@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { Instagram, Linkedin, ExternalLink, Sparkles, ShoppingBag, Mail, Phone } from "lucide-react"
+import { Logo } from "./logo"
 
 export function Footer() {
   return (
-    <footer className="bg-[#070f1e] py-20 px-6 lg:px-10 border-t border-[#B8783D]/15">
+    <footer className="bg-[#0C2340] py-20 px-6 lg:px-10 border-t border-[#B8783D]/15">
       <div className="max-w-[1400px] mx-auto">
         {/* Top CTA Strip */}
         <div className="flex flex-wrap items-center justify-between gap-6 pb-12 mb-12 border-b border-white/[0.06]">
@@ -36,11 +37,8 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-14 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl border-2 border-[#B8783D]/40 flex items-center justify-center font-serif text-xl text-[#e8a87c]">
-                Cf
-              </div>
-              <span className="font-serif text-lg text-white">Clube de Formulas</span>
+            <div className="mb-5">
+              <Logo variant="light" size="md" />
             </div>
             <p className="text-sm text-white/40 leading-relaxed mb-6">
               Prof. Samir Tannuri Cerveira

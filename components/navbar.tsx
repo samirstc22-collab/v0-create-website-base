@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { Logo } from "./logo"
 import { 
   Menu, 
   X, 
@@ -100,33 +101,7 @@ export function Navbar() {
     >
       <div className="max-w-[1400px] mx-auto px-5 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div
-            className={`w-11 h-11 rounded-xl border-2 flex items-center justify-center font-serif text-xl transition-all duration-300 ${
-              isScrolled
-                ? "border-[#B8783D] text-[#B8783D] bg-[#B8783D]/10 group-hover:bg-[#B8783D] group-hover:text-white"
-                : "border-white/30 text-white bg-white/5 group-hover:border-[#e8a87c] group-hover:bg-white/10"
-            }`}
-          >
-            Cf
-          </div>
-          <div className="hidden sm:block">
-            <div
-              className={`font-serif text-lg leading-tight tracking-wide transition-colors duration-300 ${
-                isScrolled ? "text-[#0C2340]" : "text-white"
-              }`}
-            >
-              Clube de Formulas
-            </div>
-            <div
-              className={`text-[10px] tracking-[2px] uppercase font-semibold mt-0.5 transition-colors duration-300 ${
-                isScrolled ? "text-[#64748b]" : "text-white/50"
-              }`}
-            >
-              Prof. Samir Tannuri
-            </div>
-          </div>
-        </Link>
+        <Logo variant={isScrolled ? "dark" : "light"} size="md" />
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-1" ref={dropdownRef}>

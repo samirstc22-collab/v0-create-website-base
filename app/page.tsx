@@ -1,18 +1,19 @@
 import { Navbar } from "@/components/navbar"
 import { HomeHeroLight } from "@/components/home-hero-light"
 import { BigStats } from "@/components/big-stats"
+import { HomeDifferentiation } from "@/components/home-differentiation"
+import { HomeLabPro } from "@/components/home-lab-pro"
 import { HomeAuthority } from "@/components/home-authority"
 import { Footer } from "@/components/footer"
-import { SectionTransition } from "@/components/section-transition"
 
 export default function Home() {
   return (
-    <main className="bg-[#0a1628]">
+    <main className="bg-white">
       <Navbar />
       <HomeHeroLight />
       <BigStats />
-      {/* Transição branca → navy escuro (wave) */}
-      <SectionTransition from="#ffffff" to="#0a1628" variant="wave" height={110} />
+      <HomeDifferentiation />
+      <HomeLabPro />
       <HomeAuthority />
       <Footer />
     </main>
