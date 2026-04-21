@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="bg-[#f1f5f9]">
+    <main className="bg-[#dde6f0]">
       <Navbar />
       <HomeHeroLight />
       <BigStats />

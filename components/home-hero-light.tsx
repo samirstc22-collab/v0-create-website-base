@@ -59,7 +59,7 @@ export function HomeHeroLight() {
   const current = SERVICES[activeService]
 
   return (
-    <section className="relative overflow-hidden bg-[#f1f5f9] pt-28 pb-20 lg:pt-32 lg:pb-28">
+    <section className="relative overflow-hidden bg-[#dde6f0] pt-28 pb-20 lg:pt-32 lg:pb-28">
       {/* Soft navy grid */}
       <div
         aria-hidden
@@ -279,7 +279,7 @@ export function HomeHeroLight() {
               </div>
 
               {/* Footer ticker */}
-              <div className="border-t border-[#0C2340]/8 bg-[#f8fafc] px-6 py-3 flex items-center justify-between text-[10px] font-mono tracking-[1.5px] uppercase">
+              <div className="border-t border-[#0C2340]/8 bg-[#eef2f7] px-6 py-3 flex items-center justify-between text-[10px] font-mono tracking-[1.5px] uppercase">
                 <span className="text-[#94a3b8]">lab://eurotex · 2026</span>
                 <span className="flex items-center gap-2 text-[#0C2340]">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#10b981] animate-pulse" />
