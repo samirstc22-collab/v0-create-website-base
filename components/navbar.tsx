@@ -23,7 +23,7 @@ export function Navbar() {
     { href: "/sobre", label: "Sobre" },
     { href: "/cursos", label: "Cursos" },
     { href: "/consultoria", label: "Consultoria" },
-    { href: "/lp", label: "Lab Pro", highlight: true },
+    { href: "/formulator-ai", label: "Formulator AI", highlight: true },
     { href: "/blog", label: "Blog" },
   ]
 
