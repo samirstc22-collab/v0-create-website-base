@@ -59,48 +59,66 @@ export function HomeHeroLight() {
   const current = SERVICES[activeService]
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#b8c8d8] via-[#c2d0de] to-[#adbdcf] pt-28 pb-20 lg:pt-32 lg:pb-28">
-      {/* Soft navy grid */}
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#070f1e] via-[#0a1628] to-[#0d1d35] pt-28 pb-32 lg:pt-32 lg:pb-40">
+      {/* Subtle grid */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(#0C2340 1px, transparent 1px), linear-gradient(90deg, #0C2340 1px, transparent 1px)",
+            "linear-gradient(rgba(232,168,124,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(232,168,124,0.4) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
       />
 
-      {/* Ambient navy orbs */}
+      {/* Ambient orbs - richer on dark */}
       <div
         aria-hidden
-        className="absolute top-1/4 right-[-10%] w-[560px] h-[560px] rounded-full pointer-events-none"
+        className="absolute top-1/4 right-[-10%] w-[680px] h-[680px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(12,35,64,0.09), transparent 65%)",
-          filter: "blur(50px)",
+          background: "radial-gradient(circle, rgba(184,120,61,0.18), transparent 65%)",
+          filter: "blur(60px)",
         }}
       />
       <div
         aria-hidden
-        className="absolute bottom-[-20%] left-[-10%] w-[480px] h-[480px] rounded-full pointer-events-none"
+        className="absolute bottom-[-20%] left-[-10%] w-[560px] h-[560px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(184,120,61,0.10), transparent 65%)",
+          background: "radial-gradient(circle, rgba(0,150,180,0.15), transparent 65%)",
+          filter: "blur(60px)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute top-[40%] left-[20%] w-[360px] h-[360px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(74,158,255,0.08), transparent 65%)",
           filter: "blur(50px)",
+        }}
+      />
+
+      {/* Vignette */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.35) 100%)",
         }}
       />
 
       <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10">
         {/* Top meta bar */}
         <div className="flex items-center justify-between mb-14 flex-wrap gap-4">
-          <div className="flex items-center gap-3 text-[11px] font-mono tracking-[2px] uppercase text-[#475569]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B8783D] animate-pulse" />
+          <div className="flex items-center gap-3 text-[11px] font-mono tracking-[2px] uppercase text-white/60">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#e8a87c] animate-pulse shadow-[0_0_12px_rgba(232,168,124,0.8)]" />
             Clube de Fórmulas · Vol. XII · 2026
           </div>
-          <div className="flex items-center gap-5 text-[11px] tracking-[2px] uppercase text-[#64748b] font-semibold">
+          <div className="flex items-center gap-5 text-[11px] tracking-[2px] uppercase text-white/50 font-semibold">
             <span className="hidden md:inline">CNPq · UNICAMP</span>
-            <span className="hidden md:inline text-[#cbd5e1]">|</span>
+            <span className="hidden md:inline text-white/15">|</span>
             <span>Peer-Reviewed</span>
-            <span className="text-[#cbd5e1]">|</span>
+            <span className="text-white/15">|</span>
             <span>17 Capitais</span>
           </div>
         </div>
@@ -111,17 +129,17 @@ export function HomeHeroLight() {
           <div>
             {/* Section kicker */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="h-px w-10 bg-[#B8783D]" />
-              <span className="text-[10px] tracking-[3px] uppercase text-[#B8783D] font-bold">
+              <div className="h-px w-10 bg-[#e8a87c]" />
+              <span className="text-[10px] tracking-[3px] uppercase text-[#e8a87c] font-bold">
                 § Edição de Abertura
               </span>
             </div>
 
             {/* Main headline */}
-            <h1 className="font-serif font-normal text-[clamp(44px,7vw,88px)] leading-[0.98] tracking-[-2.5px] text-[#0C2340] mb-8">
+            <h1 className="font-serif font-normal text-[clamp(44px,7vw,88px)] leading-[0.98] tracking-[-2.5px] text-white mb-8">
               Ciência que vira{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">fórmula</em>
+                <em className="italic text-[#e8a87c]">fórmula</em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="12"
@@ -131,34 +149,34 @@ export function HomeHeroLight() {
                 >
                   <path
                     d="M2,8 Q50,2 100,6 T198,4"
-                    stroke="#B8783D"
+                    stroke="#e8a87c"
                     strokeWidth="2"
                     fill="none"
-                    opacity="0.35"
+                    opacity="0.5"
                   />
                 </svg>
               </span>
               .
               <br />
               Fórmula que vira{" "}
-              <em className="italic text-[#0096B4]">resultado</em>.
+              <em className="italic text-[#2dd4bf]">resultado</em>.
             </h1>
 
-            {/* Subhead — highlighted card */}
+            {/* Subhead — highlighted glass card */}
             <div className="relative mb-10 max-w-[640px]">
-              <div className="absolute -left-1 top-3 bottom-3 w-1 bg-[#B8783D] rounded-full" />
-              <div className="bg-white/70 backdrop-blur-sm border border-[#0C2340]/10 rounded-2xl p-6 pl-8 shadow-[0_20px_40px_-20px_rgba(12,35,64,0.18)]">
-                <p className="text-lg md:text-xl text-[#1e293b] leading-[1.65]">
+              <div className="absolute -left-1 top-3 bottom-3 w-1 bg-[#e8a87c] rounded-full shadow-[0_0_20px_rgba(232,168,124,0.6)]" />
+              <div className="bg-white/[0.04] backdrop-blur-md border border-white/10 rounded-2xl p-6 pl-8 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+                <p className="text-lg md:text-xl text-white leading-[1.65]">
                   Pesquisa & desenvolvimento cosmético para{" "}
-                  <strong className="text-[#0C2340] bg-[#B8783D]/15 px-1.5 rounded">
+                  <strong className="text-[#e8a87c] bg-[#e8a87c]/12 px-1.5 rounded">
                     indústrias, marcas independentes e farmácias magistrais
                   </strong>{" "}
                   de excelência.
                 </p>
-                <p className="text-sm md:text-base text-[#475569] leading-[1.65] mt-3">
-                  Bancada <strong className="text-[#0C2340]">CNPq-UNICAMP</strong>, publicação
+                <p className="text-sm md:text-base text-white/70 leading-[1.65] mt-3">
+                  Bancada <strong className="text-white">CNPq-UNICAMP</strong>, publicação
                   peer-reviewed indexada (DOI) e missões técnicas em{" "}
-                  <strong className="text-[#0C2340]">três continentes</strong> — convertidas em
+                  <strong className="text-white">três continentes</strong> — convertidas em
                   protocolos aplicáveis ao seu balcão.
                 </p>
               </div>
@@ -168,14 +186,14 @@ export function HomeHeroLight() {
             <div className="flex flex-wrap gap-3 mb-10">
               <Link
                 href="/loja"
-                className="group inline-flex items-center gap-2 bg-gradient-to-br from-[#B8783D] to-[#8a5729] text-white px-7 py-4 rounded-xl font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-transform shadow-[0_12px_30px_rgba(184,120,61,0.4)]"
+                className="group inline-flex items-center gap-2 bg-gradient-to-br from-[#e8a87c] to-[#b87333] text-[#0a1628] px-7 py-4 rounded-xl font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-transform shadow-[0_12px_40px_rgba(232,168,124,0.35)]"
               >
                 Ver a Loja · 60+ Artefatos
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
               <Link
                 href="/consultoria"
-                className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-6 py-4 rounded-xl font-semibold text-sm tracking-wide hover:bg-[#0a1a33] transition-colors"
+                className="group inline-flex items-center gap-2 bg-white/[0.06] border border-white/15 backdrop-blur text-white px-6 py-4 rounded-xl font-semibold text-sm tracking-wide hover:bg-white/10 hover:border-white/30 transition-colors"
               >
                 Diagnóstico da farmácia
                 <ChevronRight className="w-4 h-4" />
@@ -184,29 +202,29 @@ export function HomeHeroLight() {
                 href="https://instagram.com/samir_farma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 bg-white border border-[#0C2340]/15 text-[#0C2340] px-5 py-4 rounded-xl font-semibold text-sm tracking-wide hover:border-[#B8783D]/40 hover:text-[#B8783D] transition-colors"
+                className="group inline-flex items-center gap-2 bg-white/[0.03] border border-white/10 text-white/85 px-5 py-4 rounded-xl font-semibold text-sm tracking-wide hover:border-[#e8a87c]/40 hover:text-[#e8a87c] transition-colors"
               >
                 <Instagram className="w-4 h-4" />
                 @samir_farma
               </a>
             </div>
 
-            {/* Stats strip — reinforced card */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0C2340]/10 rounded-2xl overflow-hidden border border-[#0C2340]/10 shadow-[0_20px_40px_-20px_rgba(12,35,64,0.15)]">
+            {/* Stats strip — reinforced dark card */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]">
               {[
-                { num: "4.000+", label: "Fórmulas validadas", accent: "#B8783D" },
-                { num: "800+", label: "Palestras Brasil afora", accent: "#0C2340" },
-                { num: "15+", label: "Países em missão", accent: "#0096B4" },
-                { num: "60+", label: "Artefatos editoriais", accent: "#B8783D" },
+                { num: "4.000+", label: "Fórmulas validadas", accent: "#e8a87c" },
+                { num: "800+", label: "Palestras Brasil afora", accent: "#ffffff" },
+                { num: "15+", label: "Países em missão", accent: "#2dd4bf" },
+                { num: "60+", label: "Artefatos editoriais", accent: "#e8a87c" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/85 backdrop-blur-sm px-5 py-5">
+                <div key={stat.label} className="bg-[#0a1628]/90 backdrop-blur px-5 py-5">
                   <div
                     className="font-serif text-3xl md:text-4xl tracking-tight mb-1 leading-none"
                     style={{ color: stat.accent }}
                   >
                     {stat.num}
                   </div>
-                  <div className="text-[10px] tracking-[1.5px] uppercase text-[#475569] font-bold leading-tight">
+                  <div className="text-[10px] tracking-[1.5px] uppercase text-white/55 font-bold leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -216,19 +234,19 @@ export function HomeHeroLight() {
 
           {/* RIGHT — Rotating service card */}
           <div className="relative">
-            {/* Decorative frame */}
-            <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-[#0C2340]/5 via-transparent to-[#B8783D]/5 pointer-events-none" />
+            {/* Decorative frame glow */}
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[#e8a87c]/20 via-transparent to-[#2dd4bf]/15 blur-2xl pointer-events-none" />
 
             {/* Service card */}
             <div
               key={activeService}
-              className="relative bg-white rounded-3xl overflow-hidden border border-[#0C2340]/10 shadow-[0_40px_80px_-30px_rgba(12,35,64,0.25)]"
+              className="relative bg-[#0d1d35]/90 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.7)]"
               style={{
                 animation: mounted ? "fadeInUp 0.6s ease-out" : "none",
               }}
             >
               {/* Header photo */}
-              <div className="relative aspect-[16/11] overflow-hidden bg-[#0C2340]">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#0a1628]">
                 <Image
                   src="/images/samir-lab-eurotex.png"
                   alt="Prof. Samir Tannuri em laboratório EUROTEX"
@@ -237,7 +255,7 @@ export function HomeHeroLight() {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/85 via-[#0C2340]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/50 to-transparent" />
 
                 {/* Service overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -255,21 +273,21 @@ export function HomeHeroLight() {
 
               {/* Body */}
               <div className="p-6">
-                <p className="text-sm text-[#475569] leading-[1.7] mb-5">{current.desc}</p>
+                <p className="text-sm text-white/70 leading-[1.7] mb-5">{current.desc}</p>
 
                 {/* Metric */}
-                <div className="flex items-end justify-between mb-5 pb-5 border-b border-[#0C2340]/8">
+                <div className="flex items-end justify-between mb-5 pb-5 border-b border-white/10">
                   <div>
-                    <div className="font-serif text-3xl text-[#0C2340] tracking-tight">
+                    <div className="font-serif text-3xl text-white tracking-tight">
                       {current.metric}
                     </div>
-                    <div className="text-[10px] tracking-[1.5px] uppercase text-[#94a3b8] font-bold">
+                    <div className="text-[10px] tracking-[1.5px] uppercase text-white/45 font-bold">
                       {current.metricLabel}
                     </div>
                   </div>
                   <Link
                     href={current.href}
-                    className="shrink-0 w-11 h-11 rounded-full bg-[#0C2340] text-white flex items-center justify-center hover:bg-[#B8783D] transition-colors"
+                    className="shrink-0 w-11 h-11 rounded-full bg-[#e8a87c] text-[#0a1628] flex items-center justify-center hover:bg-white transition-colors shadow-[0_8px_20px_rgba(232,168,124,0.35)]"
                     aria-label={`Ir para ${current.label}`}
                   >
                     <ArrowUpRight className="w-4 h-4" />
@@ -283,18 +301,19 @@ export function HomeHeroLight() {
                       key={s.id}
                       onClick={() => setActiveService(i)}
                       className={`group relative pt-3 pb-3 text-left transition-colors ${
-                        i === activeService ? "" : "opacity-40 hover:opacity-70"
+                        i === activeService ? "" : "opacity-40 hover:opacity-80"
                       }`}
                       aria-label={`Mostrar ${s.label}`}
                     >
                       <div
                         className="h-0.5 rounded-full mb-2 transition-colors"
                         style={{
-                          backgroundColor: i === activeService ? "#B8783D" : "#cbd5e1",
+                          backgroundColor:
+                            i === activeService ? "#e8a87c" : "rgba(255,255,255,0.15)",
                         }}
                       />
-                      <div className="font-mono text-[9px] text-[#94a3b8] mb-0.5">{s.id}</div>
-                      <div className="font-semibold text-[10px] tracking-[1px] uppercase text-[#0C2340] leading-tight">
+                      <div className="font-mono text-[9px] text-white/40 mb-0.5">{s.id}</div>
+                      <div className="font-semibold text-[10px] tracking-[1px] uppercase text-white leading-tight">
                         {s.label.split(" ")[0]}
                       </div>
                     </button>
@@ -303,16 +322,50 @@ export function HomeHeroLight() {
               </div>
 
               {/* Footer ticker */}
-              <div className="border-t border-[#0C2340]/8 bg-[#eef2f7] px-6 py-3 flex items-center justify-between text-[10px] font-mono tracking-[1.5px] uppercase">
-                <span className="text-[#94a3b8]">lab://eurotex · 2026</span>
-                <span className="flex items-center gap-2 text-[#0C2340]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#10b981] animate-pulse" />
+              <div className="border-t border-white/10 bg-black/30 px-6 py-3 flex items-center justify-between text-[10px] font-mono tracking-[1.5px] uppercase">
+                <span className="text-white/40">lab://eurotex · 2026</span>
+                <span className="flex items-center gap-2 text-white/80">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#10b981] animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
                   Em atualização
                 </span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Transition element: diagonal + wave divider */}
+      <div aria-hidden className="absolute bottom-0 left-0 right-0 pointer-events-none">
+        {/* Soft gradient fade */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-40"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(13,29,53,0.4) 50%, rgba(255,255,255,1) 100%)",
+          }}
+        />
+        {/* Wave SVG */}
+        <svg
+          className="relative block w-full"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          style={{ height: "90px" }}
+        >
+          <path
+            d="M0,64 C240,100 480,20 720,50 C960,80 1200,20 1440,60 L1440,120 L0,120 Z"
+            fill="white"
+            opacity="0.08"
+          />
+          <path
+            d="M0,80 C240,110 480,40 720,70 C960,100 1200,50 1440,85 L1440,120 L0,120 Z"
+            fill="white"
+            opacity="0.15"
+          />
+          <path
+            d="M0,95 C240,120 480,70 720,90 C960,110 1200,75 1440,100 L1440,120 L0,120 Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   )
