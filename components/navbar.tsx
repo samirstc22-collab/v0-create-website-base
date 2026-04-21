@@ -22,8 +22,9 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre" },
     { href: "/consultoria", label: "Consultoria" },
+    { href: "/blog", label: "Blog" },
     { href: "/materiais", label: "Materiais" },
-    { href: "/conteudos", label: "Conteudos" },
+    { href: "/conteudos", label: "Conteúdos" },
     { href: "/contato", label: "Contato" },
   ]
 
@@ -57,7 +58,7 @@ export function Navbar() {
                 isScrolled ? "text-navy" : "text-white"
               }`}
             >
-              Clube de Formulas
+              Clube de Fórmulas
             </div>
             <div
               className={`text-xs tracking-[2.5px] uppercase font-medium mt-0.5 transition-colors duration-300 ${

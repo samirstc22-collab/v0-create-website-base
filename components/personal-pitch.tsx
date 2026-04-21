@@ -30,14 +30,17 @@ export function PersonalPitch() {
             <Sparkles className="h-3.5 w-3.5" />
             A primeira consultoria 100% personalizada
           </div>
-          <h2 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
+          <h2 className="mt-6 font-serif text-4xl leading-[1.03] tracking-[-0.02em] text-white md:text-6xl lg:text-7xl">
             Sua farmácia não é igual a nenhuma outra.{" "}
             <span className="italic text-[#e8a87c]">Sua consultoria também não deveria ser.</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-            Prof. Samir Tannuri desenvolveu a <strong className="text-white">primeira metodologia de consultoria
-            farmacêutica verdadeiramente personalizada</strong> do Brasil — construída peça por peça para transformar a
-            realidade específica da sua farmácia ou drogaria em lucratividade real.
+          <p className="mt-8 text-lg leading-[1.7] text-white/75 md:text-xl">
+            O Prof. Samir Tannuri concebeu a{" "}
+            <strong className="text-white">primeira metodologia brasileira de consultoria farmacêutica
+            verdadeiramente personalizada</strong> — forjada em mais de duas décadas de balcão, bancada e
+            indústria, construída linha por linha para transformar a geografia, o público e o potencial
+            específicos da sua farmácia em{" "}
+            <em className="text-[#e8a87c] not-italic font-semibold">lucratividade mensurável</em>.
           </p>
         </div>
 
@@ -85,11 +88,12 @@ export function PersonalPitch() {
             <div className="relative rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm md:p-10">
               <Quote className="mb-6 h-10 w-10 text-[#b87333]" />
 
-              <p className="font-serif text-2xl leading-relaxed text-white md:text-3xl">
-                "Eu não acredito em receita de bolo. Cada farmácia tem sua{" "}
-                <em className="text-[#e8a87c]">alma</em>, seu público, seus desafios e seu potencial único.{" "}
-                Minha missão é mergulhar no seu negócio e extrair dele a{" "}
-                <em className="text-[#e8a87c]">melhor versão possível</em>."
+              <p className="font-serif text-2xl leading-[1.4] text-white md:text-3xl">
+                &ldquo;Eu não acredito em receita de bolo. Cada farmácia carrega uma{" "}
+                <em className="text-[#e8a87c]">alma</em> própria — um bairro, um público, uma história.{" "}
+                Minha missão é mergulhar até o chão do seu negócio e extrair dele a{" "}
+                <em className="text-[#e8a87c]">melhor versão possível</em> — com ciência na bancada,
+                estratégia no caixa e ternura no atendimento.&rdquo;
               </p>
 
               <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
@@ -116,18 +120,18 @@ export function PersonalPitch() {
               {[
                 {
                   icon: Target,
-                  title: "Diagnóstico real",
-                  text: "Visitas, análise de fluxo, equipe e mix de produtos.",
+                  title: "Diagnóstico de campo",
+                  text: "Visitas presenciais, leitura do fluxo, escuta da equipe e raio-X do mix.",
                 },
                 {
                   icon: Sparkles,
                   title: "Plano sob medida",
-                  text: "Estratégia construída para o seu público e sua região.",
+                  text: "Estratégia desenhada para o seu público, sua região e o seu caixa real.",
                 },
                 {
                   icon: TrendingUp,
-                  title: "Lucro comprovado",
-                  text: "Métricas acompanhadas mês a mês até o resultado.",
+                  title: "Lucro mensurável",
+                  text: "Indicadores acompanhados mês a mês, com metas claras e resultado comprovado.",
                 },
               ].map((pillar) => (
                 <div
@@ -167,24 +171,27 @@ export function PersonalPitch() {
             <div className="text-xs font-medium uppercase tracking-[0.25em] text-[#2dd4bf]">
               Paixão por ensinar
             </div>
-            <h3 className="mt-3 font-serif text-3xl leading-tight text-white md:text-4xl">
-              Cada slide é um pedaço da <em className="text-[#e8a87c]">minha história</em> com a farmácia.
+            <h3 className="mt-3 font-serif text-3xl leading-[1.1] text-white md:text-4xl lg:text-[44px]">
+              Cada slide carrega um pedaço da{" "}
+              <em className="text-[#e8a87c]">minha história</em> com a farmácia.
             </h3>
-            <p className="mt-5 text-base leading-relaxed text-white/70 md:text-lg">
-              Em mais de <strong className="text-white">800 palestras</strong> Brasil afora, o Prof. Samir construiu
-              uma reputação inconfundível: falar de farmácia com{" "}
-              <strong className="text-white">ciência, coração e aplicação imediata</strong>. É essa mesma energia
-              que ele leva para dentro da sua operação na consultoria.
+            <p className="mt-6 text-base leading-[1.7] text-white/75 md:text-lg">
+              Em mais de <strong className="text-white">800 palestras</strong> em congressos
+              nacionais e internacionais, o Prof. Samir consolidou uma reputação inconfundível:
+              discutir farmácia com{" "}
+              <strong className="text-white">rigor científico, afeto humano e aplicabilidade imediata</strong>.
+              É exatamente essa energia — disciplinada no rigor e contagiosa no entusiasmo — que ele
+              transporta, dia após dia, para dentro da sua operação na consultoria.
             </p>
 
-            <ul className="mt-6 space-y-3 text-sm text-white/80">
+            <ul className="mt-7 space-y-3.5 text-sm leading-relaxed text-white/85 md:text-base">
               {[
-                "Aulas construídas na rotina real do balcão e da manipulação",
-                "Linguagem clara para equipe, farmacêutico e gestor",
-                "Conteúdo que vira protocolo, vitrine e caixa cheio",
+                "Aulas construídas sobre a rotina real do balcão, da bancada e da manipulação",
+                "Linguagem cristalina para farmacêutico, equipe de atendimento e gestor de caixa",
+                "Conteúdo que, já no dia seguinte, vira protocolo, vitrine e ticket médio maior",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#e8a87c]" />
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#e8a87c]" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -198,14 +205,16 @@ export function PersonalPitch() {
             <div className="text-xs font-medium uppercase tracking-[0.25em] text-[#e8a87c]">
               A promessa Samir Tannuri
             </div>
-            <h3 className="mt-4 font-serif text-3xl leading-[1.1] text-white md:text-5xl">
+            <h3 className="mt-4 font-serif text-3xl leading-[1.05] tracking-[-0.015em] text-white md:text-5xl lg:text-[56px]">
               Transformar cada farmácia em um{" "}
-              <em className="text-[#e8a87c]">negócio lucrativo, respeitado e insubstituível</em> em sua comunidade.
+              <em className="text-[#e8a87c]">negócio lucrativo, respeitado e insubstituível</em>{" "}
+              em sua comunidade.
             </h3>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-              Nenhum modelo pronto. Nenhuma planilha genérica. Um plano construído olhando nos olhos do seu time,
-              estudando o seu caixa e entendendo exatamente o que sua região precisa comprar da sua farmácia —
-              e de mais ninguém.
+            <p className="mx-auto mt-7 max-w-2xl text-base leading-[1.7] text-white/75 md:text-lg">
+              Nenhum modelo pronto. Nenhuma planilha reciclada. Nenhum relatório de gaveta. Um plano
+              arquitetado olhando nos olhos do seu time, estudando a respiração do seu caixa e
+              compreendendo, com precisão de bisturi, o que o seu bairro precisa comprar da sua
+              farmácia — e de mais <em className="text-[#e8a87c] not-italic font-semibold">nenhuma outra</em>.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -12,16 +12,16 @@ export function Footer() {
               <div className="w-12 h-12 rounded-xl border-2 border-copper/40 flex items-center justify-center font-serif text-2xl text-copper-light">
                 Cf
               </div>
-              <span className="font-serif text-xl text-white">Clube de Formulas</span>
+              <span className="font-serif text-xl text-white">Clube de Fórmulas</span>
             </div>
-            <p className="text-base text-white/35 leading-relaxed">
+            <p className="text-base text-white/40 leading-relaxed">
               Prof. Samir Tannuri Cerveira
               <br />
-              Pesquisador | Consultor Industrial | Speaker
+              Pesquisador · Consultor Industrial · Palestrante
               <br />
-              Metapharma | CNPJ 00.246.124/0001-51
+              Metapharma · CNPJ 00.246.124/0001-51
               <br />
-              Goiania — GO | Brasil
+              Goiânia — GO · Brasil
             </p>
           </div>
 
@@ -50,6 +50,12 @@ export function Footer() {
                 Consultoria
               </Link>
               <Link
+                href="/blog"
+                className="block text-white/50 text-base mb-3 hover:text-copper-light transition-colors"
+              >
+                Blog Científico
+              </Link>
+              <Link
                 href="/materiais"
                 className="block text-white/50 text-base mb-3 hover:text-copper-light transition-colors"
               >
@@ -59,7 +65,7 @@ export function Footer() {
                 href="/conteudos"
                 className="block text-white/50 text-base mb-3 hover:text-copper-light transition-colors"
               >
-                Conteudos
+                Conteúdos
               </Link>
               <Link
                 href="/contato"

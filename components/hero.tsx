@@ -9,10 +9,10 @@ export function Hero() {
   const [email, setEmail] = useState("")
 
   const stats = [
-    { num: "4.000+", label: "Formulas testadas" },
-    { num: "20+", label: "Industrias atendidas" },
-    { num: "3", label: "Continentes em missao" },
-    { num: "1.000+", label: "Profissionais formados" },
+    { num: "4.000+", label: "Fórmulas validadas em bancada" },
+    { num: "20+", label: "Indústrias cosméticas atendidas" },
+    { num: "3", label: "Continentes em missão técnica" },
+    { num: "1.000+", label: "Farmacêuticos formados" },
   ]
 
   return (
@@ -56,57 +56,62 @@ export function Hero() {
             {/* Kicker */}
             <div className="inline-flex items-center gap-3 bg-teal/15 border border-teal/30 rounded-full py-2.5 px-5 mb-10">
               <div className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-              <span className="text-teal-light text-xs font-bold tracking-[2px] uppercase">
-                Pesquisador  |  Consultor Industrial  |  Speaker
+              <span className="text-teal-light text-xs font-bold tracking-[2.5px] uppercase">
+                Pesquisador · Consultor Industrial · Palestrante
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif font-normal text-[clamp(40px,6.5vw,76px)] leading-[1.02] text-white mb-8 tracking-[-1.5px]">
-              Ciencia que vira{" "}
-              <span className="text-gradient-copper">formula.</span>
+            <h1 className="font-serif font-normal text-[clamp(40px,6.5vw,78px)] leading-[1.01] text-white mb-8 tracking-[-1.8px]">
+              Ciência que vira{" "}
+              <span className="text-gradient-copper italic">fórmula.</span>
               <br />
-              Formula que vira{" "}
-              <span className="text-gradient-teal">resultado.</span>
+              Fórmula que vira{" "}
+              <span className="text-gradient-teal italic">resultado.</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-white/55 leading-relaxed max-w-[560px] mb-10">
-              P&D cosmetico para industrias, marcas independentes e farmacias magistrais. 
-              Pesquisa CNPq-UNICAMP, publicacao peer-reviewed e missoes tecnicas em tres continentes.
+            <p className="text-lg lg:text-xl text-white/60 leading-[1.65] max-w-[580px] mb-10">
+              Pesquisa & Desenvolvimento cosmético para indústrias, marcas independentes e
+              farmácias magistrais de excelência.{" "}
+              <span className="text-white/85">
+                Bancada CNPq-UNICAMP, publicação peer-reviewed indexada e missões técnicas em
+                três continentes — transformadas em protocolos aplicáveis ao seu balcão.
+              </span>
             </p>
 
             {/* Email Form */}
-            <div className="flex gap-3 max-w-[500px] flex-wrap">
+            <div className="flex gap-3 max-w-[520px] flex-wrap">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-[1_1_240px] py-4 px-5 rounded-xl border border-white/15 bg-white/[0.06] text-white text-base font-sans outline-none transition-all focus:border-copper focus:bg-white/10 placeholder:text-white/35"
-                placeholder="Seu melhor e-mail"
+                className="flex-[1_1_260px] py-4 px-5 rounded-xl border border-white/15 bg-white/[0.06] text-white text-base font-sans outline-none transition-all focus:border-copper focus:bg-white/10 placeholder:text-white/35"
+                placeholder="seu-email@farmacia.com.br"
               />
               <button className="bg-gradient-to-br from-copper to-copper-deep border-none rounded-xl py-4 px-8 text-white font-bold text-base whitespace-nowrap shadow-[0_8px_30px_rgba(192,133,74,0.35)] hover:translate-y-[-2px] hover:shadow-[0_12px_40px_rgba(192,133,74,0.5)] transition-all tracking-wide">
-                Receber Conteudo
+                Receber boletim
               </button>
             </div>
 
-            <p className="text-sm text-white/30 mt-4 tracking-wide">
-              Protocolos exclusivos, laminas tecnicas e atualizacoes cientificas mensais.
+            <p className="text-sm text-white/35 mt-4 tracking-wide leading-relaxed">
+              Protocolos exclusivos, lâminas técnicas e revisões científicas direto na sua caixa.
+              Zero spam.
             </p>
 
             {/* Quick Links */}
-            <div className="flex gap-4 mt-10 flex-wrap">
+            <div className="flex gap-5 mt-10 flex-wrap">
               <Link
                 href="/sobre"
-                className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-white/65 hover:text-white text-sm font-semibold transition-colors"
               >
-                <Play className="w-4 h-4" /> Conhecer trajetoria
+                <Play className="w-4 h-4" /> Conhecer a trajetória
               </Link>
               <Link
-                href="/materiais"
-                className="inline-flex items-center gap-2 text-copper-light hover:text-copper text-sm font-medium transition-colors"
+                href="/blog"
+                className="inline-flex items-center gap-2 text-copper-light hover:text-copper text-sm font-semibold transition-colors"
               >
-                Ver materiais <ArrowRight className="w-4 h-4" />
+                Ler o blog científico <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

@@ -5,6 +5,7 @@ import { BigStats } from "@/components/big-stats"
 import { HomeAboutPreview } from "@/components/home-about-preview"
 import { PersonalPitch } from "@/components/personal-pitch"
 import { HomeServicesPreview } from "@/components/home-services-preview"
+import { HomeBlogPreview } from "@/components/home-blog-preview"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <HomeAboutPreview />
       <PersonalPitch />
       <HomeServicesPreview />
+      <HomeBlogPreview />
       <Footer />
     </main>
   )
