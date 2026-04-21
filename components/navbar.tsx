@@ -21,10 +21,10 @@ export function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre" },
+    { href: "/cursos", label: "Cursos" },
     { href: "/consultoria", label: "Consultoria" },
     { href: "/blog", label: "Blog" },
     { href: "/materiais", label: "Materiais" },
-    { href: "/conteudos", label: "Conteúdos" },
     { href: "/contato", label: "Contato" },
   ]
 

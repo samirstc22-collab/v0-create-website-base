@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { TrustMarquee } from "@/components/trust-marquee"
 import { BigStats } from "@/components/big-stats"
 import { HomeAboutPreview } from "@/components/home-about-preview"
+import { HomeAuthority } from "@/components/home-authority"
 import { PersonalPitch } from "@/components/personal-pitch"
 import { HomeServicesPreview } from "@/components/home-services-preview"
 import { HomeBlogPreview } from "@/components/home-blog-preview"
@@ -16,6 +17,7 @@ export default function Home() {
       <TrustMarquee />
       <BigStats />
       <HomeAboutPreview />
+      <HomeAuthority />
       <PersonalPitch />
       <HomeServicesPreview />
       <HomeBlogPreview />

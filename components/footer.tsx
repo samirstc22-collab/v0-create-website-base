@@ -44,6 +44,12 @@ export function Footer() {
                 Sobre
               </Link>
               <Link
+                href="/cursos"
+                className="block text-white/50 text-base mb-3 hover:text-copper-light transition-colors"
+              >
+                Cursos
+              </Link>
+              <Link
                 href="/consultoria"
                 className="block text-white/50 text-base mb-3 hover:text-copper-light transition-colors"
               >
