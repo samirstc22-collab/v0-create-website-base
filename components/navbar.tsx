@@ -23,8 +23,8 @@ export function Navbar() {
     { href: "/sobre", label: "Sobre" },
     { href: "/cursos", label: "Cursos" },
     { href: "/consultoria", label: "Consultoria" },
+    { href: "/lp", label: "Lab Pro", highlight: true },
     { href: "/blog", label: "Blog" },
-    { href: "/materiais", label: "Materiais" },
     { href: "/contato", label: "Contato" },
   ]
 
@@ -72,26 +72,47 @@ export function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden lg:flex gap-1 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`relative px-5 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
-                isActive(link.href)
-                  ? isScrolled
-                    ? "text-copper bg-copper/10"
-                    : "text-copper-light bg-white/10"
-                  : isScrolled
-                    ? "text-navy/80 hover:text-copper hover:bg-copper/5"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
-              }`}
-            >
-              {link.label}
-              {isActive(link.href) && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-copper rounded-full" />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.highlight) {
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
+                    isScrolled
+                      ? "text-[#4a9eff] bg-[#4a9eff]/10 hover:bg-[#4a9eff]/15 border border-[#4a9eff]/20"
+                      : "text-[#7eb8ff] bg-white/5 hover:bg-white/10 border border-white/10"
+                  }`}
+                >
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#4a9eff]" />
+                  </span>
+                  {link.label}
+                </Link>
+              )
+            }
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative px-5 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
+                  isActive(link.href)
+                    ? isScrolled
+                      ? "text-copper bg-copper/10"
+                      : "text-copper-light bg-white/10"
+                    : isScrolled
+                      ? "text-navy/80 hover:text-copper hover:bg-copper/5"
+                      : "text-white/80 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-copper rounded-full" />
+                )}
+              </Link>
+            )
+          })}
           <a
             href="https://pay.hotmart.com/A105091762I"
             target="_blank"

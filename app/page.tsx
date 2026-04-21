@@ -1,12 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { DynamicBanner } from "@/components/dynamic-banner"
-import { TrustMarquee } from "@/components/trust-marquee"
 import { BigStats } from "@/components/big-stats"
-import { HomeAboutPreview } from "@/components/home-about-preview"
 import { HomeAuthority } from "@/components/home-authority"
-import { PersonalPitch } from "@/components/personal-pitch"
-import { HomeServicesPreview } from "@/components/home-services-preview"
-import { HomeBlogPreview } from "@/components/home-blog-preview"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -14,13 +9,8 @@ export default function Home() {
     <main>
       <Navbar />
       <DynamicBanner />
-      <TrustMarquee />
       <BigStats />
-      <HomeAboutPreview />
       <HomeAuthority />
-      <PersonalPitch />
-      <HomeServicesPreview />
-      <HomeBlogPreview />
       <Footer />
     </main>
   )

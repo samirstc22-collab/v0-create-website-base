@@ -1,158 +1,173 @@
-"use client"
-
 import Image from "next/image"
-import {
-  FlaskRound,
-  FileText,
-  Users,
-  Microscope,
-  BarChart3,
-  BookOpen,
-  ArrowRight,
-  CheckCircle2,
-} from "lucide-react"
+import { ArrowUpRight, FlaskRound, FileText, Users, Microscope, BarChart3, BookOpen } from "lucide-react"
 
 export function LPMagistral() {
   const services = [
     {
       icon: FlaskRound,
-      title: "Reformulação de Portfólio",
-      desc: "Análise completa e atualização de fórmulas para maior eficácia e margem.",
+      id: "01",
+      title: "Reformulação técnica",
+      desc: "Auditoria e reescrita das fórmulas do manipulado — da base à especialidade — para elevar margem, segurança e eficácia.",
     },
     {
       icon: FileText,
-      title: "Dossiês Farmacotécnicos",
-      desc: "Documentação técnica com DOIs e referências peer-reviewed.",
-    },
-    {
-      icon: Microscope,
-      title: "Mapeamento pH/pKa",
-      desc: "Estudo completo de compatibilidade e estabilidade de ativos.",
-    },
-    {
-      icon: Users,
-      title: "Treinamento de Equipes",
-      desc: "Capacitação técnica para balcão e laboratório de manipulação.",
+      id: "02",
+      title: "Dossiês de qualidade",
+      desc: "POPs, fichas de controle em processo, planos de amostragem e rastreabilidade compatíveis com RDC 67.",
     },
     {
       icon: BarChart3,
-      title: "Auditoria de Manipulados",
-      desc: "Revisão de processos, POPs e adequação à RDC 67.",
+      id: "03",
+      title: "Análise de pH &amp; pKa",
+      desc: "Diagnóstico físico-químico formulação por formulação, com ajustes documentados e validados em bancada.",
+    },
+    {
+      icon: Users,
+      id: "04",
+      title: "Treinamento da equipe",
+      desc: "Capacitação técnica e comercial — farmacêutico, manipuladores e atendimento — em linguagem única.",
+    },
+    {
+      icon: Microscope,
+      id: "05",
+      title: "Auditoria de processos",
+      desc: "Avaliação 360° do fluxo: da matéria-prima ao balcão, identificando perdas, desvios e oportunidades.",
     },
     {
       icon: BookOpen,
-      title: "Materiais de Apoio",
-      desc: "Lâminas técnicas, protocolos e materiais para equipe comercial.",
+      id: "06",
+      title: "Biblioteca técnica",
+      desc: "Protocolos exclusivos, lâminas de atendimento e literatura peer-reviewed para diferenciar seu balcão.",
     },
   ]
 
-  const differentials = [
-    "Diagnóstico presencial no chão da farmácia",
-    "Análise do mix e margem por categoria",
-    "Reformulação com foco em ticket médio",
-    "Treinamento hands-on para manipuladores",
-  ]
-
   return (
-    <section id="consultoria-magistral" className="relative overflow-hidden bg-[#0c0c10] py-32">
-      {/* Accent gradient */}
-      <div className="pointer-events-none absolute left-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-[#4a9eff]/10 blur-[150px]" />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          {/* Left: Copy */}
-          <div className="order-2 lg:order-1">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#4a9eff]/30 bg-[#4a9eff]/10 px-4 py-1.5">
-              <FlaskRound className="h-4 w-4 text-[#4a9eff]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4a9eff]">
-                Landing Page 2
-              </span>
-            </div>
-
-            <h2 className="font-serif text-4xl text-white md:text-5xl">
-              Consultoria{" "}
-              <span className="bg-gradient-to-r from-[#4a9eff] to-[#7eb8ff] bg-clip-text text-transparent">
-                P&D Magistral
-              </span>
-            </h2>
-
-            <p className="mt-6 text-lg leading-relaxed text-white/60">
-              Transformação completa da sua farmácia de manipulação com{" "}
-              <span className="text-white">ciência aplicada</span>, foco em lucratividade e
-              excelência técnica em cada fórmula.
-            </p>
-
-            {/* Services grid */}
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {services.map((service, i) => (
-                <div
-                  key={i}
-                  className="group rounded-xl border border-white/5 bg-white/[0.02] p-5 transition-all hover:border-[#4a9eff]/30 hover:bg-[#4a9eff]/5"
-                >
-                  <service.icon className="mb-3 h-6 w-6 text-[#4a9eff]" />
-                  <h4 className="font-semibold text-white">{service.title}</h4>
-                  <p className="mt-1 text-sm text-white/50">{service.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="mt-10 flex flex-wrap items-center gap-6">
-              <a
-                href="#contato"
-                className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4a9eff] to-[#3d8be6] px-8 py-4 font-bold text-white shadow-[0_10px_40px_rgba(74,158,255,0.3)] transition-all hover:shadow-[0_15px_50px_rgba(74,158,255,0.4)]"
-              >
-                Solicitar Diagnóstico Magistral
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
-              <div className="flex items-center gap-2 text-sm text-white/50">
-                <CheckCircle2 className="h-4 w-4 text-green-500" />
-                <span>Visita presencial incluída</span>
+    <section id="magistral" className="relative overflow-hidden bg-[#070A11]">
+      <div className="grid min-h-screen lg:grid-cols-[1.15fr_0.85fr]">
+        {/* LEFT — Service catalog */}
+        <div className="relative border-b border-white/[0.06] py-20 lg:border-b-0 lg:border-r lg:py-28">
+          <div className="mx-auto max-w-2xl px-6 lg:px-16">
+            <div className="mb-14">
+              <div className="mb-4 font-mono text-[10px] uppercase tracking-[3px] text-white/40">
+                Catálogo de serviços · 06 entregas
               </div>
-            </div>
-          </div>
-
-          {/* Right: Image + differentials */}
-          <div className="relative order-1 lg:order-2">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#4a9eff]/10 to-[#1a1a20]">
-                <Image
-                  src="/images/samir-portrait-stool.jpg"
-                  alt="Prof. Samir Tannuri consultoria magistral"
-                  fill
-                  className="object-cover object-top opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c10] via-[#0c0c10]/40 to-transparent" />
-              </div>
-
-              {/* Differentials overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="rounded-2xl border border-white/10 bg-[#08080c]/80 p-6 backdrop-blur-xl">
-                  <h4 className="mb-4 font-semibold text-[#4a9eff]">Diferenciais exclusivos</h4>
-                  <ul className="space-y-3">
-                    {differentials.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#4a9eff]" />
-                        <span className="text-sm text-white/80">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <h3 className="font-serif text-[clamp(28px,3vw,40px)] leading-[1.1] tracking-[-1px] text-white">
+                Consultoria magistral{" "}
+                <span className="italic text-[#c9a961]">desenhada ao seu balcão.</span>
+              </h3>
+              <p className="mt-5 text-[16px] leading-[1.7] text-white/55">
+                Nenhuma planilha reciclada. Um plano construído linha a linha sobre a geografia, o
+                público e o potencial específicos da sua farmácia — com metas mensuráveis de
+                lucratividade.
+              </p>
             </div>
 
-            {/* Floating badge */}
-            <div className="absolute -left-4 top-8 rounded-2xl border border-[#4a9eff]/30 bg-[#08080c]/90 p-4 backdrop-blur-xl lg:-left-12">
-              <div className="flex items-center gap-3">
-                <FlaskRound className="h-8 w-8 text-[#4a9eff]" />
+            <div className="space-y-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02]">
+              {services.map((s) => {
+                const Icon = s.icon
+                return (
+                  <article
+                    key={s.id}
+                    className="group relative flex items-start gap-5 bg-[#070A11] p-6 transition-colors hover:bg-white/[0.03] md:p-7"
+                  >
+                    <div className="flex shrink-0 flex-col items-center gap-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] transition-all group-hover:border-[#c9a961]/40 group-hover:bg-[#c9a961]/[0.06]">
+                        <Icon className="h-5 w-5 text-white/60 transition-colors group-hover:text-[#c9a961]" />
+                      </div>
+                      <span className="font-mono text-[10px] text-white/25">{s.id}</span>
+                    </div>
+
+                    <div className="flex-1">
+                      <h4
+                        className="font-serif text-[22px] leading-tight text-white"
+                        dangerouslySetInnerHTML={{ __html: s.title }}
+                      />
+                      <p
+                        className="mt-2 text-[14px] leading-[1.65] text-white/55"
+                        dangerouslySetInnerHTML={{ __html: s.desc }}
+                      />
+                    </div>
+
+                    <ArrowUpRight className="mt-3 h-4 w-4 shrink-0 text-white/25 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#c9a961]" />
+                  </article>
+                )
+              })}
+            </div>
+
+            <div className="mt-10 rounded-xl border border-white/[0.06] bg-white/[0.02] p-6">
+              <div className="flex items-start gap-4">
+                <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#4a9eff]/30 text-[10px] text-[#4a9eff]">
+                  ◆
+                </span>
                 <div>
-                  <div className="font-bold text-white">RDC 67</div>
-                  <div className="text-xs text-white/50">Conformidade</div>
+                  <div className="text-[10px] font-bold uppercase tracking-[2px] text-[#4a9eff]">
+                    Indicadores mensais
+                  </div>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-white/60">
+                    Cada consultoria magistral acompanha ticket médio, recompra, mix de
+                    especialidades e margem bruta — mês a mês, com relatório entregue ao gestor.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* RIGHT — Portrait panel */}
+        <aside className="relative overflow-hidden lg:sticky lg:top-0 lg:h-screen">
+          <div className="relative h-[420px] w-full lg:h-full">
+            <Image
+              src="/images/samir-portrait-stool.jpg"
+              alt="Consultoria magistral personalizada — Prof. Samir Tannuri"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-bl from-[#070A11]/90 via-[#070A11]/40 to-[#070A11]/80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070A11] via-transparent to-transparent" />
+          </div>
+
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage: `linear-gradient(rgba(201,169,97,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,97,1) 1px, transparent 1px)`,
+              backgroundSize: "48px 48px",
+            }}
+          />
+
+          <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[10px] uppercase tracking-[3px] text-[#c9a961]">
+                  § 03
+                </span>
+                <span className="h-px w-12 bg-[#c9a961]/40" />
+                <span className="font-mono text-[10px] uppercase tracking-[3px] text-white/40">
+                  Consultoria Magistral
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="font-serif text-[clamp(38px,4.5vw,64px)] leading-[0.98] tracking-[-1.5px] text-white">
+                Para quem faz{" "}
+                <span className="italic text-[#c9a961]">à mão.</span>
+              </h2>
+              <p className="mt-6 max-w-md text-[15px] leading-[1.7] text-white/60">
+                Farmácia magistral não é igual a nenhuma outra. Sua consultoria também não deveria
+                ser. Um plano sob medida, construído no chão do seu balcão.
+              </p>
+
+              <a
+                href="#contato"
+                className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[#c9a961] px-6 py-3.5 text-[12px] font-bold uppercase tracking-[2px] text-[#070A11] shadow-[0_10px_30px_rgba(201,169,97,0.25)] transition-all hover:bg-[#d4b673] hover:shadow-[0_14px_40px_rgba(201,169,97,0.4)]"
+              >
+                Diagnóstico Magistral
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
   )

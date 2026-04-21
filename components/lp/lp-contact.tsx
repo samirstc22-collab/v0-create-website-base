@@ -1,229 +1,262 @@
 "use client"
 
 import { useState } from "react"
-import { Send, MessageCircle, Mail, CheckCircle2, Loader2 } from "lucide-react"
+import { Send, Check, Loader2, Mail, MessageCircle, ArrowUpRight } from "lucide-react"
 
 export function LPContact() {
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     whatsapp: "",
-    interest: "",
+    interest: "industrial",
     message: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle")
 
-  const interests = [
-    "Consultoria Industrial",
-    "Consultoria Magistral",
-    "Formulator AI Lab Pro",
-    "Palestras e Cursos",
-    "Outro",
-  ]
+  const formatPhone = (v: string) => {
+    const digits = v.replace(/\D/g, "").slice(0, 11)
+    if (digits.length <= 2) return digits
+    if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+    if (digits.length <= 10)
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setStatus("loading")
+    await new Promise((r) => setTimeout(r, 1400))
+    setStatus("success")
   }
 
-  const formatWhatsApp = (value: string) => {
-    const numbers = value.replace(/\D/g, "")
-    if (numbers.length <= 2) return numbers
-    if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`
-    if (numbers.length <= 11)
-      return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`
-    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`
-  }
-
-  if (isSubmitted) {
-    return (
-      <section id="contato" className="relative overflow-hidden bg-[#08080c] py-32">
-        <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-          <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-green-500/20">
-            <CheckCircle2 className="h-10 w-10 text-green-500" />
-          </div>
-          <h2 className="font-serif text-4xl text-white">Mensagem enviada!</h2>
-          <p className="mt-4 text-lg text-white/60">
-            Obrigado pelo contato. Retornaremos em até 24 horas.
-          </p>
-          <button
-            onClick={() => {
-              setIsSubmitted(false)
-              setFormData({ name: "", email: "", whatsapp: "", interest: "", message: "" })
-            }}
-            className="mt-8 rounded-xl border border-white/20 px-6 py-3 text-white transition-colors hover:bg-white/5"
-          >
-            Enviar nova mensagem
-          </button>
-        </div>
-      </section>
-    )
-  }
+  const interests = [
+    { value: "industrial", label: "Consultoria Industrial" },
+    { value: "magistral", label: "Consultoria Magistral" },
+    { value: "labpro", label: "Formulator AI Lab Pro" },
+    { value: "palestra", label: "Palestra / Aula" },
+  ]
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-[#08080c] py-32">
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-[#c9a227]/10 blur-[120px]" />
-        <div className="absolute right-1/4 top-0 h-[300px] w-[300px] rounded-full bg-[#4a9eff]/10 blur-[100px]" />
-      </div>
+    <section id="contato" className="relative overflow-hidden bg-[#070A11] py-24 lg:py-32">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(196,210,230,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(196,210,230,0.8) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          {/* Left: Copy */}
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+          {/* Left — Editorial */}
           <div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c9a227]/30 bg-[#c9a227]/10 px-4 py-1.5">
-              <Mail className="h-4 w-4 text-[#c9a227]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#c9a227]">
-                Contato
+            <div className="mb-6 flex items-center gap-3">
+              <span className="font-mono text-[10px] uppercase tracking-[3px] text-[#4a9eff]">
+                § 05
+              </span>
+              <span className="h-px w-12 bg-[#4a9eff]/40" />
+              <span className="font-mono text-[10px] uppercase tracking-[3px] text-white/40">
+                Contato Direto
               </span>
             </div>
 
-            <h2 className="font-serif text-4xl text-white md:text-5xl">
-              Vamos conversar sobre o{" "}
-              <span className="bg-gradient-to-r from-[#c9a227] to-[#e8c547] bg-clip-text text-transparent">
-                seu projeto
-              </span>
+            <h2 className="font-serif text-[clamp(36px,5vw,58px)] leading-[1] tracking-[-1.5px] text-white">
+              Um diálogo{" "}
+              <span className="italic text-[#c9a961]">de bancada.</span>
             </h2>
-
-            <p className="mt-6 text-lg text-white/60">
-              Preencha o formulário ao lado e receba uma proposta personalizada para a sua
-              necessidade. Resposta garantida em até 24 horas.
+            <p className="mt-6 max-w-lg text-[17px] leading-[1.7] text-white/60">
+              Todo contato é respondido pessoalmente pela equipe técnica em até{" "}
+              <span className="text-white">24 horas úteis</span>. Sem bots, sem atendimento
+              terceirizado, sem intermediários.
             </p>
 
-            {/* Quick contact */}
-            <div className="mt-10 space-y-4">
+            {/* Quick channels */}
+            <div className="mt-10 space-y-3">
               <a
                 href="https://wa.me/5562999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition-all hover:border-green-500/30 hover:bg-green-500/5"
+                className="group flex items-center gap-4 rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 transition-all hover:border-[#4a9eff]/30 hover:bg-white/[0.04]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/20">
-                  <MessageCircle className="h-6 w-6 text-green-500" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] transition-all group-hover:border-[#4a9eff]/40 group-hover:bg-[#4a9eff]/[0.08]">
+                  <MessageCircle className="h-5 w-5 text-white/70 group-hover:text-[#4a9eff]" />
                 </div>
-                <div>
-                  <div className="font-semibold text-white">WhatsApp Direto</div>
-                  <div className="text-sm text-white/50">Resposta rápida para urgências</div>
+                <div className="flex-1">
+                  <div className="text-[10px] font-bold uppercase tracking-[2px] text-[#4a9eff]">
+                    WhatsApp · Canal direto
+                  </div>
+                  <div className="mt-0.5 text-[14px] text-white/85">+55 62 9 9999-9999</div>
                 </div>
+                <ArrowUpRight className="h-4 w-4 text-white/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#4a9eff]" />
               </a>
 
               <a
                 href="mailto:contato@clubedeformulas.com.br"
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition-all hover:border-[#4a9eff]/30 hover:bg-[#4a9eff]/5"
+                className="group flex items-center gap-4 rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 transition-all hover:border-[#c9a961]/30 hover:bg-white/[0.04]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#4a9eff]/20">
-                  <Mail className="h-6 w-6 text-[#4a9eff]" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] transition-all group-hover:border-[#c9a961]/40 group-hover:bg-[#c9a961]/[0.08]">
+                  <Mail className="h-5 w-5 text-white/70 group-hover:text-[#c9a961]" />
                 </div>
-                <div>
-                  <div className="font-semibold text-white">contato@clubedeformulas.com.br</div>
-                  <div className="text-sm text-white/50">Para propostas e parcerias</div>
+                <div className="flex-1">
+                  <div className="text-[10px] font-bold uppercase tracking-[2px] text-[#c9a961]">
+                    E-mail corporativo
+                  </div>
+                  <div className="mt-0.5 text-[14px] text-white/85">
+                    contato@clubedeformulas.com.br
+                  </div>
                 </div>
+                <ArrowUpRight className="h-4 w-4 text-white/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#c9a961]" />
               </a>
+            </div>
+
+            {/* Footnote */}
+            <div className="mt-10 border-t border-white/[0.06] pt-6">
+              <div className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
+                Metapharma · CNPJ 00.246.124/0001-51
+              </div>
+              <div className="mt-1 text-[12px] text-white/40">
+                Goiânia — GO · Brasil · Atendimento nacional
+              </div>
             </div>
           </div>
 
-          {/* Right: Form */}
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="mb-2 block text-sm font-medium text-white/70">Nome completo</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition-all placeholder:text-white/30 focus:border-[#c9a227]/50 focus:bg-white/[0.08]"
-                  placeholder="Seu nome"
-                />
+          {/* Right — Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.03] to-white/[0.01] p-8 backdrop-blur-sm lg:p-10"
+          >
+            {status === "success" ? (
+              <div className="flex min-h-[520px] flex-col items-center justify-center text-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#4a9eff]/30 bg-[#4a9eff]/[0.08]">
+                  <Check className="h-8 w-8 text-[#4a9eff]" />
+                </div>
+                <h3 className="mt-6 font-serif text-3xl text-white">Recebido.</h3>
+                <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-white/55">
+                  Sua solicitação foi registrada. Retornaremos pessoalmente em até 24 horas úteis.
+                </p>
+                <div className="mt-6 font-mono text-[10px] uppercase tracking-[2.5px] text-white/30">
+                  Referência · SMT-{Date.now().toString().slice(-6)}
+                </div>
               </div>
+            ) : (
+              <>
+                <div className="mb-8 flex items-center justify-between border-b border-white/[0.06] pb-5">
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
+                      Formulário · Secure
+                    </div>
+                    <h3 className="mt-2 font-serif text-2xl text-white">Solicitar contato</h3>
+                  </div>
+                  <span className="rounded-md border border-[#4a9eff]/25 bg-[#4a9eff]/[0.08] px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-[#7eb8ff]">
+                    24h reply
+                  </span>
+                </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-white/70">E-mail</label>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div>
+                    <label className="mb-2 block text-[10px] font-bold uppercase tracking-[2px] text-white/50">
+                      Nome completo
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      className="w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-[14px] text-white outline-none transition-all focus:border-[#4a9eff]/50 focus:bg-white/[0.04] placeholder:text-white/25"
+                      placeholder="Ana Lima"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-[10px] font-bold uppercase tracking-[2px] text-white/50">
+                      WhatsApp
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      value={form.whatsapp}
+                      onChange={(e) =>
+                        setForm({ ...form, whatsapp: formatPhone(e.target.value) })
+                      }
+                      className="w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-[14px] text-white outline-none transition-all focus:border-[#4a9eff]/50 focus:bg-white/[0.04] placeholder:text-white/25"
+                      placeholder="(62) 9 9999-9999"
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-5">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[2px] text-white/50">
+                    E-mail profissional
+                  </label>
                   <input
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition-all placeholder:text-white/30 focus:border-[#c9a227]/50 focus:bg-white/[0.08]"
-                    placeholder="seu@email.com"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    className="w-full rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-[14px] text-white outline-none transition-all focus:border-[#4a9eff]/50 focus:bg-white/[0.04] placeholder:text-white/25"
+                    placeholder="ana@farmacia.com.br"
                   />
                 </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-white/70">WhatsApp</label>
-                  <input
-                    type="tel"
+
+                <div className="mt-5">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[2px] text-white/50">
+                    Interesse principal
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {interests.map((i) => (
+                      <button
+                        key={i.value}
+                        type="button"
+                        onClick={() => setForm({ ...form, interest: i.value })}
+                        className={`rounded-lg border px-3 py-2.5 text-[12px] font-semibold transition-all ${
+                          form.interest === i.value
+                            ? "border-[#4a9eff]/50 bg-[#4a9eff]/[0.08] text-[#7eb8ff]"
+                            : "border-white/10 bg-white/[0.02] text-white/60 hover:border-white/20 hover:text-white/80"
+                        }`}
+                      >
+                        {i.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-5">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[2px] text-white/50">
+                    Mensagem
+                  </label>
+                  <textarea
+                    rows={4}
                     required
-                    value={formData.whatsapp}
-                    onChange={(e) =>
-                      setFormData({ ...formData, whatsapp: formatWhatsApp(e.target.value) })
-                    }
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition-all placeholder:text-white/30 focus:border-[#c9a227]/50 focus:bg-white/[0.08]"
-                    placeholder="(00) 00000-0000"
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    className="w-full resize-none rounded-lg border border-white/10 bg-white/[0.02] px-4 py-3 text-[14px] text-white outline-none transition-all focus:border-[#4a9eff]/50 focus:bg-white/[0.04] placeholder:text-white/25"
+                    placeholder="Conte-nos brevemente sobre sua operação, desafio atual e escopo esperado."
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-white/70">Interesse</label>
-                <select
-                  required
-                  value={formData.interest}
-                  onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition-all focus:border-[#c9a227]/50 focus:bg-white/[0.08]"
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-[#c9a961] px-6 py-4 text-[12px] font-bold uppercase tracking-[2px] text-[#070A11] shadow-[0_12px_40px_rgba(201,169,97,0.2)] transition-all hover:bg-[#d4b673] hover:shadow-[0_16px_50px_rgba(201,169,97,0.35)] disabled:opacity-70"
                 >
-                  <option value="" className="bg-[#08080c]">
-                    Selecione uma opção
-                  </option>
-                  {interests.map((interest) => (
-                    <option key={interest} value={interest} className="bg-[#08080c]">
-                      {interest}
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  {status === "loading" ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      Enviar solicitação
+                      <Send className="h-4 w-4" />
+                    </>
+                  )}
+                </button>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-white/70">Mensagem</label>
-                <textarea
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition-all placeholder:text-white/30 focus:border-[#c9a227]/50 focus:bg-white/[0.08]"
-                  placeholder="Conte-nos sobre seu projeto ou necessidade..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="group flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#c9a227] to-[#b8941f] px-8 py-4 font-bold text-[#08080c] shadow-[0_10px_40px_rgba(201,162,39,0.3)] transition-all hover:shadow-[0_15px_50px_rgba(201,162,39,0.4)] disabled:opacity-70"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="h-5 w-5 animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  <>
-                    Enviar mensagem
-                    <Send className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </>
-                )}
-              </button>
-
-              <p className="text-center text-xs text-white/40">
-                Suas informações estao seguras e nao serao compartilhadas.
-              </p>
-            </form>
-          </div>
+                <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[2px] text-white/30">
+                  Dados tratados conforme LGPD · Sem spam
+                </p>
+              </>
+            )}
+          </form>
         </div>
       </div>
     </section>

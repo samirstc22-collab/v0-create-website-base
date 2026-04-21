@@ -8,20 +8,20 @@ import { LPContact } from "@/components/lp/lp-contact"
 import { LPFooter } from "@/components/lp/lp-footer"
 
 export const metadata: Metadata = {
-  title: "Prof. Samir Tannuri — Consultoria P&D e Formulator AI Lab Pro",
+  title: "Lab Pro — Prof. Samir Tannuri · Laboratório de Alta Performance",
   description:
-    "Ciência que vira fórmula. Fórmula que vira resultado. Consultoria P&D Industrial e Magistral, cursos e o lançamento do Formulator AI Lab Pro — infraestrutura inteligente de formulação.",
+    "Jornal científico de luxo encontra interface SaaS. Consultoria P&D Industrial, Magistral e o Formulator AI Lab Pro — infraestrutura inteligente de formulação treinada sobre 4.000+ fórmulas validadas.",
   openGraph: {
-    title: "Prof. Samir Tannuri — Consultoria P&D e Formulator AI Lab Pro",
+    title: "Lab Pro — Prof. Samir Tannuri",
     description:
-      "P&D cosmético de alta performance para indústrias, marcas e farmácias magistrais. Conheça o Formulator AI Lab Pro.",
+      "P&D cosmético de alta performance + Formulator AI Lab Pro.",
     type: "website",
   },
 }
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-[#08080c]">
+    <main className="min-h-screen bg-[#070A11] text-white">
       <LPHero />
       <LPMissions />
       <LPIndustrial />

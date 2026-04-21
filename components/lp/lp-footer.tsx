@@ -1,134 +1,114 @@
 import Link from "next/link"
-import { Linkedin, Instagram, FileText, ArrowUpRight, Beaker } from "lucide-react"
+import { Linkedin, Instagram, FileText, ArrowUpRight } from "lucide-react"
 
 export function LPFooter() {
   const socials = [
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/samirtannuri",
-    },
-    {
-      icon: Instagram,
-      label: "@cienciadapele",
-      href: "https://instagram.com/cienciadapele",
-    },
-    {
-      icon: FileText,
-      label: "Currículo Lattes",
-      href: "http://lattes.cnpq.br/samirtannuri",
-    },
-  ]
-
-  const links = [
-    { label: "Home", href: "/" },
-    { label: "Sobre", href: "/sobre" },
-    { label: "Cursos", href: "/cursos" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contato", href: "/contato" },
+    { icon: Linkedin, label: "LinkedIn", meta: "/in/samirtannuri", href: "#" },
+    { icon: Instagram, label: "Instagram", meta: "@cienciadapele", href: "#" },
+    { icon: FileText, label: "Lattes · CNPq", meta: "Currículo acadêmico", href: "#" },
   ]
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/5 bg-[#050508] py-16">
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-4">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#c9a227]/20">
-                <Beaker className="h-5 w-5 text-[#c9a227]" />
-              </div>
-              <span className="font-serif text-xl text-white">Clube de Fórmulas</span>
-            </div>
-            <p className="mb-6 max-w-sm text-sm leading-relaxed text-white/40">
-              Prof. Samir Tannuri Cerveira
-              <br />
-              Pesquisador · Consultor Industrial · Palestrante
-              <br />
-              Metapharma · CNPJ 00.246.124/0001-51
-            </p>
+    <footer className="relative overflow-hidden border-t border-white/[0.06] bg-[#050710]">
+      {/* Grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(196,210,230,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(196,210,230,0.8) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
 
-            {/* Socials */}
-            <div className="flex gap-3">
-              {socials.map((social, i) => (
-                <a
-                  key={i}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.02] px-4 py-2.5 text-sm text-white/60 transition-all hover:border-[#c9a227]/30 hover:bg-[#c9a227]/5 hover:text-[#c9a227]"
-                >
-                  <social.icon className="h-4 w-4" />
-                  <span className="hidden sm:inline">{social.label}</span>
-                </a>
-              ))}
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 lg:px-12">
+        {/* Top editorial */}
+        <div className="grid gap-12 border-b border-white/[0.06] pb-14 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#c9a961]/25 bg-[#c9a961]/[0.06] font-serif text-xl text-[#c9a961]">
+                Cf
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="font-serif text-lg text-white">Clube de Fórmulas</span>
+                <span className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/40">
+                  Prof. Samir Tannuri
+                </span>
+              </div>
             </div>
+            <p className="mt-6 max-w-md text-[14px] leading-[1.7] text-white/50">
+              Consultoria científica em P&amp;D cosmético — para indústrias Grau 1 e 2, marcas
+              independentes e farmácias magistrais de excelência. Pesquisa CNPq-UNICAMP, publicação
+              peer-reviewed indexada e missões técnicas em três continentes.
+            </p>
           </div>
 
-          {/* Links */}
+          {/* Navegação */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/70">
-              Navegação
-            </h4>
-            <ul className="space-y-3">
-              {links.map((link, i) => (
-                <li key={i}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/50 transition-colors hover:text-[#c9a227]"
-                  >
-                    {link.label}
-                  </Link>
+            <div className="mb-4 font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
+              Landing Page
+            </div>
+            <ul className="space-y-2 text-[14px]">
+              {[
+                { href: "#missoes", label: "Missões &amp; Formação" },
+                { href: "#industrial", label: "Consultoria Industrial" },
+                { href: "#magistral", label: "Consultoria Magistral" },
+                { href: "#lab-pro", label: "Formulator AI Lab Pro" },
+                { href: "#contato", label: "Contato" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    className="text-white/60 transition-colors hover:text-white"
+                    dangerouslySetInnerHTML={{ __html: l.label }}
+                  />
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* CTA */}
+          {/* Socials */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/70">
-              Serviços
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#consultoria-industrial"
-                  className="group flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-[#c9a227]"
-                >
-                  P&D Industrial
-                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#consultoria-magistral"
-                  className="group flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-[#4a9eff]"
-                >
-                  P&D Magistral
-                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#formulator-ai"
-                  className="group flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-[#c9a227]"
-                >
-                  Formulator AI
-                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
-              </li>
+            <div className="mb-4 font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
+              Redes oficiais
+            </div>
+            <ul className="space-y-2">
+              {socials.map((s) => {
+                const Icon = s.icon
+                return (
+                  <li key={s.label}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-3 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 transition-all hover:border-white/15 hover:bg-white/[0.04]"
+                    >
+                      <Icon className="h-4 w-4 text-white/60 transition-colors group-hover:text-[#c9a961]" />
+                      <div className="flex-1 leading-tight">
+                        <div className="text-[13px] text-white/90">{s.label}</div>
+                        <div className="text-[10px] text-white/40">{s.meta}</div>
+                      </div>
+                      <ArrowUpRight className="h-3.5 w-3.5 text-white/25 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#c9a961]" />
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
-          <p className="text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Clube de Fórmulas. Todos os direitos reservados.
-          </p>
-          <p className="text-xs text-white/30">
-            Nota: As fotos utilizadas sao originais do Prof. Samir Tannuri.
-          </p>
+        {/* Bottom bar */}
+        <div className="flex flex-col items-start justify-between gap-4 pt-8 md:flex-row md:items-center">
+          <div className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
+            © {new Date().getFullYear()} · Metapharma · CNPJ 00.246.124/0001-51
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.02] px-4 py-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-white/70 transition-all hover:border-white/20 hover:text-white"
+            >
+              Ir ao site principal
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
