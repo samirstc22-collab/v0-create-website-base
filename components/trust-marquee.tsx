@@ -1,26 +1,25 @@
 export function TrustMarquee() {
   const items = [
-    "Farmacêutico USF",
-    "Bolsista CNPq · UNICAMP",
-    "Publicação Peer-Reviewed DOI",
+    "Farmaceutico USF",
+    "Bolsista CNPq | UNICAMP",
+    "Publicacao Peer-Reviewed DOI",
     "In-Cosmetics Global Paris 2025",
-    "1° Peeling Azelaico Pasta Anidra",
-    "Criador Técnica Fenol FREE",
-    "Missões Paris · Amsterdam · Japão",
+    "1o Peeling Azelaico Pasta Anidra",
+    "Criador Tecnica Fenol FREE",
+    "Missoes Paris | Amsterdam | Japao",
     "Speaker 7+ Congressos",
-    "Co-Organizador 1° Simpósio de Peelings",
+    "Co-Organizador 1o Simposio de Peelings",
   ]
 
-  // Duplicate for seamless marquee
   const allItems = [...items, ...items]
 
   return (
-    <div className="bg-off-white border-t border-b border-border py-[18px] overflow-hidden">
-      <div className="flex gap-14 animate-marquee whitespace-nowrap w-max">
+    <div className="bg-navy-deep border-t border-b border-white/5 py-5 overflow-hidden">
+      <div className="flex gap-16 animate-marquee whitespace-nowrap w-max">
         {allItems.map((item, i) => (
-          <div key={i} className="flex items-center gap-3.5">
-            <div className="w-[5px] h-[5px] rounded-full bg-copper shrink-0" />
-            <span className="text-[11.5px] text-muted tracking-[1px] uppercase font-semibold">
+          <div key={i} className="flex items-center gap-4">
+            <div className="w-1.5 h-1.5 rounded-full bg-copper shrink-0" />
+            <span className="text-xs text-white/45 tracking-[2px] uppercase font-semibold">
               {item}
             </span>
           </div>
