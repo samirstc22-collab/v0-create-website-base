@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Calendar, Mic } from "lucide-react"
 import { FlaskIllustration, HexagonPattern } from "./illustrations"
 
@@ -53,8 +54,15 @@ export function Speaker() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Photo Side */}
           <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(11,29,53,0.15)] relative hidden lg:block">
-            <div className="w-full aspect-[4/5] bg-gradient-to-b from-navy-mid to-navy-deep flex items-center justify-center">
-              <span className="font-serif text-[120px] text-white/10">SP</span>
+            <div className="relative w-full aspect-[4/5]">
+              <Image
+                src="/images/samir-stage-gesture.jpg"
+                alt="Prof. Samir Tannuri palestrando em congresso nacional"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 0px, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
             <div className="absolute bottom-6 left-6 right-6 bg-black/75 backdrop-blur-xl border border-white/15 rounded-2xl p-5 text-white">
               <div className="flex items-center gap-2 mb-1">
@@ -62,7 +70,7 @@ export function Speaker() {
                 <div className="font-serif text-lg">Prof. Samir Tannuri</div>
               </div>
               <div className="text-sm text-white/70 tracking-wide">
-                20o Congresso Consulfarma | 2025
+                20º Congresso Consulfarma · 2025
               </div>
             </div>
           </div>
