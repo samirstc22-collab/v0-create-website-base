@@ -22,9 +22,9 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre" },
     { href: "/cursos", label: "Cursos" },
+    { href: "/formularios", label: "Formulários" },
     { href: "/consultoria", label: "Consultoria" },
     { href: "/formulator-ai", label: "Formulator AI", highlight: true },
-    { href: "/blog", label: "Blog" },
   ]
 
   const isActive = (href: string) => {
