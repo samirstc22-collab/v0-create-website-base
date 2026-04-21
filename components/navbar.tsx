@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, ChevronRight } from "lucide-react"
+import { Menu, X, ChevronRight, ShoppingBag } from "lucide-react"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,7 +25,6 @@ export function Navbar() {
     { href: "/consultoria", label: "Consultoria" },
     { href: "/lp", label: "Lab Pro", highlight: true },
     { href: "/blog", label: "Blog" },
-    { href: "/contato", label: "Contato" },
   ]
 
   const isActive = (href: string) => {
@@ -113,15 +112,13 @@ export function Navbar() {
               </Link>
             )
           })}
-          <a
-            href="https://pay.hotmart.com/A105091762I"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/loja"
             className="ml-4 bg-gradient-to-br from-copper to-copper-deep border-none rounded-xl py-3 px-7 text-white font-bold text-sm shadow-[0_4px_20px_rgba(192,133,74,0.35)] hover:translate-y-[-2px] hover:shadow-[0_8px_28px_rgba(192,133,74,0.45)] transition-all duration-300 tracking-wide flex items-center gap-2"
           >
-            Acessar Materiais
-            <ChevronRight className="w-4 h-4" />
-          </a>
+            <ShoppingBag className="w-4 h-4" />
+            Loja
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -157,14 +154,14 @@ export function Navbar() {
                 <ChevronRight className={`w-5 h-5 ${isActive(link.href) ? "text-copper" : "text-muted"}`} />
               </Link>
             ))}
-            <a
-              href="https://pay.hotmart.com/A105091762I"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 bg-gradient-to-br from-copper to-copper-deep rounded-xl py-4 px-6 text-white font-bold text-base text-center shadow-[0_4px_20px_rgba(192,133,74,0.3)]"
+            <Link
+              href="/loja"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-4 bg-gradient-to-br from-copper to-copper-deep rounded-xl py-4 px-6 text-white font-bold text-base text-center shadow-[0_4px_20px_rgba(192,133,74,0.3)] flex items-center justify-center gap-2"
             >
-              Acessar Materiais
-            </a>
+              <ShoppingBag className="w-5 h-5" />
+              Loja · 60+ Artefatos
+            </Link>
           </div>
         </div>
       )}

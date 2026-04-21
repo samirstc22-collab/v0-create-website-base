@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { ArrowUpRight, ChevronRight } from "lucide-react"
+import { ArrowUpRight, ChevronRight, Instagram } from "lucide-react"
 
 const SERVICES = [
   {
@@ -59,7 +59,7 @@ export function HomeHeroLight() {
   const current = SERVICES[activeService]
 
   return (
-    <section className="relative overflow-hidden bg-[#dde6f0] pt-28 pb-20 lg:pt-32 lg:pb-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#b8c8d8] via-[#c2d0de] to-[#adbdcf] pt-28 pb-20 lg:pt-32 lg:pb-28">
       {/* Soft navy grid */}
       <div
         aria-hidden
@@ -144,45 +144,69 @@ export function HomeHeroLight() {
               <em className="italic text-[#0096B4]">resultado</em>.
             </h1>
 
-            {/* Subhead */}
-            <p className="text-lg md:text-xl text-[#334155] leading-[1.7] max-w-[620px] mb-10">
-              Pesquisa & desenvolvimento cosmético para{" "}
-              <strong className="text-[#0C2340]">indústrias, marcas independentes e farmácias magistrais</strong>
-              {" "}de excelência. Bancada CNPq-UNICAMP, publicação peer-reviewed indexada e missões
-              técnicas em três continentes — convertidas em protocolos aplicáveis ao seu balcão.
-            </p>
+            {/* Subhead — highlighted card */}
+            <div className="relative mb-10 max-w-[640px]">
+              <div className="absolute -left-1 top-3 bottom-3 w-1 bg-[#B8783D] rounded-full" />
+              <div className="bg-white/70 backdrop-blur-sm border border-[#0C2340]/10 rounded-2xl p-6 pl-8 shadow-[0_20px_40px_-20px_rgba(12,35,64,0.18)]">
+                <p className="text-lg md:text-xl text-[#1e293b] leading-[1.65]">
+                  Pesquisa & desenvolvimento cosmético para{" "}
+                  <strong className="text-[#0C2340] bg-[#B8783D]/15 px-1.5 rounded">
+                    indústrias, marcas independentes e farmácias magistrais
+                  </strong>{" "}
+                  de excelência.
+                </p>
+                <p className="text-sm md:text-base text-[#475569] leading-[1.65] mt-3">
+                  Bancada <strong className="text-[#0C2340]">CNPq-UNICAMP</strong>, publicação
+                  peer-reviewed indexada (DOI) e missões técnicas em{" "}
+                  <strong className="text-[#0C2340]">três continentes</strong> — convertidas em
+                  protocolos aplicáveis ao seu balcão.
+                </p>
+              </div>
+            </div>
 
             {/* CTA row */}
             <div className="flex flex-wrap gap-3 mb-10">
               <Link
-                href="/consultoria"
-                className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-6 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-[#0a1a33] transition-colors shadow-[0_8px_24px_rgba(12,35,64,0.2)]"
+                href="/loja"
+                className="group inline-flex items-center gap-2 bg-gradient-to-br from-[#B8783D] to-[#8a5729] text-white px-7 py-4 rounded-xl font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-transform shadow-[0_12px_30px_rgba(184,120,61,0.4)]"
               >
-                Diagnóstico da farmácia
+                Ver a Loja · 60+ Artefatos
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
               <Link
-                href="/lp"
-                className="group inline-flex items-center gap-2 bg-white border border-[#0C2340]/15 text-[#0C2340] px-6 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:border-[#0C2340]/30 transition-colors"
+                href="/consultoria"
+                className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-6 py-4 rounded-xl font-semibold text-sm tracking-wide hover:bg-[#0a1a33] transition-colors"
               >
-                Lab Pro · IA de Formulação
+                Diagnóstico da farmácia
                 <ChevronRight className="w-4 h-4" />
               </Link>
+              <a
+                href="https://instagram.com/samir_farma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 bg-white border border-[#0C2340]/15 text-[#0C2340] px-5 py-4 rounded-xl font-semibold text-sm tracking-wide hover:border-[#B8783D]/40 hover:text-[#B8783D] transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+                @samir_farma
+              </a>
             </div>
 
-            {/* Stats strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-[#0C2340]/10">
+            {/* Stats strip — reinforced card */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0C2340]/10 rounded-2xl overflow-hidden border border-[#0C2340]/10 shadow-[0_20px_40px_-20px_rgba(12,35,64,0.15)]">
               {[
-                { num: "4.000+", label: "Fórmulas validadas" },
-                { num: "800+", label: "Palestras Brasil afora" },
-                { num: "15+", label: "Países em missão" },
-                { num: "60+", label: "Artefatos editoriais" },
+                { num: "4.000+", label: "Fórmulas validadas", accent: "#B8783D" },
+                { num: "800+", label: "Palestras Brasil afora", accent: "#0C2340" },
+                { num: "15+", label: "Países em missão", accent: "#0096B4" },
+                { num: "60+", label: "Artefatos editoriais", accent: "#B8783D" },
               ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-serif text-2xl md:text-3xl text-[#0C2340] tracking-tight mb-1">
+                <div key={stat.label} className="bg-white/85 backdrop-blur-sm px-5 py-5">
+                  <div
+                    className="font-serif text-3xl md:text-4xl tracking-tight mb-1 leading-none"
+                    style={{ color: stat.accent }}
+                  >
                     {stat.num}
                   </div>
-                  <div className="text-[10px] tracking-[1.5px] uppercase text-[#64748b] font-semibold leading-tight">
+                  <div className="text-[10px] tracking-[1.5px] uppercase text-[#475569] font-bold leading-tight">
                     {stat.label}
                   </div>
                 </div>
