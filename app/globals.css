@@ -1,0 +1,238 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Navy Colors */
+  --navy: #0b1d35;
+  --navy-deep: #071629;
+  --navy-mid: #132b4d;
+
+  /* Teal Colors */
+  --teal: #0a8f9e;
+  --teal-light: #12b5c8;
+  --teal-glow: rgba(10, 143, 158, 0.12);
+
+  /* Copper Colors */
+  --copper: #c0854a;
+  --copper-light: #d4a76a;
+  --copper-deep: #a86f38;
+  --copper-glow: rgba(192, 133, 74, 0.15);
+
+  /* Gold */
+  --gold: #d4af37;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --off-white: #fafaf8;
+  --cream: #f5f0e8;
+  --sand: #ede4d6;
+  --dark: #0f0f0f;
+  --body: #3a3a3a;
+  --muted: #8a8a8a;
+  --border: #e8e3db;
+
+  /* Base tokens */
+  --background: var(--white);
+  --foreground: var(--body);
+  --primary: var(--copper);
+  --primary-foreground: var(--white);
+  --secondary: var(--navy);
+  --secondary-foreground: var(--white);
+  --accent: var(--teal);
+  --accent-foreground: var(--white);
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-mid: var(--navy-mid);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-copper: var(--copper);
+  --color-copper-light: var(--copper-light);
+  --color-copper-deep: var(--copper-deep);
+  --color-gold: var(--gold);
+  --color-off-white: var(--off-white);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-dark: var(--dark);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(192, 133, 74, 0.25);
+  }
+
+  img {
+    @apply max-w-full block;
+  }
+
+  a {
+    @apply no-underline text-inherit;
+  }
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-marquee {
+  animation: marquee 42s linear infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+/* Gradient text utilities */
+.text-gradient-copper {
+  background: linear-gradient(135deg, var(--copper-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, var(--teal-light), #7fe5ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cover gradient variants */
+.cover-regen {
+  background: linear-gradient(160deg, #1a4d5c, #0b1d35 70%, #050e1b);
+}
+.cover-melasma {
+  background: linear-gradient(160deg, #6b2737, #2d1b2d 60%, #0f0818);
+}
+.cover-peptides {
+  background: linear-gradient(160deg, #1e4a6b, #0f2a4a 60%, #050e1b);
+}
+.cover-cicatriz {
+  background: linear-gradient(160deg, #3d5a3d, #1e3a2b 60%, #0a1a14);
+}
+.cover-veiculos {
+  background: linear-gradient(160deg, #5c4d3d, #2d2418 60%, #0f0a05);
+}
+.cover-bases {
+  background: linear-gradient(160deg, #4a3d5c, #241d38 60%, #0e0a1a);
+}
+.cover-terapeutico {
+  background: linear-gradient(160deg, #2d4a5c, #1a2d3d 60%, #050e1b);
+}
+.cover-clareadores {
+  background: linear-gradient(160deg, #7a5c3d, #3d2d1a 60%, #1a0f05);
+}
+.cover-growth {
+  background: linear-gradient(160deg, #2d5c4d, #1a3d2d 60%, #05140a);
+}
+.cover-atual {
+  background: linear-gradient(160deg, #4a2d5c, #2d1a3d 60%, #100518);
+}
+.cover-curso {
+  background: linear-gradient(160deg, #c0854a, #8b5a2b 60%, #3d2514);
+}
+.cover-peelings {
+  background: linear-gradient(160deg, #5c3d3d, #3d1f1f 60%, #1a0a0a);
+}
+
+/* Blog cover variants */
+.b-ghkcu {
+  background: linear-gradient(160deg, #1a4d5c, #0b2d3f);
+}
+.b-fenol {
+  background: linear-gradient(160deg, #5c3d3d, #3d1f1f);
+}
+.b-nano {
+  background: linear-gradient(160deg, #2d4a5c, #0f2a3d);
+}
+.b-fotoprot {
+  background: linear-gradient(160deg, #4a2d5c, #2d1a3d);
+}
+.b-melasma {
+  background: linear-gradient(160deg, #6b2737, #2d1b2d);
+}
+.b-growth {
+  background: linear-gradient(160deg, #2d5c4d, #1a3d2d);
+}
+
+/* Mission card visual variants */
+.mission-paris {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);
+}
+.mission-amsterdam {
+  background: linear-gradient(135deg, #2d4a3e, #1e3a5f, #0f4c75);
+}
+.mission-japan {
+  background: linear-gradient(135deg, #3d1f3d, #1a1a2e, #2d1b4e);
+}
