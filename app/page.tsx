@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/navbar"
-import { Hero } from "@/components/hero"
+import { DynamicBanner } from "@/components/dynamic-banner"
 import { TrustMarquee } from "@/components/trust-marquee"
 import { BigStats } from "@/components/big-stats"
 import { HomeAboutPreview } from "@/components/home-about-preview"
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
+      <DynamicBanner />
       <TrustMarquee />
       <BigStats />
       <HomeAboutPreview />
