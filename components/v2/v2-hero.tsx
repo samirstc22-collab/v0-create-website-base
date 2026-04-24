@@ -39,22 +39,22 @@ export function V2Hero() {
           </div>
 
           <h1 className="font-serif text-[#0f2419] text-[clamp(44px,6.8vw,84px)] leading-[0.98] tracking-[-0.02em] mb-8">
-            A farmácia magistral,{" "}
-            <em className="text-[#1a3d2e]">reescrita</em> em{" "}
+            Tecnologia farmacêutica,{" "}
+            <em className="text-[#1a3d2e]">para quem</em>{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">ciência</span>
+              <span className="relative z-10">não pode errar</span>
               <span className="absolute bottom-2 left-0 right-0 h-3 bg-[#c9a961]/40 -z-0" />
             </span>
             .
           </h1>
 
           <p className="text-lg md:text-xl text-[#0f2419]/70 leading-[1.7] max-w-[580px] mb-10">
-            Vinte e quatro anos de bancada, vinte indústrias atendidas, três continentes
-            percorridos.{" "}
+            Seis anos coordenando P&D no maior grupo magistral do Brasil, 500+ farmácias
+            atendidas, 1.000+ formuladores treinados.{" "}
             <span className="text-[#0f2419]">
-              Um método autoral que traduz evidência científica em lucro previsível
+              Consultoria técnica sob medida para indústrias, magistrais e marcas
             </span>{" "}
-            — do gral de porcelana ao caixa do fim do mês.
+            — prática industrial real, não teoria de sala de aula.
           </p>
 
           <div className="flex flex-wrap items-center gap-5">
@@ -76,10 +76,10 @@ export function V2Hero() {
           {/* Signature row */}
           <div className="mt-14 pt-8 border-t border-[#1a3d2e]/12 flex flex-wrap items-center gap-x-10 gap-y-4">
             {[
-              { n: "26", l: "capitais visitadas" },
-              { n: "15+", l: "países em missão" },
-              { n: "12k", l: "alunos formados" },
-              { n: "4k+", l: "fórmulas validadas" },
+              { n: "6 anos", l: "coordenando P&D" },
+              { n: "500+", l: "farmácias atendidas" },
+              { n: "1.000+", l: "formuladores treinados" },
+              { n: "3", l: "continentes em missão" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-serif text-3xl text-[#1a3d2e] leading-none">
@@ -99,7 +99,7 @@ export function V2Hero() {
           <div className="relative rounded-[28px] overflow-hidden border border-[#1a3d2e]/15 aspect-[4/5] shadow-[0_30px_80px_rgba(15,36,25,0.25)]">
             <Image
               src="/images/samir-portrait-stool.jpg"
-              alt="Prof. Samir Tannuri"
+              alt="Samir Tannuri — Consultor em tecnologia farmacêutica"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 480px"
@@ -111,10 +111,10 @@ export function V2Hero() {
           {/* Credential tags */}
           <div className="absolute -left-4 md:-left-8 bottom-14 bg-[#f5f1e8] border border-[#1a3d2e]/12 rounded-2xl px-5 py-4 shadow-xl">
             <div className="text-[10px] uppercase tracking-[2px] text-[#1a3d2e]/60 font-bold">
-              Pesquisador associado
+              Delegado Técnico
             </div>
             <div className="font-serif text-xl text-[#0f2419] mt-1">
-              CNPq · UNICAMP
+              In-Cosmetics · Paris 2025
             </div>
           </div>
           <div className="absolute -right-4 md:-right-8 top-16 bg-[#1a3d2e] text-[#f5f1e8] rounded-2xl px-5 py-4 shadow-xl">

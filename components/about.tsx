@@ -2,12 +2,12 @@ import { Check } from "lucide-react"
 
 export function About() {
   const checkItems = [
-    "Bolsista CNPq pesquisando ativos em UNICAMP",
-    "Speaker convidado em 7+ congressos nacionais",
+    "6 anos coordenando P&D no maior grupo magistral do Brasil",
+    "Delegado técnico In-Cosmetics Global Paris 2025",
     "Publicação peer-reviewed com DOI indexado",
-    "Co-organizador do 1° Simpósio de Peelings",
+    "Co-organizador do 1° Simpósio de Peelings Químicos do Brasil",
     "Missões técnicas em Paris, Amsterdam e Japão",
-    "Consultor P&D de 20+ indústrias cosméticas",
+    "500+ farmácias atendidas e 1.000+ formuladores treinados",
   ]
 
   return (
@@ -15,14 +15,14 @@ export function About() {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
           <span className="text-[11.5px] font-bold tracking-[2.5px] uppercase text-copper inline-block mb-3.5">
-            Quem é Samir Tannuri
+            Quem conduz a ST Farma
           </span>
           <h2 className="font-serif font-normal text-[clamp(32px,4vw,44px)] text-navy mb-4 leading-[1.15] tracking-[-0.5px]">
-            Ciência transformada em resultado clínico
+            Prática industrial real, não teoria de sala de aula
           </h2>
           <p className="text-[15px] text-muted max-w-[580px] mx-auto leading-[1.7]">
-            Farmacêutico pela USF, pesquisador CNPq na UNICAMP e consultor industrial com mais de
-            duas décadas de experiência em P&D cosmético.
+            Samir Tannuri — seis anos coordenando P&D no maior grupo magistral do Brasil, mais de
+            500 farmácias atendidas tecnicamente e 1.000+ formuladores treinados.
           </p>
         </div>
 
@@ -34,8 +34,8 @@ export function About() {
                 <span className="font-serif text-[100px] text-white/10">ST</span>
               </div>
               <div className="absolute bottom-5 left-5 right-5 bg-white/[0.96] backdrop-blur-[16px] rounded-[14px] p-4 px-5 shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
-                <div className="font-serif text-[15px] text-navy">Prof. Samir Tannuri</div>
-                <div className="text-[11px] text-muted mt-0.5">Farmacêutico · Pesquisador CNPq</div>
+                <div className="font-serif text-[15px] text-navy">Samir Tannuri</div>
+                <div className="text-[11px] text-muted mt-0.5">Consultor em Tecnologia Farmacêutica</div>
               </div>
             </div>
           </div>
@@ -43,21 +43,23 @@ export function About() {
           {/* Text Side */}
           <div className="flex-1 min-w-[300px]">
             <p className="text-[15.5px] leading-[1.85] mb-[18px] text-body">
-              <strong className="text-navy font-semibold">Samir Tannuri Cerveira</strong> é um dos
-              nomes de referência no P&D cosmético brasileiro. Com formação em Farmácia pela
-              Universidade São Francisco e pesquisa de ponta na UNICAMP, desenvolve formulações
-              magistrais e industriais que conectam ciência de bancada ao resultado clínico.
+              <strong className="text-navy font-semibold">Samir Tannuri Cerveira</strong> passou os
+              últimos seis anos coordenando o P&D de cosméticos no{" "}
+              <strong className="text-navy font-semibold">maior grupo magistral do Brasil</strong>.
+              Nesse período, formulou, escalonou, resolveu desvio de lote, atendeu tecnicamente mais
+              de 500 farmácias magistrais e treinou mais de 1.000 formuladores no país inteiro.
             </p>
             <p className="text-[15.5px] leading-[1.85] mb-[18px] text-body">
-              Sua trajetória inclui consultoria técnica para mais de <strong className="text-navy font-semibold">20 indústrias cosméticas</strong>,
-              criação de 40+ marcas independentes e a produção de materiais científicos que já
-              impactaram milhares de profissionais de saúde.
+              A <strong className="text-navy font-semibold">ST Farma</strong> nasce para levar essa
+              vivência operacional para dentro da sua empresa: diagnóstico técnico, reformulação de
+              portfólio, transferência de tecnologia, sourcing internacional e due diligence de
+              ingredientes.
             </p>
             <p className="text-[15.5px] leading-[1.85] mb-[18px] text-body">
-              Criador da <strong className="text-navy font-semibold">Técnica Fenol FREE</strong> e
-              pioneiro no desenvolvimento do primeiro peeling de ácido azelaico em pasta anidra do
-              Brasil, Samir também lidera missões técnicas internacionais em Paris, Amsterdam e
-              Japão.
+              Criador do primeiro peeling de ácido azelaico em pasta anidra do mundo, autor da{" "}
+              <strong className="text-navy font-semibold">Técnica Fenol FREE</strong> e coautor de
+              paper peer-reviewed sobre fotoproteção em peles negras. Delegado técnico In-Cosmetics
+              Global Paris 2025, com missões em Amsterdam e no Japão.
             </p>
 
             {/* Check Grid */}
@@ -75,7 +77,7 @@ export function About() {
               <p className="font-serif italic text-[16px] text-navy leading-[1.6] mb-1.5">
                 {'"'}Fórmula boa não nasce de opinião — nasce de evidência, método e iteração.{'"'}
               </p>
-              <span className="text-[12px] text-muted">— Prof. Samir Tannuri</span>
+              <span className="text-[12px] text-muted">— Samir Tannuri</span>
             </div>
           </div>
         </div>

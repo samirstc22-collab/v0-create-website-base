@@ -8,13 +8,13 @@ import { LPContact } from "@/components/lp/lp-contact"
 import { LPFooter } from "@/components/lp/lp-footer"
 
 export const metadata: Metadata = {
-  title: "Lab Pro — Prof. Samir Tannuri · Laboratório de Alta Performance",
+  title: "Consultoria Premium — Samir Tannuri · ST Farma",
   description:
-    "Jornal científico de luxo encontra interface SaaS. Consultoria P&D Industrial, Magistral e o Formulator AI Lab Pro — infraestrutura inteligente de formulação treinada sobre 4.000+ fórmulas validadas.",
+    "Consultoria em Tecnologia Farmacêutica: P&D industrial, consultoria magistral, transferência de tecnologia e sourcing internacional. Prática industrial real, aplicada ao seu portfólio.",
   openGraph: {
-    title: "Lab Pro — Prof. Samir Tannuri",
+    title: "Consultoria Premium — ST Farma",
     description:
-      "P&D cosmético de alta performance + Formulator AI Lab Pro.",
+      "Consultoria técnica de alta performance em tecnologia farmacêutica magistral e industrial.",
     type: "website",
   },
 }

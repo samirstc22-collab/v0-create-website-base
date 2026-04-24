@@ -14,11 +14,11 @@ export function V2Footer() {
               <span className="font-serif text-xl">Clube de Fórmulas</span>
             </div>
             <p className="text-[#f5f1e8]/55 text-sm leading-[1.8]">
-              Prof. Samir Tannuri Cerveira
+              Samir Tannuri Cerveira
               <br />
-              Pesquisador · Consultor Industrial · Palestrante
+              Consultor em Tecnologia Farmacêutica · Palestrante
               <br />
-              Metapharma · Goiânia — GO · Brasil
+              ST Farma · Goiânia — GO · Brasil
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export function V2Footer() {
                 href="#"
                 className="flex items-center gap-3 text-[#f5f1e8]/65 hover:text-[#c9a961] transition-colors"
               >
-                <BookOpen className="w-4 h-4" /> Lattes · CNPq
+                <BookOpen className="w-4 h-4" /> Publicação · DOI
               </a>
             </div>
           </div>

@@ -62,7 +62,7 @@ export function V2Method() {
                 <span className="text-[#c9a961]">lucro no caixa</span>.
               </p>
               <div className="mt-6 text-sm text-[#f5f1e8]/65 tracking-wide">
-                — Prof. Samir Tannuri
+                — Samir Tannuri
               </div>
             </div>
 
@@ -70,7 +70,7 @@ export function V2Method() {
             <div className="mt-8 relative h-64 rounded-3xl overflow-hidden border border-[#1a3d2e]/15">
               <Image
                 src="/images/samir-stage-gesture.jpg"
-                alt="Prof. Samir Tannuri em palestra"
+                alt="Samir Tannuri em palestra técnica"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 540px"
@@ -78,9 +78,9 @@ export function V2Method() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f2419]/70 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-[#f5f1e8]">
                 <div className="text-[10px] uppercase tracking-[2.5px] text-[#c9a961] font-bold">
-                  Palco · 20º Consulfarma
+                  Palco · Congresso 2025
                 </div>
-                <div className="font-serif text-lg mt-1">Paixão por ensinar</div>
+                <div className="font-serif text-lg mt-1">Técnica aplicada</div>
               </div>
             </div>
           </div>

@@ -1,14 +1,15 @@
 export function TrustMarquee() {
   const items = [
-    "Farmaceutico USF",
-    "Bolsista CNPq | UNICAMP",
-    "Publicacao Peer-Reviewed DOI",
-    "In-Cosmetics Global Paris 2025",
-    "1o Peeling Azelaico Pasta Anidra",
-    "Criador Tecnica Fenol FREE",
+    "6 anos coordenando P&D no maior grupo magistral",
+    "500+ farmacias atendidas tecnicamente",
+    "1.000+ formuladores treinados",
+    "Delegado In-Cosmetics Global Paris 2025",
     "Missoes Paris | Amsterdam | Japao",
-    "Speaker 7+ Congressos",
-    "Co-Organizador 1o Simposio de Peelings",
+    "Paper Peer-Reviewed com DOI indexado",
+    "Criador Tecnica Fenol FREE",
+    "1o Peeling Azelaico em Pasta Anidra do Mundo",
+    "Co-Organizador 1o Simposio de Peelings do Brasil",
+    "8/10 modulos ICosmetologia ministrados",
   ]
 
   const allItems = [...items, ...items]

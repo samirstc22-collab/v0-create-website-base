@@ -4,10 +4,10 @@ import { FlaskIllustration, AtomIllustration } from "./illustrations"
 
 export function HomeAboutPreview() {
   const highlights = [
-    "Bolsista CNPq pesquisando ativos em UNICAMP",
-    "Speaker convidado em 7+ congressos nacionais",
+    "6 anos coordenando P&D no maior grupo magistral",
+    "500+ farmacias atendidas tecnicamente",
     "Publicacao peer-reviewed com DOI indexado",
-    "Missoes tecnicas em Paris, Amsterdam e Japao",
+    "Delegado In-Cosmetics Paris | Amsterdam | Japao",
   ]
 
   return (
@@ -25,31 +25,31 @@ export function HomeAboutPreview() {
                 <span className="font-serif text-[120px] text-white/10">ST</span>
               </div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.1)]">
-                <div className="font-serif text-xl text-navy">Prof. Samir Tannuri</div>
-                <div className="text-sm text-muted mt-1">Farmaceutico | Pesquisador CNPq</div>
+                <div className="font-serif text-xl text-navy">Samir Tannuri</div>
+                <div className="text-sm text-muted mt-1">Consultor em Tecnologia Farmaceutica</div>
               </div>
             </div>
             
             {/* Floating Badge */}
             <div className="absolute -top-4 -right-4 bg-copper text-white rounded-2xl py-3 px-5 shadow-[0_8px_30px_rgba(192,133,74,0.4)]">
-              <span className="font-serif text-2xl font-bold">24+</span>
-              <span className="text-xs block opacity-80">anos de P&D</span>
+              <span className="font-serif text-2xl font-bold">6 anos</span>
+              <span className="text-xs block opacity-80">P&D magistral</span>
             </div>
           </div>
 
           {/* Content Side */}
           <div className="flex-1 min-w-[320px]">
             <span className="text-xs font-bold tracking-[3px] uppercase text-copper inline-block mb-4">
-              Quem e Samir Tannuri
+              Quem conduz a ST Farma
             </span>
             <h2 className="font-serif font-normal text-[clamp(36px,4.5vw,52px)] text-navy mb-6 leading-[1.1] tracking-[-0.5px]">
-              Ciencia transformada em <span className="text-gradient-copper">resultado clinico</span>
+              Pratica industrial real, <span className="text-gradient-copper">nao teoria</span>
             </h2>
             <p className="text-lg text-body leading-relaxed mb-8 max-w-[560px]">
-              Farmaceutico pela USF, pesquisador CNPq na UNICAMP e consultor industrial 
-              com mais de duas decadas de experiencia em P&D cosmetico. Criador da 
-              <strong className="text-navy"> Tecnica Fenol FREE</strong> e pioneiro no desenvolvimento 
-              do primeiro peeling de acido azelaico em pasta anidra do Brasil.
+              Samir Tannuri — seis anos coordenando P&D no maior grupo magistral do Brasil, 
+              500+ farmacias atendidas e 1.000+ formuladores treinados. Criador da 
+              <strong className="text-navy"> Tecnica Fenol FREE</strong> e do primeiro peeling 
+              de acido azelaico em pasta anidra do mundo.
             </p>
 
             {/* Highlights */}

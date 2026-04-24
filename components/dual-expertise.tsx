@@ -4,26 +4,26 @@ import { HexagonPattern, CircuitPattern } from "./illustrations"
 export function DualExpertise() {
   const cards = [
     {
-      badge: "Expertise Magistral",
-      title: "P&D para Farmacias Magistrais",
-      years: "15 anos | 500+ prescricoes desenvolvidas",
-      desc: "Desenvolvimento de formulacoes dermatologicas sob medida para farmacias magistrais, com dossiês tecnicos completos, laudos de estabilidade e treinamento de equipe.",
+      badge: "Consultoria Magistral",
+      title: "Suporte tecnico para Farmacias Magistrais",
+      years: "500+ farmacias atendidas | 1.000+ formuladores treinados",
+      desc: "Consultoria sob medida para magistrais que querem elevar padrao tecnico: reformulacao de portfolio, dossies tecnicos, treinamento de equipe e resolucao de desvio de lote.",
       items: [
         "Reformulacao de portfolio e bases dermatologicas",
-        "Dossiês tecnicos com pH, pKa e embalagem",
-        "Treinamento de farmaceuticos e prescritores",
+        "Dossies tecnicos com pH, pKa e embalagem",
+        "Treinamento de formuladores e prescritores",
         "Auditoria de boas praticas de manipulacao",
       ],
     },
     {
-      badge: "Expertise Industrial",
-      title: "Consultoria para Industrias",
-      years: "20+ industrias | 40+ marcas lancadas",
-      desc: "P&D cosmetico grau 1 e 2 para industrias de insumos, laboratorios de private label e marcas independentes — do briefing ao produto na gondola.",
+      badge: "Consultoria Industrial",
+      title: "Consultoria para Industrias Cosmeticas",
+      years: "P&D, transferencia de tecnologia, sourcing internacional",
+      desc: "Consultoria tecnica para industrias de insumos, laboratorios de private label e marcas em desenvolvimento de portfolio — do briefing ao produto na gondola.",
       items: [
-        "Briefing -> formulacao -> estabilidade -> claims",
-        "Private label e desenvolvimento de marcas proprias",
-        "Compatibilidade embalagem-formula",
+        "Briefing, formulacao, estabilidade e claims",
+        "Transferencia de tecnologia e escalonamento de lote",
+        "Sourcing internacional e due diligence de ativos",
         "Estudos de estabilidade e eficacia clinica",
       ],
     },
@@ -40,14 +40,15 @@ export function DualExpertise() {
       <div className="max-w-[1320px] mx-auto relative z-10">
         <div className="text-center mb-16">
           <span className="text-xs font-bold tracking-[3px] uppercase text-copper-light inline-block mb-4">
-            Dupla Expertise
+            Dois territorios de atuacao
           </span>
           <h2 className="font-serif font-normal text-[clamp(36px,4.5vw,52px)] text-white mb-5 leading-[1.1] tracking-[-0.5px]">
             Magistral & Industrial
           </h2>
           <p className="text-lg text-white/50 max-w-[620px] mx-auto leading-relaxed">
-            Duas decadas transitando entre bancada magistral e linha de producao industrial — um
-            posicionamento raro que garante formulacoes robustas em qualquer escala.
+            Seis anos coordenando P&D no maior grupo magistral do Brasil transitando entre bancada
+            e linha de producao industrial — um posicionamento raro que garante formulacoes
+            robustas em qualquer escala.
           </p>
         </div>
 

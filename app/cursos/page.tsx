@@ -7,9 +7,9 @@ import { CursosTestimonials } from "@/components/cursos/cursos-testimonials"
 import { CursosCTA } from "@/components/cursos/cursos-cta"
 
 export const metadata = {
-  title: "Cursos | Clube de Fórmulas — Prof. Samir Tannuri",
+  title: "Cursos & Imersões | ST Farma — Samir Tannuri",
   description:
-    "Cursos de cosmetologia aplicada, manipulação avançada e gestão farmacêutica com o Prof. Samir Tannuri. Conhecimento internacional, aplicação imediata no seu balcão.",
+    "Cursos de cosmetologia aplicada, manipulação avançada e tecnologia farmacêutica com Samir Tannuri. Prática industrial real, aplicação imediata no seu portfólio.",
 }
 
 export default function CursosPage() {

@@ -9,10 +9,10 @@ export function Hero() {
   const [email, setEmail] = useState("")
 
   const stats = [
-    { num: "4.000+", label: "Fórmulas validadas em bancada" },
-    { num: "20+", label: "Indústrias cosméticas atendidas" },
+    { num: "6 anos", label: "Coordenando P&D magistral" },
+    { num: "500+", label: "Farmácias atendidas tecnicamente" },
+    { num: "1.000+", label: "Formuladores treinados" },
     { num: "3", label: "Continentes em missão técnica" },
-    { num: "1.000+", label: "Farmacêuticos formados" },
   ]
 
   return (
@@ -57,7 +57,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-3 bg-teal/15 border border-teal/30 rounded-full py-2.5 px-5 mb-10">
               <div className="w-2 h-2 rounded-full bg-teal animate-pulse" />
               <span className="text-teal-light text-xs font-bold tracking-[2.5px] uppercase">
-                Pesquisador · Consultor Industrial · Palestrante
+                Consultoria · Tecnologia Farmacêutica · Formação
               </span>
             </div>
 
@@ -72,11 +72,12 @@ export function Hero() {
 
             {/* Description */}
             <p className="text-lg lg:text-xl text-white/60 leading-[1.65] max-w-[580px] mb-10">
-              Pesquisa & Desenvolvimento cosmético para indústrias, marcas independentes e
-              farmácias magistrais de excelência.{" "}
+              Consultoria técnica em P&D cosmético para indústrias, magistrais e marcas em
+              desenvolvimento de portfólio.{" "}
               <span className="text-white/85">
-                Bancada CNPq-UNICAMP, publicação peer-reviewed indexada e missões técnicas em
-                três continentes — transformadas em protocolos aplicáveis ao seu balcão.
+                Seis anos coordenando P&D no maior grupo magistral do Brasil, publicação
+                peer-reviewed indexada e missões técnicas em três continentes — prática
+                industrial real aplicada ao seu portfólio.
               </span>
             </p>
 
@@ -120,7 +121,7 @@ export function Hero() {
           <div className="flex-[0_1_460px] min-w-[300px] relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.5)] border border-white/10">
               <div className="absolute top-6 left-6 bg-navy/90 backdrop-blur-xl border border-white/15 rounded-full py-2 px-4 text-xs font-bold text-copper-light tracking-[1.5px] uppercase z-[2]">
-                CNPq | UNICAMP | DOI
+                In-Cosmetics · Paris · DOI
               </div>
               <div className="w-full aspect-[4/5] bg-gradient-to-b from-navy-mid to-navy-deep flex items-center justify-center relative">
                 <span className="font-serif text-[140px] text-white/[0.07]">Cf</span>
