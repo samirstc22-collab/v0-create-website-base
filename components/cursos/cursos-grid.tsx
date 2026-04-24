@@ -108,7 +108,7 @@ export function CursosGrid() {
       levelColor: "#0a1628",
       title: "Imersão Executiva Presencial",
       description:
-        "3 dias presenciais em Goiânia com Prof. Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
+        "3 dias presenciais em Goiânia com Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
       duration: "3 dias",
       lessons: "Presencial",
       price: "R$ 4.997",

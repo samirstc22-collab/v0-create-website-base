@@ -65,7 +65,7 @@ export function BlogPostRelated({ currentSlug }: { currentSlug: string }) {
                   </h3>
 
                   <div className="mt-auto flex items-center justify-between border-t border-black/5 pt-5">
-                    <span className="text-xs text-muted">Prof. Samir Tannuri</span>
+                    <span className="text-xs text-muted">Samir Tannuri</span>
                     <ArrowUpRight className="h-4 w-4 text-[#b87333] transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                 </div>

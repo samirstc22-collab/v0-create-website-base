@@ -80,7 +80,7 @@ export function Logo({
             <span className="font-medium">Formulas</span>
           </div>
           <div className={`${s.sub} tracking-[2.5px] uppercase font-semibold mt-0.5 ${c.subtitle} transition-colors duration-300`}>
-            Prof. Samir Tannuri
+            Samir Tannuri
           </div>
         </div>
       )}

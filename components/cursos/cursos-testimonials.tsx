@@ -13,7 +13,7 @@ export function CursosTestimonials() {
       name: "Farm. Ricardo Bueno",
       role: "Rede Bueno Farma · Curitiba",
       quote:
-        "Já fiz sete cursos em cosmetologia antes. O do Prof. Samir foi o primeiro que me fez sair da sala com protocolo pronto pra rodar.",
+        "Já fiz sete cursos em cosmetologia antes. O do Samir foi o primeiro que me fez sair da sala com protocolo pronto pra rodar.",
       stars: 5,
     },
     {

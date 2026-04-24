@@ -42,7 +42,7 @@ export function BlogHero() {
             </h1>
 
             <p className="mt-8 max-w-[640px] text-lg leading-relaxed text-white/65 md:text-xl">
-              Artigos técnicos, revisões peer-reviewed e ensaios clínicos do Prof. Samir Tannuri —
+              Artigos técnicos, revisões peer-reviewed e ensaios clínicos do Samir Tannuri —
               escritos para farmacêuticos, pesquisadores e gestores que exigem{" "}
               <strong className="text-white">profundidade científica</strong> e{" "}
               <strong className="text-white">aplicabilidade imediata</strong> na mesma linha.
@@ -75,7 +75,7 @@ export function BlogHero() {
               <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/images/samir-portrait-stool.jpg"
-                  alt="Prof. Samir Tannuri — autor dos artigos científicos"
+                  alt="Samir Tannuri — autor dos artigos científicos"
                   fill
                   priority
                   className="object-cover"
@@ -88,9 +88,9 @@ export function BlogHero() {
                   <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
                     Autor convidado
                   </div>
-                  <div className="mt-2 font-serif text-2xl text-white">Prof. Samir Tannuri</div>
+                  <div className="mt-2 font-serif text-2xl text-white">Samir Tannuri</div>
                   <div className="mt-1 text-sm leading-relaxed text-white/65">
-                    Farmacêutico · Pesquisador CNPq-UNICAMP · Publicação indexada (DOI)
+                    Farmacêutico · Consultor em Tecnologia Farmacêutica-UNICAMP · Publicação indexada (DOI)
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export function BlogHero() {
                 <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#86efd4]">
                   Indexado
                 </div>
-                <div className="mt-1 font-serif text-base text-white">DOI · CNPq · Lattes</div>
+                <div className="mt-1 font-serif text-base text-white">DOI · · Lattes</div>
               </div>
 
               {/* Corner accent */}

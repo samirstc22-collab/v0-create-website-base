@@ -179,7 +179,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-[#b87333]/30">
                 <Image
                   src="/images/samir-portrait-smile.jpg"
-                  alt="Prof. Samir Tannuri"
+                  alt="Samir Tannuri"
                   fill
                   className="object-cover"
                   sizes="64px"

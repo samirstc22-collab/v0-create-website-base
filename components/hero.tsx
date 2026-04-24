@@ -75,7 +75,7 @@ export function Hero() {
               Pesquisa & Desenvolvimento cosmético para indústrias, marcas independentes e
               farmácias magistrais de excelência.{" "}
               <span className="text-white/85">
-                Bancada CNPq-UNICAMP, publicação peer-reviewed indexada e missões técnicas em
+                Bancada-UNICAMP, publicação peer-reviewed indexada e missões técnicas em
                 três continentes — transformadas em protocolos aplicáveis ao seu balcão.
               </span>
             </p>
@@ -120,7 +120,7 @@ export function Hero() {
           <div className="flex-[0_1_460px] min-w-[300px] relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.5)] border border-white/10">
               <div className="absolute top-6 left-6 bg-navy/90 backdrop-blur-xl border border-white/15 rounded-full py-2 px-4 text-xs font-bold text-copper-light tracking-[1.5px] uppercase z-[2]">
-                CNPq | UNICAMP | DOI
+                | UNICAMP | DOI
               </div>
               <div className="w-full aspect-[4/5] bg-gradient-to-b from-navy-mid to-navy-deep flex items-center justify-center relative">
                 <span className="font-serif text-[140px] text-white/[0.07]">Cf</span>

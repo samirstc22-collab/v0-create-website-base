@@ -54,7 +54,7 @@ const slides: Slide[] = [
     metricValue: "+38%",
     metricLabel: "de ticket médio em 90 dias",
     image: "/images/samir-portrait-sofa.jpg",
-    imageAlt: "Prof. Samir Tannuri em retrato executivo",
+    imageAlt: "Samir Tannuri em retrato executivo",
     icon: Microscope,
     tone: {
       accent: "#d4a76a",
@@ -79,7 +79,7 @@ const slides: Slide[] = [
     metricValue: "12k+",
     metricLabel: "farmacêuticos formados",
     image: "/images/samir-stage-gesture.jpg",
-    imageAlt: "Prof. Samir palestrando em congresso nacional",
+    imageAlt: "Samir palestrando em congresso nacional",
     icon: GraduationCap,
     tone: {
       accent: "#12b5c8",
@@ -92,7 +92,7 @@ const slides: Slide[] = [
   },
   {
     id: "pd",
-    kicker: "P&D Cosmético · Bancada CNPq-UNICAMP",
+    kicker: "P&D Cosmético · Bancada-UNICAMP",
     headlineA: "Pesquisa peer-reviewed",
     headlineAccent: "que vira fórmula",
     headlineB: "na sua indústria.",
@@ -104,7 +104,7 @@ const slides: Slide[] = [
     metricValue: "4.000+",
     metricLabel: "fórmulas validadas em bancada",
     image: "/images/samir-lab-eurotex.jpg",
-    imageAlt: "Prof. Samir em laboratório EUROTEX — França",
+    imageAlt: "Samir em laboratório EUROTEX — França",
     icon: FlaskConical,
     tone: {
       accent: "#7fe5ee",
@@ -129,7 +129,7 @@ const slides: Slide[] = [
     metricValue: "20+",
     metricLabel: "indústrias atendidas",
     image: "/images/samir-portrait-smile.jpg",
-    imageAlt: "Prof. Samir em retrato profissional",
+    imageAlt: "Samir em retrato profissional",
     icon: Factory,
     tone: {
       accent: "#e8a87c",
@@ -154,7 +154,7 @@ const slides: Slide[] = [
     metricValue: "800+",
     metricLabel: "palestras realizadas",
     image: "/images/samir-stage-clicker.jpg",
-    imageAlt: "Prof. Samir Tannuri no palco de congresso internacional",
+    imageAlt: "Samir Tannuri no palco de congresso internacional",
     icon: Mic2,
     tone: {
       accent: "#c7a2e0",
@@ -243,7 +243,7 @@ export function DynamicBanner() {
           <div>
             <div className="font-serif text-sm text-white/90">Clube de Fórmulas</div>
             <div className="text-[11px] uppercase tracking-[2px] text-white/50">
-              Prof. Samir Tannuri · desde 2001
+              Samir Tannuri · desde 2001
             </div>
           </div>
         </div>
@@ -485,9 +485,9 @@ export function DynamicBanner() {
       <div className="relative z-10 border-t border-white/10 bg-black/20 py-4 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-6 md:px-10">
           <div className="flex items-center gap-6 text-[11px] uppercase tracking-[2.5px] text-white/45">
-            <span>CNPq · UNICAMP</span>
+            <span>In-Cosmetics Paris 2025 · Delegado Técnico</span>
             <span className="hidden sm:inline">Peer-Reviewed · DOI</span>
-            <span className="hidden md:inline">ISO 9001 · GMP</span>
+            <span className="hidden md:inline">500+ Farmácias · Magistral</span>
           </div>
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-[2.5px] text-white/45">
             <span>Próximo ciclo:</span>

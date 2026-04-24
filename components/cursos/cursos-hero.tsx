@@ -74,7 +74,7 @@ export function CursosHero() {
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
               <Image
                 src="/images/samir-lab-eurotex.jpg"
-                alt="Prof. Samir Tannuri em laboratório internacional"
+                alt="Samir Tannuri em laboratório internacional"
                 width={1000}
                 height={1250}
                 className="h-auto w-full object-cover"

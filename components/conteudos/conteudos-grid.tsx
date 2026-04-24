@@ -23,7 +23,7 @@ const articles = [
     readTime: "15 min",
     title: "Fenol FREE: profundidade com seguranca",
     excerpt:
-      "Tecnica autoral criada e apresentada no 20o Congresso Consulfarma. Combinacao Glicolico 20-70%, Mandelico 45%, Retinoico 5% e Azelaico para profundidade de peeling fenol sem os riscos.",
+      "Tecnica autoral criada e apresentada no 20o Congresso In-Cosmetics. Combinacao Glicolico 20-70%, Mandelico 45%, Retinoico 5% e Azelaico para profundidade de peeling fenol sem os riscos.",
     link: "#",
   },
   {
@@ -72,7 +72,7 @@ const articles = [
     readTime: "14 min",
     title: "TGF-B, EGF, FGF e PDGF na dermatologia magistral",
     excerpt:
-      "Pesquisa CNPq aplicada: estabilidade, veiculos anidros, conservacao e protocolos pos-procedimento (laser CO2, microagulhamento). 15+ formulacoes completas com concentracoes, pH e embalagem validados.",
+      "Pesquisa aplicada: estabilidade, veiculos anidros, conservacao e protocolos pos-procedimento (laser CO2, microagulhamento). 15+ formulacoes completas com concentracoes, pH e embalagem validados.",
     link: "#",
   },
 ]

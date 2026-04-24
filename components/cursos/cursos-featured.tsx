@@ -42,7 +42,7 @@ export function CursosFeatured() {
               O curso que encerra a era dos formulários aleatórios na sua farmácia.
             </h3>
             <p className="mt-5 text-base leading-[1.7] text-[#0a1628]/70 md:text-lg">
-              Oito semanas de imersão construídas sobre o mesmo arcabouço que o Prof. Samir usa para
+              Oito semanas de imersão construídas sobre o mesmo arcabouço que o Samir usa para
               consultar grandes indústrias: bancada, ciência, margem e execução.{" "}
               <span className="font-semibold text-[#0a1628]">
                 Você termina o curso com sete fórmulas proprietárias prontas para rodar no seu
@@ -123,7 +123,7 @@ export function CursosFeatured() {
             <div className="relative overflow-hidden rounded-[28px] border border-[#0a1628]/10 shadow-[0_30px_80px_rgba(10,22,40,0.2)]">
               <Image
                 src="/images/samir-portrait-stool.jpg"
-                alt="Prof. Samir Tannuri"
+                alt="Samir Tannuri"
                 width={800}
                 height={1000}
                 className="h-auto w-full object-cover"
@@ -131,11 +131,11 @@ export function CursosFeatured() {
             </div>
             <div className="absolute -bottom-6 -left-6 max-w-xs rounded-2xl border border-[#0a1628]/10 bg-white p-5 shadow-[0_20px_50px_rgba(10,22,40,0.15)]">
               <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#b87333]">
-                Professor titular
+                Consultor Senior
               </div>
-              <div className="mt-1 font-serif text-lg text-[#0a1628]">Prof. Samir Tannuri</div>
+              <div className="mt-1 font-serif text-lg text-[#0a1628]">Samir Tannuri</div>
               <p className="mt-1 text-xs leading-relaxed text-[#0a1628]/60">
-                Pesquisador CNPq-UNICAMP, 800+ palestras, publicação peer-reviewed indexada.
+                Consultor em Tecnologia Farmacêutica-UNICAMP, 800+ palestras, publicação peer-reviewed indexada.
               </p>
             </div>
           </div>

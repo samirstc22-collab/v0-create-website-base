@@ -1,7 +1,7 @@
 export function TrustMarquee() {
   const items = [
     "Farmaceutico USF",
-    "Bolsista CNPq | UNICAMP",
+    "Bolsista | UNICAMP",
     "Publicacao Peer-Reviewed DOI",
     "In-Cosmetics Global Paris 2025",
     "1o Peeling Azelaico Pasta Anidra",

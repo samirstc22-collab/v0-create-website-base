@@ -21,7 +21,7 @@ const steps = [
     icon: Rocket,
     title: "Execução conjunta",
     text: "Acompanhamento da implementação com treinamento de equipe, ajustes de protocolos e suporte semanal.",
-    highlight: "O Prof. Samir e o time ao lado do seu farmacêutico.",
+    highlight: "O Samir e o time ao lado do seu farmacêutico.",
   },
   {
     number: "04",
@@ -62,7 +62,7 @@ export function ConsultoriaMethod() {
               <div className="relative aspect-[16/11] overflow-hidden rounded-2xl">
                 <Image
                   src="/images/samir-stage-clicker.jpg"
-                  alt="Prof. Samir Tannuri palestrando sobre gestão farmacêutica"
+                  alt="Samir Tannuri palestrando sobre gestão farmacêutica"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -74,7 +74,7 @@ export function ConsultoriaMethod() {
                   "Personalizar é ter coragem de ouvir antes de prescrever."
                 </p>
                 <div className="mt-2 text-xs font-medium uppercase tracking-wider text-[#e8a87c]">
-                  Prof. Samir Tannuri
+                  Samir Tannuri
                 </div>
               </div>
             </div>

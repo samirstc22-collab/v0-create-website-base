@@ -118,7 +118,7 @@ export function LPMagistral() {
           <div className="relative h-[420px] w-full lg:h-full">
             <Image
               src="/images/samir-portrait-stool.jpg"
-              alt="Consultoria magistral personalizada — Prof. Samir Tannuri"
+              alt="Consultoria magistral personalizada — Samir Tannuri"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 40vw"

@@ -4,7 +4,7 @@ export function V2Science() {
   const pillars = [
     {
       icon: Microscope,
-      title: "Pesquisa CNPq",
+      title: "Pesquisa",
       text: "Bancada ativa na UNICAMP com projetos validados de bioativos aplicados à cosmetologia.",
     },
     {
@@ -80,7 +80,7 @@ export function V2Science() {
               em plataforma de liberação modificada&rdquo;
             </h3>
             <p className="text-[#0f2419]/70 text-sm md:text-base leading-[1.7]">
-              Revista peer-reviewed internacional indexada · Projeto CNPq-UNICAMP · Protocolo
+              Revista peer-reviewed internacional indexada · Projeto-UNICAMP · Protocolo
               replicável em farmácia magistral com controle de estabilidade a 45 °C por 90
               dias.
             </p>

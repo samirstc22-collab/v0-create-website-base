@@ -23,7 +23,7 @@ export function V2Contact() {
         </h2>
 
         <p className="mt-7 text-lg md:text-xl text-[#0f2419]/70 leading-[1.65] max-w-2xl mx-auto">
-          Agende uma conversa reservada de 30 minutos com o Prof. Samir. Sem fórmulas
+          Agende uma conversa reservada de 30 minutos com o Samir. Sem fórmulas
           prontas, sem discurso padrão — apenas escuta, leitura do seu cenário e desenho
           inicial de rota.
         </p>
@@ -36,7 +36,7 @@ export function V2Contact() {
                 Primeira consulta · sem compromisso
               </div>
               <h3 className="font-serif text-3xl md:text-4xl leading-tight">
-                Diagnóstico inicial com o Prof. Samir em pessoa.
+                Diagnóstico inicial com o Samir em pessoa.
               </h3>
               <p className="mt-4 text-[#f5f1e8]/70 leading-[1.7]">
                 Responda em até 24 horas. Atendemos farmácias magistrais, drogarias e

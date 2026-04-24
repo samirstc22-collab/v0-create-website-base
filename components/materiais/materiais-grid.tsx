@@ -93,7 +93,7 @@ const products = [
     title: "Fatores de Crescimento",
     cover: "cover-growth",
     ornament: "FC",
-    edition: "Protocolo CNPq",
+    edition: "Protocolo",
     desc: "EGF, FGF, VEGF, PDGF e fatores lipossomados. 15+ formulacoes.",
     price: "Consulte",
   },
@@ -210,7 +210,7 @@ export function MateriaisGrid() {
                     {p.title}
                   </h3>
                   <div className="text-xs opacity-80 font-medium tracking-wide">
-                    Prof. Samir Tannuri | {p.edition}
+                    Samir Tannuri | {p.edition}
                   </div>
                 </div>
               </div>
