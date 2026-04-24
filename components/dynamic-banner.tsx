@@ -103,7 +103,7 @@ const slides: Slide[] = [
     ctaHref: "/sobre",
     metricValue: "4.000+",
     metricLabel: "fórmulas validadas em bancada",
-    image: "/images/samir-lab-eurotex.png",
+    image: "/images/samir-lab-eurotex.jpg",
     imageAlt: "Prof. Samir em laboratório EUROTEX — França",
     icon: FlaskConical,
     tone: {

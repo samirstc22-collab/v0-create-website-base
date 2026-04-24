@@ -205,7 +205,7 @@ export function LPHero() {
               {/* Image */}
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/images/samir-lab-eurotex.png"
+                  src="/images/samir-lab-eurotex.jpg"
                   alt="Prof. Samir Tannuri em treinamento internacional no laboratório EUROTEX na França"
                   fill
                   className="object-cover object-top"

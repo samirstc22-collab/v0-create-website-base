@@ -57,7 +57,7 @@ export function V2Authority() {
           <div className="relative">
             <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] border border-[#c9a961]/25 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
               <Image
-                src="/images/samir-lab-eurotex.png"
+                src="/images/samir-lab-eurotex.jpg"
                 alt="Prof. Samir Tannuri em laboratório internacional EUROTEX"
                 fill
                 className="object-cover"
