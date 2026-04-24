@@ -51,10 +51,10 @@ const slides: Slide[] = [
     highlight: "Vagas limitadas a 12 farmácias por ciclo",
     ctaLabel: "Agendar diagnóstico",
     ctaHref: "/consultoria",
-    metricValue: "500+",
-    metricLabel: "farmácias atendidas tecnicamente",
+    metricValue: "+38%",
+    metricLabel: "de ticket médio em 90 dias",
     image: "/images/samir-portrait-sofa.jpg",
-    imageAlt: "Samir Tannuri em retrato executivo",
+    imageAlt: "Prof. Samir Tannuri em retrato executivo",
     icon: Microscope,
     tone: {
       accent: "#d4a76a",
@@ -67,7 +67,7 @@ const slides: Slide[] = [
   },
   {
     id: "cursos",
-    kicker: "Cursos Premium · 1.000+ formuladores treinados",
+    kicker: "Cursos Premium · 12.000+ alunos",
     headlineA: "Do fundamento à elite:",
     headlineAccent: "ciência aplicável",
     headlineB: "ao seu balcão.",
@@ -76,10 +76,10 @@ const slides: Slide[] = [
     highlight: "Garantia incondicional de 7 dias · 12 meses de acesso",
     ctaLabel: "Ver catálogo de cursos",
     ctaHref: "/cursos",
-    metricValue: "1.000+",
-    metricLabel: "formuladores treinados",
+    metricValue: "12k+",
+    metricLabel: "farmacêuticos formados",
     image: "/images/samir-stage-gesture.jpg",
-    imageAlt: "Samir palestrando em congresso nacional",
+    imageAlt: "Prof. Samir palestrando em congresso nacional",
     icon: GraduationCap,
     tone: {
       accent: "#12b5c8",
@@ -92,19 +92,19 @@ const slides: Slide[] = [
   },
   {
     id: "pd",
-    kicker: "P&D Cosmético · Prática Industrial Real",
-    headlineA: "Ciência aplicada",
+    kicker: "P&D Cosmético · Bancada CNPq-UNICAMP",
+    headlineA: "Pesquisa peer-reviewed",
     headlineAccent: "que vira fórmula",
     headlineB: "na sua indústria.",
     description:
-      "Desenvolvimento de ativos, estudos de estabilidade, transferência de tecnologia e sourcing internacional. Seis anos coordenando P&D no maior grupo magistral do Brasil — operação real em escala industrial.",
+      "Desenvolvimento de ativos, estudos de estabilidade, validação de eficácia e transferência de tecnologia com rigor acadêmico e cronograma industrial.",
     highlight: "Publicação indexada · DOI · Missões em 3 continentes",
-    ctaLabel: "Conhecer a trajetória",
+    ctaLabel: "Conhecer o laboratório",
     ctaHref: "/sobre",
-    metricValue: "6 anos",
-    metricLabel: "coordenando P&D magistral",
+    metricValue: "4.000+",
+    metricLabel: "fórmulas validadas em bancada",
     image: "/images/samir-lab-eurotex.jpg",
-    imageAlt: "Samir em missão técnica internacional — Paris",
+    imageAlt: "Prof. Samir em laboratório EUROTEX — França",
     icon: FlaskConical,
     tone: {
       accent: "#7fe5ee",
@@ -117,19 +117,19 @@ const slides: Slide[] = [
   },
   {
     id: "industrial",
-    kicker: "Consultoria Industrial · P&D, transferência e sourcing",
+    kicker: "Consultoria Industrial · 20+ marcas",
     headlineA: "Da formulação ao",
     headlineAccent: "scale-up industrial",
     headlineB: "com reprodutibilidade.",
     description:
-      "Reformulação de portfólio, transferência de tecnologia, sourcing internacional e due diligence de ativos. Seis anos coordenando operação real em volume industrial — não teoria.",
-    highlight: "Missões Paris · Amsterdam · Japão · Sourcing direto",
+      "Criação de linhas autorais, reformulação de carros-chefe e otimização de processos para indústrias cosméticas e marcas independentes que precisam de diferencial real.",
+    highlight: "Contratos executados em Brasil, Europa e Ásia",
     ctaLabel: "Solicitar proposta",
     ctaHref: "/contato",
-    metricValue: "500+",
-    metricLabel: "farmácias atendidas",
+    metricValue: "20+",
+    metricLabel: "indústrias atendidas",
     image: "/images/samir-portrait-smile.jpg",
-    imageAlt: "Samir Tannuri em retrato profissional",
+    imageAlt: "Prof. Samir em retrato profissional",
     icon: Factory,
     tone: {
       accent: "#e8a87c",
@@ -142,19 +142,19 @@ const slides: Slide[] = [
   },
   {
     id: "palestras",
-    kicker: "Palestrante · 7+ congressos nacionais",
+    kicker: "Palestrante · 800+ apresentações",
     headlineA: "A palestra que vira",
     headlineAccent: "protocolo",
     headlineB: "na segunda-feira.",
     description:
       "Keynotes sob medida para congressos, convenções de vendas e treinamentos corporativos. Ciência de ponta traduzida em linguagem aplicável, com energia de palco inconfundível.",
-    highlight: "Palestras técnicas · 1.000+ formuladores treinados",
+    highlight: "26 capitais brasileiras · 15 países · 3 continentes",
     ctaLabel: "Solicitar palestra",
     ctaHref: "/contato",
-    metricValue: "1.000+",
-    metricLabel: "formuladores treinados",
+    metricValue: "800+",
+    metricLabel: "palestras realizadas",
     image: "/images/samir-stage-clicker.jpg",
-    imageAlt: "Samir Tannuri no palco de congresso nacional",
+    imageAlt: "Prof. Samir Tannuri no palco de congresso internacional",
     icon: Mic2,
     tone: {
       accent: "#c7a2e0",
@@ -241,9 +241,9 @@ export function DynamicBanner() {
             <span className="font-serif text-base leading-none text-white">S</span>
           </div>
           <div>
-            <div className="font-serif text-sm text-white/90">ST Farma</div>
+            <div className="font-serif text-sm text-white/90">Clube de Fórmulas</div>
             <div className="text-[11px] uppercase tracking-[2px] text-white/50">
-              Samir Tannuri · Consultor em Tecnologia Farmacêutica
+              Prof. Samir Tannuri · desde 2001
             </div>
           </div>
         </div>
@@ -485,9 +485,9 @@ export function DynamicBanner() {
       <div className="relative z-10 border-t border-white/10 bg-black/20 py-4 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-6 md:px-10">
           <div className="flex items-center gap-6 text-[11px] uppercase tracking-[2.5px] text-white/45">
-            <span>In-Cosmetics · Paris 2025</span>
+            <span>CNPq · UNICAMP</span>
             <span className="hidden sm:inline">Peer-Reviewed · DOI</span>
-            <span className="hidden md:inline">ANVISA · GMP</span>
+            <span className="hidden md:inline">ISO 9001 · GMP</span>
           </div>
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-[2.5px] text-white/45">
             <span>Próximo ciclo:</span>

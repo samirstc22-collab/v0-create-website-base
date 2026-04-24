@@ -21,7 +21,7 @@ const steps = [
     icon: Rocket,
     title: "Execução conjunta",
     text: "Acompanhamento da implementação com treinamento de equipe, ajustes de protocolos e suporte semanal.",
-    highlight: "Samir e o time ao lado do seu farmacêutico.",
+    highlight: "O Prof. Samir e o time ao lado do seu farmacêutico.",
   },
   {
     number: "04",
@@ -45,7 +45,7 @@ export function ConsultoriaMethod() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#b87333]/30 bg-[#b87333]/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[#b87333]">
-              O Método ST Farma
+              O Método Samir Tannuri
             </div>
             <h2 className="mt-5 font-serif text-4xl leading-[1.05] tracking-tight text-[#0a1628] md:text-5xl lg:text-6xl">
               Quatro passos para transformar{" "}
@@ -62,7 +62,7 @@ export function ConsultoriaMethod() {
               <div className="relative aspect-[16/11] overflow-hidden rounded-2xl">
                 <Image
                   src="/images/samir-stage-clicker.jpg"
-                  alt="Samir Tannuri palestrando sobre gestão e tecnologia farmacêutica"
+                  alt="Prof. Samir Tannuri palestrando sobre gestão farmacêutica"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -74,7 +74,7 @@ export function ConsultoriaMethod() {
                   "Personalizar é ter coragem de ouvir antes de prescrever."
                 </p>
                 <div className="mt-2 text-xs font-medium uppercase tracking-wider text-[#e8a87c]">
-                  Samir Tannuri
+                  Prof. Samir Tannuri
                 </div>
               </div>
             </div>

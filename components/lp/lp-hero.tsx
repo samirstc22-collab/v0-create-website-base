@@ -45,9 +45,9 @@ export function LPHero() {
               Cf
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-serif text-[15px] text-white/90">ST Farma</span>
+              <span className="font-serif text-[15px] text-white/90">Clube de Fórmulas</span>
               <span className="text-[10px] uppercase tracking-[2.5px] text-white/40">
-                Samir Tannuri
+                Prof. Samir Tannuri
               </span>
             </div>
           </Link>
@@ -134,12 +134,12 @@ export function LPHero() {
 
           {/* Editorial lede */}
           <p className="mt-10 max-w-xl text-[17px] leading-[1.7] text-white/60 lg:text-[19px]">
-            Consultoria em Tecnologia Farmacêutica para{" "}
-            <span className="text-white/90">indústrias cosméticas, marcas em desenvolvimento</span>{" "}
+            Pesquisa &amp; Desenvolvimento cosmético de alta performance para{" "}
+            <span className="text-white/90">indústrias Grau 1 e 2, marcas independentes</span>{" "}
             e{" "}
-            <span className="text-white/90">farmácias magistrais de excelência</span>. Seis anos
-            coordenando P&amp;D no maior grupo magistral do Brasil, publicação peer-reviewed
-            indexada e delegado técnico In-Cosmetics Global Paris 2025.
+            <span className="text-white/90">farmácias magistrais de excelência</span>. Bancada
+            CNPq-UNICAMP, publicação peer-reviewed indexada e infraestrutura inteligente de
+            formulação.
           </p>
 
           {/* CTA row */}
@@ -163,10 +163,10 @@ export function LPHero() {
           {/* Credentials strip */}
           <div className="mt-14 grid grid-cols-2 gap-6 border-t border-white/[0.06] pt-8 md:grid-cols-4">
             {[
-              { k: "6 anos", v: "P&D Magistral" },
-              { k: "500+", v: "Farmácias" },
-              { k: "In-Cosmetics", v: "Paris 2025" },
+              { k: "CNPq", v: "UNICAMP" },
               { k: "DOI", v: "Peer-Reviewed" },
+              { k: "EUROTEX", v: "França" },
+              { k: "17+", v: "Capitais" },
             ].map((c) => (
               <div key={c.k}>
                 <div className="font-serif text-lg text-[#c9a961]">{c.k}</div>
@@ -197,7 +197,7 @@ export function LPHero() {
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#4a9eff]" />
                   <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">
-                    LIVE · PARIS 2025
+                    LIVE · EUROTEX.FR
                   </span>
                 </div>
               </div>
@@ -206,7 +206,7 @@ export function LPHero() {
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/images/samir-lab-eurotex.jpg"
-                  alt="Samir Tannuri em missão técnica internacional — Paris"
+                  alt="Prof. Samir Tannuri em treinamento internacional no laboratório EUROTEX na França"
                   fill
                   className="object-cover object-top"
                   priority
@@ -235,10 +235,10 @@ export function LPHero() {
                         FIG. 01
                       </div>
                       <div className="mt-2 font-serif text-lg text-white/95 leading-tight">
-                        Missão técnica · In-Cosmetics Global
+                        Missão técnica · Laboratório EUROTEX
                       </div>
                       <div className="mt-1 text-xs text-white/50">
-                        Paris 2025 · Delegado técnico
+                        França · Homogeneização industrial
                       </div>
                     </div>
                     <div className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1.5 backdrop-blur-md">
@@ -252,22 +252,22 @@ export function LPHero() {
             {/* Floating KPI — top right */}
             <div className="absolute -right-3 top-20 hidden rounded-xl border border-[#c9a961]/25 bg-[#0b0f17]/95 p-4 backdrop-blur-xl md:block lg:-right-8">
               <div className="mb-1 text-[9px] font-bold uppercase tracking-[2px] text-[#c9a961]/70">
-                Farmácias atendidas
+                Fórmulas validadas
               </div>
-              <div className="font-serif text-3xl text-white">500<span className="text-[#c9a961]">+</span></div>
+              <div className="font-serif text-3xl text-white">4.000<span className="text-[#c9a961]">+</span></div>
               <div className="mt-1 flex items-center gap-1.5">
                 <span className="h-1 w-1 animate-pulse rounded-full bg-[#4a9eff]" />
-                <span className="text-[10px] text-white/40">6 anos · P&D magistral</span>
+                <span className="text-[10px] text-white/40">em bancada · 24 anos</span>
               </div>
             </div>
 
             {/* Floating KPI — bottom left */}
             <div className="absolute -left-3 bottom-24 hidden rounded-xl border border-[#4a9eff]/25 bg-[#0b0f17]/95 p-4 backdrop-blur-xl md:block lg:-left-8">
               <div className="mb-1 text-[9px] font-bold uppercase tracking-[2px] text-[#4a9eff]/80">
-                Formuladores treinados
+                Profissionais formados
               </div>
               <div className="font-serif text-3xl text-white">1.000<span className="text-[#4a9eff]">+</span></div>
-              <div className="mt-1 text-[10px] text-white/40">Brasil · Paris · Japão</div>
+              <div className="mt-1 text-[10px] text-white/40">Brasil · Europa · Japão</div>
             </div>
           </div>
         </div>
@@ -283,13 +283,13 @@ export function LPHero() {
             </span>
           </div>
           <div className="flex flex-1 items-center gap-8 font-mono text-[11px] text-white/40 overflow-hidden whitespace-nowrap">
-            <span>In-Cosmetics · Paris 2025</span>
+            <span>CNPq · Bolsista ativo</span>
             <span className="text-white/15">·</span>
             <span>DOI · Publicação peer-reviewed indexada</span>
             <span className="text-white/15">·</span>
-            <span>500+ farmácias atendidas</span>
+            <span>Lattes · Currículo atualizado</span>
             <span className="text-white/15">·</span>
-            <span>1.000+ formuladores treinados</span>
+            <span>ResearchGate · Network ativo</span>
             <span className="text-white/15">·</span>
             <span>ANVISA · Compliance regulatório</span>
           </div>

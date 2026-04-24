@@ -8,9 +8,9 @@ import { BlogContactForm } from "@/components/blog/blog-contact-form"
 import { BlogCommunityCTA } from "@/components/blog/blog-community-cta"
 
 export const metadata: Metadata = {
-  title: "Blog Técnico — ST Farma",
+  title: "Blog Científico — Clube de Fórmulas",
   description:
-    "Artigos, revisões técnicas e protocolos de Samir Tannuri sobre cosmetologia avançada, tricologia, dermocosmética e tecnologia farmacêutica magistral e industrial.",
+    "Artigos peer-reviewed, revisões técnicas e ensaios clínicos do Prof. Samir Tannuri sobre cosmetologia avançada, tricologia, dermocosmética e gestão farmacêutica.",
 }
 
 export default function BlogPage() {

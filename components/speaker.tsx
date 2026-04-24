@@ -6,12 +6,7 @@ export function Speaker() {
   const events = [
     {
       year: "2025",
-      title: "In-Cosmetics Global · Paris",
-      desc: "Delegado tecnico | Interlocucao direta com Sederma, Lucas Meyer e referencias mundiais",
-    },
-    {
-      year: "2025",
-      title: "20o Congresso Nacional de Farmacia Magistral",
+      title: "20o Congresso Consulfarma",
       desc: "Apresentacao da Tecnica Fenol FREE | Curso de Formulacoes e Protocolos para Lasers",
     },
     {
@@ -21,8 +16,8 @@ export function Speaker() {
     },
     {
       year: "16o-19o",
-      title: "Edicoes consecutivas como speaker",
-      desc: "Cosmetologia avancada, seruns, peelings e tricologia em 4 edicoes seguidas",
+      title: "Congressos Consulfarma",
+      desc: "Speaker em 4 edicoes consecutivas | Cosmetologia avancada, seruns, peelings e tricologia",
     },
     {
       year: "2023",
@@ -45,15 +40,14 @@ export function Speaker() {
       <div className="max-w-[1320px] mx-auto">
         <div className="text-center mb-16">
           <span className="text-xs font-bold tracking-[3px] uppercase text-copper inline-block mb-4">
-            Producao Tecnica em Congressos
+            Speaker & Educador
           </span>
           <h2 className="font-serif font-normal text-[clamp(36px,4.5vw,52px)] text-navy mb-5 leading-[1.1] tracking-[-0.5px]">
-            Contribuicao documentada no setor
+            Palcos que formam opiniao
           </h2>
           <p className="text-lg text-muted max-w-[620px] mx-auto leading-relaxed">
-            Palestras tecnicas em mais de 7 congressos nacionais e co-organizacao do 1o Simposio
-            de Peelings Quimicos do Brasil — compartilhando pratica industrial real com mais de
-            1.000 formuladores.
+            Mais de 7 congressos nacionais como speaker convidado — compartilhando P&D aplicado
+            com milhares de prescritores e farmaceuticos.
           </p>
         </div>
 
@@ -63,7 +57,7 @@ export function Speaker() {
             <div className="relative w-full aspect-[4/5]">
               <Image
                 src="/images/samir-stage-gesture.jpg"
-                alt="Samir Tannuri em palestra tecnica em congresso nacional"
+                alt="Prof. Samir Tannuri palestrando em congresso nacional"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 0px, 50vw"
@@ -73,10 +67,10 @@ export function Speaker() {
             <div className="absolute bottom-6 left-6 right-6 bg-black/75 backdrop-blur-xl border border-white/15 rounded-2xl p-5 text-white">
               <div className="flex items-center gap-2 mb-1">
                 <Mic className="w-4 h-4 text-copper-light" />
-                <div className="font-serif text-lg">Samir Tannuri</div>
+                <div className="font-serif text-lg">Prof. Samir Tannuri</div>
               </div>
               <div className="text-sm text-white/70 tracking-wide">
-                Tecnica Fenol FREE · Congresso 2025
+                20º Congresso Consulfarma · 2025
               </div>
             </div>
           </div>

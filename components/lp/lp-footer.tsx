@@ -5,7 +5,7 @@ export function LPFooter() {
   const socials = [
     { icon: Linkedin, label: "LinkedIn", meta: "/in/samirtannuri", href: "#" },
     { icon: Instagram, label: "Instagram", meta: "@cienciadapele", href: "#" },
-    { icon: FileText, label: "Publicação · DOI", meta: "Paper peer-reviewed indexado", href: "#" },
+    { icon: FileText, label: "Lattes · CNPq", meta: "Currículo acadêmico", href: "#" },
   ]
 
   return (
@@ -28,17 +28,16 @@ export function LPFooter() {
                 Cf
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-serif text-lg text-white">ST Farma</span>
+                <span className="font-serif text-lg text-white">Clube de Fórmulas</span>
                 <span className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/40">
-                  Samir Tannuri
+                  Prof. Samir Tannuri
                 </span>
               </div>
             </div>
             <p className="mt-6 max-w-md text-[14px] leading-[1.7] text-white/50">
-              Consultoria em Tecnologia Farmacêutica — para indústrias cosméticas, marcas em
-              desenvolvimento e farmácias magistrais de excelência. Seis anos coordenando P&amp;D
-              no maior grupo magistral do Brasil, publicação peer-reviewed indexada e missões
-              técnicas em três continentes.
+              Consultoria científica em P&amp;D cosmético — para indústrias Grau 1 e 2, marcas
+              independentes e farmácias magistrais de excelência. Pesquisa CNPq-UNICAMP, publicação
+              peer-reviewed indexada e missões técnicas em três continentes.
             </p>
           </div>
 
@@ -99,7 +98,7 @@ export function LPFooter() {
         {/* Bottom bar */}
         <div className="flex flex-col items-start justify-between gap-4 pt-8 md:flex-row md:items-center">
           <div className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/35">
-            © {new Date().getFullYear()} · ST Farma · Consultoria em Tecnologia Farmacêutica
+            © {new Date().getFullYear()} · Metapharma · CNPJ 00.246.124/0001-51
           </div>
           <div className="flex items-center gap-4">
             <Link

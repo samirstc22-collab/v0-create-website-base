@@ -40,8 +40,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "12 min de leitura",
     date: "18 de março de 2026",
     dateISO: "2026-03-18",
-    author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Pesquisador · Consultor Industrial · Farmacêutico Magistral",
     coverGradient: "from-[#0a1628] via-[#0f2d4a] to-[#1a4d6e]",
     excerpt:
       "Publicação peer-reviewed indexada (DOI: 10.24933/rep.v6i2.281) consolida a primeira evidência científica brasileira sobre peelings químicos em apresentação de pasta — com ganhos de penetração controlada, redução de irritabilidade e previsibilidade clínica inédita.",
@@ -100,8 +100,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min de leitura",
     date: "02 de março de 2026",
     dateISO: "2026-03-02",
-    author: "Samir Tannuri",
-    authorRole: "Consultor Industrial · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Pesquisador · Consultor Industrial",
     coverGradient: "from-[#1a4d6e] via-[#0d7a80] to-[#0a8f9e]",
     excerpt:
       "A tricologia entrou definitivamente na era da biologia molecular. Veja como combinamos peptídeos sinalizadores, ativadores de Wnt/β-catenina e cofatores mitocondriais em um mesmo veículo — com resultados visíveis em 90 dias.",
@@ -146,8 +146,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min de leitura",
     date: "14 de fevereiro de 2026",
     dateISO: "2026-02-14",
-    author: "Samir Tannuri",
-    authorRole: "Consultor Industrial · Farmacêutico Magistral · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Consultor Industrial · Farmacêutico Magistral",
     coverGradient: "from-[#5a2e0a] via-[#b87333] to-[#e8a87c]",
     excerpt:
       "Em toda farmácia bem analisada, 20% das fórmulas respondem por 80% do faturamento. O problema não é a estatística — é o dono que ainda não a conhece. Um método em quatro passos para transformar dados em lucro.",
@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "A matemática silenciosa da sua farmácia",
         paragraphs: [
-          "Em seis anos coordenando P&D no maior grupo magistral do Brasil, atendendo tecnicamente mais de 500 farmácias, uma constante matemática se repete com impressionante regularidade: 18% a 23% das fórmulas cadastradas respondem por 75% a 82% da receita líquida.",
+          "Em mais de 800 consultorias, uma constante matemática se repete com impressionante regularidade: 18% a 23% das fórmulas cadastradas respondem por 75% a 82% da receita líquida.",
           "O que varia não é a proporção — é a lucidez do gestor sobre ela. Farmácias que conhecem seus 20% crescem; farmácias que ignoram, estagnam e culpam o mercado.",
         ],
       },
@@ -191,8 +191,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "11 min de leitura",
     date: "28 de janeiro de 2026",
     dateISO: "2026-01-28",
-    author: "Samir Tannuri",
-    authorRole: "Farmacêutico Magistral · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Pesquisador · Farmacêutico Magistral",
     coverGradient: "from-[#1a0a2e] via-[#3d1f5c] to-[#5b2e8a]",
     excerpt:
       "Niacinamida não 'briga' com vitamina C. Niacinamida não precisa de pH neutro. Niacinamida não perde função em creme. Desmontamos os mitos mais persistentes da dermocosmética com literatura recente e protocolos testados.",
@@ -239,8 +239,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "13 min de leitura",
     date: "10 de janeiro de 2026",
     dateISO: "2026-01-10",
-    author: "Samir Tannuri",
-    authorRole: "Consultor Industrial · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Consultor Industrial · Pesquisador",
     coverGradient: "from-[#0a4d3c] via-[#0d7a5c] to-[#10a87e]",
     excerpt:
       "O salto do pote manipulado ao lote piloto industrial não é apenas de escala — é de mentalidade. Um mapa em sete estações para quem quer atravessar a ponte sem perder alma.",
@@ -287,8 +287,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min de leitura",
     date: "22 de dezembro de 2025",
     dateISO: "2025-12-22",
-    author: "Samir Tannuri",
-    authorRole: "Consultor Industrial · ST Farma",
+    author: "Prof. Samir Tannuri",
+    authorRole: "Pesquisador · Consultor Industrial",
     coverGradient: "from-[#0a2e1a] via-[#1a5c33] to-[#2d8a4f]",
     excerpt:
       "O Brasil é a maior farmácia a céu aberto do planeta — mas boa parte dos bioativos amazônicos ainda é vendida por folclore. Revisamos a literatura recente e indicamos quais merecem espaço em formulações sérias.",

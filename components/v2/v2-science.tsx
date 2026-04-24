@@ -4,18 +4,18 @@ export function V2Science() {
   const pillars = [
     {
       icon: Microscope,
-      title: "Prática industrial",
-      text: "Seis anos coordenando P&D no maior grupo magistral do Brasil — formulação, escalonamento e resolução de desvio de lote em volume real.",
+      title: "Pesquisa CNPq",
+      text: "Bancada ativa na UNICAMP com projetos validados de bioativos aplicados à cosmetologia.",
     },
     {
       icon: FileText,
       title: "Publicação indexada",
-      text: "Coautoria em artigo peer-reviewed com DOI sobre fotoproteção em peles negras Fitzpatrick V–VI — único trabalho do tipo no Brasil.",
+      text: "Primeira autoria em artigo peer-reviewed com DOI e protocolos replicáveis internacionalmente.",
     },
     {
       icon: BookOpen,
-      title: "Atualização internacional",
-      text: "Delegado técnico In-Cosmetics Global Paris 2025 e missões em Amsterdam e Japão — sourcing direto com fornecedores mundiais.",
+      title: "Formação contínua",
+      text: "Atualização técnica em laboratórios europeus e presença em congressos de cinco continentes.",
     },
   ]
 
@@ -73,16 +73,16 @@ export function V2Science() {
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-[3px] text-[#1a3d2e]/60 font-bold mb-3">
-              Publicação coassinada
+              Publicação de primeira autoria
             </div>
             <h3 className="font-serif text-2xl md:text-3xl leading-snug mb-3">
-              &ldquo;Fotoproteção para peles negras — desenvolvimento e validação de FPS com
-              pigmentos microencapsulados&rdquo;
+              &ldquo;Desenvolvimento e estabilidade de sistema emulsionado com ativo magistral
+              em plataforma de liberação modificada&rdquo;
             </h3>
             <p className="text-[#0f2419]/70 text-sm md:text-base leading-[1.7]">
-              Revista peer-reviewed indexada com DOI · FPS 30,5 · FPUVA 10,3 · λc 378,3 nm ·
-              Design experimental validado laboratorialmente para fototipos Fitzpatrick V–VI.
-              Único trabalho do tipo publicado no Brasil.
+              Revista peer-reviewed internacional indexada · Projeto CNPq-UNICAMP · Protocolo
+              replicável em farmácia magistral com controle de estabilidade a 45 °C por 90
+              dias.
             </p>
           </div>
         </div>

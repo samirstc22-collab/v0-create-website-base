@@ -4,7 +4,7 @@ import { ConteudosHero } from "@/components/conteudos/conteudos-hero"
 import { ConteudosGrid } from "@/components/conteudos/conteudos-grid"
 
 export const metadata = {
-  title: "Conteudos | Samir Tannuri - ST Farma",
+  title: "Conteudos | Prof. Samir Tannuri - Clube de Formulas",
   description: "Laminas tecnicas, artigos cientificos e conteudos de autoridade sobre peptideos, peelings, nanotecnologia e protocolos clinicos.",
 }
 

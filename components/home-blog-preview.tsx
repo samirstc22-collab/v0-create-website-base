@@ -36,8 +36,8 @@ export function HomeBlogPreview() {
               <span className="italic text-[#b87333]">clareza cirúrgica</span>.
             </h2>
             <p className="mt-5 max-w-[640px] text-base leading-relaxed text-muted md:text-lg">
-              Uma biblioteca viva de revisões técnicas, protocolos testados no balcão e
-              ensaios sobre o futuro da farmácia magistral e industrial brasileira.
+              Uma biblioteca viva de revisões peer-reviewed, protocolos testados no balcão
+              e ensaios sobre o futuro da farmácia magistral brasileira.
             </p>
           </div>
 
@@ -100,13 +100,13 @@ export function HomeBlogPreview() {
                     <div className="relative h-8 w-8 overflow-hidden rounded-full ring-1 ring-[#b87333]/20">
                       <Image
                         src="/images/samir-portrait-smile.jpg"
-                        alt="Samir Tannuri"
+                        alt="Prof. Samir Tannuri"
                         fill
                         className="object-cover"
                         sizes="32px"
                       />
                     </div>
-                    <span className="text-xs text-muted">Samir Tannuri</span>
+                    <span className="text-xs text-muted">Prof. Samir Tannuri</span>
                   </div>
                   <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#b87333]">
                     Ler artigo
