@@ -77,6 +77,7 @@ export function Navbar() {
         { href: "/protocolos", label: "Protocolos Clinicos", description: "Dermatologia e prescritores", icon: Stethoscope },
       ]
     },
+    { href: "/portfolio-inovacoes", label: "Portfolio", icon: Sparkles },
     { href: "/missoes", label: "Missoes", icon: Globe },
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/contato", label: "Contato", icon: Mail },

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, X, Check, AlertTriangle } from "lucide-react"
 
 export function HomeDifferentiation() {
@@ -99,18 +100,73 @@ export function HomeDifferentiation() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-[#475569] mb-6">
-            Pronto para elevar o padrao tecnico da sua operacao?
-          </p>
-          <Link
-            href="/consultoria"
-            className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
-          >
-            Agendar diagnostico tecnico
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+        {/* Image + CTA Section */}
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
+          {/* Images Grid */}
+          <div className="relative space-y-4">
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#0C2340]/10 via-transparent to-[#B8783D]/10 blur-xl pointer-events-none" />
+            
+            {/* Training workshop image */}
+            <div className="relative overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-[0_20px_60px_-15px_rgba(12,35,64,0.15)]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%202026-04-21%20a%CC%80%28s%29%2020.04.24-GqBE7P7pok9Hw3CPH6YzshQ2B1v35n.png"
+                alt="Workshop de peelings quimicos com pratica supervisionada"
+                width={600}
+                height={400}
+                className="w-full h-[280px] object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="bg-white/95 backdrop-blur rounded-xl px-4 py-3 shadow-lg">
+                  <div className="text-[10px] uppercase tracking-[2px] font-bold text-[#B8783D] mb-1">
+                    Treinamento pratico
+                  </div>
+                  <div className="text-sm font-semibold text-[#0C2340]">
+                    Formacao com pratica supervisionada real
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Product development showcase */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative group overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1700403712110-gEYnsv8nrv3qDjAzTOhj9LXhnJ6YEQ.jpeg"
+                  alt="Treinamento tecnico em formulacao"
+                  width={300}
+                  height={200}
+                  className="w-full h-[120px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="relative group overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693088095952-SOf45sTK8EQFDr4RtYf8yo4CsQqVis.jpeg"
+                  alt="Portfolio de produtos desenvolvidos"
+                  width={300}
+                  height={200}
+                  className="w-full h-[120px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Content */}
+          <div className="text-center lg:text-left">
+            <h3 className="font-serif text-2xl md:text-3xl text-[#0C2340] leading-[1.2] mb-4">
+              Pronto para elevar o padrao tecnico da sua operacao?
+            </h3>
+            <p className="text-[#475569] mb-6 max-w-md mx-auto lg:mx-0">
+              Agende um diagnostico tecnico gratuito e descubra como podemos otimizar seus processos de formulacao.
+            </p>
+            <Link
+              href="/consultoria"
+              className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
+            >
+              Agendar diagnostico tecnico
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

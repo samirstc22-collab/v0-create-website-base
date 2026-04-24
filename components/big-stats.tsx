@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function BigStats() {
   const stats = [
     { num: "6 anos", label: "Coordenando P&D no maior grupo magistral", accent: "#0C2340" },
@@ -23,30 +25,52 @@ export function BigStats() {
           </h2>
         </div>
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
-          {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="group relative bg-[#f8fafc] hover:bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:shadow-[0_20px_50px_-15px_rgba(12,35,64,0.12)] border border-transparent hover:border-[#e5e7eb]"
-            >
-              {/* Accent line */}
-              <div 
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 rounded-b-full opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ backgroundColor: stat.accent }}
+        {/* Photo + Stats grid */}
+        <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-start">
+          {/* Professional photo */}
+          <div className="hidden lg:block relative">
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#B8783D]/15 via-transparent to-[#0C2340]/10 blur-xl pointer-events-none" />
+            <div className="relative overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-[0_20px_50px_-15px_rgba(12,35,64,0.15)]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9950%20copiar-5oI7SGUIxX6Vi6p4D42Jo06tatWSVM.jpg"
+                alt="Samir Tannuri - Consultor em Formulacao Magistral"
+                width={280}
+                height={400}
+                className="w-full h-auto object-cover"
               />
-              
-              <div 
-                className="font-serif text-[clamp(36px,5vw,52px)] leading-none mb-3 transition-colors"
-                style={{ color: stat.accent }}
-              >
-                {stat.num}
-              </div>
-              <div className="text-xs md:text-sm text-[#64748b] tracking-[1px] uppercase font-semibold leading-tight">
-                {stat.label}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="text-white font-semibold text-sm">Samir Tannuri</div>
+                <div className="text-white/70 text-xs">Consultor ST Farma</div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className="group relative bg-[#f8fafc] hover:bg-white rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-[0_20px_50px_-15px_rgba(12,35,64,0.12)] border border-transparent hover:border-[#e5e7eb]"
+              >
+                {/* Accent line */}
+                <div 
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 rounded-b-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ backgroundColor: stat.accent }}
+                />
+                
+                <div 
+                  className="font-serif text-[clamp(32px,4vw,48px)] leading-none mb-2 transition-colors"
+                  style={{ color: stat.accent }}
+                >
+                  {stat.num}
+                </div>
+                <div className="text-[10px] md:text-xs text-[#64748b] tracking-[1px] uppercase font-semibold leading-tight">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       

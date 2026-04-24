@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Sparkles, Zap, Brain, Search, Shield, Clock } from "lucide-react"
 
 export function HomeLabPro() {
@@ -24,6 +25,87 @@ export function HomeLabPro() {
       />
 
       <div className="relative max-w-[1320px] mx-auto">
+        {/* Speaker authority image */}
+        <div className="mb-10 relative overflow-hidden rounded-3xl border border-[#e5e7eb] shadow-[0_20px_60px_-15px_rgba(12,35,64,0.12)]">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4727-G0PVdfQPCEkOzNyGOL4Rovyvn71ljB.jpg"
+            alt="Samir Tannuri palestrando sobre tecnologia magistral"
+            width={1400}
+            height={500}
+            className="w-full h-[280px] md:h-[350px] object-cover object-[center_35%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0C2340]/80 via-[#0C2340]/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            <div className="max-w-xl">
+              <div className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#4a9eff] mb-3">
+                Tecnologia que nasce da pratica
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl text-white leading-[1.2] mb-3">
+                O Lab Pro e alimentado por 6 anos de pratica industrial real
+              </h3>
+              <p className="text-white/70 text-sm md:text-base max-w-lg">
+                Cada formula validada, cada desvio resolvido, cada protocolo criado — tudo isso alimenta a inteligencia do Formulator AI.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Lab formulation gallery */}
+        <div className="mb-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="relative group overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm hover:shadow-lg transition-shadow">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1698278552063-6G7ctach6vsNi8BxMKAOZ0dla11kww.jpeg"
+              alt="Formulacoes micelares em desenvolvimento"
+              width={400}
+              height={400}
+              className="w-full h-[180px] md:h-[220px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-semibold text-white">Micelares</span>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm hover:shadow-lg transition-shadow">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693949412132-wFGpfq6VcPV2gvU4jE0TXRw1MOJMDL.jpeg"
+              alt="Mascaras de argila em desenvolvimento"
+              width={400}
+              height={400}
+              className="w-full h-[180px] md:h-[220px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-semibold text-white">Mascaras faciais</span>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm hover:shadow-lg transition-shadow">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1709143998205-H1eDfKMSub31LhCMxixc3pPiskEqZd.jpeg"
+              alt="Linha de produtos desenvolvidos"
+              width={400}
+              height={400}
+              className="w-full h-[180px] md:h-[220px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-semibold text-white">Linha completa</span>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm hover:shadow-lg transition-shadow">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693088095952-SOf45sTK8EQFDr4RtYf8yo4CsQqVis.jpeg"
+              alt="Desenvolvimento de maquiagem e skincare"
+              width={400}
+              height={400}
+              className="w-full h-[180px] md:h-[220px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-semibold text-white">Cosmeticos</span>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Content */}
           <div>
