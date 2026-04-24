@@ -47,7 +47,7 @@ export function LPHero() {
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-[15px] text-white/90">Clube de Fórmulas</span>
               <span className="text-[10px] uppercase tracking-[2.5px] text-white/40">
-                Prof. Samir Tannuri
+                Samir Tannuri
               </span>
             </div>
           </Link>
@@ -138,7 +138,7 @@ export function LPHero() {
             <span className="text-white/90">indústrias Grau 1 e 2, marcas independentes</span>{" "}
             e{" "}
             <span className="text-white/90">farmácias magistrais de excelência</span>. Bancada
-            CNPq-UNICAMP, publicação peer-reviewed indexada e infraestrutura inteligente de
+           , publicação peer-reviewed indexada e infraestrutura inteligente de
             formulação.
           </p>
 
@@ -163,10 +163,10 @@ export function LPHero() {
           {/* Credentials strip */}
           <div className="mt-14 grid grid-cols-2 gap-6 border-t border-white/[0.06] pt-8 md:grid-cols-4">
             {[
-              { k: "CNPq", v: "UNICAMP" },
+              { k: "In-Cosmetics", v: "Delegado 2025" },
               { k: "DOI", v: "Peer-Reviewed" },
-              { k: "EUROTEX", v: "França" },
-              { k: "17+", v: "Capitais" },
+              { k: "Missões", v: "3 Continentes" },
+              { k: "Magistral", v: "500+ Farmácias" },
             ].map((c) => (
               <div key={c.k}>
                 <div className="font-serif text-lg text-[#c9a961]">{c.k}</div>
@@ -205,8 +205,8 @@ export function LPHero() {
               {/* Image */}
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/images/samir-lab-eurotex.png"
-                  alt="Prof. Samir Tannuri em treinamento internacional no laboratório EUROTEX na França"
+                  src="/placeholder.svg?height=600&width=800"
+                  alt="Samir Tannuri em treinamento internacional no laboratório EUROTEX na França"
                   fill
                   className="object-cover object-top"
                   priority
@@ -283,13 +283,13 @@ export function LPHero() {
             </span>
           </div>
           <div className="flex flex-1 items-center gap-8 font-mono text-[11px] text-white/40 overflow-hidden whitespace-nowrap">
-            <span>CNPq · Bolsista ativo</span>
+            <span>6 anos de P&D · Maior grupo magistral</span>
             <span className="text-white/15">·</span>
-            <span>DOI · Publicação peer-reviewed indexada</span>
+            <span>Delegado In-Cosmetics Paris 2025</span>
             <span className="text-white/15">·</span>
-            <span>Lattes · Currículo atualizado</span>
+            <span>Paper peer-reviewed · DOI indexado</span>
             <span className="text-white/15">·</span>
-            <span>ResearchGate · Network ativo</span>
+            <span>500+ farmácias atendidas</span>
             <span className="text-white/15">·</span>
             <span>ANVISA · Compliance regulatório</span>
           </div>

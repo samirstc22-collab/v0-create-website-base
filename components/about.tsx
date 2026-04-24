@@ -2,7 +2,7 @@ import { Check } from "lucide-react"
 
 export function About() {
   const checkItems = [
-    "Bolsista CNPq pesquisando ativos em UNICAMP",
+    "Bolsista pesquisando ativos em",
     "Speaker convidado em 7+ congressos nacionais",
     "Publicação peer-reviewed com DOI indexado",
     "Co-organizador do 1° Simpósio de Peelings",
@@ -21,7 +21,7 @@ export function About() {
             Ciência transformada em resultado clínico
           </h2>
           <p className="text-[15px] text-muted max-w-[580px] mx-auto leading-[1.7]">
-            Farmacêutico pela USF, pesquisador CNPq na UNICAMP e consultor industrial com mais de
+            Bacharel pela USF, consultor sênior — e consultor industrial com mais de
             duas décadas de experiência em P&D cosmético.
           </p>
         </div>
@@ -34,8 +34,8 @@ export function About() {
                 <span className="font-serif text-[100px] text-white/10">ST</span>
               </div>
               <div className="absolute bottom-5 left-5 right-5 bg-white/[0.96] backdrop-blur-[16px] rounded-[14px] p-4 px-5 shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
-                <div className="font-serif text-[15px] text-navy">Prof. Samir Tannuri</div>
-                <div className="text-[11px] text-muted mt-0.5">Farmacêutico · Pesquisador CNPq</div>
+                <div className="font-serif text-[15px] text-navy">Samir Tannuri</div>
+                <div className="text-[11px] text-muted mt-0.5">Professor · Consultor em Formulação Magistral</div>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function About() {
             <p className="text-[15.5px] leading-[1.85] mb-[18px] text-body">
               <strong className="text-navy font-semibold">Samir Tannuri Cerveira</strong> é um dos
               nomes de referência no P&D cosmético brasileiro. Com formação em Farmácia pela
-              Universidade São Francisco e pesquisa de ponta na UNICAMP, desenvolve formulações
+              Universidade São Francisco e pesquisa de ponta na, desenvolve formulações
               magistrais e industriais que conectam ciência de bancada ao resultado clínico.
             </p>
             <p className="text-[15.5px] leading-[1.85] mb-[18px] text-body">
@@ -75,7 +75,7 @@ export function About() {
               <p className="font-serif italic text-[16px] text-navy leading-[1.6] mb-1.5">
                 {'"'}Fórmula boa não nasce de opinião — nasce de evidência, método e iteração.{'"'}
               </p>
-              <span className="text-[12px] text-muted">— Prof. Samir Tannuri</span>
+              <span className="text-[12px] text-muted">— Samir Tannuri</span>
             </div>
           </div>
         </div>

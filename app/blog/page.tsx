@@ -10,7 +10,7 @@ import { BlogCommunityCTA } from "@/components/blog/blog-community-cta"
 export const metadata: Metadata = {
   title: "Blog Científico — Clube de Fórmulas",
   description:
-    "Artigos peer-reviewed, revisões técnicas e ensaios clínicos do Prof. Samir Tannuri sobre cosmetologia avançada, tricologia, dermocosmética e gestão farmacêutica.",
+    "Artigos peer-reviewed, revisões técnicas e ensaios clínicos do Samir Tannuri sobre cosmetologia avançada, tricologia, dermocosmética e gestão magistral.",
 }
 
 export default function BlogPage() {

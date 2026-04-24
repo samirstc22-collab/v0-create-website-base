@@ -8,9 +8,9 @@ import { Industries } from "@/components/industries"
 import { PersonalPitch } from "@/components/personal-pitch"
 
 export const metadata = {
-  title: "Consultoria Personalizada | Prof. Samir Tannuri",
+  title: "Consultoria em Formulação Magistral | ST Farma",
   description:
-    "A primeira consultoria farmacêutica 100% personalizada do Brasil. Diagnóstico, plano sob medida e lucratividade comprovada para a sua farmácia ou drogaria.",
+    "Consultoria sob medida para indústrias cosméticas, farmácias magistrais e marcas em desenvolvimento de portfólio. Diagnóstico técnico, reformulação, transferência de tecnologia e sourcing internacional.",
 }
 
 export default function ConsultoriaPage() {

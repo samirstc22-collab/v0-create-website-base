@@ -181,7 +181,7 @@ export function LPFormulatorAI() {
 
             <p className="mt-8 max-w-2xl text-lg leading-[1.7] text-white/65 md:text-xl">
               Uma plataforma criada para apoiar{" "}
-              <span className="text-white">farmácias de manipulação, farmacêuticos formuladores,
+              <span className="text-white">farmácias de manipulação, consultores magistrais,
               P&D, marcas dermocosméticas e prescritores</span>{" "}
               no desenvolvimento de formulações mais seguras, estratégicas e tecnicamente robustas.{" "}
               <span className="text-[#c9a961]">

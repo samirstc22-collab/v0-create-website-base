@@ -121,7 +121,7 @@ export function ConsultoriaTiers() {
               </div>
               
               <a
-                href="https://wa.me/5562999999999"
+                href="https://wa.me/5511981403000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`rounded-xl py-4 px-7 font-bold text-base w-full text-center transition-all tracking-wide inline-flex items-center justify-center gap-2 ${

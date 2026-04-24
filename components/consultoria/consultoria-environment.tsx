@@ -69,8 +69,8 @@ export function ConsultoriaEnvironment() {
               <div className="absolute bottom-6 left-6 right-6 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/10">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
-                    alt="Prof. Samir Tannuri dentro da farmácia com a equipe"
+                    src="/placeholder.svg?height=600&width=500"
+                    alt="Samir Tannuri dentro da farmácia com a equipe"
                     fill
                     className="object-cover object-[center_top]"
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -100,7 +100,7 @@ export function ConsultoriaEnvironment() {
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-[#0a1628]/75">
-              Nenhuma consultoria do Prof. Samir acontece à distância. É obrigatório entender como a sua equipe
+              Nenhuma consultoria do Samir acontece à distância. É obrigatório entender como a sua equipe
               atende, como o cliente entra, o que falta na prateleira e o que sobra na vitrine.{" "}
               <strong className="text-[#0a1628]">Personalização começa ali — no olho no olho.</strong>
             </p>
@@ -142,14 +142,14 @@ export function ConsultoriaEnvironment() {
               <div className="mt-4 flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
-                    alt="Prof. Samir Tannuri"
+                    src="/placeholder.svg?height=600&width=500"
+                    alt="Samir Tannuri"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-[#0a1628]">Prof. Samir Tannuri</div>
+                  <div className="text-sm font-medium text-[#0a1628]">Samir Tannuri</div>
                   <div className="text-xs text-[#0a1628]/60">Fundador · Clube de Fórmulas</div>
                 </div>
               </div>

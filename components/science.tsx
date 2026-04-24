@@ -39,7 +39,7 @@ export function Science() {
             </h3>
             
             <p className="text-base text-white/50 leading-relaxed mb-7 italic">
-              Revista Ensaios Pioneiros v.6 n.2 | DOI: 10.24933/rep.v6i2.281
+              Revista Ensaios Pioneiros v.6 n.2 · DOI: 10.24933/rep.v6i2.281 · Em colaboração com pesquisadores da UNICAMP
             </p>
             
             <div className="flex gap-8 flex-wrap mb-8">

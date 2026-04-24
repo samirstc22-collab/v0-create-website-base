@@ -41,7 +41,7 @@ export function V2Navbar() {
               Clube de Fórmulas
             </span>
             <span className="text-[10px] uppercase tracking-[2.5px] text-[#1a3d2e]/55 font-semibold">
-              Prof. Samir Tannuri
+              Samir Tannuri
             </span>
           </div>
         </Link>

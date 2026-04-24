@@ -25,7 +25,7 @@ export function LPMagistral() {
       icon: Users,
       id: "04",
       title: "Treinamento da equipe",
-      desc: "Capacitação técnica e comercial — farmacêutico, manipuladores e atendimento — em linguagem única.",
+      desc: "Capacitação técnica e comercial — profissionais magistrais e atendimento — em linguagem única.",
     },
     {
       icon: Microscope,
@@ -117,8 +117,8 @@ export function LPMagistral() {
         <aside className="relative overflow-hidden lg:sticky lg:top-0 lg:h-screen">
           <div className="relative h-[420px] w-full lg:h-full">
             <Image
-              src="/images/samir-portrait-stool.jpg"
-              alt="Consultoria magistral personalizada — Prof. Samir Tannuri"
+              src="/placeholder.svg?height=700&width=500"
+              alt="Consultoria magistral personalizada — Samir Tannuri"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 40vw"

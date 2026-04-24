@@ -35,8 +35,8 @@ export function PersonalPitch() {
             <span className="italic text-[#e8a87c]">Sua consultoria também não deveria ser.</span>
           </h2>
           <p className="mt-8 text-lg leading-[1.7] text-white/75 md:text-xl">
-            O Prof. Samir Tannuri concebeu a{" "}
-            <strong className="text-white">primeira metodologia brasileira de consultoria farmacêutica
+            O Samir Tannuri concebeu a{" "}
+            <strong className="text-white">primeira metodologia brasileira de consultoria em magistral
             verdadeiramente personalizada</strong> — forjada em mais de duas décadas de balcão, bancada e
             indústria, construída linha por linha para transformar a geografia, o público e o potencial
             específicos da sua farmácia em{" "}
@@ -51,8 +51,8 @@ export function PersonalPitch() {
             <div className="relative">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/samir-portrait-sofa.jpg"
-                  alt="Prof. Samir Tannuri sentado, postura confiante e profissional"
+                  src="/placeholder.svg?height=800&width=600"
+                  alt="Samir Tannuri sentado, postura confiante e profissional"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -99,17 +99,17 @@ export function PersonalPitch() {
               <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
                 <div className="h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#b87333]/40">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
-                    alt="Prof. Samir Tannuri"
+                    src="/placeholder.svg?height=600&width=500"
+                    alt="Samir Tannuri"
                     width={56}
                     height={56}
                     className="h-full w-full object-cover"
                   />
                 </div>
                 <div>
-                  <div className="font-medium text-white">Prof. Samir Tannuri</div>
+                  <div className="font-medium text-white">Samir Tannuri</div>
                   <div className="text-sm text-white/60">
-                    Farmacêutico · Consultor · 24 anos transformando negócios
+                    Professor · Consultor · 24 anos transformando negócios
                   </div>
                 </div>
               </div>
@@ -152,8 +152,8 @@ export function PersonalPitch() {
           <div className="relative">
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[4/3]">
               <Image
-                src="/images/samir-stage-gesture.jpg"
-                alt="Prof. Samir Tannuri no palco ministrando palestra com energia"
+                src="/placeholder.svg?height=600&width=800"
+                alt="Samir Tannuri no palco ministrando palestra com energia"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -177,7 +177,7 @@ export function PersonalPitch() {
             </h3>
             <p className="mt-6 text-base leading-[1.7] text-white/75 md:text-lg">
               Em mais de <strong className="text-white">800 palestras</strong> em congressos
-              nacionais e internacionais, o Prof. Samir consolidou uma reputação inconfundível:
+              nacionais e internacionais, o Samir consolidou uma reputação inconfundível:
               discutir farmácia com{" "}
               <strong className="text-white">rigor científico, afeto humano e aplicabilidade imediata</strong>.
               É exatamente essa energia — disciplinada no rigor e contagiosa no entusiasmo — que ele
@@ -187,7 +187,7 @@ export function PersonalPitch() {
             <ul className="mt-7 space-y-3.5 text-sm leading-relaxed text-white/85 md:text-base">
               {[
                 "Aulas construídas sobre a rotina real do balcão, da bancada e da manipulação",
-                "Linguagem cristalina para farmacêutico, equipe de atendimento e gestor de caixa",
+                "Linguagem cristalina para especialista, equipe de atendimento e gestor de caixa",
                 "Conteúdo que, já no dia seguinte, vira protocolo, vitrine e ticket médio maior",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -229,7 +229,7 @@ export function PersonalPitch() {
                 href="/contato"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-medium text-white transition hover:border-white/40 hover:bg-white/5"
               >
-                Falar com o Prof. Samir
+                Falar com o Samir
               </Link>
             </div>
           </div>

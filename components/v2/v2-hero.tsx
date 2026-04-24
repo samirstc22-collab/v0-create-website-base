@@ -98,8 +98,8 @@ export function V2Hero() {
           <div className="absolute -inset-6 bg-[#c9a961]/25 rounded-[32px] blur-2xl" />
           <div className="relative rounded-[28px] overflow-hidden border border-[#1a3d2e]/15 aspect-[4/5] shadow-[0_30px_80px_rgba(15,36,25,0.25)]">
             <Image
-              src="/images/samir-portrait-stool.jpg"
-              alt="Prof. Samir Tannuri"
+              src="/placeholder.svg?height=700&width=500"
+              alt="Samir Tannuri"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 480px"
@@ -114,7 +114,7 @@ export function V2Hero() {
               Pesquisador associado
             </div>
             <div className="font-serif text-xl text-[#0f2419] mt-1">
-              CNPq · UNICAMP
+             
             </div>
           </div>
           <div className="absolute -right-4 md:-right-8 top-16 bg-[#1a3d2e] text-[#f5f1e8] rounded-2xl px-5 py-4 shadow-xl">

@@ -88,7 +88,7 @@ export function LojaCta() {
               <div className="pt-6 border-t border-white/10">
                 <div className="font-serif text-base text-white">Dra. Camila Fonseca</div>
                 <div className="text-[11px] tracking-[1.5px] uppercase text-white/50 font-semibold mt-1">
-                  Farmacêutica Magistral · Curitiba – PR
+                  Manipulação Magistral · Curitiba – PR
                 </div>
               </div>
             </blockquote>

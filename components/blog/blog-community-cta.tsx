@@ -77,12 +77,12 @@ export function BlogCommunityCTA() {
               <h2 className="mt-5 font-serif text-3xl leading-[1.05] tracking-tight text-[#0a1628] md:text-5xl lg:text-[56px]">
                 <span className="italic text-[#b87333]">Ciência da Pele</span>
                 <span className="block text-[#0a1628]">— o grupo onde nasce a próxima</span>
-                <span className="block italic text-[#b87333]">geração farmacêutica.</span>
+                <span className="block italic text-[#b87333]">geração magistral.</span>
               </h2>
 
               <p className="mt-6 text-base leading-[1.7] text-[#3b4a5c] md:text-lg">
-                Um espaço curado pessoalmente pelo Prof. Samir Tannuri, onde mais de{" "}
-                <strong className="text-[#0a1628]">400 farmacêuticos, esteticistas e médicos</strong>{" "}
+                Um espaço curado pessoalmente pelo Samir Tannuri, onde mais de{" "}
+                <strong className="text-[#0a1628]">400 profissionais, esteticistas e médicos</strong>{" "}
                 discutem, todos os dias, casos clínicos reais, formulações inéditas, bastidores de
                 pesquisa e os últimos congressos internacionais — sem filtros, sem jabá, sem custo.
               </p>
@@ -109,7 +109,7 @@ export function BlogCommunityCTA() {
                   Lá eu escuto o Brasil real da farmácia — e é esse diálogo que move a minha pesquisa.&rdquo;
                 </p>
                 <p className="mt-3 text-xs font-bold uppercase tracking-[2px] text-[#b87333]">
-                  — Prof. Samir Tannuri
+                  — Samir Tannuri
                 </p>
               </div>
             </div>

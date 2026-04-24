@@ -16,67 +16,56 @@ import {
 export function HomeAuthority() {
   const bigNumbers = [
     {
-      icon: Mic2,
-      value: "800+",
-      label: "Palestras ministradas",
-      detail: "Congressos nacionais e internacionais",
-    },
-    {
-      icon: MapPin,
-      value: "26",
-      label: "Capitais brasileiras",
-      detail: "Tour técnico em todos os estados",
-    },
-    {
-      icon: Globe2,
-      value: "15+",
-      label: "Países visitados",
-      detail: "Missões técnicas em 3 continentes",
-    },
-    {
-      icon: GraduationCap,
-      value: "12.000+",
-      label: "Alunos impactados",
-      detail: "Farmacêuticos e estudantes formados",
+      icon: Building2,
+      value: "6 anos",
+      label: "Coordenando P&D",
+      detail: "No maior grupo magistral do Brasil",
     },
     {
       icon: FlaskConical,
-      value: "4.000+",
-      label: "Fórmulas validadas",
-      detail: "Testadas em bancada e mercado",
+      value: "500+",
+      label: "Farmácias atendidas",
+      detail: "Suporte técnico especializado",
     },
     {
-      icon: Building2,
-      value: "20+",
-      label: "Indústrias atendidas",
-      detail: "Brasil, Europa e América do Sul",
+      icon: GraduationCap,
+      value: "1.000+",
+      label: "Formuladores treinados",
+      detail: "Programas presenciais e online",
+    },
+    {
+      icon: Mic2,
+      value: "7+",
+      label: "Palestras internacionais",
+      detail: "Congressos nacionais e internacionais",
+    },
+    {
+      icon: Globe2,
+      value: "3",
+      label: "Continentes em missão",
+      detail: "Paris, Amsterdam e Japão",
+    },
+    {
+      icon: Award,
+      value: "1",
+      label: "Paper peer-reviewed",
+      detail: "DOI 10.24933/rep.v6i2.281",
     },
   ]
 
   const countries = [
     "Brasil",
-    "França",
-    "Holanda",
-    "Portugal",
-    "Espanha",
-    "Itália",
-    "Alemanha",
+    "França — Paris",
+    "Holanda — Amsterdam",
     "Japão",
-    "Estados Unidos",
-    "México",
-    "Argentina",
-    "Chile",
-    "Colômbia",
-    "Peru",
-    "Uruguai",
   ]
 
   const authoritySeals = [
-    "CNPq - Conselho Nacional",
-    "UNICAMP - Pós-Graduação",
-    "Peer-Reviewed DOI",
-    "Lattes K2699008D8",
-    "ResearchGate",
+    "In-Cosmetics Global Paris 2025",
+    "Missão Técnica Amsterdam",
+    "Missão Técnica Japão",
+    "Paper Peer-Reviewed",
+    "ICosmetologia",
   ]
 
   return (
@@ -106,18 +95,19 @@ export function HomeAuthority() {
           <div className="inline-flex items-center gap-3 rounded-full border border-[#e8a87c]/30 bg-[#e8a87c]/10 px-5 py-2">
             <Award className="h-4 w-4 text-[#e8a87c]" />
             <span className="text-xs font-bold uppercase tracking-[3px] text-[#e8a87c]">
-              Autoridade Comprovada
+              Quem conduz a ST Farma
             </span>
           </div>
           <h2 className="mt-6 font-serif text-4xl leading-[1.03] tracking-[-0.02em] text-white md:text-6xl lg:text-[72px]">
-            Enquanto outros leem sobre cosmetologia,{" "}
-            <span className="italic text-[#e8a87c]">ele formula ao lado de quem escreve os livros.</span>
+            Prática industrial real,{" "}
+            <span className="italic text-[#e8a87c]">não teoria de sala de aula.</span>
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-[1.7] text-white/70 md:text-xl">
-            Mais de duas décadas na ponta da pesquisa cosmética global. Quando o Prof. Samir senta à sua
-            mesa para pensar a sua farmácia, ele traz com ele{" "}
-            <span className="font-semibold text-white">o que há de mais avançado em Paris, Tóquio e
-            Amsterdam</span> — traduzido em protocolos que cabem no seu caixa.
+            Seis anos coordenando P&D no maior grupo magistral do Brasil. Quando Samir Tannuri senta à
+            sua mesa para pensar a sua operação, ele traz{" "}
+            <span className="font-semibold text-white">formulação, escalonamento, resolução de desvio
+            de lote e rede internacional</span> — traduzidos em entregáveis claros para industrial
+            ou magistral.
           </p>
         </div>
 
@@ -128,8 +118,8 @@ export function HomeAuthority() {
             <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/30 via-transparent to-[#2dd4bf]/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
-                src="/images/samir-lab-eurotex.png"
-                alt="Prof. Samir Tannuri em laboratório internacional EUROTEX operando homogenizador"
+                src="/placeholder.svg?height=600&width=800"
+                alt="Samir Tannuri — consultor em tecnologia magistral"
                 width={1200}
                 height={1500}
                 className="h-auto w-full object-cover"
@@ -141,11 +131,11 @@ export function HomeAuthority() {
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-xl">
                 <div className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
                   <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#e8a87c]" />
-                  Em bancada · EUROTEX França
+                  In-Cosmetics Paris 2025 · Delegado Técnico
                 </div>
                 <p className="font-serif text-lg leading-tight text-white">
-                  Imersão técnica europeia em novas tecnologias de emulsão a frio e veiculação
-                  dermatológica avançada.
+                  Interlocução direta com fornecedores de referência mundial. Acesso antecipado a
+                  ativos não disponíveis no mercado local.
                 </p>
               </div>
             </div>
@@ -153,9 +143,9 @@ export function HomeAuthority() {
             {/* Corner badges */}
             <div className="absolute -right-4 top-8 hidden rounded-2xl border border-white/15 bg-white/[0.08] px-5 py-4 backdrop-blur-xl lg:block">
               <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">
-                Lattes
+                In-Cosmetics
               </div>
-              <div className="font-mono text-sm text-white">K2699008D8</div>
+              <div className="font-mono text-sm text-white">Paris 2025</div>
             </div>
             <div className="absolute -left-4 bottom-24 hidden rounded-2xl border border-white/15 bg-white/[0.08] px-5 py-4 backdrop-blur-xl lg:block">
               <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">
@@ -169,13 +159,13 @@ export function HomeAuthority() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2dd4bf]/30 bg-[#2dd4bf]/10 px-4 py-1.5">
               <span className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
-                Por que isso importa para você
+                Três ativos que a ST Farma entrega
               </span>
             </div>
             <h3 className="mt-5 font-serif text-3xl leading-[1.1] text-white md:text-5xl">
-              A sua concorrência vende <em className="text-[#e8a87c]">receita de bolo.</em>{" "}
+              Não é aula. Não é palestra. <em className="text-[#e8a87c]">É consultoria técnica</em>{" "}
               <br />
-              Você vai entregar <em className="text-[#2dd4bf]">ciência de ponta.</em>
+              com <em className="text-[#2dd4bf]">entregáveis claros.</em>
             </h3>
 
             <div className="mt-8 space-y-5">
@@ -183,11 +173,11 @@ export function HomeAuthority() {
                 <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-[#e8a87c]" />
                 <div>
                   <div className="font-semibold text-white">
-                    Protocolos que chegam anos antes do mercado brasileiro
+                    Prática industrial real — não teoria de sala de aula
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-white/65">
-                    Tecnologias testadas em laboratórios europeus e asiáticos, adaptadas com rigor
-                    técnico para a sua bancada — antes mesmo de virarem tendência no Instagram.
+                    Seis anos coordenando P&D no maior grupo magistral do Brasil: formulação,
+                    escalonamento, resolução de desvio de lote e suporte a 500+ farmácias.
                   </p>
                 </div>
               </div>
@@ -196,11 +186,11 @@ export function HomeAuthority() {
                 <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-[#e8a87c]" />
                 <div>
                   <div className="font-semibold text-white">
-                    Fórmulas proprietárias com lucratividade validada
+                    Rede internacional para sourcing e benchmarking
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-white/65">
-                    Cada molécula selecionada passa por três filtros: eficácia clínica, viabilidade
-                    de margem e aceitação real do seu público de balcão.
+                    Delegado técnico In-Cosmetics Global Paris 2025. Missões em Amsterdam e no
+                    Japão. Interlocução direta com fornecedores como Sederma e Lucas Meyer.
                   </p>
                 </div>
               </div>
@@ -209,11 +199,12 @@ export function HomeAuthority() {
                 <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-[#e8a87c]" />
                 <div>
                   <div className="font-semibold text-white">
-                    Autoridade que se transfere para a sua marca
+                    Produção técnica verificável
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-white/65">
-                    Você não compra apenas consultoria — você adquire o endosso científico de quem
-                    publica em revista peer-reviewed e palestra nos maiores congressos do setor.
+                    Co-organizador do 1º Simpósio de Peelings Químicos do Brasil. Criador do primeiro
+                    peeling de ácido azelaico em pasta anidra do mundo. Autor da técnica Fenol FREE
+                    e coautor de paper peer-reviewed.
                   </p>
                 </div>
               </div>
@@ -224,14 +215,14 @@ export function HomeAuthority() {
                 href="/consultoria"
                 className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#e8a87c] to-[#b87333] px-8 py-4 font-bold text-[#0a1628] shadow-[0_8px_30px_rgba(232,168,124,0.35)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(232,168,124,0.5)]"
               >
-                Quero meu diagnóstico
+                Quero discutir um projeto
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/cursos"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all hover:border-white/40 hover:bg-white/10"
               >
-                Ver cursos disponíveis
+                Clube de Fórmulas
               </Link>
             </div>
           </div>
@@ -242,15 +233,15 @@ export function HomeAuthority() {
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[3px] text-[#e8a87c]">
-                Os números falam
+                A experiência por trás do método
               </div>
               <h3 className="mt-2 font-serif text-3xl leading-tight text-white md:text-5xl">
-                Uma trajetória que não cabe em um currículo.
+                Os números que sustentam a consultoria.
               </h3>
             </div>
             <p className="max-w-md text-base leading-relaxed text-white/60">
-              24 anos dedicados à ciência farmacêutica, da bancada universitária ao palco dos maiores
-              congressos — e ao seu balcão.
+              Seis anos de coordenação de P&D, mais de 500 farmácias atendidas, 1.000+ formuladores
+              treinados e missões técnicas em três continentes — traduzidos em método replicável.
             </p>
           </div>
 
@@ -286,15 +277,15 @@ export function HomeAuthority() {
               <div className="flex items-center gap-3">
                 <Globe2 className="h-6 w-6 text-[#2dd4bf]" />
                 <div className="text-[11px] font-bold uppercase tracking-[3px] text-[#2dd4bf]">
-                  Missões técnicas
+                  Presença internacional
                 </div>
               </div>
               <h3 className="mt-4 font-serif text-3xl leading-tight text-white md:text-4xl">
-                Ciência sem fronteiras, resultado com endereço.
+                Rede internacional que vira vantagem técnica.
               </h3>
               <p className="mt-4 text-base leading-relaxed text-white/65">
-                Cada país visitado vira protocolo aplicado no Brasil. Cada laboratório europeu vira
-                uma nova fórmula no seu cardápio.
+                Acesso antecipado a ativos não disponíveis no mercado local, curadoria técnica
+                independente e diferenciação real de portfólio — não promessa de marketing.
               </p>
             </div>
 
@@ -334,26 +325,27 @@ export function HomeAuthority() {
           <div className="relative mx-auto max-w-3xl text-center">
             <Users className="mx-auto h-8 w-8 text-[#e8a87c]" />
             <h3 className="mt-6 font-serif text-3xl leading-[1.1] text-white md:text-5xl lg:text-6xl">
-              Seja o farmacêutico que a sua cidade{" "}
-              <em className="text-[#e8a87c]">procura primeiro.</em>
+              Se a sua empresa precisa de um parceiro técnico,{" "}
+              <em className="text-[#e8a87c]">a gente tem um assunto.</em>
             </h3>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.7] text-white/75">
-              Entre para o grupo seleto de farmácias que já adotaram o método Samir Tannuri e
-              multiplicaram ticket médio, fidelização e reputação técnica na sua região.
+              Consultoria sob medida para indústrias, magistrais e marcas em desenvolvimento ou
+              reposicionamento de portfólio. Atendimento restrito a empresas. Resposta em até 48h
+              úteis.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
                 href="/consultoria"
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#e8a87c] to-[#b87333] px-10 py-4 text-base font-bold text-[#0a1628] shadow-[0_10px_40px_rgba(232,168,124,0.4)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_50px_rgba(232,168,124,0.55)]"
               >
-                Agendar reunião estratégica
+                Agendar diagnóstico técnico
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/cursos"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/[0.06] px-10 py-4 text-base font-semibold text-white backdrop-blur-xl transition-all hover:border-white/40 hover:bg-white/10"
               >
-                Explorar cursos
+                Acessar o Clube de Fórmulas
               </Link>
             </div>
           </div>

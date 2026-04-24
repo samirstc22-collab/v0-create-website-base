@@ -1,10 +1,10 @@
 export function BigStats() {
   const stats = [
-    { num: "24", label: "Anos de P&D cosmetico", accent: "#0C2340" },
-    { num: "4.000+", label: "Formulas testadas e validadas", accent: "#B8783D" },
-    { num: "20+", label: "Industrias atendidas", accent: "#0C2340" },
-    { num: "1.000+", label: "Profissionais formados", accent: "#B8783D" },
-    { num: "3", label: "Continentes em missao", accent: "#0a8f9e" },
+    { num: "6 anos", label: "Coordenando P&D no maior grupo magistral", accent: "#0C2340" },
+    { num: "500+", label: "Farmacias magistrais atendidas tecnicamente", accent: "#B8783D" },
+    { num: "1.000+", label: "Profissionais formados em programas proprios", accent: "#0C2340" },
+    { num: "8/10", label: "Modulos ICosmetologia ministrados", accent: "#B8783D" },
+    { num: "3", label: "Continentes em missao tecnica", accent: "#0a8f9e" },
   ]
 
   return (
@@ -16,10 +16,10 @@ export function BigStats() {
         {/* Section header */}
         <div className="text-center mb-14">
           <span className="inline-block text-[11px] font-bold tracking-[3px] uppercase text-[#B8783D] mb-3">
-            Numeros que contam historia
+            A experiencia por tras do metodo
           </span>
           <h2 className="font-serif text-3xl md:text-4xl text-[#0C2340] tracking-tight">
-            Duas decadas de <em className="italic text-[#B8783D]">resultado comprovado</em>
+            Pratica industrial real, <em className="italic text-[#B8783D]">nao teoria de sala de aula</em>
           </h2>
         </div>
 

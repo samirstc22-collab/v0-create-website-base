@@ -6,7 +6,7 @@ export function Speaker() {
   const events = [
     {
       year: "2025",
-      title: "20o Congresso Consulfarma",
+      title: "20o Congresso In-Cosmetics",
       desc: "Apresentacao da Tecnica Fenol FREE | Curso de Formulacoes e Protocolos para Lasers",
     },
     {
@@ -16,7 +16,7 @@ export function Speaker() {
     },
     {
       year: "16o-19o",
-      title: "Congressos Consulfarma",
+      title: "Congressos In-Cosmetics",
       desc: "Speaker em 4 edicoes consecutivas | Cosmetologia avancada, seruns, peelings e tricologia",
     },
     {
@@ -47,7 +47,7 @@ export function Speaker() {
           </h2>
           <p className="text-lg text-muted max-w-[620px] mx-auto leading-relaxed">
             Mais de 7 congressos nacionais como speaker convidado — compartilhando P&D aplicado
-            com milhares de prescritores e farmaceuticos.
+            com milhares de prescritores e profissionais de saúde.
           </p>
         </div>
 
@@ -56,8 +56,8 @@ export function Speaker() {
           <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(11,29,53,0.15)] relative hidden lg:block">
             <div className="relative w-full aspect-[4/5]">
               <Image
-                src="/images/samir-stage-gesture.jpg"
-                alt="Prof. Samir Tannuri palestrando em congresso nacional"
+                src="/placeholder.svg?height=600&width=800"
+                alt="Samir Tannuri palestrando em congresso nacional"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 0px, 50vw"
@@ -67,10 +67,10 @@ export function Speaker() {
             <div className="absolute bottom-6 left-6 right-6 bg-black/75 backdrop-blur-xl border border-white/15 rounded-2xl p-5 text-white">
               <div className="flex items-center gap-2 mb-1">
                 <Mic className="w-4 h-4 text-copper-light" />
-                <div className="font-serif text-lg">Prof. Samir Tannuri</div>
+                <div className="font-serif text-lg">Samir Tannuri</div>
               </div>
               <div className="text-sm text-white/70 tracking-wide">
-                20º Congresso Consulfarma · 2025
+                20º Congresso In-Cosmetics · 2025
               </div>
             </div>
           </div>

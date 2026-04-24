@@ -178,8 +178,8 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
             <div className="flex items-center gap-4 rounded-2xl border border-black/5 bg-white p-7 shadow-[0_10px_25px_rgba(11,29,53,0.04)]">
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-[#b87333]/30">
                 <Image
-                  src="/images/samir-portrait-smile.jpg"
-                  alt="Prof. Samir Tannuri"
+                  src="/placeholder.svg?height=600&width=500"
+                  alt="Samir Tannuri"
                   fill
                   className="object-cover"
                   sizes="64px"

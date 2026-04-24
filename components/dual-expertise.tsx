@@ -11,7 +11,7 @@ export function DualExpertise() {
       items: [
         "Reformulacao de portfolio e bases dermatologicas",
         "Dossiês tecnicos com pH, pKa e embalagem",
-        "Treinamento de farmaceuticos e prescritores",
+        "Treinamento de profissionais e prescritores",
         "Auditoria de boas praticas de manipulacao",
       ],
     },

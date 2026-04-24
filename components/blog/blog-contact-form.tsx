@@ -38,7 +38,7 @@ export function BlogContactForm() {
               </div>
               <h2 className="mt-6 font-serif text-3xl leading-[1.05] tracking-tight text-white md:text-[44px]">
                 Gostou do artigo?{" "}
-                <em className="text-[#e8a87c]">Converse diretamente</em> com o Prof. Samir.
+                <em className="text-[#e8a87c]">Converse diretamente</em> com o Samir.
               </h2>
               <p className="mt-5 text-base leading-[1.7] text-white/70 md:text-lg">
                 Dúvidas clínicas, sugestões de pauta, pedidos de parecer técnico ou convites para
@@ -127,7 +127,7 @@ export function BlogContactForm() {
                   type="submit"
                   className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#a0632c] px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(184,115,51,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(184,115,51,0.5)]"
                 >
-                  Enviar mensagem ao Prof. Samir
+                  Enviar mensagem ao Samir
                   <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
 

@@ -8,11 +8,11 @@ import { LPContact } from "@/components/lp/lp-contact"
 import { LPFooter } from "@/components/lp/lp-footer"
 
 export const metadata: Metadata = {
-  title: "Lab Pro — Prof. Samir Tannuri · Laboratório de Alta Performance",
+  title: "Lab Pro — Samir Tannuri · Laboratório de Alta Performance",
   description:
     "Jornal científico de luxo encontra interface SaaS. Consultoria P&D Industrial, Magistral e o Formulator AI Lab Pro — infraestrutura inteligente de formulação treinada sobre 4.000+ fórmulas validadas.",
   openGraph: {
-    title: "Lab Pro — Prof. Samir Tannuri",
+    title: "Lab Pro — Samir Tannuri",
     description:
       "P&D cosmético de alta performance + Formulator AI Lab Pro.",
     type: "website",

@@ -10,10 +10,10 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-6 pb-12 mb-12 border-b border-white/[0.06]">
           <div>
             <h3 className="font-serif text-2xl text-white mb-2">
-              Pronto para transformar sua farmacia?
+              Pronto para discutir um projeto?
             </h3>
             <p className="text-white/50 text-base">
-              Fale conosco ou acesse a loja com 60+ artefatos tecnicos.
+              Fale com a ST Farma ou acesse o Clube de Formulas.
             </p>
           </div>
           <div className="flex gap-3 flex-wrap">
@@ -41,11 +41,11 @@ export function Footer() {
               <Logo variant="light" size="md" />
             </div>
             <p className="text-sm text-white/40 leading-relaxed mb-6">
-              Prof. Samir Tannuri Cerveira
+              Samir Tannuri Cerveira
               <br />
-              Pesquisador · Consultor · Palestrante
+              Consultor em Formulação Magistral
               <br />
-              Metapharma · CNPJ 00.246.124/0001-51
+              ST Farma — Consultoria em Formulação Magistral
               <br />
               Goiania — GO · Brasil
             </p>
@@ -70,7 +70,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/5562999999999"
+                href="https://wa.me/5511981403000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/50 hover:text-[#25D366] hover:bg-[#25D366]/10 transition-all"
@@ -136,10 +136,10 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Cientifico */}
+          {/* Credenciais */}
           <div>
             <div className="text-[10px] font-bold text-white/25 tracking-[2px] uppercase mb-5">
-              Cientifico
+              Credenciais
             </div>
             <a
               href="https://doi.org/10.24933/rep.v6i2.281"
@@ -148,34 +148,18 @@ export function Footer() {
               className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors"
             >
               <ExternalLink className="w-3.5 h-3.5" />
-              DOI Publicacao
+              Paper Peer-Reviewed
             </a>
-            <a
-              href="http://lattes.cnpq.br/K2699008D8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors"
-            >
-              <ExternalLink className="w-3.5 h-3.5" />
-              Curriculo Lattes
-            </a>
-            <a
-              href="https://researchgate.net/profile/Samir-Cerveira"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors"
-            >
-              <ExternalLink className="w-3.5 h-3.5" />
-              ResearchGate
-            </a>
-            <span className="block text-white/40 text-sm">CNPq Bolsista | UNICAMP</span>
+            <span className="block text-white/50 text-sm mb-3">In-Cosmetics Paris 2025</span>
+            <span className="block text-white/50 text-sm mb-3">Missao Amsterdam · Japao</span>
+            <span className="block text-white/40 text-sm">ICosmetologia</span>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-white/[0.06]">
           <span className="text-xs text-white/25 text-center sm:text-left">
-            2026 Clube de Formulas | Metapharma | Todos os direitos reservados.
+            2026 ST Farma | Clube de Formulas | Todos os direitos reservados.
           </span>
           <div className="flex items-center gap-4 text-xs text-white/25">
             <span>@samir_farma</span>

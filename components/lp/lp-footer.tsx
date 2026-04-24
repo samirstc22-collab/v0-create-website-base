@@ -5,7 +5,7 @@ export function LPFooter() {
   const socials = [
     { icon: Linkedin, label: "LinkedIn", meta: "/in/samirtannuri", href: "#" },
     { icon: Instagram, label: "Instagram", meta: "@cienciadapele", href: "#" },
-    { icon: FileText, label: "Lattes · CNPq", meta: "Currículo acadêmico", href: "#" },
+    { icon: FileText, label: "Lattes ·", meta: "Currículo acadêmico", href: "#" },
   ]
 
   return (
@@ -30,13 +30,13 @@ export function LPFooter() {
               <div className="flex flex-col leading-tight">
                 <span className="font-serif text-lg text-white">Clube de Fórmulas</span>
                 <span className="font-mono text-[10px] uppercase tracking-[2.5px] text-white/40">
-                  Prof. Samir Tannuri
+                  Samir Tannuri
                 </span>
               </div>
             </div>
             <p className="mt-6 max-w-md text-[14px] leading-[1.7] text-white/50">
               Consultoria científica em P&amp;D cosmético — para indústrias Grau 1 e 2, marcas
-              independentes e farmácias magistrais de excelência. Pesquisa CNPq-UNICAMP, publicação
+              independentes e farmácias magistrais de excelência. Pesquisa, publicação
               peer-reviewed indexada e missões técnicas em três continentes.
             </p>
           </div>

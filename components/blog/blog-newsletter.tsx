@@ -33,9 +33,9 @@ export function BlogNewsletter() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-[620px] text-base leading-relaxed text-white/65 md:text-lg">
-            Uma carta científica mensal, curada pelo Prof. Samir — sem spam, sem promoção, só
+            Uma carta científica mensal, curada pelo Samir — sem spam, sem promoção, só
             ciência aplicável. Formulações novas, revisões de literatura, achados de congresso
-            e bastidores da pesquisa CNPq-UNICAMP.
+            e bastidores da pesquisa.
           </p>
 
           {!submitted ? (

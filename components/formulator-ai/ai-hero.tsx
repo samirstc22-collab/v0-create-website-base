@@ -158,7 +158,7 @@ export function AIHero() {
 
             {/* Trust line */}
             <p className="mt-8 text-sm text-white/40">
-              +20.000 consultas respondidas · Usado por farmacêuticos em 17 estados
+              +20.000 consultas respondidas · Usado por profissionais em 17 estados
             </p>
           </div>
 

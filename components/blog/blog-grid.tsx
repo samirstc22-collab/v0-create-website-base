@@ -111,7 +111,7 @@ export function BlogGrid() {
 
                   <div className="mt-6 flex items-center justify-between border-t border-black/5 pt-5">
                     <div className="text-xs text-muted">
-                      Por <span className="font-semibold text-navy">Prof. Samir Tannuri</span>
+                      Por <span className="font-semibold text-navy">Samir Tannuri</span>
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-[#b87333] transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>

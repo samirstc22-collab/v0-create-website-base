@@ -32,7 +32,7 @@ export function ConsultoriaHero() {
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-white/75 md:text-xl">
-            O Prof. Samir Tannuri criou um método único no Brasil: em vez de aplicar o mesmo manual em todo lugar,
+            O Samir Tannuri criou um método único no Brasil: em vez de aplicar o mesmo manual em todo lugar,
             ele <strong className="text-white">desenha uma estratégia sob medida</strong> para a realidade,
             o público e a lucratividade da sua drogaria ou farmácia de manipulação.
           </p>
@@ -83,8 +83,8 @@ export function ConsultoriaHero() {
           <div className="relative mx-auto max-w-md lg:max-w-none">
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
-                src="/images/samir-portrait-sofa.jpg"
-                alt="Prof. Samir Tannuri, consultor especialista em farmácias e drogarias"
+                src="/placeholder.svg?height=800&width=600"
+                alt="Samir Tannuri, consultor especialista em formulacao magistral"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 90vw, 45vw"
@@ -99,7 +99,7 @@ export function ConsultoriaHero() {
                 "Eu não entrego a mesma solução duas vezes — porque nenhuma farmácia é igual à outra."
               </div>
               <div className="mt-3 text-xs font-medium uppercase tracking-wider text-[#e8a87c]">
-                Prof. Samir Tannuri
+                Samir Tannuri
               </div>
             </div>
 

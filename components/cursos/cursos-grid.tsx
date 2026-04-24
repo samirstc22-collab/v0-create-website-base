@@ -18,9 +18,9 @@ export function CursosGrid() {
       icon: FlaskConical,
       level: "Fundamentos",
       levelColor: "#2dd4bf",
-      title: "Manipulação Farmacêutica do Zero",
+      title: "Manipulação Magistral do Zero",
       description:
-        "Base sólida em BPF, cálculo galênico, incompatibilidades e boas práticas de bancada. Ideal para recém-formados e farmacêuticos que querem reciclar.",
+        "Base sólida em BPF, cálculo galênico, incompatibilidades e boas práticas de bancada. Ideal para recém-formados e profissionais que querem reciclar.",
       duration: "6 semanas",
       lessons: "28 aulas",
       price: "R$ 197",
@@ -75,7 +75,7 @@ export function CursosGrid() {
       levelColor: "#2dd4bf",
       title: "Farmácia Lucrativa: Do Balcão ao Caixa",
       description:
-        "Precificação estratégica, mix de produtos, gestão de estoque e marketing farmacêutico com ética e resultado.",
+        "Precificação estratégica, mix de produtos, gestão de estoque e marketing para manipulação com ética e resultado.",
       duration: "5 semanas",
       lessons: "26 aulas",
       price: "R$ 347",
@@ -97,7 +97,7 @@ export function CursosGrid() {
       levelColor: "#b87333",
       title: "Liderança & Escala na Farmácia",
       description:
-        "Para donos de rede e farmacêuticos-empresários que querem escalar sem perder qualidade técnica. Casos reais de Brasil e Europa.",
+        "Para donos de rede e empreendedores magistrais que querem escalar sem perder qualidade técnica. Casos reais de Brasil e Europa.",
       duration: "8 semanas",
       lessons: "40 aulas",
       price: "R$ 897",
@@ -108,7 +108,7 @@ export function CursosGrid() {
       levelColor: "#0a1628",
       title: "Imersão Executiva Presencial",
       description:
-        "3 dias presenciais em Goiânia com Prof. Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
+        "3 dias presenciais em Goiânia com Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
       duration: "3 dias",
       lessons: "Presencial",
       price: "R$ 4.997",
@@ -126,7 +126,7 @@ export function CursosGrid() {
             Uma trilha pensada para cada momento da sua carreira.
           </h2>
           <p className="mt-6 text-lg leading-[1.7] text-[#0a1628]/65">
-            Do recém-formado ao farmacêutico-empresário: nove cursos encadeados para levar você do
+            Do recém-formado ao empreendedor magistral: nove cursos encadeados para levar você do
             zero ao domínio técnico e comercial do seu setor.
           </p>
         </div>

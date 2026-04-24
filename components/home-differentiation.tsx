@@ -5,18 +5,18 @@ export function HomeDifferentiation() {
   const problems = [
     {
       bad: "Formulas copiadas de apostilas desatualizadas",
-      good: "Protocolos proprios validados em bancada CNPq",
+      good: "Protocolos proprios validados em bancada industrial",
     },
     {
       bad: "Ativos incompativeis por falta de conhecimento tecnico",
-      good: "Compatibilidade testada e documentada cientificamente",
+      good: "Compatibilidade testada e documentada tecnicamente",
     },
     {
       bad: "Claims sem lastro — promessas vazias ao prescritor",
       good: "Resultados com DOI e referencia peer-reviewed",
     },
     {
-      bad: "Bases instáveis que comprometem eficacia",
+      bad: "Bases instaveis que comprometem eficacia",
       good: "Veiculos selecionados por estabilidade comprovada",
     },
   ]
@@ -44,13 +44,13 @@ export function HomeDifferentiation() {
           </div>
 
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#0C2340] leading-[1.1] tracking-tight mb-6 max-w-[800px] mx-auto">
-            A maioria das formulas falha por{" "}
+            A maioria dos portfolios falha por{" "}
             <em className="italic text-[#dc2626]">falta de criterio tecnico</em>
           </h2>
 
           <p className="text-lg text-[#475569] leading-[1.7] max-w-[600px] mx-auto">
-            Enquanto o mercado replica receitas sem fundamento, nos entregamos ciencia aplicada
-            com resultado validado.
+            Enquanto o mercado replica receitas sem fundamento, a ST Farma entrega consultoria
+            tecnica documentada com resultado em bancada.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function HomeDifferentiation() {
             <div className="bg-[#f0fdf4] px-6 py-4 border-b border-[#bbf7d0]/30">
               <div className="flex items-center gap-2">
                 <Check className="w-5 h-5 text-[#16a34a]" />
-                <span className="font-semibold text-[#166534]">Metodo Samir Tannuri</span>
+                <span className="font-semibold text-[#166534]">Metodo ST Farma</span>
               </div>
             </div>
             <div className="p-6 space-y-4">
@@ -102,13 +102,13 @@ export function HomeDifferentiation() {
         {/* CTA */}
         <div className="text-center">
           <p className="text-[#475569] mb-6">
-            Pronto para elevar o padrao da sua farmacia?
+            Pronto para elevar o padrao tecnico da sua operacao?
           </p>
           <Link
             href="/consultoria"
             className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
           >
-            Solicitar diagnostico gratuito
+            Agendar diagnostico tecnico
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

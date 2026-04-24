@@ -29,14 +29,14 @@ const socials = [
     accent: "#d62976",
   },
   {
-    name: "Plataforma Lattes",
-    handle: "CV Lattes · CNPq",
-    url: "http://lattes.cnpq.br/0000000000000000",
+    name: "Paper Peer-Reviewed",
+    handle: "DOI · 10.24933/rep.v6i2.281",
+    url: "https://doi.org/10.24933/rep.v6i2.281",
     description:
-      "Currículo científico oficial junto ao CNPq. Histórico acadêmico, publicações peer-reviewed, orientações e projetos de pesquisa indexados.",
+      "Paper peer-reviewed sobre fotoproteção em peles negras, publicado em colaboração com pesquisadores vinculados à. Credencial técnica verificável.",
     icon: GraduationCap,
     metric: "DOI",
-    metricLabel: "Publicações indexadas",
+    metricLabel: "Publicação indexada",
     metricIcon: Award,
     gradient: "from-[#0a1628] via-[#1a3055] to-[#0a1628]",
     accent: "#0a1628",
@@ -59,13 +59,12 @@ export function SobreSocials() {
             </span>
           </div>
           <h2 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-[#0a1628] md:text-6xl">
-            Encontre o Prof. Samir onde a{" "}
-            <em className="text-[#b87333]">ciência acontece</em>.
+            Onde encontrar{" "}
+            <em className="text-[#b87333]">Samir Tannuri</em>.
           </h2>
           <p className="mx-auto mt-6 max-w-[680px] text-base leading-[1.7] text-[#3b4a5c] md:text-lg">
-            Três canais oficiais — escolhidos com critério — para quem quer acompanhar a pesquisa,
-            os bastidores da bancada e a produção científica do Clube de Fórmulas. Nada de
-            agregadores, nada de perfis paralelos.
+            Canais oficiais da ST Farma e do Clube de Fórmulas — produção técnica, conexões B2B e
+            comunidade educacional. Nada de agregadores, nada de perfis paralelos.
           </p>
         </div>
 
