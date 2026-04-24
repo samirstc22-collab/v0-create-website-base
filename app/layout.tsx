@@ -18,14 +18,15 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Clube de Fórmulas — Prof. Samir Tannuri | Pesquisador · Consultor Industrial · Speaker",
+  title: "ST Farma — Consultoria em Tecnologia Farmacêutica | Samir Tannuri",
   description:
-    "Prof. Samir Tannuri — Pesquisador CNPq, Consultor Industrial e Speaker. P&D cosmético para indústrias, marcas e farmácias magistrais. Missões Paris, Amsterdam e Japão.",
+    "Consultoria em tecnologia farmacêutica para indústrias, magistrais e marcas que não podem errar a formulação. Seis anos coordenando P&D no maior grupo magistral do Brasil. Missões internacionais em Paris, Amsterdam e Japão.",
   keywords:
-    "P&D cosmético, consultoria farmacotécnica, peelings químicos, peptídeos biomiméticos, dermatologia regenerativa, farmácia magistral, indústria cosmética",
+    "consultoria em tecnologia farmacêutica, P&D cosmético, transferência de tecnologia, reformulação de portfólio, estudo de estabilidade, sourcing internacional de ativos, indústria cosmética, farmácia magistral",
   openGraph: {
-    title: "Clube de Fórmulas — Prof. Samir Tannuri",
-    description: "Ciência que vira fórmula. Fórmula que vira resultado.",
+    title: "ST Farma — Consultoria em Tecnologia Farmacêutica",
+    description:
+      "Boutique de consultoria em tecnologia farmacêutica. Prática industrial real, rede internacional e produção técnica verificável.",
   },
 }
 

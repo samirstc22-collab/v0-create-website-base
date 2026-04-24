@@ -4,12 +4,12 @@ import { FlaskIllustration, BeakerIllustration } from "../illustrations"
 
 export function SobreAbout() {
   const checkItems = [
-    "Bolsista CNPq pesquisando ativos em UNICAMP",
-    "Speaker convidado em 7+ congressos nacionais",
+    "6 anos coordenando P&D no maior grupo magistral do Brasil",
+    "Delegado tecnico In-Cosmetics Global Paris 2025",
     "Publicacao peer-reviewed com DOI indexado",
-    "Co-organizador do 1o Simposio de Peelings",
+    "Co-organizador do 1o Simposio de Peelings Quimicos do Brasil",
     "Missoes tecnicas em Paris, Amsterdam e Japao",
-    "Consultor P&D de 20+ industrias cosmeticas",
+    "500+ farmacias atendidas e 1.000+ formuladores treinados",
   ]
 
   return (
@@ -26,15 +26,15 @@ export function SobreAbout() {
               <div className="w-full aspect-[3/4] relative">
                 <Image
                   src="/images/samir-award.png"
-                  alt="Prof. Samir Tannuri com troféu Clinic Day"
+                  alt="Samir Tannuri — consultor em tecnologia farmacêutica"
                   fill
                   className="object-cover object-top"
                   sizes="400px"
                 />
               </div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                <div className="font-serif text-xl text-navy">Prof. Samir Tannuri</div>
-                <div className="text-sm text-muted mt-1">Farmaceutico | Pesquisador CNPq</div>
+                <div className="font-serif text-xl text-navy">Samir Tannuri</div>
+                <div className="text-sm text-muted mt-1">Consultor em Tecnologia Farmaceutica</div>
               </div>
             </div>
           </div>
@@ -42,22 +42,26 @@ export function SobreAbout() {
           {/* Text Side */}
           <div className="flex-1 min-w-[320px]">
             <p className="text-lg leading-relaxed mb-6 text-body">
-              <strong className="text-navy font-semibold">Samir Tannuri Cerveira</strong> e um dos
-              nomes de referencia no P&D cosmetico brasileiro. Com formacao em Farmacia pela
-              Universidade Sao Francisco e pesquisa de ponta na UNICAMP, desenvolve formulacoes
-              magistrais e industriais que conectam ciencia de bancada ao resultado clinico.
+              <strong className="text-navy font-semibold">Samir Tannuri Cerveira</strong> passou os
+              ultimos seis anos coordenando o P&D de cosmeticos no{" "}
+              <strong className="text-navy font-semibold">maior grupo magistral do Brasil</strong>.
+              Nesse periodo, formulou, escalonou, resolveu desvio de lote, atendeu tecnicamente mais
+              de 500 farmacias magistrais e treinou mais de mil formuladores no pais inteiro.
             </p>
             <p className="text-lg leading-relaxed mb-6 text-body">
-              Sua trajetoria inclui consultoria tecnica para mais de{" "}
-              <strong className="text-navy font-semibold">20 industrias cosmeticas</strong>,
-              criacao de 40+ marcas independentes e a producao de materiais cientificos que ja
-              impactaram milhares de profissionais de saude.
+              A <strong className="text-navy font-semibold">ST Farma — Consultoria em Tecnologia
+              Farmaceutica</strong> nasce para levar essa vivencia operacional para dentro da sua
+              empresa. Nao e aula. Nao e palestra motivacional. E consultoria tecnica, documentada,
+              com entregaveis claros: diagnostico de formulacao, reformulacao de portfolio, estudo
+              de estabilidade, transferencia de tecnologia, selecao de ativos e due diligence de
+              ingredientes.
             </p>
             <p className="text-lg leading-relaxed mb-8 text-body">
-              Criador da <strong className="text-navy font-semibold">Tecnica Fenol FREE</strong> e
-              pioneiro no desenvolvimento do primeiro peeling de acido azelaico em pasta anidra do
-              Brasil, Samir tambem lidera missoes tecnicas internacionais em Paris, Amsterdam e
-              Japao.
+              Criador do primeiro peeling de acido azelaico em pasta anidra do mundo e autor da{" "}
+              <strong className="text-navy font-semibold">Tecnica Fenol FREE</strong>. Co-assina
+              paper peer-reviewed sobre fotoprotecao em peles negras, publicado em colaboracao com
+              pesquisadores vinculados a UNICAMP. Delegado tecnico In-Cosmetics Global Paris 2025,
+              com missoes em Amsterdam e no Japao.
             </p>
 
             {/* Check Grid */}
@@ -77,7 +81,7 @@ export function SobreAbout() {
               <p className="font-serif italic text-xl text-navy leading-relaxed mb-3">
                 {'"'}Formula boa nao nasce de opiniao — nasce de evidencia, metodo e iteracao.{'"'}
               </p>
-              <span className="text-sm text-muted font-medium">— Prof. Samir Tannuri</span>
+              <span className="text-sm text-muted font-medium">— Samir Tannuri</span>
             </div>
           </div>
         </div>

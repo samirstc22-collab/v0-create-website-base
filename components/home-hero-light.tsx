@@ -47,14 +47,14 @@ export function HomeHeroLight() {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mb-12 text-[11px] tracking-[2px] uppercase font-bold text-[#64748b]">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#10b981]" />
-            <span>CNPq · UNICAMP</span>
+            <span>In-Cosmetics Paris 2025</span>
           </div>
           <span className="hidden md:inline text-[#d1d5db]">|</span>
-          <span>Publicacao Peer-Reviewed</span>
+          <span>Missoes Amsterdam · Japao</span>
           <span className="hidden md:inline text-[#d1d5db]">|</span>
-          <span>DOI Indexado</span>
+          <span>Paper Peer-Reviewed</span>
           <span className="hidden md:inline text-[#d1d5db]">|</span>
-          <span>3 Continentes</span>
+          <span>ICosmetologia</span>
         </div>
 
         {/* Hero content grid */}
@@ -63,9 +63,9 @@ export function HomeHeroLight() {
           <div className="text-center lg:text-left">
             {/* Headline */}
             <h1 className="font-serif font-normal text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-1.5px] text-[#0C2340] mb-6">
-              Desenvolvimento cosmetico{" "}
+              Consultoria em tecnologia farmaceutica{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">com ciencia</em>
+                <em className="italic text-[#B8783D]">para quem nao pode errar</em>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="8"
@@ -87,11 +87,11 @@ export function HomeHeroLight() {
 
             {/* Subheadline — clear and commercial */}
             <p className="text-lg md:text-xl text-[#475569] leading-[1.7] max-w-[580px] mx-auto lg:mx-0 mb-8">
-              Consultoria tecnica, P&D e formacao especializada para{" "}
-              <strong className="text-[#0C2340] font-semibold">farmacias magistrais</strong>,{" "}
-              <strong className="text-[#0C2340] font-semibold">industrias cosmeticas</strong> e{" "}
-              <strong className="text-[#0C2340] font-semibold">prescritores</strong>.
-              Resultados validados em bancada CNPq-UNICAMP.
+              Seis anos coordenando P&D no{" "}
+              <strong className="text-[#0C2340] font-semibold">maior grupo magistral do Brasil</strong>,{" "}
+              <strong className="text-[#0C2340] font-semibold">500+ farmacias atendidas</strong> tecnicamente e{" "}
+              <strong className="text-[#0C2340] font-semibold">1.000+ formuladores treinados</strong>.
+              Hoje, essa experiencia vira consultoria sob medida para a sua operacao — industrial ou magistral.
             </p>
 
             {/* CTA row — dominant primary */}
@@ -100,7 +100,7 @@ export function HomeHeroLight() {
                 href="/consultoria"
                 className="group inline-flex items-center justify-center gap-3 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.25)] hover:shadow-[0_12px_40px_rgba(12,35,64,0.35)] hover:translate-y-[-2px]"
               >
-                Solicitar diagnostico gratuito
+                Agendar diagnostico tecnico
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -108,16 +108,16 @@ export function HomeHeroLight() {
                 className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-[#0C2340]/15 text-[#0C2340] px-6 py-4 rounded-xl font-semibold text-base tracking-wide hover:border-[#B8783D]/40 hover:bg-[#B8783D]/5 transition-all"
               >
                 <Sparkles className="w-5 h-5 text-[#4a9eff]" />
-                Conhecer o Lab Pro
+                Conhecer os servicos
               </Link>
             </div>
 
             {/* Trust bullets */}
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-[#64748b]">
               {[
-                "4.000+ formulas validadas",
-                "60+ artefatos tecnicos",
-                "Garantia de resultado",
+                "6 anos de P&D no maior grupo magistral",
+                "500+ farmacias atendidas",
+                "1.000+ formuladores treinados",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#10b981]" />
@@ -142,7 +142,7 @@ export function HomeHeroLight() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/samir-lab-eurotex.jpg"
-                  alt="Prof. Samir Tannuri em laboratorio EUROTEX - Validacao de formulacoes"
+                  alt="Samir Tannuri - Consultor em tecnologia farmaceutica"
                   fill
                   className="object-cover object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -157,11 +157,11 @@ export function HomeHeroLight() {
                       <Play className="w-4 h-4 text-white fill-white" />
                     </div>
                     <span className="text-[11px] tracking-[2px] uppercase font-bold text-white/80">
-                      Bancada real · Resultado validado
+                      Consultoria tecnica · Pratica industrial real
                     </span>
                   </div>
                   <p className="text-white font-medium text-lg leading-snug max-w-[320px]">
-                    Lab EUROTEX, Paris — missao de validacao de claims
+                    Samir Tannuri — tecnologia farmaceutica aplicada
                   </p>
                 </div>
               </div>
@@ -169,9 +169,9 @@ export function HomeHeroLight() {
               {/* Stats strip */}
               <div className="grid grid-cols-3 divide-x divide-[#e5e7eb] bg-[#f8fafc]">
                 {[
-                  { num: "24", label: "Anos de P&D" },
-                  { num: "15+", label: "Paises" },
-                  { num: "1.000+", label: "Profissionais" },
+                  { num: "6 anos", label: "Coordenando P&D" },
+                  { num: "500+", label: "Farmacias atendidas" },
+                  { num: "1.000+", label: "Profissionais formados" },
                 ].map((stat) => (
                   <div key={stat.label} className="py-5 px-4 text-center">
                     <div className="font-serif text-2xl text-[#0C2340] mb-0.5">{stat.num}</div>
@@ -185,7 +185,7 @@ export function HomeHeroLight() {
 
             {/* Floating badge */}
             <div className="absolute -top-3 -right-3 bg-[#B8783D] text-white px-4 py-2 rounded-xl font-bold text-xs tracking-wide shadow-[0_8px_24px_rgba(184,120,61,0.4)] animate-glow">
-              #1 em formulacao
+              Boutique B2B
             </div>
           </div>
         </div>

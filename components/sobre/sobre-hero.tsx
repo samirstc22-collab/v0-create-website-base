@@ -14,34 +14,35 @@ export function SobreHero() {
         {/* Copy */}
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#b87333]/30 bg-[#b87333]/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[#e8a87c]">
-            Trajetória & Expertise
+            Quem conduz a ST Farma
           </div>
 
           <h1 className="mt-6 font-serif text-5xl leading-[1.02] tracking-tight text-white md:text-6xl lg:text-7xl">
-            Quem é <em className="text-[#e8a87c]">Samir Tannuri</em>
+            Samir <em className="text-[#e8a87c]">Tannuri Cerveira</em>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
-            Farmacêutico, pesquisador CNPq na UNICAMP, consultor industrial e palestrante.
-            <strong className="text-white"> Mais de duas décadas</strong> transformando ciência farmacêutica em
-            resultados reais — tanto em grandes indústrias quanto no balcão das farmácias magistrais brasileiras.
+            Consultor em tecnologia farmacêutica. <strong className="text-white">Seis anos
+            coordenando P&D</strong> no maior grupo magistral do Brasil, mais de 500 farmácias
+            atendidas tecnicamente e 1.000+ formuladores treinados. Hoje, essa experiência vira
+            consultoria sob medida para indústrias, magistrais e marcas.
           </p>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <GraduationCap className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">Pesquisador</div>
-              <div className="text-xs text-white/60">CNPq · UNICAMP</div>
+              <div className="text-sm font-medium text-white">Consultor</div>
+              <div className="text-xs text-white/60">Tecnologia Farmacêutica</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <Microscope className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">Consultor</div>
+              <div className="text-sm font-medium text-white">P&D</div>
               <div className="text-xs text-white/60">Indústria & Magistral</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <Mic className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">Palestrante</div>
-              <div className="text-xs text-white/60">+800 eventos</div>
+              <div className="text-sm font-medium text-white">Delegado Técnico</div>
+              <div className="text-xs text-white/60">In-Cosmetics Paris 2025</div>
             </div>
           </div>
         </div>
@@ -52,7 +53,7 @@ export function SobreHero() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
                 src="/images/samir-portrait-smile.jpg"
-                alt="Prof. Samir Tannuri"
+                alt="Samir Tannuri — Consultor em tecnologia farmacêutica"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 80vw, 40vw"
