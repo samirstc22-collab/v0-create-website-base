@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Check } from "lucide-react"
 import { FlaskIllustration, BeakerIllustration } from "../illustrations"
 
@@ -22,8 +23,14 @@ export function SobreAbout() {
           {/* Photo Side */}
           <div className="flex-[0_0_400px] min-w-[300px] hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] sticky top-32">
-              <div className="w-full aspect-[3/4] bg-gradient-to-b from-navy-mid to-navy-deep flex items-center justify-center">
-                <span className="font-serif text-[120px] text-white/10">ST</span>
+              <div className="w-full aspect-[3/4] relative">
+                <Image
+                  src="/images/samir-award.png"
+                  alt="Prof. Samir Tannuri com troféu Clinic Day"
+                  fill
+                  className="object-cover object-top"
+                  sizes="400px"
+                />
               </div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                 <div className="font-serif text-xl text-navy">Prof. Samir Tannuri</div>
