@@ -114,13 +114,13 @@ export function PortfolioCta() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[#e8a87c]/15 via-transparent to-[#0096B4]/15 blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-2-IiYwYOTDXAN931odiZaInaOmsEYjAA.jpg"
-                alt="Prof. Samir Tannuri — pesquisador, consultor e professor em formulação dermatológica"
-                width={600}
-                height={800}
-                className="w-full h-[600px] object-cover"
-              />
+            <Image
+              src="/portfolio/samir-portrait.jpg"
+              alt="Prof. Samir Tannuri — pesquisador, consultor e professor em formulação dermatológica"
+              width={600}
+              height={800}
+              className="w-full h-[600px] object-cover"
+            />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c] mb-1">

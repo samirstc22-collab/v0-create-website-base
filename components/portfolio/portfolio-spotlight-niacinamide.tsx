@@ -206,7 +206,7 @@ export function PortfolioSpotlightNiacinamide() {
             {/* Pink B12 serum hero */}
             <div className="relative overflow-hidden rounded-3xl border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4947-FTQyTm5fdOHPzRp1NsZ0Zyhp3mZFhb.jpg"
+                src="/portfolio/serum-b12-rose.jpg"
                 alt="Serum rose com vitamina B12 derramado em superficie texturizada"
                 width={800}
                 height={1000}
@@ -229,7 +229,7 @@ export function PortfolioSpotlightNiacinamide() {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="relative overflow-hidden rounded-2xl border border-white/15 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1e079e4b-072d-455d-a6be-a86dd0055659-zxpBOtRL2qStFWka2XoEim6RpXndvo.jpg"
+                  src="/portfolio/serum-niacinamida-ice.jpg"
                   alt="Serum azul de niacinamida em base gelo"
                   width={400}
                   height={300}
@@ -244,7 +244,7 @@ export function PortfolioSpotlightNiacinamide() {
               </div>
               <div className="relative overflow-hidden rounded-2xl border border-white/15 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5705-Q8VdMBInR3tsJDUZcuWyrZKxmXWg26.jpg"
+                  src="/portfolio/serum-niacinamida-ice.jpg"
                   alt="Serum 25% em ambiente refrigerado para preservacao de ativos"
                   width={400}
                   height={300}

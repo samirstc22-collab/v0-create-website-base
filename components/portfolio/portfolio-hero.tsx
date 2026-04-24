@@ -91,7 +91,7 @@ export function PortfolioHero() {
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-[#0096B4]/20 via-transparent to-[#B8783D]/20 blur-2xl" />
           <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5705-Q8VdMBInR3tsJDUZcuWyrZKxmXWg26.jpg"
+              src="/portfolio/serum-niacinamida-ice.jpg"
               alt="Serum azul de niacinamida em ambiente refrigerado para preservacao de ativos"
               width={800}
               height={1000}

@@ -41,7 +41,7 @@ export function PortfolioResearch() {
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[#0096B4]/15 via-transparent to-[#0C2340]/10 blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl border border-[#0C2340]/10 shadow-[0_20px_60px_-20px_rgba(12,35,64,0.3)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2487-eym4eG0kM3JYqNeGqletXnmSZiT2ky.jpeg"
+                src="/portfolio/lab-equipment.jpeg"
                 alt="Equipe de pesquisa em laboratório de cosmetologia avançada"
                 width={800}
                 height={1000}
@@ -69,7 +69,7 @@ export function PortfolioResearch() {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="relative overflow-hidden rounded-2xl border border-[#0C2340]/10 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2463-2ez8wTX15VFYpUwy5m8IVZ9n1UobcS.jpeg"
+                  src="/portfolio/lab-work.jpeg"
                   alt="Pesquisador com viscosímetro Rayneri em laboratório"
                   width={400}
                   height={250}
@@ -78,7 +78,7 @@ export function PortfolioResearch() {
               </div>
               <div className="relative overflow-hidden rounded-2xl border border-[#0C2340]/10 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1698278552063-jkEnrdJIx1197ZehjC5zCReuicY212.jpeg"
+                  src="/portfolio/products-portfolio.jpeg"
                   alt="Sistemas micelares com diferentes ativos em desenvolvimento"
                   width={400}
                   height={250}

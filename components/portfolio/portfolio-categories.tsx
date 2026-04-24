@@ -118,7 +118,7 @@ export function PortfolioCategories() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-3xl border border-[#0C2340]/10 shadow-[0_15px_40px_-15px_rgba(12,35,64,0.2)]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693088095952-FQzUDoGQTTybOZN71BYwXxY1NATLRo.jpeg"
+              src="/portfolio/products-portfolio.jpeg"
               alt="Portfolio amplo de produtos magistrais desenvolvidos"
               width={800}
               height={500}
@@ -134,7 +134,7 @@ export function PortfolioCategories() {
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-[#0C2340]/10 shadow-[0_15px_40px_-15px_rgba(12,35,64,0.2)]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1709143998205-k3ZbQcJygwLCew7QUjXqFUJD9LNe4v.jpeg"
+              src="/portfolio/skincare-line.jpeg"
               alt="Linha completa de skincare em desenvolvimento"
               width={800}
               height={500}

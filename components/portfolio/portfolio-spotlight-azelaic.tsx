@@ -65,7 +65,7 @@ export function PortfolioSpotlightAzelaic() {
             {/* Main hero image — paste jars */}
             <div className="relative overflow-hidden rounded-3xl border border-[#0C2340]/10 shadow-[0_20px_60px_-20px_rgba(12,35,64,0.3)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693949412132-QvPfOE05EYzYLI0ESc6zqCzRxjwtDK.jpeg"
+                src="/portfolio/peeling-azelaico-pasta.jpeg"
                 alt="Pasta de peeling azelaico em diferentes pigmentacoes em frascos identificados"
                 width={800}
                 height={900}
@@ -95,7 +95,7 @@ export function PortfolioSpotlightAzelaic() {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="relative overflow-hidden rounded-2xl border border-[#0C2340]/10 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4727-AYzleApgdsbSuB2upKYr2liMpfy01f.jpg"
+                  src="/portfolio/congresso-peeling-azelaico.jpg"
                   alt="Apresentacao em congresso: Primeiro peeling azelaico em pasta do mundo"
                   width={400}
                   height={250}
@@ -110,7 +110,7 @@ export function PortfolioSpotlightAzelaic() {
               </div>
               <div className="relative overflow-hidden rounded-2xl border border-[#0C2340]/10 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2423-8gzfmIxSofcHB2eQkSqydrPy4fwJbA.jpeg"
+                  src="/portfolio/lab-equipment.jpeg"
                   alt="Desenvolvimento da pasta em ambiente laboratorial controlado"
                   width={400}
                   height={250}
