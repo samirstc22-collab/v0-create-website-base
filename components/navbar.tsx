@@ -8,12 +8,19 @@ import {
   Menu, 
   X, 
   ChevronRight, 
+  ChevronDown,
   User,
   GraduationCap,
   Briefcase,
   BookOpen,
   Mail,
-  Instagram
+  Instagram,
+  Store,
+  FileText,
+  Sparkles,
+  Globe,
+  Stethoscope,
+  ArrowUpRight
 } from "lucide-react"
 
 interface NavLink {
@@ -24,10 +31,18 @@ interface NavLink {
   children?: { href: string; label: string; description: string; icon: React.ElementType }[]
 }
 
+// Loja offer thumbnails data
+const lojaOffers = [
+  { id: "formularios", name: "Formularios Tecnicos", price: "R$ 47", image: "/placeholder.svg?height=60&width=60" },
+  { id: "ebooks", name: "E-books Especializados", price: "R$ 97", image: "/placeholder.svg?height=60&width=60" },
+  { id: "compendios", name: "Compendios Completos", price: "R$ 197", image: "/placeholder.svg?height=60&width=60" },
+]
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [activeLojaTab, setActiveLojaTab] = useState<"formularios" | "ebooks">("formularios")
   const dropdownRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
 
@@ -52,9 +67,18 @@ export function Navbar() {
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre", icon: User },
-    { href: "/cursos", label: "Clube de Formulas", icon: GraduationCap },
+    { 
+      href: "#", 
+      label: "Servicos",
+      icon: Briefcase,
+      children: [
+        { href: "/consultoria", label: "Consultoria", description: "Magistral e industrial", icon: Briefcase },
+        { href: "/mentoria", label: "Mentoria Premium", description: "4 sessoes + planos mensais", icon: GraduationCap },
+        { href: "/protocolos", label: "Protocolos Clinicos", description: "Dermatologia e prescritores", icon: Stethoscope },
+      ]
+    },
+    { href: "/missoes", label: "Missoes", icon: Globe },
     { href: "/blog", label: "Blog", icon: BookOpen },
-    { href: "/missoes", label: "Missoes", icon: Briefcase },
     { href: "/contato", label: "Contato", icon: Mail },
   ]
 
@@ -163,6 +187,90 @@ export function Navbar() {
               </Link>
             )
           })}
+
+          {/* Loja Dropdown with Tabs */}
+          <div className="relative">
+            <button
+              onClick={() => setOpenDropdown(openDropdown === "Loja" ? null : "Loja")}
+              className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
+                pathname.startsWith("/loja")
+                  ? isScrolled
+                    ? "text-[#B8783D] bg-[#B8783D]/10"
+                    : "text-[#e8a87c] bg-white/10"
+                  : isScrolled
+                    ? "text-[#0C2340]/80 hover:text-[#B8783D] hover:bg-[#B8783D]/5"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              <Store className="w-4 h-4" />
+              Loja
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === "Loja" ? "rotate-180" : ""}`} />
+            </button>
+            
+            {/* Loja Mega Menu with Tabs */}
+            {openDropdown === "Loja" && (
+              <div className="absolute top-full right-0 mt-2 w-96 bg-white rounded-2xl shadow-[0_20px_60px_rgba(12,35,64,0.15)] border border-[#0C2340]/10 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                {/* Tabs */}
+                <div className="flex border-b border-[#0C2340]/10">
+                  <button
+                    onClick={() => setActiveLojaTab("formularios")}
+                    className={`flex-1 px-4 py-3 text-xs font-bold tracking-[1px] uppercase transition-all ${
+                      activeLojaTab === "formularios"
+                        ? "bg-[#B8783D]/10 text-[#B8783D] border-b-2 border-[#B8783D]"
+                        : "text-[#64748b] hover:text-[#0C2340]"
+                    }`}
+                  >
+                    <FileText className="w-4 h-4 inline mr-2" />
+                    Formularios
+                  </button>
+                  <button
+                    onClick={() => setActiveLojaTab("ebooks")}
+                    className={`flex-1 px-4 py-3 text-xs font-bold tracking-[1px] uppercase transition-all ${
+                      activeLojaTab === "ebooks"
+                        ? "bg-[#B8783D]/10 text-[#B8783D] border-b-2 border-[#B8783D]"
+                        : "text-[#64748b] hover:text-[#0C2340]"
+                    }`}
+                  >
+                    <BookOpen className="w-4 h-4 inline mr-2" />
+                    E-books
+                  </button>
+                </div>
+
+                {/* Offer Thumbnails */}
+                <div className="p-3">
+                  {lojaOffers.map((offer) => (
+                    <Link
+                      key={offer.id}
+                      href={`/loja#${offer.id}`}
+                      onClick={() => setOpenDropdown(null)}
+                      className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#f8fafc] transition-all"
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-[#f1f5f9] flex items-center justify-center shrink-0">
+                        <FileText className="w-5 h-5 text-[#B8783D]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-semibold text-[#0C2340] truncate">{offer.name}</div>
+                        <div className="text-xs text-[#64748b]">A partir de {offer.price}</div>
+                      </div>
+                      <ArrowUpRight className="w-4 h-4 text-[#94a3b8]" />
+                    </Link>
+                  ))}
+                </div>
+
+                {/* View All CTA */}
+                <div className="p-3 border-t border-[#0C2340]/10 bg-[#fafbfc]">
+                  <Link
+                    href="/loja"
+                    onClick={() => setOpenDropdown(null)}
+                    className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0C2340] text-white rounded-lg text-sm font-semibold hover:bg-[#1a3a5c] transition-all"
+                  >
+                    Ver Catalogo Completo
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           
           {/* Instagram */}
           <a
@@ -178,6 +286,23 @@ export function Navbar() {
           >
             <Instagram className="w-5 h-5" />
           </a>
+
+          {/* AI Button - Leva a IA na sua */}
+          <Link
+            href="/leva-ia"
+            className={`ml-2 flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
+              isScrolled
+                ? "text-[#4a9eff] bg-[#4a9eff]/10 hover:bg-[#4a9eff]/15 border border-[#4a9eff]/20"
+                : "text-[#7eb8ff] bg-white/5 hover:bg-white/10 border border-white/10"
+            }`}
+          >
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#4a9eff]" />
+            </span>
+            <Sparkles className="w-4 h-4" />
+            Leva a IA
+          </Link>
 
           {/* Consultoria CTA */}
           <Link
@@ -257,6 +382,31 @@ export function Navbar() {
                 </Link>
               )
             })}
+
+            {/* Loja Mobile */}
+            <Link
+              href="/loja"
+              className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-semibold text-[#0C2340] hover:bg-[#f8fafc]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Store className="w-5 h-5" />
+              Loja
+              <ChevronRight className="w-4 h-4 ml-auto text-[#94a3b8]" />
+            </Link>
+            
+            {/* AI Button Mobile */}
+            <Link
+              href="/leva-ia"
+              className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-semibold bg-[#4a9eff]/10 text-[#4a9eff] border border-[#4a9eff]/20"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Sparkles className="w-5 h-5" />
+              Leva a IA na sua
+              <span className="ml-auto relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#4a9eff]" />
+              </span>
+            </Link>
             
             {/* Instagram Mobile */}
             <a

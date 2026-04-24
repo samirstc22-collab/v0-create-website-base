@@ -74,7 +74,7 @@ export function BlogHero() {
             <div className="relative mx-auto max-w-[420px]">
               <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
                 <Image
-                  src="/images/samir-portrait-stool.jpg"
+                  src="/placeholder.svg?height=700&width=500"
                   alt="Samir Tannuri — autor dos artigos científicos"
                   fill
                   priority

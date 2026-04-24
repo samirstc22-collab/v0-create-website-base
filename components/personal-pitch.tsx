@@ -51,7 +51,7 @@ export function PersonalPitch() {
             <div className="relative">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/samir-portrait-sofa.jpg"
+                  src="/placeholder.svg?height=800&width=600"
                   alt="Samir Tannuri sentado, postura confiante e profissional"
                   fill
                   className="object-cover"
@@ -99,7 +99,7 @@ export function PersonalPitch() {
               <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
                 <div className="h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#b87333]/40">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
+                    src="/placeholder.svg?height=600&width=500"
                     alt="Samir Tannuri"
                     width={56}
                     height={56}
@@ -152,7 +152,7 @@ export function PersonalPitch() {
           <div className="relative">
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[4/3]">
               <Image
-                src="/images/samir-stage-gesture.jpg"
+                src="/placeholder.svg?height=600&width=800"
                 alt="Samir Tannuri no palco ministrando palestra com energia"
                 fill
                 className="object-cover"

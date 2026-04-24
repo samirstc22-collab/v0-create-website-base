@@ -52,7 +52,7 @@ export function SobreHero() {
           <div className="relative mx-auto max-w-sm lg:max-w-none">
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
-                src="/images/samir-portrait-smile.jpg"
+                src="/placeholder.svg?height=600&width=500"
                 alt="Samir Tannuri — Consultor em tecnologia magistral"
                 fill
                 className="object-cover"

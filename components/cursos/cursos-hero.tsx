@@ -73,7 +73,7 @@ export function CursosHero() {
             <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/25 to-[#2dd4bf]/20 blur-3xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
               <Image
-                src="/images/samir-lab-eurotex.jpg"
+                src="/placeholder.svg?height=600&width=800"
                 alt="Samir Tannuri em laboratório internacional"
                 width={1000}
                 height={1250}

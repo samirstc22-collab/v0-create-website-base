@@ -69,7 +69,7 @@ export function V2Method() {
             {/* Photo accent */}
             <div className="mt-8 relative h-64 rounded-3xl overflow-hidden border border-[#1a3d2e]/15">
               <Image
-                src="/images/samir-stage-gesture.jpg"
+                src="/placeholder.svg?height=600&width=800"
                 alt="Samir Tannuri em palestra"
                 fill
                 className="object-cover"

@@ -69,7 +69,7 @@ export function ConsultoriaEnvironment() {
               <div className="absolute bottom-6 left-6 right-6 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/10">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
+                    src="/placeholder.svg?height=600&width=500"
                     alt="Samir Tannuri dentro da farmácia com a equipe"
                     fill
                     className="object-cover object-[center_top]"
@@ -142,7 +142,7 @@ export function ConsultoriaEnvironment() {
               <div className="mt-4 flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image
-                    src="/images/samir-portrait-smile.jpg"
+                    src="/placeholder.svg?height=600&width=500"
                     alt="Samir Tannuri"
                     fill
                     className="object-cover"

@@ -117,7 +117,7 @@ export function LPMagistral() {
         <aside className="relative overflow-hidden lg:sticky lg:top-0 lg:h-screen">
           <div className="relative h-[420px] w-full lg:h-full">
             <Image
-              src="/images/samir-portrait-stool.jpg"
+              src="/placeholder.svg?height=700&width=500"
               alt="Consultoria magistral personalizada — Samir Tannuri"
               fill
               className="object-cover object-top"

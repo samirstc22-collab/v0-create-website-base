@@ -50,7 +50,7 @@ export function LPIndustrial() {
           {/* Image full-bleed */}
           <div className="relative h-[420px] w-full lg:h-full">
             <Image
-              src="/images/samir-lab-eurotex.jpg"
+              src="/placeholder.svg?height=600&width=800"
               alt="Consultoria industrial — laboratório EUROTEX"
               fill
               className="object-cover object-center"

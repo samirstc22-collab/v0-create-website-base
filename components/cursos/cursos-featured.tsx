@@ -122,7 +122,7 @@ export function CursosFeatured() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-[28px] border border-[#0a1628]/10 shadow-[0_30px_80px_rgba(10,22,40,0.2)]">
               <Image
-                src="/images/samir-portrait-stool.jpg"
+                src="/placeholder.svg?height=700&width=500"
                 alt="Samir Tannuri"
                 width={800}
                 height={1000}

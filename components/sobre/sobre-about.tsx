@@ -25,7 +25,7 @@ export function SobreAbout() {
             <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] sticky top-32">
               <div className="w-full aspect-[3/4] relative">
                 <Image
-                  src="/images/samir-award.png"
+                  src="/placeholder.svg?height=500&width=500"
                   alt="Samir Tannuri — consultor em tecnologia magistral"
                   fill
                   className="object-cover object-top"

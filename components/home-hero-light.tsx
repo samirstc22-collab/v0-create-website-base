@@ -141,7 +141,7 @@ export function HomeHeroLight() {
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/samir-lab-eurotex.jpg"
+                  src="/placeholder.svg?height=600&width=800"
                   alt="Samir Tannuri - Consultor em tecnologia magistral"
                   fill
                   className="object-cover object-[center_30%]"

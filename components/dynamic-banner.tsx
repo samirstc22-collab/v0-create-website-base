@@ -53,7 +53,7 @@ const slides: Slide[] = [
     ctaHref: "/consultoria",
     metricValue: "+38%",
     metricLabel: "de ticket médio em 90 dias",
-    image: "/images/samir-portrait-sofa.jpg",
+    image: "/placeholder.svg?height=800&width=600",
     imageAlt: "Samir Tannuri em retrato executivo",
     icon: Microscope,
     tone: {
@@ -78,7 +78,7 @@ const slides: Slide[] = [
     ctaHref: "/cursos",
     metricValue: "12k+",
     metricLabel: "profissionais formados",
-    image: "/images/samir-stage-gesture.jpg",
+    image: "/placeholder.svg?height=600&width=800",
     imageAlt: "Samir palestrando em congresso nacional",
     icon: GraduationCap,
     tone: {
@@ -103,7 +103,7 @@ const slides: Slide[] = [
     ctaHref: "/sobre",
     metricValue: "4.000+",
     metricLabel: "fórmulas validadas em bancada",
-    image: "/images/samir-lab-eurotex.jpg",
+    image: "/placeholder.svg?height=600&width=800",
     imageAlt: "Samir em laboratório EUROTEX — França",
     icon: FlaskConical,
     tone: {
@@ -128,7 +128,7 @@ const slides: Slide[] = [
     ctaHref: "/contato",
     metricValue: "20+",
     metricLabel: "indústrias atendidas",
-    image: "/images/samir-portrait-smile.jpg",
+    image: "/placeholder.svg?height=600&width=500",
     imageAlt: "Samir em retrato profissional",
     icon: Factory,
     tone: {
@@ -153,7 +153,7 @@ const slides: Slide[] = [
     ctaHref: "/contato",
     metricValue: "800+",
     metricLabel: "palestras realizadas",
-    image: "/images/samir-stage-clicker.jpg",
+    image: "/placeholder.svg?height=500&width=700",
     imageAlt: "Samir Tannuri no palco de congresso internacional",
     icon: Mic2,
     tone: {

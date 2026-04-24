@@ -118,7 +118,7 @@ export function HomeAuthority() {
             <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/30 via-transparent to-[#2dd4bf]/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
-                src="/images/samir-lab-eurotex.jpg"
+                src="/placeholder.svg?height=600&width=800"
                 alt="Samir Tannuri — consultor em tecnologia magistral"
                 width={1200}
                 height={1500}

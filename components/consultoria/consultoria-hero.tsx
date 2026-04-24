@@ -83,8 +83,8 @@ export function ConsultoriaHero() {
           <div className="relative mx-auto max-w-md lg:max-w-none">
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
-                src="/images/samir-portrait-sofa.jpg"
-                alt="Samir Tannuri, consultor especialista em farmácias e drogarias"
+                src="/placeholder.svg?height=800&width=600"
+                alt="Samir Tannuri, consultor especialista em formulacao magistral"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 90vw, 45vw"

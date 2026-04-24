@@ -56,7 +56,7 @@ export function Speaker() {
           <div className="rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(11,29,53,0.15)] relative hidden lg:block">
             <div className="relative w-full aspect-[4/5]">
               <Image
-                src="/images/samir-stage-gesture.jpg"
+                src="/placeholder.svg?height=600&width=800"
                 alt="Samir Tannuri palestrando em congresso nacional"
                 fill
                 className="object-cover"

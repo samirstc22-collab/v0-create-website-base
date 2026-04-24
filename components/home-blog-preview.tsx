@@ -99,7 +99,7 @@ export function HomeBlogPreview() {
                   <div className="flex items-center gap-2.5">
                     <div className="relative h-8 w-8 overflow-hidden rounded-full ring-1 ring-[#b87333]/20">
                       <Image
-                        src="/images/samir-portrait-smile.jpg"
+                        src="/placeholder.svg?height=600&width=500"
                         alt="Samir Tannuri"
                         fill
                         className="object-cover"

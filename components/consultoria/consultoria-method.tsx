@@ -61,7 +61,7 @@ export function ConsultoriaMethod() {
             <div className="relative">
               <div className="relative aspect-[16/11] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/samir-stage-clicker.jpg"
+                  src="/placeholder.svg?height=500&width=700"
                   alt="Samir Tannuri palestrando sobre gestão magistral"
                   fill
                   className="object-cover"
