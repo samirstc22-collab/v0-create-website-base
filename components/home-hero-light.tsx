@@ -141,10 +141,10 @@ export function HomeHeroLight() {
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Samir Tannuri - Consultor em tecnologia magistral"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9321%20copiar-R9iJREd47uVnHpBixTYoO1EHXgF3Pd.jpg"
+                  alt="Samir Tannuri - Consultor em Formulacao Magistral"
                   fill
-                  className="object-cover object-[center_30%]"
+                  className="object-cover object-[center_20%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />

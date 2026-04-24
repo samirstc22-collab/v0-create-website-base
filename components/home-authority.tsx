@@ -118,8 +118,8 @@ export function HomeAuthority() {
             <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/30 via-transparent to-[#2dd4bf]/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
-                src="/placeholder.svg?height=600&width=800"
-                alt="Samir Tannuri — consultor em tecnologia magistral"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-Fh12Umo5MunvDT3pxP0ePdyCtwVaRC.jpg"
+                alt="Samir Tannuri — Consultor em Formulacao Magistral"
                 width={1200}
                 height={1500}
                 className="h-auto w-full object-cover"
@@ -270,36 +270,73 @@ export function HomeAuthority() {
           </div>
         </div>
 
-        {/* Countries band */}
-        <div className="mt-20 rounded-[32px] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 md:p-12">
-          <div className="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
-            <div className="max-w-sm">
-              <div className="flex items-center gap-3">
-                <Globe2 className="h-6 w-6 text-[#2dd4bf]" />
-                <div className="text-[11px] font-bold uppercase tracking-[3px] text-[#2dd4bf]">
-                  Presença internacional
+        {/* Missions gallery */}
+        <div className="mt-20">
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center gap-3 rounded-full border border-[#2dd4bf]/30 bg-[#2dd4bf]/10 px-5 py-2">
+              <Globe2 className="h-4 w-4 text-[#2dd4bf]" />
+              <span className="text-xs font-bold uppercase tracking-[3px] text-[#2dd4bf]">
+                Missoes Internacionais
+              </span>
+            </div>
+            <h3 className="mt-4 font-serif text-3xl leading-tight text-white md:text-4xl">
+              Rede internacional que vira vantagem técnica.
+            </h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* In-Cosmetics Paris */}
+            <div className="relative group overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744355862838-J3zTIx6C9CoFx3MVLHAV1WrNvI0p3I.jpeg"
+                alt="Delegacao brasileira na In-Cosmetics Global Paris 2025"
+                width={800}
+                height={600}
+                className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf] mb-2">
+                  In-Cosmetics Global · Paris 2025
                 </div>
+                <p className="text-white font-medium text-lg leading-snug">
+                  Delegado tecnico com acesso a lancamentos exclusivos de ativos
+                </p>
               </div>
-              <h3 className="mt-4 font-serif text-3xl leading-tight text-white md:text-4xl">
-                Rede internacional que vira vantagem técnica.
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-white/65">
-                Acesso antecipado a ativos não disponíveis no mercado local, curadoria técnica
-                independente e diferenciação real de portfólio — não promessa de marketing.
-              </p>
             </div>
 
-            <div className="flex flex-wrap gap-2.5">
-              {countries.map((country) => (
-                <span
-                  key={country}
-                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 transition-all hover:border-[#2dd4bf]/40 hover:bg-[#2dd4bf]/10 hover:text-white"
-                >
-                  <MapPin className="mr-1.5 inline h-3 w-3 text-[#2dd4bf]" />
-                  {country}
-                </span>
-              ))}
+            {/* Missao Europa */}
+            <div className="relative group overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1743767748476-LASjOXxtAod9sJxrQpexHRcHYjQa2C.jpeg"
+                alt="Missao tecnica na Europa - visita a laboratorios"
+                width={800}
+                height={600}
+                className="w-full h-[300px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c] mb-2">
+                  Missao Tecnica · Europa
+                </div>
+                <p className="text-white font-medium text-lg leading-snug">
+                  Visitas tecnicas a laboratorios e fornecedores de referencia
+                </p>
+              </div>
             </div>
+          </div>
+
+          {/* Countries tags */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+            {countries.map((country) => (
+              <span
+                key={country}
+                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 transition-all hover:border-[#2dd4bf]/40 hover:bg-[#2dd4bf]/10 hover:text-white"
+              >
+                <MapPin className="mr-1.5 inline h-3 w-3 text-[#2dd4bf]" />
+                {country}
+              </span>
+            ))}
           </div>
         </div>
 
@@ -322,17 +359,32 @@ export function HomeAuthority() {
         <div className="relative mt-20 overflow-hidden rounded-[32px] border border-[#e8a87c]/30 bg-gradient-to-br from-[#e8a87c]/15 via-[#0a1628] to-[#2dd4bf]/10 p-10 md:p-16">
           <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#e8a87c]/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#2dd4bf]/15 blur-3xl" />
-          <div className="relative mx-auto max-w-3xl text-center">
-            <Users className="mx-auto h-8 w-8 text-[#e8a87c]" />
-            <h3 className="mt-6 font-serif text-3xl leading-[1.1] text-white md:text-5xl lg:text-6xl">
-              Se a sua empresa precisa de um parceiro técnico,{" "}
-              <em className="text-[#e8a87c]">a gente tem um assunto.</em>
-            </h3>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.7] text-white/75">
-              Consultoria sob medida para indústrias, magistrais e marcas em desenvolvimento ou
-              reposicionamento de portfólio. Atendimento restrito a empresas. Resposta em até 48h
-              úteis.
-            </p>
+          <div className="relative grid lg:grid-cols-[auto_1fr] gap-10 items-center">
+            {/* Photo */}
+            <div className="hidden lg:block">
+              <div className="relative w-[180px] h-[180px] rounded-full overflow-hidden border-4 border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0083%20copiar-i1zHpOYJQutLzHKphs5z9JTmuZimeK.jpg"
+                  alt="Samir Tannuri"
+                  fill
+                  className="object-cover object-[center_20%]"
+                />
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="text-center lg:text-left">
+              <h3 className="font-serif text-3xl leading-[1.1] text-white md:text-5xl lg:text-6xl">
+                Se a sua empresa precisa de um parceiro técnico,{" "}
+                <em className="text-[#e8a87c]">a gente tem um assunto.</em>
+              </h3>
+              <p className="mt-6 max-w-2xl text-lg leading-[1.7] text-white/75">
+                Consultoria sob medida para indústrias, magistrais e marcas em desenvolvimento ou
+                reposicionamento de portfólio. Atendimento restrito a empresas. Resposta em até 48h
+                úteis.
+              </p>
+            </div>
+          </div>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
                 href="/consultoria"

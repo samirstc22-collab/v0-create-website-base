@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, X, Check, AlertTriangle } from "lucide-react"
 
 export function HomeDifferentiation() {
@@ -99,18 +100,49 @@ export function HomeDifferentiation() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-[#475569] mb-6">
-            Pronto para elevar o padrao tecnico da sua operacao?
-          </p>
-          <Link
-            href="/consultoria"
-            className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
-          >
-            Agendar diagnostico tecnico
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+        {/* Image + CTA Section */}
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
+          {/* Image */}
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#0C2340]/10 via-transparent to-[#B8783D]/10 blur-xl pointer-events-none" />
+            <div className="relative overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-[0_20px_60px_-15px_rgba(12,35,64,0.15)]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1700403712110-gEYnsv8nrv3qDjAzTOhj9LXhnJ6YEQ.jpeg"
+                alt="Prof. Samir Tannuri em treinamento tecnico"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="bg-white/95 backdrop-blur rounded-xl px-4 py-3 shadow-lg">
+                  <div className="text-[10px] uppercase tracking-[2px] font-bold text-[#B8783D] mb-1">
+                    Treinamento tecnico
+                  </div>
+                  <div className="text-sm font-semibold text-[#0C2340]">
+                    Formacao pratica para equipes magistrais
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Content */}
+          <div className="text-center lg:text-left">
+            <h3 className="font-serif text-2xl md:text-3xl text-[#0C2340] leading-[1.2] mb-4">
+              Pronto para elevar o padrao tecnico da sua operacao?
+            </h3>
+            <p className="text-[#475569] mb-6 max-w-md mx-auto lg:mx-0">
+              Agende um diagnostico tecnico gratuito e descubra como podemos otimizar seus processos de formulacao.
+            </p>
+            <Link
+              href="/consultoria"
+              className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
+            >
+              Agendar diagnostico tecnico
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

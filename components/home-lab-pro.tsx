@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Sparkles, Zap, Brain, Search, Shield, Clock } from "lucide-react"
 
 export function HomeLabPro() {
@@ -24,6 +25,31 @@ export function HomeLabPro() {
       />
 
       <div className="relative max-w-[1320px] mx-auto">
+        {/* Speaker authority image */}
+        <div className="mb-16 relative overflow-hidden rounded-3xl border border-[#e5e7eb] shadow-[0_20px_60px_-15px_rgba(12,35,64,0.12)]">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4728-VrvO22Qj6M0yyiVSA3QSBQYv5KdkZO.jpg"
+            alt="Samir Tannuri palestrando sobre tecnologia magistral"
+            width={1400}
+            height={500}
+            className="w-full h-[280px] md:h-[350px] object-cover object-[center_40%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0C2340]/80 via-[#0C2340]/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            <div className="max-w-xl">
+              <div className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#4a9eff] mb-3">
+                Tecnologia que nasce da pratica
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl text-white leading-[1.2] mb-3">
+                O Lab Pro e alimentado por 6 anos de pratica industrial real
+              </h3>
+              <p className="text-white/70 text-sm md:text-base max-w-lg">
+                Cada formula validada, cada desvio resolvido, cada protocolo criado — tudo isso alimenta a inteligencia do Formulator AI.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Content */}
           <div>
