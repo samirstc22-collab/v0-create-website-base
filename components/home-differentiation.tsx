@@ -102,27 +102,51 @@ export function HomeDifferentiation() {
 
         {/* Image + CTA Section */}
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
-          {/* Image */}
-          <div className="relative">
+          {/* Images Grid */}
+          <div className="relative space-y-4">
             <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-[#0C2340]/10 via-transparent to-[#B8783D]/10 blur-xl pointer-events-none" />
+            
+            {/* Training workshop image */}
             <div className="relative overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-[0_20px_60px_-15px_rgba(12,35,64,0.15)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1700403712110-gEYnsv8nrv3qDjAzTOhj9LXhnJ6YEQ.jpeg"
-                alt="Prof. Samir Tannuri em treinamento tecnico"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%202026-04-21%20a%CC%80%28s%29%2020.04.24-GqBE7P7pok9Hw3CPH6YzshQ2B1v35n.png"
+                alt="Workshop de peelings quimicos com pratica supervisionada"
                 width={600}
-                height={600}
-                className="w-full h-auto object-cover"
+                height={400}
+                className="w-full h-[280px] object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-white/95 backdrop-blur rounded-xl px-4 py-3 shadow-lg">
                   <div className="text-[10px] uppercase tracking-[2px] font-bold text-[#B8783D] mb-1">
-                    Treinamento tecnico
+                    Treinamento pratico
                   </div>
                   <div className="text-sm font-semibold text-[#0C2340]">
-                    Formacao pratica para equipes magistrais
+                    Formacao com pratica supervisionada real
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Product development showcase */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative group overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1700403712110-gEYnsv8nrv3qDjAzTOhj9LXhnJ6YEQ.jpeg"
+                  alt="Treinamento tecnico em formulacao"
+                  width={300}
+                  height={200}
+                  className="w-full h-[120px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="relative group overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1693088095952-SOf45sTK8EQFDr4RtYf8yo4CsQqVis.jpeg"
+                  alt="Portfolio de produtos desenvolvidos"
+                  width={300}
+                  height={200}
+                  className="w-full h-[120px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             </div>
           </div>

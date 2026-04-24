@@ -228,6 +228,79 @@ export function HomeAuthority() {
           </div>
         </div>
 
+        {/* Luxury product showcase */}
+        <div className="mt-24">
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center gap-3 rounded-full border border-[#e8a87c]/30 bg-[#e8a87c]/10 px-5 py-2">
+              <FlaskConical className="h-4 w-4 text-[#e8a87c]" />
+              <span className="text-xs font-bold uppercase tracking-[3px] text-[#e8a87c]">
+                Desenvolvimento de produto
+              </span>
+            </div>
+            <h3 className="mt-4 font-serif text-3xl leading-tight text-white md:text-4xl">
+              Do conceito ao produto final.
+            </h3>
+            <p className="mt-4 max-w-2xl mx-auto text-base text-white/60">
+              Formulacoes desenvolvidas com criterio tecnico — da escolha de ativos a estabilidade final.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5705-Hn707YGXAWd1o4MWk44jt8mtSKkBLX.jpg"
+                alt="Serum azul em ambiente gelado - produto premium"
+                width={400}
+                height={500}
+                className="w-full h-[200px] md:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-semibold text-white">Serum hidratante</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1e079e4b-072d-455d-a6be-a86dd0055659-vcHySDPRp5FKkLSrjpcOj8yIDUVEOf.jpg"
+                alt="Serum azul textura aquosa - formulacao premium"
+                width={400}
+                height={500}
+                className="w-full h-[200px] md:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-semibold text-white">Textura aquosa</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4947-1tfYgi1azf3P1KdhBmhPNdNO8xFnrn.jpg"
+                alt="Serum rosa premium - formulacao de alta performance"
+                width={400}
+                height={500}
+                className="w-full h-[200px] md:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-semibold text-white">Serum anti-idade</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1709143998205-H1eDfKMSub31LhCMxixc3pPiskEqZd.jpeg"
+                alt="Linha de produtos skincare desenvolvida"
+                width={400}
+                height={500}
+                className="w-full h-[200px] md:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-semibold text-white">Linha completa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Big numbers grid */}
         <div className="mt-24">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
