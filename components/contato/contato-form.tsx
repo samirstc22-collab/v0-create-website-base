@@ -20,7 +20,7 @@ export function ContatoForm() {
     {
       icon: Mail,
       label: "E-mail",
-      value: "contato@clubedeformulas.com.br",
+      value: "contato@stfarma.com.br",
     },
     {
       icon: MapPin,
@@ -68,7 +68,7 @@ export function ContatoForm() {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/5562999999999"
+              href="https://wa.me/5511981403000"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#25D366] border-none rounded-xl py-4 px-8 text-white font-bold text-base flex items-center justify-center gap-3 hover:translate-y-[-2px] transition-all shadow-[0_6px_24px_rgba(37,211,102,0.3)]"

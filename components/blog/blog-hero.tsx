@@ -43,7 +43,7 @@ export function BlogHero() {
 
             <p className="mt-8 max-w-[640px] text-lg leading-relaxed text-white/65 md:text-xl">
               Artigos técnicos, revisões peer-reviewed e ensaios clínicos do Samir Tannuri —
-              escritos para farmacêuticos, pesquisadores e gestores que exigem{" "}
+              escritos para profissionais de saúde, pesquisadores e gestores que exigem{" "}
               <strong className="text-white">profundidade científica</strong> e{" "}
               <strong className="text-white">aplicabilidade imediata</strong> na mesma linha.
             </p>
@@ -90,7 +90,7 @@ export function BlogHero() {
                   </div>
                   <div className="mt-2 font-serif text-2xl text-white">Samir Tannuri</div>
                   <div className="mt-1 text-sm leading-relaxed text-white/65">
-                    Farmacêutico · Consultor em Tecnologia Farmacêutica-UNICAMP · Publicação indexada (DOI)
+                    Professor · Consultor · Publicação indexada (DOI)
                   </div>
                 </div>
               </div>

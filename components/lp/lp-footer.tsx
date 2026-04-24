@@ -36,7 +36,7 @@ export function LPFooter() {
             </div>
             <p className="mt-6 max-w-md text-[14px] leading-[1.7] text-white/50">
               Consultoria científica em P&amp;D cosmético — para indústrias Grau 1 e 2, marcas
-              independentes e farmácias magistrais de excelência. Pesquisa-UNICAMP, publicação
+              independentes e farmácias magistrais de excelência. Pesquisa, publicação
               peer-reviewed indexada e missões técnicas em três continentes.
             </p>
           </div>

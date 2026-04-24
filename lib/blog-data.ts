@@ -3,7 +3,7 @@ export type BlogCategory =
   | "Dermocosmética"
   | "Tricologia"
   | "Manipulação Magistral"
-  | "Gestão Farmacêutica"
+  | "Gestão Magistral"
   | "Inovação Industrial"
 
 export type BlogPost = {
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 de março de 2026",
     dateISO: "2026-03-18",
     author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica",
+    authorRole: "Consultor em Formulação Magistral",
     coverGradient: "from-[#0a1628] via-[#0f2d4a] to-[#1a4d6e]",
     excerpt:
       "Publicação peer-reviewed indexada (DOI: 10.24933/rep.v6i2.281) consolida a primeira evidência científica brasileira sobre peelings químicos em apresentação de pasta — com ganhos de penetração controlada, redução de irritabilidade e previsibilidade clínica inédita.",
@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Impacto para a farmácia magistral brasileira",
         paragraphs: [
-          "Mais do que uma fórmula, a pasta peeling inaugura uma categoria. Ela habilita farmácias de qualquer porte a ofertar um procedimento avançado com previsibilidade hospitalar, ampliando a percepção de valor do farmacêutico magistral como protagonista científico do cuidado dermatológico.",
+          "Mais do que uma fórmula, a pasta peeling inaugura uma categoria. Ela habilita farmácias de qualquer porte a ofertar um procedimento avançado com previsibilidade hospitalar, ampliando a percepção de valor do consultor magistral como protagonista científico do cuidado dermatológico.",
           "Do ponto de vista de negócio, transforma um procedimento genérico em assinatura técnica da farmácia — com receita média superior, fidelização clínica e um argumento competitivo difícil de copiar.",
         ],
       },
@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
     date: "02 de março de 2026",
     dateISO: "2026-03-02",
     author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica",
+    authorRole: "Consultor em Formulação Magistral",
     coverGradient: "from-[#1a4d6e] via-[#0d7a80] to-[#0a8f9e]",
     excerpt:
       "A tricologia entrou definitivamente na era da biologia molecular. Veja como combinamos peptídeos sinalizadores, ativadores de Wnt/β-catenina e cofatores mitocondriais em um mesmo veículo — com resultados visíveis em 90 dias.",
@@ -142,12 +142,12 @@ export const blogPosts: BlogPost[] = [
     title: "A Lei de Pareto na farmácia magistral: os 20% que sustentam o caixa",
     subtitle:
       "Gestão científica aplicada ao balcão: como mapear o mix de produtos, identificar formulações-chave e transformar dados em decisões de estoque, precificação e foco comercial.",
-    category: "Gestão Farmacêutica",
+    category: "Gestão Magistral",
     readTime: "8 min de leitura",
     date: "14 de fevereiro de 2026",
     dateISO: "2026-02-14",
     author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica",
+    authorRole: "Consultor em Formulação Magistral",
     coverGradient: "from-[#5a2e0a] via-[#b87333] to-[#e8a87c]",
     excerpt:
       "Em toda farmácia bem analisada, 20% das fórmulas respondem por 80% do faturamento. O problema não é a estatística — é o dono que ainda não a conhece. Um método em quatro passos para transformar dados em lucro.",
@@ -192,7 +192,7 @@ export const blogPosts: BlogPost[] = [
     date: "28 de janeiro de 2026",
     dateISO: "2026-01-28",
     author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica",
+    authorRole: "Consultor em Formulação Magistral",
     coverGradient: "from-[#1a0a2e] via-[#3d1f5c] to-[#5b2e8a]",
     excerpt:
       "Niacinamida não 'briga' com vitamina C. Niacinamida não precisa de pH neutro. Niacinamida não perde função em creme. Desmontamos os mitos mais persistentes da dermocosmética com literatura recente e protocolos testados.",
@@ -240,7 +240,7 @@ export const blogPosts: BlogPost[] = [
     date: "10 de janeiro de 2026",
     dateISO: "2026-01-10",
     author: "Samir Tannuri",
-    authorRole: "Consultor em Tecnologia Farmacêutica",
+    authorRole: "Consultor em Formulação Magistral",
     coverGradient: "from-[#0a4d3c] via-[#0d7a5c] to-[#10a87e]",
     excerpt:
       "O salto do pote manipulado ao lote piloto industrial não é apenas de escala — é de mentalidade. Um mapa em sete estações para quem quer atravessar a ponte sem perder alma.",
@@ -343,6 +343,6 @@ export const blogCategories: BlogCategory[] = [
   "Dermocosmética",
   "Tricologia",
   "Manipulação Magistral",
-  "Gestão Farmacêutica",
+  "Gestão Magistral",
   "Inovação Industrial",
 ]

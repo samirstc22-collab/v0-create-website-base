@@ -37,7 +37,7 @@ export function AICTA() {
 
         {/* Subhead */}
         <p className="text-xl text-white/60 max-w-2xl mx-auto mb-10">
-          Junte-se a centenas de farmacêuticos que já estão usando inteligência artificial para criar fórmulas melhores, mais rápido.
+          Junte-se a centenas de profissionais que já estão usando inteligência artificial para criar fórmulas melhores, mais rápido.
         </p>
 
         {/* CTAs */}

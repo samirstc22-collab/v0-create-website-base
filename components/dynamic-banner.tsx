@@ -77,7 +77,7 @@ const slides: Slide[] = [
     ctaLabel: "Ver catálogo de cursos",
     ctaHref: "/cursos",
     metricValue: "12k+",
-    metricLabel: "farmacêuticos formados",
+    metricLabel: "profissionais formados",
     image: "/images/samir-stage-gesture.jpg",
     imageAlt: "Samir palestrando em congresso nacional",
     icon: GraduationCap,
@@ -92,7 +92,7 @@ const slides: Slide[] = [
   },
   {
     id: "pd",
-    kicker: "P&D Cosmético · Bancada-UNICAMP",
+    kicker: "P&D Cosmético · Bancada",
     headlineA: "Pesquisa peer-reviewed",
     headlineAccent: "que vira fórmula",
     headlineB: "na sua indústria.",
@@ -241,7 +241,7 @@ export function DynamicBanner() {
             <span className="font-serif text-base leading-none text-white">S</span>
           </div>
           <div>
-            <div className="font-serif text-sm text-white/90">Clube de Fórmulas</div>
+            <div className="font-serif text-sm text-white/90">ST Farma</div>
             <div className="text-[11px] uppercase tracking-[2px] text-white/50">
               Samir Tannuri · desde 2001
             </div>

@@ -59,7 +59,7 @@ export function V2Contact() {
             </span>
             <div className="flex flex-wrap gap-5">
               {[
-                { icon: Mail, label: "contato@clubedeformulas.com.br" },
+                { icon: Mail, label: "contato@stfarma.com.br" },
                 { icon: Instagram, label: "@cienciadapele" },
                 { icon: Linkedin, label: "/in/samirtannuri" },
               ].map(({ icon: Icon, label }) => (

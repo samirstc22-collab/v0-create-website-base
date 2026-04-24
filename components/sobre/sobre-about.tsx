@@ -26,7 +26,7 @@ export function SobreAbout() {
               <div className="w-full aspect-[3/4] relative">
                 <Image
                   src="/images/samir-award.png"
-                  alt="Samir Tannuri — consultor em tecnologia farmacêutica"
+                  alt="Samir Tannuri — consultor em tecnologia magistral"
                   fill
                   className="object-cover object-top"
                   sizes="400px"
@@ -34,7 +34,7 @@ export function SobreAbout() {
               </div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                 <div className="font-serif text-xl text-navy">Samir Tannuri</div>
-                <div className="text-sm text-muted mt-1">Consultor em Tecnologia Farmaceutica</div>
+                <div className="text-sm text-muted mt-1">Consultor em Formulação Magistral</div>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ export function SobreAbout() {
               Criador do primeiro peeling de acido azelaico em pasta anidra do mundo e autor da{" "}
               <strong className="text-navy font-semibold">Tecnica Fenol FREE</strong>. Co-assina
               paper peer-reviewed sobre fotoprotecao em peles negras, publicado em colaboracao com
-              pesquisadores vinculados a UNICAMP. Delegado tecnico In-Cosmetics Global Paris 2025,
+              pesquisadores vinculados a. Delegado tecnico In-Cosmetics Global Paris 2025,
               com missoes em Amsterdam e no Japao.
             </p>
 

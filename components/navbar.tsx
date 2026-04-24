@@ -8,16 +8,11 @@ import {
   Menu, 
   X, 
   ChevronRight, 
-  ChevronDown,
-  ShoppingBag,
   User,
   GraduationCap,
-  FileText,
   Briefcase,
-  Sparkles,
   BookOpen,
   Mail,
-  Store,
   Instagram
 } from "lucide-react"
 
@@ -57,26 +52,9 @@ export function Navbar() {
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre", icon: User },
-    { 
-      href: "#", 
-      label: "Aprender",
-      icon: GraduationCap,
-      children: [
-        { href: "/cursos", label: "Cursos", description: "Formacao completa em formulacao", icon: GraduationCap },
-        { href: "/formularios", label: "Formularios", description: "60+ artefatos tecnicos", icon: FileText },
-        { href: "/blog", label: "Blog Cientifico", description: "Artigos e pesquisas", icon: BookOpen },
-      ]
-    },
-    { 
-      href: "#", 
-      label: "Servicos",
-      icon: Briefcase,
-      children: [
-        { href: "/consultoria", label: "Consultoria", description: "Magistral e industrial", icon: Briefcase },
-        { href: "/formulator-ai", label: "Formulator AI", description: "IA de formulacao", icon: Sparkles },
-      ]
-    },
-    { href: "/loja", label: "Loja", icon: Store },
+    { href: "/cursos", label: "Clube de Formulas", icon: GraduationCap },
+    { href: "/blog", label: "Blog", icon: BookOpen },
+    { href: "/missoes", label: "Missoes", icon: Briefcase },
     { href: "/contato", label: "Contato", icon: Mail },
   ]
 
@@ -186,22 +164,6 @@ export function Navbar() {
             )
           })}
           
-          {/* Formulator AI Highlight Button */}
-          <Link
-            href="/formulator-ai"
-            className={`ml-2 flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
-              isScrolled
-                ? "text-[#4a9eff] bg-[#4a9eff]/10 hover:bg-[#4a9eff]/15 border border-[#4a9eff]/20"
-                : "text-[#7eb8ff] bg-white/5 hover:bg-white/10 border border-white/10"
-            }`}
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#4a9eff]" />
-            </span>
-            AI Lab
-          </Link>
-
           {/* Instagram */}
           <a
             href="https://instagram.com/samir_farma"
@@ -216,14 +178,14 @@ export function Navbar() {
           >
             <Instagram className="w-5 h-5" />
           </a>
-          
-          {/* Loja CTA */}
+
+          {/* Consultoria CTA */}
           <Link
-            href="/loja"
+            href="/consultoria"
             className="ml-3 bg-gradient-to-br from-[#B8783D] to-[#8a5729] border-none rounded-xl py-2.5 px-5 text-white font-bold text-sm shadow-[0_4px_16px_rgba(184,120,61,0.35)] hover:translate-y-[-1px] hover:shadow-[0_6px_24px_rgba(184,120,61,0.45)] transition-all duration-300 tracking-wide flex items-center gap-2"
           >
-            <ShoppingBag className="w-4 h-4" />
-            Loja
+            <Briefcase className="w-4 h-4" />
+            Consultoria
           </Link>
         </div>
 
@@ -296,20 +258,6 @@ export function Navbar() {
               )
             })}
             
-            {/* Formulator AI Mobile */}
-            <Link
-              href="/formulator-ai"
-              className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-semibold bg-[#4a9eff]/10 text-[#4a9eff] border border-[#4a9eff]/20"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Sparkles className="w-5 h-5" />
-              Formulator AI Lab
-              <span className="ml-auto relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#4a9eff]" />
-              </span>
-            </Link>
-            
             {/* Instagram Mobile */}
             <a
               href="https://instagram.com/samir_farma"
@@ -322,15 +270,15 @@ export function Navbar() {
               @samir_farma
               <ChevronRight className="w-4 h-4 ml-auto text-[#94a3b8]" />
             </a>
-            
-            {/* Loja Mobile CTA */}
+
+            {/* Consultoria Mobile CTA */}
             <Link
-              href="/loja"
+              href="/consultoria"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-3 bg-gradient-to-br from-[#B8783D] to-[#8a5729] rounded-xl py-4 px-6 text-white font-bold text-base text-center shadow-[0_4px_20px_rgba(184,120,61,0.3)] flex items-center justify-center gap-2"
             >
-              <ShoppingBag className="w-5 h-5" />
-              Loja · 60+ Artefatos
+              <Briefcase className="w-5 h-5" />
+              Agendar Consultoria
             </Link>
           </div>
         </div>

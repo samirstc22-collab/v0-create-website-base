@@ -309,7 +309,7 @@ export function MateriaisCatalog2026() {
               <em className="text-[#e8a87c]">desenhado para sua prática</em>.
             </h3>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl mb-10">
-              Dermatologista estético, farmacêutico magistral, clínica laser ou docente — o acervo
+              Dermatologista estético, consultor magistral, clínica laser ou docente — o acervo
               é recortado pelo uso clínico real. Sem excesso, sem lacuna.
             </p>
 

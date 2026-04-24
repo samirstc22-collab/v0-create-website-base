@@ -22,7 +22,7 @@ export function SobreHero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
-            Consultor em tecnologia farmacêutica. <strong className="text-white">Seis anos
+            Consultor em tecnologia magistral. <strong className="text-white">Seis anos
             coordenando P&D</strong> no maior grupo magistral do Brasil, mais de 500 farmácias
             atendidas tecnicamente e 1.000+ formuladores treinados. Hoje, essa experiência vira
             consultoria sob medida para indústrias, magistrais e marcas.
@@ -32,7 +32,7 @@ export function SobreHero() {
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <GraduationCap className="mb-3 h-6 w-6 text-[#e8a87c]" />
               <div className="text-sm font-medium text-white">Consultor</div>
-              <div className="text-xs text-white/60">Tecnologia Farmacêutica</div>
+              <div className="text-xs text-white/60">Formulação Magistral</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <Microscope className="mb-3 h-6 w-6 text-[#e8a87c]" />
@@ -53,7 +53,7 @@ export function SobreHero() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
                 src="/images/samir-portrait-smile.jpg"
-                alt="Samir Tannuri — Consultor em tecnologia farmacêutica"
+                alt="Samir Tannuri — Consultor em tecnologia magistral"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 80vw, 40vw"

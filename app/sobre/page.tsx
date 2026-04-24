@@ -11,7 +11,7 @@ import { Speaker } from "@/components/speaker"
 export const metadata = {
   title: "Sobre — Samir Tannuri · ST Farma",
   description:
-    "Conheça a trajetória de Samir Tannuri — consultor em tecnologia farmacêutica com seis anos coordenando P&D no maior grupo magistral do Brasil, delegado técnico In-Cosmetics Global Paris 2025 e coautor de paper peer-reviewed.",
+    "Conheça a trajetória de Samir Tannuri — consultor em tecnologia magistral com seis anos coordenando P&D no maior grupo magistral do Brasil, delegado técnico In-Cosmetics Global Paris 2025 e coautor de paper peer-reviewed.",
 }
 
 export default function SobrePage() {

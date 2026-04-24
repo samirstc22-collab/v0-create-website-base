@@ -119,7 +119,7 @@ export function HomeAuthority() {
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
                 src="/images/samir-lab-eurotex.jpg"
-                alt="Samir Tannuri — consultor em tecnologia farmacêutica"
+                alt="Samir Tannuri — consultor em tecnologia magistral"
                 width={1200}
                 height={1500}
                 className="h-auto w-full object-cover"

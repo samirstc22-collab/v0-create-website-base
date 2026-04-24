@@ -33,7 +33,7 @@ const socials = [
     handle: "DOI · 10.24933/rep.v6i2.281",
     url: "https://doi.org/10.24933/rep.v6i2.281",
     description:
-      "Paper peer-reviewed sobre fotoproteção em peles negras, publicado em colaboração com pesquisadores vinculados à UNICAMP. Credencial técnica verificável.",
+      "Paper peer-reviewed sobre fotoproteção em peles negras, publicado em colaboração com pesquisadores vinculados à. Credencial técnica verificável.",
     icon: GraduationCap,
     metric: "DOI",
     metricLabel: "Publicação indexada",

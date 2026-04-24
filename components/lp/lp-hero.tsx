@@ -138,7 +138,7 @@ export function LPHero() {
             <span className="text-white/90">indústrias Grau 1 e 2, marcas independentes</span>{" "}
             e{" "}
             <span className="text-white/90">farmácias magistrais de excelência</span>. Bancada
-           -UNICAMP, publicação peer-reviewed indexada e infraestrutura inteligente de
+           , publicação peer-reviewed indexada e infraestrutura inteligente de
             formulação.
           </p>
 

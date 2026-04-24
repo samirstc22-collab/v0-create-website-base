@@ -8,7 +8,7 @@ import { Industries } from "@/components/industries"
 import { PersonalPitch } from "@/components/personal-pitch"
 
 export const metadata = {
-  title: "Consultoria em Tecnologia Farmacêutica | ST Farma",
+  title: "Consultoria em Formulação Magistral | ST Farma",
   description:
     "Consultoria sob medida para indústrias cosméticas, farmácias magistrais e marcas em desenvolvimento de portfólio. Diagnóstico técnico, reformulação, transferência de tecnologia e sourcing internacional.",
 }

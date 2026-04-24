@@ -63,7 +63,7 @@ export function HomeHeroLight() {
           <div className="text-center lg:text-left">
             {/* Headline */}
             <h1 className="font-serif font-normal text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-1.5px] text-[#0C2340] mb-6">
-              Consultoria em tecnologia farmaceutica{" "}
+              ST Farma · Consultoria em Formulação{" "}
               <span className="relative inline-block">
                 <em className="italic text-[#B8783D]">para quem nao pode errar</em>
                 <svg
@@ -142,7 +142,7 @@ export function HomeHeroLight() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/samir-lab-eurotex.jpg"
-                  alt="Samir Tannuri - Consultor em tecnologia farmaceutica"
+                  alt="Samir Tannuri - Consultor em tecnologia magistral"
                   fill
                   className="object-cover object-[center_30%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -161,7 +161,7 @@ export function HomeHeroLight() {
                     </span>
                   </div>
                   <p className="text-white font-medium text-lg leading-snug max-w-[320px]">
-                    Samir Tannuri — tecnologia farmaceutica aplicada
+                    Samir Tannuri — tecnologia magistral aplicada
                   </p>
                 </div>
               </div>

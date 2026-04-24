@@ -5,7 +5,7 @@ export function Industries() {
     {
       num: "20+",
       title: "Industrias Cosmeticas",
-      desc: "Atendimento tecnico a industrias de insumos dermatologicos, laboratorios cosmeticos e embalagens farmaceuticas no Brasil.",
+      desc: "Atendimento tecnico a industrias de insumos dermatologicos, laboratorios cosmeticos e embalagens magistrais no Brasil.",
     },
     {
       num: "40+",
@@ -15,7 +15,7 @@ export function Industries() {
     {
       num: "9",
       title: "Ativos Nano Documentados",
-      desc: "Nanoencapsulamento farmaceutico de Retinol, Tranexamico, Kojico, Q10, Vitamina C, PDRN, Peptideos, Cisteamina e Arbutina.",
+      desc: "Nanoencapsulamento cosmético de Retinol, Tranexamico, Kojico, Q10, Vitamina C, PDRN, Peptideos, Cisteamina e Arbutina.",
     },
     {
       num: "200+",

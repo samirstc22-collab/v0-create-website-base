@@ -122,7 +122,7 @@ export function Consultoria() {
                 ))}
               </div>
               <a
-                href="https://wa.me/5562999999999"
+                href="https://wa.me/5511981403000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`rounded-[10px] py-3.5 px-[22px] font-semibold text-[13.5px] w-full text-center transition-all tracking-[0.3px] ${

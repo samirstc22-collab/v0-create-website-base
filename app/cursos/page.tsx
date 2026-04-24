@@ -9,7 +9,7 @@ import { CursosCTA } from "@/components/cursos/cursos-cta"
 export const metadata = {
   title: "Cursos | Clube de Fórmulas — Samir Tannuri",
   description:
-    "Cursos de cosmetologia aplicada, manipulação avançada e gestão farmacêutica com o Samir Tannuri. Conhecimento internacional, aplicação imediata no seu balcão.",
+    "Cursos de cosmetologia aplicada, manipulação avançada e gestão magistral com o Samir Tannuri. Conhecimento internacional, aplicação imediata no seu balcão.",
 }
 
 export default function CursosPage() {

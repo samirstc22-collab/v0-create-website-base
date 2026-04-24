@@ -58,7 +58,7 @@ export function FormulariosCta() {
           </Link>
 
           <a
-            href="https://wa.me/5562999999999?text=Olá! Tenho interesse nos materiais técnicos."
+            href="https://wa.me/5511981403000?text=Olá! Tenho interesse nos materiais técnicos."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-4 rounded-xl font-semibold text-base hover:bg-white/15 transition-colors"

@@ -43,9 +43,9 @@ export function Footer() {
             <p className="text-sm text-white/40 leading-relaxed mb-6">
               Samir Tannuri Cerveira
               <br />
-              Consultor em Tecnologia Farmaceutica
+              Consultor em Formulação Magistral
               <br />
-              ST Farma — Consultoria em Tecnologia Farmaceutica
+              ST Farma — Consultoria em Formulação Magistral
               <br />
               Goiania — GO · Brasil
             </p>
@@ -70,7 +70,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/5562999999999"
+                href="https://wa.me/5511981403000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/50 hover:text-[#25D366] hover:bg-[#25D366]/10 transition-all"

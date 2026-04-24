@@ -135,7 +135,7 @@ export function CursosFeatured() {
               </div>
               <div className="mt-1 font-serif text-lg text-[#0a1628]">Samir Tannuri</div>
               <p className="mt-1 text-xs leading-relaxed text-[#0a1628]/60">
-                Consultor em Tecnologia Farmacêutica-UNICAMP, 800+ palestras, publicação peer-reviewed indexada.
+                Consultor em Formulação Magistral, 800+ palestras, publicação peer-reviewed indexada.
               </p>
             </div>
           </div>

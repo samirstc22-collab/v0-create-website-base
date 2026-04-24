@@ -47,7 +47,7 @@ export function Speaker() {
           </h2>
           <p className="text-lg text-muted max-w-[620px] mx-auto leading-relaxed">
             Mais de 7 congressos nacionais como speaker convidado — compartilhando P&D aplicado
-            com milhares de prescritores e farmaceuticos.
+            com milhares de prescritores e profissionais de saúde.
           </p>
         </div>
 

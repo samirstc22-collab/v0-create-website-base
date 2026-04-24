@@ -54,13 +54,13 @@ export function Logo({
         
         {/* Inner elements */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* Stylized "Cf" monogram */}
+          {/* Stylized "ST" monogram */}
           <div className="relative">
             <span 
               className={`font-serif font-medium ${s.text} ${c.iconText} tracking-tight`}
               style={{ textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}
             >
-              Cf
+              ST
             </span>
             {/* Accent dot */}
             <div className={`absolute -top-0.5 -right-1.5 w-1.5 h-1.5 rounded-full ${c.accent} shadow-[0_0_8px_rgba(184,120,61,0.6)]`} />
@@ -75,9 +75,9 @@ export function Logo({
       {showText && (
         <div className="hidden sm:block">
           <div className={`font-serif ${s.text} leading-tight tracking-wide ${c.title} transition-colors duration-300`}>
-            <span className="font-medium">Clube</span>
-            <span className="font-normal opacity-90"> de </span>
-            <span className="font-medium">Formulas</span>
+            <span className="font-medium">ST</span>
+            <span className="font-normal opacity-90"> </span>
+            <span className="font-medium">Farma</span>
           </div>
           <div className={`${s.sub} tracking-[2.5px] uppercase font-semibold mt-0.5 ${c.subtitle} transition-colors duration-300`}>
             Samir Tannuri
@@ -110,7 +110,7 @@ export function LogoIcon({ className = "" }: { className?: string }) {
         strokeOpacity="0.5"
       />
       
-      {/* Cf monogram */}
+      {/* ST monogram */}
       <text
         x="24"
         y="30"
@@ -120,7 +120,7 @@ export function LogoIcon({ className = "" }: { className?: string }) {
         fontWeight="500"
         fill="white"
       >
-        Cf
+        ST
       </text>
       
       {/* Accent dot */}

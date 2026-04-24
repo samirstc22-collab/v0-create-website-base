@@ -36,7 +36,7 @@ export function PersonalPitch() {
           </h2>
           <p className="mt-8 text-lg leading-[1.7] text-white/75 md:text-xl">
             O Samir Tannuri concebeu a{" "}
-            <strong className="text-white">primeira metodologia brasileira de consultoria farmacêutica
+            <strong className="text-white">primeira metodologia brasileira de consultoria em magistral
             verdadeiramente personalizada</strong> — forjada em mais de duas décadas de balcão, bancada e
             indústria, construída linha por linha para transformar a geografia, o público e o potencial
             específicos da sua farmácia em{" "}
@@ -109,7 +109,7 @@ export function PersonalPitch() {
                 <div>
                   <div className="font-medium text-white">Samir Tannuri</div>
                   <div className="text-sm text-white/60">
-                    Farmacêutico · Consultor · 24 anos transformando negócios
+                    Professor · Consultor · 24 anos transformando negócios
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export function PersonalPitch() {
             <ul className="mt-7 space-y-3.5 text-sm leading-relaxed text-white/85 md:text-base">
               {[
                 "Aulas construídas sobre a rotina real do balcão, da bancada e da manipulação",
-                "Linguagem cristalina para farmacêutico, equipe de atendimento e gestor de caixa",
+                "Linguagem cristalina para especialista, equipe de atendimento e gestor de caixa",
                 "Conteúdo que, já no dia seguinte, vira protocolo, vitrine e ticket médio maior",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">

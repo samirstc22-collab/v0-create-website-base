@@ -7,7 +7,7 @@ const plans = [
   {
     id: "starter",
     name: "Starter",
-    description: "Para farmacêuticos iniciando na formulação",
+    description: "Para profissionais iniciando na formulação",
     price: "47",
     period: "/mês",
     icon: Zap,

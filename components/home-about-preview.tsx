@@ -4,7 +4,7 @@ import { FlaskIllustration, AtomIllustration } from "./illustrations"
 
 export function HomeAboutPreview() {
   const highlights = [
-    "Bolsista pesquisando ativos em UNICAMP",
+    "Bolsista pesquisando ativos em",
     "Speaker convidado em 7+ congressos nacionais",
     "Publicacao peer-reviewed com DOI indexado",
     "Missoes tecnicas em Paris, Amsterdam e Japao",
@@ -26,7 +26,7 @@ export function HomeAboutPreview() {
               </div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.1)]">
                 <div className="font-serif text-xl text-navy">Samir Tannuri</div>
-                <div className="text-sm text-muted mt-1">Farmaceutico | Consultor em Tecnologia Farmacêutica</div>
+                <div className="text-sm text-muted mt-1">Professor · Consultor em Formulação Magistral</div>
               </div>
             </div>
             
@@ -46,7 +46,7 @@ export function HomeAboutPreview() {
               Ciencia transformada em <span className="text-gradient-copper">resultado clinico</span>
             </h2>
             <p className="text-lg text-body leading-relaxed mb-8 max-w-[560px]">
-              Farmaceutico pela USF, pesquisador na UNICAMP e consultor industrial 
+              Bacharel pela USF, consultor sênior — e consultor industrial 
               com mais de duas decadas de experiencia em P&D cosmetico. Criador da 
               <strong className="text-navy"> Tecnica Fenol FREE</strong> e pioneiro no desenvolvimento 
               do primeiro peeling de acido azelaico em pasta anidra do Brasil.

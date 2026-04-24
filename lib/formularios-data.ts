@@ -117,7 +117,7 @@ export const formularios: Formulario[] = [
     id: "guia-terapeutico",
     title: "Guia Terapêutico Dermatológico Magistral",
     subtitle: "42 diagnósticos mapeados",
-    description: "200+ prescrições com compatibilidades confirmadas. O guia definitivo para farmacêuticos magistrais e consultores.",
+    description: "200+ prescrições com compatibilidades confirmadas. O guia definitivo para profissionais magistrais e consultores.",
     details: [
       "Diagnósticos: 42 condições dermatológicas mapeadas",
       "Fórmulas: 200+ prescrições com compatibilidades confirmadas",

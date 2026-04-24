@@ -25,7 +25,7 @@ export function LPMagistral() {
       icon: Users,
       id: "04",
       title: "Treinamento da equipe",
-      desc: "Capacitação técnica e comercial — farmacêutico, manipuladores e atendimento — em linguagem única.",
+      desc: "Capacitação técnica e comercial — profissionais magistrais e atendimento — em linguagem única.",
     },
     {
       icon: Microscope,
