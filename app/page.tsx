@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/navbar"
-import { HomeHeroLight } from "@/components/home-hero-light"
+import { HeroSection } from "@/components/hero-section"
+import { InstagramBanner } from "@/components/instagram-banner"
+import { ConsultoriaSection } from "@/components/consultoria-section"
 import { BigStats } from "@/components/big-stats"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { HomeLabPro } from "@/components/home-lab-pro"
@@ -9,9 +11,11 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-white scroll-smooth">
       <Navbar />
-      <HomeHeroLight />
+      <HeroSection />
+      <InstagramBanner />
+      <ConsultoriaSection />
       <BigStats />
       <HomeDifferentiation />
       <HomeLabPro />
