@@ -303,6 +303,47 @@ export function HomeAuthority() {
             </p>
           </div>
 
+          {/* Lab experience gallery - Gattefossé Lyon 2024 */}
+          <div className="mb-12 grid gap-5 md:grid-cols-2">
+            <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5b4edd5d-17b9-4846-9dbd-722d9442e841-nf3fCM6rrx3cBtOknh5tuLWnLuZ9Zy.jpeg"
+                alt="Equipe no laboratório Gattefossé em Lyon, França — Missão Técnica 2024"
+                width={800}
+                height={600}
+                className="h-[280px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="mb-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
+                  Gattefossé · Lyon, França 2024
+                </div>
+                <p className="text-base font-medium leading-snug text-white">
+                  Imersão técnica no laboratório de excipientes lipídicos de referência mundial
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2463-RxpXzonMPBY2NnpVV3zwrpEM0AsaCX.jpeg"
+                alt="Samir Tannuri trabalhando com agitador Rayneri no laboratório Gattefossé"
+                width={800}
+                height={600}
+                className="h-[280px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="mb-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
+                  Hands-on · Prática Industrial
+                </div>
+                <p className="text-base font-medium leading-snug text-white">
+                  Manipulação de emulsões com equipamento Rayneri — metodologia aplicada
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {bigNumbers.map((item) => {
               const Icon = item.icon
