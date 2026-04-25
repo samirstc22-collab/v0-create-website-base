@@ -4,8 +4,6 @@ import { MissoesHero } from "@/components/missoes/missoes-hero"
 import { MissoesGallery } from "@/components/missoes/missoes-gallery"
 import { MissoesTraining } from "@/components/missoes/missoes-training"
 import { MissoesClube } from "@/components/missoes/missoes-clube"
-import { MissoesCTA } from "@/components/missoes/missoes-cta"
-
 export const metadata = {
   title: "Missoes Internacionais | Imersoes Tecnicas | ST Farma",
   description:
@@ -20,7 +18,6 @@ export default function MissoesPage() {
       <MissoesGallery />
       <MissoesTraining />
       <MissoesClube />
-      <MissoesCTA />
       <Footer />
     </main>
   )

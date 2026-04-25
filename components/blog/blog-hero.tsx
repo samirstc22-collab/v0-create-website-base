@@ -74,11 +74,11 @@ export function BlogHero() {
             <div className="relative mx-auto max-w-[420px]">
               <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
                 <Image
-                  src="/placeholder.svg?height=700&width=500"
-                  alt="Samir Tannuri — autor dos artigos científicos"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9814-ThaKfzbYLzYf9ZWwP5wWjYtI0iJSvc.jpeg"
+                  alt="Samir Tannuri dando aula sobre hidrofobicidade capilar em conferencia tecnica internacional"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 80vw, 420px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/10 to-transparent" />
