@@ -1,382 +1,320 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
-import {
-  ArrowRight,
-  Brain,
-  FlaskConical,
-  Sparkles,
-  Zap,
+import { 
+  ArrowRight, 
+  Brain, 
+  FlaskConical, 
+  Sparkles, 
+  Zap, 
   CheckCircle2,
   X,
   Check,
+  Rocket,
   RefreshCw,
   Droplets,
   Target,
   Sliders,
   Mail,
-  Loader2,
-  Terminal,
-  Activity,
-  ChevronRight,
+  Loader2
 } from "lucide-react"
 
-/* ─── Animated AI terminal lines ─── */
-const formulaSteps = [
-  { type: "cmd",    text: "> analisando objetivo: sérum clareador com vitamina C" },
-  { type: "info",   text: "  carregando base de 4.000 testes validados..." },
-  { type: "active", text: "  selecionando ativos: Niacinamida 10% + Arbutin 2%" },
-  { type: "info",   text: "  ajustando pH para 5.5 — estabilidade otimizada" },
-  { type: "active", text: "  textura: sérum aquoso fluido, espalhabilidade 9/10" },
-  { type: "info",   text: "  conservação: Phenoxyethanol 0.8% + Ethylhexylglycerin" },
-  { type: "active", text: "  adicionando agente filmogênico: Hyaluronate 0.2%" },
-  { type: "info",   text: "  verificando compatibilidade entre ativos..." },
-  { type: "success",text: "  fórmula validada — 98.4% de aderência aos testes" },
-  { type: "cmd",    text: "> exportando protocolo de fabricação..." },
-  { type: "success",text: "  pronto. fórmula gerada em 14 segundos." },
-]
-
-function AITerminal() {
-  const [visibleLines, setVisibleLines] = useState<number>(0)
-  const [isRunning, setIsRunning] = useState(true)
-  const termRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!isRunning) return
-    if (visibleLines >= formulaSteps.length) {
-      // reset after pause
-      const timeout = setTimeout(() => {
-        setVisibleLines(0)
-      }, 3500)
-      return () => clearTimeout(timeout)
-    }
-    const timeout = setTimeout(
-      () => setVisibleLines((v) => v + 1),
-      visibleLines === 0 ? 400 : 520
-    )
-    return () => clearTimeout(timeout)
-  }, [visibleLines, isRunning])
-
-  useEffect(() => {
-    if (termRef.current) {
-      termRef.current.scrollTop = termRef.current.scrollHeight
-    }
-  }, [visibleLines])
-
-  const lineColor: Record<string, string> = {
-    cmd:     "text-[#4a9eff]",
-    info:    "text-white/45",
-    active:  "text-[#2dd4bf]",
-    success: "text-[#28c840]",
-  }
-
-  return (
-    <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_24px_64px_rgba(0,0,0,0.5)] bg-[#080e1a]">
-      {/* Window chrome */}
-      <div className="flex items-center gap-2 px-4 py-3 bg-[#0d1526] border-b border-white/5">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-        <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-        <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-        <div className="ml-3 flex items-center gap-2">
-          <Terminal className="w-3.5 h-3.5 text-white/30" />
-          <span className="text-[11px] font-mono text-white/30 tracking-wide">STAi Formulator — engine v2.6.0</span>
-        </div>
-        <div className="ml-auto flex items-center gap-1.5">
-          <Activity className="w-3.5 h-3.5 text-[#28c840] animate-pulse" />
-          <span className="text-[10px] text-[#28c840] font-mono">LIVE</span>
-        </div>
-      </div>
-
-      {/* Terminal body */}
-      <div
-        ref={termRef}
-        className="font-mono text-[12px] leading-relaxed p-5 h-56 overflow-y-auto scrollbar-none space-y-1.5"
-      >
-        {formulaSteps.slice(0, visibleLines).map((line, i) => (
-          <div key={i} className={`${lineColor[line.type]} transition-opacity duration-300`}>
-            {line.text}
-          </div>
-        ))}
-        {visibleLines < formulaSteps.length && (
-          <span className="inline-block w-2 h-4 bg-[#4a9eff]/80 animate-pulse align-middle" />
-        )}
-      </div>
-
-      {/* Stats bar */}
-      <div className="px-5 py-3 border-t border-white/5 bg-[#0d1526] flex items-center gap-6 flex-wrap">
-        {[
-          { label: "Testes", value: "4.000+" },
-          { label: "Perguntas", value: "10k+" },
-          { label: "Tópicos", value: "100+" },
-          { label: "Precisão", value: "98.4%" },
-        ].map((s) => (
-          <div key={s.label} className="flex flex-col">
-            <span className="text-[10px] text-white/30 font-mono uppercase tracking-wider">{s.label}</span>
-            <span className="text-sm font-bold text-white">{s.value}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-/* ─── Main Banner ─── */
 export function IALabBanner() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [activeMetric, setActiveMetric] = useState(0)
+  
+  const metrics = [
+    { value: "4.000+", label: "Testes de bancada validados" },
+    { value: "10.000+", label: "Perguntas respondidas" },
+    { value: "100+", label: "Topicos especializados" },
+    { value: "7 dias", label: "Teste gratuito" },
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveMetric((prev) => (prev + 1) % metrics.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
+    
     setIsSubmitting(true)
-    await new Promise((r) => setTimeout(r, 1500))
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500))
     setIsSubmitting(false)
     setIsSubmitted(true)
   }
 
   const features = [
-    { icon: RefreshCw,    text: "Substitui matérias-primas sob demanda" },
-    { icon: Sliders,      text: "Ajusta textura e viscosidade" },
-    { icon: Droplets,     text: "Melhora sensorial: toque, espalhabilidade, absorção" },
-    { icon: Target,       text: "Otimiza performance da fórmula" },
-    { icon: Sparkles,     text: "Personaliza conforme seu objetivo técnico" },
-    { icon: FlaskConical, text: "Integração em tempo real com PubMed e bases científicas" },
+    { icon: RefreshCw, text: "Substituo materias-primas sob demanda" },
+    { icon: Sliders, text: "Ajusto textura e viscosidade" },
+    { icon: Droplets, text: "Melhoro sensorial (toque, espalhabilidade, absorcao)" },
+    { icon: Target, text: "Otimizo performance da formula" },
+    { icon: Sparkles, text: "Personalizo conforme seu objetivo tecnico" },
   ]
 
   return (
-    <section className="relative overflow-hidden bg-[#050b18]">
-      {/* ── Background layer ── */}
-      <div className="pointer-events-none absolute inset-0">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#050a12] via-[#0a1628] to-[#0f1e36] py-20 lg:py-28">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Neural grid */}
         <div
-          className="absolute inset-0 opacity-[0.035]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, #4a9eff 1px, transparent 0)`,
-            backgroundSize: "28px 28px",
+            backgroundSize: "32px 32px",
           }}
         />
-        <div className="absolute -top-40 left-1/3 w-[700px] h-[700px] rounded-full bg-[#4a9eff]/8 blur-[180px]" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#0a8f9e]/10 blur-[140px]" />
-        <div className="absolute top-1/2 left-0 w-[350px] h-[350px] rounded-full bg-[#B8783D]/6 blur-[120px]" />
+        
+        {/* Gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#4a9eff]/10 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#8b5cf6]/8 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1.5s" }} />
+
+        {/* Floating particles */}
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-[#4a9eff]/50 rounded-full animate-pulse"
+            style={{
+              left: `${10 + Math.random() * 80}%`,
+              top: `${10 + Math.random() * 80}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
       </div>
 
-      {/* ══════════════════════════════════════
-          PART 1 — HERO PHRASE (full-width)
-      ══════════════════════════════════════ */}
-      <div className="relative z-10 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-16 text-center">
-          {/* 2026 launch pill */}
-          <div className="inline-flex items-center gap-2 bg-[#B8783D]/15 border border-[#B8783D]/30 rounded-full px-5 py-2 mb-10">
-            <span className="w-2 h-2 rounded-full bg-[#B8783D] animate-pulse" />
-            <span className="text-[#e8a87c] text-[11px] font-bold tracking-[2.5px] uppercase">
-              Lancamento 2026 — STAi Formulator LAB
-            </span>
-          </div>
-
-          {/* BIG phrases */}
-          <div className="space-y-4 mb-6">
-            {/* Line 1 — strikethrough contrast */}
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl text-white/35 leading-tight">
-              Farmacotécnica de prateleira é{" "}
-              <span className="relative inline-block">
-                <span className="text-white/50">museu</span>
-                <span
-                  className="absolute left-0 top-1/2 w-full h-[3px] -rotate-1"
-                  style={{ background: "linear-gradient(90deg,#dc2626,#ef4444)" }}
-                />
-              </span>
-              .
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Catchy Phrase - Top Banner */}
+        <div className="text-center mb-12">
+          <div className="inline-block bg-gradient-to-r from-[#f59e0b]/20 via-[#f59e0b]/10 to-[#f59e0b]/20 border border-[#f59e0b]/30 rounded-2xl px-8 py-6 mb-8 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f59e0b]/5 to-transparent animate-pulse" />
+            <p className="text-lg md:text-xl lg:text-2xl font-serif italic text-[#fbbf24] leading-relaxed relative z-10">
+              {'"'}Farmacotecnica de prateleira e <span className="line-through opacity-60">museu</span>.{'"'}
             </p>
-
-            {/* Line 2 — the REAL statement */}
-            <p className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.0] tracking-tight">
-              Formulação inteligente{" "}
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(135deg, #4a9eff 0%, #2dd4bf 50%, #0a8f9e 100%)",
-                }}
-              >
-                é futuro
-              </span>
-              .
+            <p className="text-xl md:text-2xl lg:text-3xl font-serif text-white mt-2 relative z-10">
+              Formulacao inteligente e <span className="text-[#4a9eff] font-bold">futuro</span>.
             </p>
-
-            {/* Line 3 — the zinger */}
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/50 font-medium italic mt-2">
-              Em terra de IA, quem só copia fórmula{" "}
-              <span className="text-[#e8a87c] not-italic font-bold">vira rodapé</span>.
+            <p className="text-sm md:text-base text-white/50 mt-3 relative z-10">
+              Em terra de IA, quem so copia formula vira rodape.
             </p>
           </div>
-
-          {/* Thin separator line */}
-          <div className="mx-auto mt-10 w-24 h-px bg-gradient-to-r from-transparent via-[#4a9eff]/40 to-transparent" />
         </div>
-      </div>
 
-      {/* ══════════════════════════════════════
-          PART 2 — AI IN ACTION + EMAIL FORM
-      ══════════════════════════════════════ */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
-        <div className="grid lg:grid-cols-12 gap-14 xl:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Content */}
+          <div className="lg:col-span-7">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#4a9eff]/15 to-[#8b5cf6]/15 border border-[#4a9eff]/25 rounded-full px-5 py-2.5 mb-6">
+              <Rocket className="w-4 h-4 text-[#4a9eff]" />
+              <span className="text-[#7eb8ff] text-xs font-bold tracking-[2px] uppercase">
+                Lancamento 2025
+              </span>
+            </div>
 
-          {/* ── LEFT: Product pitch + Features ── */}
-          <div className="lg:col-span-6 xl:col-span-5">
-            <h2 className="font-serif text-4xl md:text-5xl text-white leading-[1.08] tracking-tight mb-5">
-              A IA que{" "}
-              <span className="text-[#4a9eff]">cria</span>,{" "}
-              <span className="text-[#2dd4bf]">ajusta</span> e{" "}
-              <span className="text-[#0a8f9e]">evolui</span>{" "}
-              suas fórmulas cosméticas
+            {/* Headline */}
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] tracking-[-1.5px] mb-4">
+              <span className="text-3xl md:text-4xl">🚀</span>{" "}
+              <span className="bg-gradient-to-r from-[#4a9eff] via-[#8b5cf6] to-[#06b6d4] bg-clip-text text-transparent">
+                STAi Formulator LAB
+              </span>
             </h2>
-            <p className="text-white/50 text-base leading-relaxed mb-10">
-              Chega de fórmulas prontas e limitadas. Agora você desenvolve do seu jeito —
-              com <strong className="text-white/80">segurança</strong> e{" "}
-              <strong className="text-white/80">eficácia</strong> comprovadas em bancada.
+
+            <p className="text-xl md:text-2xl text-white/80 font-medium mb-6">
+              A IA que <span className="text-[#4a9eff]">cria</span>, <span className="text-[#8b5cf6]">ajusta</span> e <span className="text-[#06b6d4]">evolui</span> suas formulas cosmeticas
             </p>
 
-            {/* Comparison */}
-            <div className="grid grid-cols-2 gap-3 mb-10">
-              <div className="rounded-xl border border-[#dc2626]/20 bg-[#dc2626]/6 p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <X className="w-4 h-4 text-[#dc2626]" />
-                  <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-widest">Antes</span>
-                </div>
-                <p className="text-sm text-white/50 leading-snug">
-                  Comprar bases prontas de prateleira
-                </p>
-              </div>
-              <div className="rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/6 p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <Check className="w-4 h-4 text-[#2dd4bf]" />
-                  <span className="text-[10px] font-bold text-[#2dd4bf] uppercase tracking-widest">Agora</span>
-                </div>
-                <p className="text-sm text-white/50 leading-snug">
-                  Criar fórmulas sob medida, com controle total
-                </p>
-              </div>
-            </div>
+            {/* Description */}
+            <p className="text-base md:text-lg text-white/50 leading-relaxed mb-8">
+              Chega de formulas prontas limitadas. Agora voce desenvolve do seu jeito — com <strong className="text-white">seguranca</strong> e <strong className="text-white">eficacia</strong>.
+            </p>
 
-            {/* Features */}
-            <div className="space-y-3 mb-10">
-              <p className="text-[11px] font-bold text-white/30 uppercase tracking-[2.5px] mb-4">
-                O que eu faço por você
-              </p>
-              {features.map((f, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-[#4a9eff]/10 border border-[#4a9eff]/15 flex items-center justify-center mt-0.5">
-                    <f.icon className="w-3.5 h-3.5 text-[#4a9eff]" />
+            {/* What I do for you */}
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 mb-8">
+              <h3 className="text-sm font-bold text-[#4a9eff] uppercase tracking-[2px] mb-5 flex items-center gap-2">
+                <Brain className="w-4 h-4" />
+                O que eu faco por voce
+              </h3>
+              <div className="space-y-3">
+                {features.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-lg bg-[#4a9eff]/10 border border-[#4a9eff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <feature.icon className="w-3.5 h-3.5 text-[#4a9eff]" />
+                    </div>
+                    <span className="text-white/70 text-sm leading-relaxed">{feature.text}</span>
                   </div>
-                  <span className="text-sm text-white/60 leading-relaxed">{f.text}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* Go to page CTA */}
-            <Link
-              href="/formulator-ai"
-              className="group inline-flex items-center gap-2 text-[#4a9eff] hover:text-white text-sm font-semibold transition-colors border-b border-[#4a9eff]/30 hover:border-white/50 pb-0.5"
-            >
-              Conhecer o STAi Formulator LAB completo
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {/* Old vs New */}
+            <div className="grid grid-cols-2 gap-4 mb-10">
+              <div className="bg-[#dc2626]/10 border border-[#dc2626]/20 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <X className="w-5 h-5 text-[#dc2626]" />
+                  <span className="text-xs font-bold text-[#dc2626] uppercase tracking-wider">Antes</span>
+                </div>
+                <p className="text-sm text-white/60">Comprar bases prontas de prateleira</p>
+              </div>
+              <div className="bg-[#28c840]/10 border border-[#28c840]/20 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Check className="w-5 h-5 text-[#28c840]" />
+                  <span className="text-xs font-bold text-[#28c840] uppercase tracking-wider">Agora</span>
+                </div>
+                <p className="text-sm text-white/60">Criar formulas sob medida, com controle total</p>
+              </div>
+            </div>
+
+            {/* CTA to AI page */}
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/formulator-ai"
+                className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-[#4a9eff] to-[#8b5cf6] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide shadow-[0_8px_32px_rgba(74,158,255,0.35)] hover:shadow-[0_12px_48px_rgba(74,158,255,0.5)] transition-all duration-300"
+              >
+                <Brain className="w-5 h-5" />
+                Acessar STAi Formulator LAB
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
 
-          {/* ── RIGHT: AI Terminal + Email Capture ── */}
-          <div className="lg:col-span-6 xl:col-span-7 flex flex-col gap-6">
+          {/* Right: Email Signup Card */}
+          <div className="lg:col-span-5">
+            <div className="relative">
+              {/* Glow behind */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#4a9eff]/25 via-[#8b5cf6]/15 to-transparent rounded-3xl blur-3xl" />
 
-            {/* AI Terminal mockup */}
-            <AITerminal />
-
-            {/* Email capture card */}
-            <div className="relative rounded-2xl border border-[#4a9eff]/20 bg-gradient-to-br from-[#0d1a30] to-[#091220] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.35)]">
-              {/* Shimmer accent bar */}
-              <div className="h-[3px] w-full" style={{ background: "linear-gradient(90deg,#4a9eff,#2dd4bf,#B8783D)" }} />
-
-              <div className="p-6 md:p-8">
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  <div>
-                    <div className="inline-flex items-center gap-2 bg-[#B8783D]/15 border border-[#B8783D]/30 rounded-full px-3 py-1 mb-3">
-                      <Zap className="w-3.5 h-3.5 text-[#e8a87c]" />
-                      <span className="text-[#e8a87c] text-[10px] font-bold tracking-[2px] uppercase">
-                        Oferta de Lançamento 2026
-                      </span>
-                    </div>
-                    <h3 className="font-serif text-2xl md:text-3xl text-white leading-tight">
-                      7 dias grátis +{" "}
-                      <span className="text-[#2dd4bf]">desconto exclusivo</span>
-                    </h3>
-                    <p className="text-white/45 text-sm mt-2">
-                      Insira seu e-mail e receba acesso antecipado com desconto de lançamento.
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4a9eff] to-[#2dd4bf] flex items-center justify-center shadow-[0_8px_24px_rgba(74,158,255,0.3)]">
-                    <Brain className="w-7 h-7 text-white" />
-                  </div>
-                </div>
-
-                {!isSubmitted ? (
-                  <form onSubmit={handleSubmit}>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <div className="relative flex-1">
-                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/25 pointer-events-none" />
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="seu@email.com"
-                          required
-                          className="w-full bg-white/[0.06] border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-white/25 text-sm focus:outline-none focus:border-[#4a9eff]/60 focus:ring-2 focus:ring-[#4a9eff]/15 transition-all"
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="flex-shrink-0 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 font-bold text-sm text-white transition-all disabled:opacity-60 shadow-[0_8px_24px_rgba(74,158,255,0.3)] hover:shadow-[0_12px_36px_rgba(74,158,255,0.45)]"
-                        style={{ background: "linear-gradient(135deg,#4a9eff,#2dd4bf)" }}
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="w-4 h-4 animate-spin" />
-                            Processando...
-                          </>
-                        ) : (
-                          <>
-                            Quero testar grátis
-                            <ArrowRight className="w-4 h-4" />
-                          </>
-                        )}
-                      </button>
-                    </div>
-
-                    {/* Trust micro-copy */}
-                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4">
-                      {[
-                        "Sem cartão de crédito",
-                        "Cancele quando quiser",
-                        "Acesso imediato",
-                      ].map((t) => (
-                        <div key={t} className="flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#2dd4bf]" />
-                          <span className="text-[11px] text-white/35">{t}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </form>
-                ) : (
-                  <div className="flex items-center gap-4 py-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg,#28c840,#2dd4bf)" }}>
-                      <CheckCircle2 className="w-6 h-6 text-white" />
+              {/* Main card */}
+              <div className="relative bg-[#0a1221]/95 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.4)]">
+                {/* Header */}
+                <div className="px-6 py-5 border-b border-white/5 bg-gradient-to-r from-[#28c840]/10 to-[#4a9eff]/10">
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#28c840] to-[#4a9eff] flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-bold text-white">Inscricao confirmada</p>
-                      <p className="text-sm text-white/45 mt-0.5">
-                        Voce recebera seu acesso e desconto de lancamento em breve.
-                      </p>
+                      <div className="text-white font-bold text-base">Teste Gratis por 7 Dias</div>
+                      <div className="text-[11px] text-white/40">Sem cartao de credito</div>
                     </div>
                   </div>
-                )}
+                </div>
+
+                {/* Metrics rotating display */}
+                <div className="p-6 border-b border-white/5">
+                  <div className="text-center">
+                    <div className="text-5xl font-serif text-white mb-2 tabular-nums transition-all duration-500">
+                      {metrics[activeMetric].value}
+                    </div>
+                    <div className="text-sm text-white/50 font-medium">
+                      {metrics[activeMetric].label}
+                    </div>
+                    {/* Dots indicator */}
+                    <div className="flex justify-center gap-2 mt-4">
+                      {metrics.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setActiveMetric(i)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            i === activeMetric 
+                              ? "bg-[#4a9eff] w-6" 
+                              : "bg-white/20 hover:bg-white/30"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email signup form */}
+                <div className="p-6">
+                  {!isSubmitted ? (
+                    <>
+                      <p className="text-center text-white/60 text-sm mb-5">
+                        <strong className="text-white">Voce pede. Eu reformulo.</strong><br />
+                        Tenha sua base personalizada em minutos.
+                      </p>
+                      <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="relative">
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                          <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Seu melhor e-mail"
+                            required
+                            className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#4a9eff]/50 focus:ring-2 focus:ring-[#4a9eff]/20 transition-all"
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full bg-gradient-to-r from-[#28c840] to-[#4a9eff] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(40,200,64,0.3)] hover:shadow-[0_12px_32px_rgba(40,200,64,0.4)] transition-all disabled:opacity-70"
+                        >
+                          {isSubmitting ? (
+                            <>
+                              <Loader2 className="w-5 h-5 animate-spin" />
+                              Processando...
+                            </>
+                          ) : (
+                            <>
+                              <Rocket className="w-5 h-5" />
+                              Quero testar gratis
+                            </>
+                          )}
+                        </button>
+                      </form>
+                      <p className="text-center text-[11px] text-white/30 mt-4">
+                        Ao se inscrever, voce concorda em receber emails sobre o STAi.
+                      </p>
+                    </>
+                  ) : (
+                    <div className="text-center py-6">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#28c840] to-[#4a9eff] flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle2 className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">Inscricao confirmada!</h3>
+                      <p className="text-white/60 text-sm">
+                        Voce recebera acesso ao teste gratuito em breve.
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Footer */}
+                <div className="px-6 py-4 bg-gradient-to-r from-[#4a9eff]/5 to-[#8b5cf6]/5 border-t border-white/5">
+                  <div className="flex items-center justify-center gap-4 text-[11px] text-white/40">
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#28c840]" />
+                      <span>Acesso imediato</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#28c840]" />
+                      <span>Cancele quando quiser</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating accent badges */}
+              <div className="absolute -top-3 -right-3 bg-[#0a1221] border border-[#28c840]/40 rounded-xl px-3 py-2 shadow-xl">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#28c840] animate-pulse" />
+                  <span className="text-[11px] font-bold text-[#28c840]">Gratuito</span>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-3 -left-3 bg-[#0a1221] border border-[#f59e0b]/40 rounded-xl px-3 py-2 shadow-xl">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#f59e0b]" />
+                  <span className="text-[11px] font-bold text-[#f59e0b]">Nova Era</span>
+                </div>
               </div>
             </div>
           </div>
