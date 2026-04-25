@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Sparkles, Zap, Brain, FlaskConical } from "lucide-react"
+import { ArrowRight, Sparkles, Zap, Brain, FlaskConical, Home } from "lucide-react"
 
 export function AIHero() {
   const [typedText, setTypedText] = useState("")
@@ -88,6 +88,17 @@ export function AIHero() {
             }}
           />
         ))}
+      </div>
+
+      {/* Home Button - Fixed top left */}
+      <div className="absolute top-6 left-6 z-20">
+        <Link
+          href="/"
+          className="group inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/70 hover:text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-all"
+        >
+          <Home className="w-4 h-4" />
+          <span>Voltar ao Inicio</span>
+        </Link>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 lg:pt-40 lg:pb-32">

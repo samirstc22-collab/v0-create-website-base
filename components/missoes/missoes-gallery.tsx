@@ -54,8 +54,9 @@ const missions = [
       "Convite de fornecedores internacionais para estudo das tecnologias do mercado asiatico e ativos inovadores japoneses. Participacao em conferencia em Toquio com acesso exclusivo a ingredientes de biofermentacao japonesa, texturas water-essence, tecnicas de layering e filosofia J-Beauty — referencia global de inovacao em cuidados com a pele.",
     highlights: ["Biofermentacao Japonesa", "Water Essence", "Layering Techniques", "J-Beauty", "Mercado Asiatico", "Ativos Inovadores"],
     photos: [
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0127-Fp5kYPh4TrQNv6ulvJX6tDZ0VxuwHM.jpeg", alt: "Samir Tannuri com grupo no templo Senso-ji, Toquio, Japao 2023", caption: "Templo Senso-ji · Toquio, Japao 2023", wide: true },
-      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0129-COqZ4gEAffFyUCl3TBIVvfbsnPBOrE.jpeg", alt: "Equipe da missao em Asakusa, Toquio 2023", caption: "Asakusa · Conferencia Toquio 2023", wide: false },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0009-G8wVY5Cxv5RuRPmMakVQYJHPXfaSqq.jpeg", alt: "Equipe completa de profissionais no laboratorio durante treinamento tecnico no Japao 2023", caption: "Treinamento Laboratorial · Toquio, Japao 2023", wide: true },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9533-s6omDteP0N01dd4VKTuyFvBL9yT9Ht.jpeg", alt: "Samir Tannuri operando equipamento de homogeneizacao no laboratorio japones", caption: "Lab Hands-On · Toquio 2023", wide: false },
+      { src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9814-ThaKfzbYLzYf9ZWwP5wWjYtI0iJSvc.jpeg", alt: "Samir Tannuri apresentando sobre hidrofobicidade capilar em conferencia no Japao", caption: "Palestra Tecnica · Conferencia Toquio 2023", wide: false },
     ],
     gradientCard: "from-[#BC002D] via-[#FFFFFF]/30 to-[#BC002D]",
     featured: false,
