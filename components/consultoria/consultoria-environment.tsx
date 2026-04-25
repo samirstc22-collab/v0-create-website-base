@@ -69,10 +69,10 @@ export function ConsultoriaEnvironment() {
               <div className="absolute bottom-6 left-6 right-6 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white/10">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/placeholder.svg?height=600&width=500"
-                    alt="Samir Tannuri dentro da farmácia com a equipe"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5807-MVrZXwAjG1TA5axkZtyIbGxca3Yufh.jpeg"
+                    alt="Samir Tannuri com equipe no InCos Global Amsterdam — consultoria em tecnologia magistral"
                     fill
-                    className="object-cover object-[center_top]"
+                    className="object-cover object-top"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
@@ -142,10 +142,10 @@ export function ConsultoriaEnvironment() {
               <div className="mt-4 flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image
-                    src="/placeholder.svg?height=600&width=500"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2423-OOSVQktaEsVx00hrr7fyPx9v384NCH.jpeg"
                     alt="Samir Tannuri"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div>

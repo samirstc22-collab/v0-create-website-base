@@ -58,12 +58,12 @@ export function LojaFeatured() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-2xl leading-[1.15] text-[#0C2340] tracking-[-0.5px] mb-3">
+                  <h3 className="font-serif text-2xl font-bold leading-[1.12] text-[#0C2340] tracking-[-0.5px] mb-3">
                     {item.title}
                   </h3>
 
                   {/* Subtitle */}
-                  <p className="text-sm text-[#475569] leading-relaxed mb-5">{item.subtitle}</p>
+                  <p className="text-sm text-[#475569] leading-relaxed mb-5 font-medium">{item.subtitle}</p>
 
                   {/* Assets */}
                   <div className="flex flex-wrap gap-1.5 mb-5">
