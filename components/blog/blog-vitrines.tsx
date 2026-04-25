@@ -6,32 +6,32 @@ import { blogPosts, blogCategories, type BlogCategory } from "@/lib/blog-data"
 import { MoleculeIllustration, FlaskIllustration, HexagonPattern } from "@/components/illustrations"
 
 const categoryMeta: Record<BlogCategory, { icon: typeof FlaskConical; color: string; gradient: string }> = {
-  Cosmetologia: {
+  "Cosmetologia Avançada": {
     icon: FlaskConical,
     color: "#B8783D",
     gradient: "from-[#B8783D]/10 to-[#B8783D]/5",
   },
-  Dermatologia: {
+  "Dermocosmética": {
     icon: Heart,
     color: "#e63946",
     gradient: "from-[#e63946]/10 to-[#e63946]/5",
   },
-  Tricologia: {
+  "Tricologia": {
     icon: Sparkles,
     color: "#8b5cf6",
     gradient: "from-[#8b5cf6]/10 to-[#8b5cf6]/5",
   },
-  "Tecnologia Farmaceutica": {
+  "Manipulação Magistral": {
     icon: Microscope,
     color: "#0096B4",
     gradient: "from-[#0096B4]/10 to-[#0096B4]/5",
   },
-  "Gestao Magistral": {
+  "Gestão Magistral": {
     icon: BookOpen,
     color: "#059669",
     gradient: "from-[#059669]/10 to-[#059669]/5",
   },
-  Fotoprotecao: {
+  "Inovação Industrial": {
     icon: Droplets,
     color: "#f59e0b",
     gradient: "from-[#f59e0b]/10 to-[#f59e0b]/5",
@@ -84,6 +84,10 @@ export function BlogVitrines() {
         <div className="space-y-16">
           {categoriesWithPosts.map((category, catIdx) => {
             const meta = categoryMeta[category]
+            if (!meta) {
+              console.warn(`[v0] Missing metadata for category: ${category}`)
+              return null
+            }
             const posts = postsByCategory[category]
             const Icon = meta.icon
 
