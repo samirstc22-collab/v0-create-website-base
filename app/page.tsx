@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
+import { IALabBanner } from "@/components/ia-lab-banner"
 import { InstagramBanner } from "@/components/instagram-banner"
 import { ConsultoriaSection } from "@/components/consultoria-section"
 import { BigStats } from "@/components/big-stats"
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="bg-white scroll-smooth">
       <Navbar />
       <HeroSection />
+      <IALabBanner />
       <InstagramBanner />
       <ConsultoriaSection />
       <BigStats />
