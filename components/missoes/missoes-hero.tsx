@@ -29,17 +29,17 @@ export function MissoesHero() {
           </h1>
 
           <p className="text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-12">
-            Imersoes tecnicas lideradas por mim em tres continentes — acesso privilegiado a
-            industrias de ingredientes, laboratorios de ponta e tendencias globais.
+            Intercambios e imersoes tecnicas lideradas por mim em tres continentes — Paris, Amsterdam e Toquio.
+            Acesso privilegiado a Lucas Meyer, Gattefossé, Croda, Sederma, Evonik e laboratorios de ponta.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
               { icon: MapPin, value: "3", label: "Continentes" },
-              { icon: Calendar, value: "12+", label: "Missoes realizadas" },
-              { icon: Users, value: "200+", label: "Profissionais" },
-              { icon: Plane, value: "2025", label: "Proxima missao" },
+              { icon: Calendar, value: "2023–25", label: "Missoes realizadas" },
+              { icon: Users, value: "200+", label: "Profissionais guiados" },
+              { icon: Plane, value: "Paris 2025", label: "Proxima missao" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
@@ -55,12 +55,16 @@ export function MissoesHero() {
 
       {/* Destination Flags */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
-        {["FR", "NL", "JP"].map((flag, i) => (
-          <div
-            key={flag}
-            className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-serif text-lg text-white/80"
-          >
-            {flag}
+        {[
+          { code: "FR", label: "Paris 2025" },
+          { code: "NL", label: "Amsterdam 2024" },
+          { code: "JP", label: "Toquio 2023" },
+        ].map((dest) => (
+          <div key={dest.code} className="flex flex-col items-center gap-1">
+            <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-serif text-lg text-white/80">
+              {dest.code}
+            </div>
+            <span className="text-[10px] text-white/40 tracking-wider">{dest.label}</span>
           </div>
         ))}
       </div>

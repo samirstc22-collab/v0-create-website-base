@@ -146,12 +146,12 @@ export function LojaCatalog() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-lg leading-[1.2] text-[#0C2340] tracking-[-0.3px] mb-2">
+                  <h3 className="font-serif text-xl font-bold leading-[1.15] text-[#0C2340] tracking-[-0.4px] mb-2">
                     {item.title}
                   </h3>
 
                   {/* Subtitle */}
-                  <p className="text-xs text-[#64748b] leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-xs text-[#475569] leading-relaxed line-clamp-2 mb-4 font-medium">
                     {item.subtitle}
                   </p>
 

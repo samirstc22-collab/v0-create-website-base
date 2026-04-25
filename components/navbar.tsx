@@ -71,6 +71,7 @@ export function Navbar() {
       href: "#", 
       label: "Servicos",
       icon: Briefcase,
+      highlight: true,
       children: [
         { href: "/consultoria", label: "Consultoria", description: "Magistral e industrial", icon: Briefcase },
         { href: "/mentoria", label: "Mentoria Premium", description: "4 sessoes + planos mensais", icon: GraduationCap },
@@ -117,16 +118,23 @@ export function Navbar() {
                 <div key={link.label} className="relative">
                   <button
                     onClick={() => setOpenDropdown(isDropdownOpen ? null : link.label)}
-                    className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
-                      hasActiveChild
-                        ? isScrolled
-                          ? "text-[#B8783D] bg-[#B8783D]/10"
-                          : "text-[#e8a87c] bg-white/10"
-                        : isScrolled
-                          ? "text-[#0C2340]/80 hover:text-[#B8783D] hover:bg-[#B8783D]/5"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
+                    className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-bold tracking-wide rounded-lg transition-all duration-200 ${
+                      link.highlight
+                        ? hasActiveChild
+                          ? "text-white bg-[#0C2340] shadow-[0_4px_14px_rgba(12,35,64,0.3)]"
+                          : isScrolled
+                            ? "text-white bg-[#0C2340] hover:bg-[#1a3a5c] shadow-[0_4px_14px_rgba(12,35,64,0.2)] hover:shadow-[0_4px_18px_rgba(12,35,64,0.3)]"
+                            : "text-[#0C2340] bg-white hover:bg-white/90 shadow-[0_4px_14px_rgba(0,0,0,0.2)]"
+                        : hasActiveChild
+                          ? isScrolled
+                            ? "text-[#B8783D] bg-[#B8783D]/10"
+                            : "text-[#e8a87c] bg-white/10"
+                          : isScrolled
+                            ? "text-[#0C2340]/80 hover:text-[#B8783D] hover:bg-[#B8783D]/5"
+                            : "text-white/80 hover:text-white hover:bg-white/10"
                     }`}
                   >
+                    {link.highlight && <Briefcase className="w-3.5 h-3.5" />}
                     {link.label}
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>
@@ -193,18 +201,20 @@ export function Navbar() {
           <div className="relative">
             <button
               onClick={() => setOpenDropdown(openDropdown === "Loja" ? null : "Loja")}
-              className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
+              className={`flex items-center gap-2 px-4 py-2.5 text-sm font-bold tracking-wide rounded-lg transition-all duration-200 border ${
                 pathname.startsWith("/loja")
-                  ? isScrolled
-                    ? "text-[#B8783D] bg-[#B8783D]/10"
-                    : "text-[#e8a87c] bg-white/10"
+                  ? "bg-[#B8783D] text-white border-[#B8783D] shadow-[0_4px_16px_rgba(184,120,61,0.4)]"
                   : isScrolled
-                    ? "text-[#0C2340]/80 hover:text-[#B8783D] hover:bg-[#B8783D]/5"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "bg-[#B8783D]/10 text-[#B8783D] border-[#B8783D]/30 hover:bg-[#B8783D] hover:text-white hover:border-[#B8783D] hover:shadow-[0_4px_16px_rgba(184,120,61,0.35)]"
+                    : "bg-[#B8783D]/20 text-[#e8a87c] border-[#B8783D]/30 hover:bg-[#B8783D] hover:text-white hover:border-[#B8783D]"
               }`}
             >
               <Store className="w-4 h-4" />
               Loja
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-current opacity-60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-current" />
+              </span>
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === "Loja" ? "rotate-180" : ""}`} />
             </button>
             

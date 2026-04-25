@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { GraduationCap, Microscope, Mic } from "lucide-react"
+import { GraduationCap, Microscope, Mic, FlaskConical, BookOpen, Users } from "lucide-react"
 
 export function SobreHero() {
   return (
@@ -18,31 +18,50 @@ export function SobreHero() {
           </div>
 
           <h1 className="mt-6 font-serif text-5xl leading-[1.02] tracking-tight text-white md:text-6xl lg:text-7xl">
-            Samir <em className="text-[#e8a87c]">Tannuri Cerveira</em>
+            Samir <em className="text-[#e8a87c]">Tannuri</em>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
-            Consultor em tecnologia magistral. <strong className="text-white">Seis anos
-            coordenando P&D</strong> no maior grupo magistral do Brasil, mais de 500 farmácias
-            atendidas tecnicamente e 1.000+ formuladores treinados. Hoje, essa experiência vira
-            consultoria sob medida para indústrias, magistrais e marcas.
+            <strong className="text-white">Consultor em Tecnologia Magistral</strong> com seis anos liderando P&D no maior grupo magistral do Brasil. Mais de <strong className="text-white">500 farmacias atendidas tecnicamente</strong> e <strong className="text-white">1.000+ formuladores treinados</strong> em programas proprios. Desde 2021, conduzo iniciativas cientificas inovadoras em laboratorios e projetos de Pesquisa e Desenvolvimento — identificando novas solucoes, otimizando processos e desenvolvendo formulacoes de alta performance.
+          </p>
+
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60">
+            Essa experiencia agora e aplicada em <strong className="text-white/80">consultoria sob medida para industrias, laboratorios magistrais e marcas</strong>. Colaboro com equipes multidisciplinares para atender as demandas do mercado farmaceutico e cosmetico — do diagnostico de formulacao a transferencia de tecnologia.
           </p>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <GraduationCap className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">Consultor</div>
-              <div className="text-xs text-white/60">Formulação Magistral</div>
+              <FlaskConical className="mb-3 h-6 w-6 text-[#e8a87c]" />
+              <div className="text-sm font-medium text-white">6 Anos P&D</div>
+              <div className="text-xs text-white/60">Maior grupo magistral BR</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <Microscope className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">P&D</div>
-              <div className="text-xs text-white/60">Indústria & Magistral</div>
+              <Users className="mb-3 h-6 w-6 text-[#e8a87c]" />
+              <div className="text-sm font-medium text-white">1.000+ Treinados</div>
+              <div className="text-xs text-white/60">Formuladores e tecnicos</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
               <Mic className="mb-3 h-6 w-6 text-[#e8a87c]" />
-              <div className="text-sm font-medium text-white">Delegado Técnico</div>
+              <div className="text-sm font-medium text-white">Delegado Tecnico</div>
               <div className="text-xs text-white/60">In-Cosmetics Paris 2025</div>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+              <GraduationCap className="mb-3 h-6 w-6 text-[#2dd4bf]" />
+              <div className="text-sm font-medium text-white">Formacao Academica</div>
+              <div className="text-xs text-white/60">Nutricao & Ciencias Biomedicas</div>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+              <BookOpen className="mb-3 h-6 w-6 text-[#2dd4bf]" />
+              <div className="text-sm font-medium text-white">Professor</div>
+              <div className="text-xs text-white/60">Cursos, Congressos & MBAs</div>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+              <Microscope className="mb-3 h-6 w-6 text-[#2dd4bf]" />
+              <div className="text-sm font-medium text-white">Pesquisa Cientifica</div>
+              <div className="text-xs text-white/60">Paper DOI Peer-Reviewed</div>
             </div>
           </div>
         </div>
@@ -52,10 +71,10 @@ export function SobreHero() {
           <div className="relative mx-auto max-w-sm lg:max-w-none">
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
               <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="Samir Tannuri — Consultor em tecnologia magistral"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4128-pAVchu8AAaVoA2fHFbF3NfNqx04xGp.jpeg"
+                alt="Samir Tannuri — Consultor em Tecnologia Magistral no In-Cosmetics Global Paris"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 1024px) 80vw, 40vw"
                 priority
               />

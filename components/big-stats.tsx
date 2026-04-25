@@ -5,7 +5,7 @@ export function BigStats() {
     { num: "6 anos", label: "Coordenando P&D no maior grupo magistral", accent: "#0C2340" },
     { num: "500+", label: "Farmacias magistrais atendidas tecnicamente", accent: "#B8783D" },
     { num: "1.000+", label: "Profissionais formados em programas proprios", accent: "#0C2340" },
-    { num: "8/10", label: "Modulos ICosmetologia ministrados", accent: "#B8783D" },
+    { num: "10+", label: "Aulas presenciais e praticas in loco em cursos, congressos e MBAs", accent: "#B8783D" },
     { num: "3", label: "Continentes em missao tecnica", accent: "#0a8f9e" },
   ]
 

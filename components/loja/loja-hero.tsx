@@ -34,14 +34,26 @@ export function LojaHero() {
       />
 
       <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10">
+        {/* NEW Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-[#B8783D] via-[#d4a574] to-[#B8783D] text-white font-bold text-sm tracking-wide px-6 py-3 rounded-full shadow-[0_8px_32px_rgba(184,120,61,0.4)] animate-pulse">
+            <span className="absolute -top-1 -right-1 flex h-4 w-4">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex h-4 w-4 rounded-full bg-white" />
+            </span>
+            <Sparkles className="w-4 h-4" />
+            NOVO — Catalogo 2026 Disponivel
+          </div>
+        </div>
+
         {/* Meta bar */}
         <div className="flex items-center justify-between mb-14 flex-wrap gap-4">
           <div className="flex items-center gap-3 text-[11px] font-mono tracking-[2px] uppercase text-[#e8a87c]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#B8783D] animate-pulse" />
-            Catálogo Técnico 2026 · Vitrine Editorial
+            Catalogo Tecnico 2026 · Vitrine Editorial
           </div>
           <div className="text-[11px] tracking-[2px] uppercase text-white/40 font-semibold">
-            60+ artefatos · ~500 páginas técnicas
+            60+ artefatos · ~500 paginas tecnicas
           </div>
         </div>
 

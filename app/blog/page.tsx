@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { PageLayout } from "@/components/page-layout"
 import { BlogHero } from "@/components/blog/blog-hero"
 import { BlogFeatured } from "@/components/blog/blog-featured"
+import { BlogVitrines } from "@/components/blog/blog-vitrines"
 import { BlogGrid } from "@/components/blog/blog-grid"
 import { BlogNewsletter } from "@/components/blog/blog-newsletter"
 import { BlogContactForm } from "@/components/blog/blog-contact-form"
@@ -18,6 +19,7 @@ export default function BlogPage() {
     <PageLayout>
       <BlogHero />
       <BlogFeatured />
+      <BlogVitrines />
       <BlogGrid />
       <BlogNewsletter />
       <BlogContactForm />

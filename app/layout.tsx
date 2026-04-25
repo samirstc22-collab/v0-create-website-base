@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Outfit, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { NewsletterPopup } from "@/components/newsletter-popup"
 import "./globals.css"
 
 const outfit = Outfit({
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${outfit.variable} ${instrumentSerif.variable}`}>
       <body className="font-sans antialiased bg-white text-body overflow-x-hidden">
         {children}
+        <NewsletterPopup />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

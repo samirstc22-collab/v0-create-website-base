@@ -51,10 +51,10 @@ export function PersonalPitch() {
             <div className="relative">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
-                  alt="Samir Tannuri sentado, postura confiante e profissional"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/24da41c1-6aed-4c98-a405-36a49a556cd7-yTaMOtFNI9o8wCxLqXDSxSiWJeNl2o.jpeg"
+                  alt="Samir Tannuri no campus Lucas Meyer Cosmetics Paris — consultor em tecnologia magistral"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority
                 />
@@ -99,11 +99,11 @@ export function PersonalPitch() {
               <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
                 <div className="h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#b87333]/40">
                   <Image
-                    src="/placeholder.svg?height=600&width=500"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2423-OOSVQktaEsVx00hrr7fyPx9v384NCH.jpeg"
                     alt="Samir Tannuri"
                     width={56}
                     height={56}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-top"
                   />
                 </div>
                 <div>
@@ -152,10 +152,10 @@ export function PersonalPitch() {
           <div className="relative">
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[4/3]">
               <Image
-                src="/placeholder.svg?height=600&width=800"
-                alt="Samir Tannuri no palco ministrando palestra com energia"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2492-JxhgefX7fKKPzUqysDvarshOrjNzep.jpeg"
+                alt="Samir Tannuri com profissionais durante treinamento em laboratorio de cosmetologia Paris"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 45vw"
               />
             </div>
