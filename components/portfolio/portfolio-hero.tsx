@@ -91,11 +91,11 @@ export function PortfolioHero() {
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-[#0096B4]/20 via-transparent to-[#B8783D]/20 blur-2xl" />
           <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9814-ThaKfzbYLzYf9ZWwP5wWjYtI0iJSvc.jpeg"
-              alt="Samir Tannuri apresentando pesquisa sobre hidrofobicidade capilar em conferencia internacional"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/51gclugLt3L._AC_SL1200_-KEOu75hUCbTKotDCnEAgbYfwmd6svd.jpg"
+              alt="Serum Facial Clareador Rosa Selvagem — Niacinamida 25%, Acido Hialuronico e Alpha-Arbutin"
               width={800}
               height={1000}
-              className="w-full h-[520px] object-cover object-top"
+              className="w-full h-[520px] object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
