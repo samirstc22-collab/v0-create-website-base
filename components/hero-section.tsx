@@ -86,15 +86,26 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Editorial column */}
           <div className="text-center lg:text-left">
-            {/* Headline */}
+            {/* Attention-grabbing small headline */}
+            <div
+              className={`mb-4 transition-all duration-700 delay-150 ${
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-lg md:text-xl font-bold tracking-wide">
+                Inovacao que transforma formulas em resultados
+              </span>
+            </div>
+
+            {/* Main headline */}
             <h1
-              className={`font-serif font-normal text-[clamp(40px,6vw,72px)] leading-[1.05] tracking-[-1.5px] text-white mb-6 transition-all duration-700 delay-200 ${
+              className={`font-serif font-normal text-[clamp(36px,5.5vw,64px)] leading-[1.08] tracking-[-1.5px] text-white mb-6 transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              ST Farma · Consultoria em Formulacao{" "}
+              Consultoria Tecnica em Formulacao{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">para quem nao pode errar</em>
+                <em className="italic text-[#B8783D]">para quem busca excelencia</em>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="8"
