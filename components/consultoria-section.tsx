@@ -5,28 +5,31 @@ import { ArrowRight, Beaker, Building2, Stethoscope } from "lucide-react"
 
 const cards = [
   {
-    title: "Farmacias de manipulacao",
+    label: "Para farmacias magistrais",
+    title: "Saia da disputa por preco",
     description:
-      "Formulas exclusivas, protocolos diferenciados e materiais tecnicos que transformam sua operacao em referencia regional.",
+      "Construa um portfolio exclusivo com formulas autorais, protocolos diferenciados e narrativa tecnica que transforma sua farmacia em referencia regional.",
     icon: Beaker,
-    color: "#B8783D", // copper
-    features: ["Formulas exclusivas", "Protocolos de manipulacao", "Materiais tecnicos"],
+    color: "#B8783D",
+    features: ["Formulas autorais validadas", "Protocolos de manipulacao", "Argumentacao tecnica para prescritores"],
   },
   {
-    title: "Industria e marcas proprias",
+    label: "Para industria e marcas proprias",
+    title: "Acelere o time-to-market",
     description:
-      "Prototipos funcionais, ajuste sensorial refinado, claims embasados e suporte para escala industrial.",
+      "Prototipos funcionais com ajuste sensorial refinado, claims embasados em literatura e suporte tecnico do conceito a escala industrial.",
     icon: Building2,
-    color: "#0db5c8", // teal
-    features: ["Prototipos funcionais", "Sensorial refinado", "Claims e escala"],
+    color: "#0db5c8",
+    features: ["Prototipos com sensorial refinado", "Claims com lastro cientifico", "Suporte tecnico para escala"],
   },
   {
-    title: "Prescritores e clinicas",
+    label: "Para prescritores e clinicas",
+    title: "Protocolos com evidencia",
     description:
-      "Protocolos clinicos validados em peelings, regeneracao cutanea, tricologia e dermatologia avancada.",
+      "Protocolos clinicos validados em peelings, regeneracao cutanea, tricologia e dermatologia avancada — com racional tecnico documentado.",
     icon: Stethoscope,
-    color: "#0C2340", // navy
-    features: ["Peelings avancados", "Regeneracao cutanea", "Tricologia clinica"],
+    color: "#0C2340",
+    features: ["Peelings avancados validados", "Regeneracao cutanea documentada", "Tricologia clinica baseada em evidencia"],
   },
 ]
 
@@ -83,8 +86,16 @@ export function ConsultoriaSection() {
                   />
                 </div>
 
+                {/* Segment label */}
+                <div
+                  className="text-[10px] font-bold tracking-[2px] uppercase mb-2"
+                  style={{ color: card.color }}
+                >
+                  {card.label}
+                </div>
+
                 {/* Title */}
-                <h3 className="font-serif text-2xl text-[#0C2340] mb-3">
+                <h3 className="font-serif text-2xl text-[#0C2340] mb-3 leading-tight">
                   {card.title}
                 </h3>
 
@@ -112,8 +123,9 @@ export function ConsultoriaSection() {
 
         {/* Impact phrase */}
         <div className="text-center mb-12">
-          <p className="font-serif text-xl md:text-2xl italic text-[#64748b] max-w-[700px] mx-auto">
-            &ldquo;A diferenca entre um produto comum e um produto memoravel esta nos detalhes que so a experiencia revela.&rdquo;
+          <p className="font-serif text-xl md:text-2xl italic text-[#64748b] max-w-[760px] mx-auto leading-relaxed">
+            &ldquo;Ciencia aplicada para transformar formulacao em{" "}
+            <span className="text-[#B8783D] not-italic font-semibold">diferenciacao competitiva</span>.&rdquo;
           </p>
         </div>
 

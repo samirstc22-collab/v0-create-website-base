@@ -40,7 +40,7 @@ export function HomeDifferentiation() {
           <div className="inline-flex items-center gap-2 bg-[#fef3c7] border border-[#fcd34d]/30 rounded-full px-4 py-2 mb-6">
             <AlertTriangle className="w-4 h-4 text-[#d97706]" />
             <span className="text-[11px] tracking-[2px] uppercase font-bold text-[#92400e]">
-              O problema do mercado
+              Diagnostico do mercado magistral
             </span>
           </div>
 
@@ -152,17 +152,21 @@ export function HomeDifferentiation() {
 
           {/* CTA Content */}
           <div className="text-center lg:text-left">
+            <span className="inline-block text-[11px] font-bold tracking-[3px] uppercase text-[#B8783D] mb-3">
+              Proximo passo
+            </span>
             <h3 className="font-serif text-2xl md:text-3xl text-[#0C2340] leading-[1.2] mb-4">
-              Pronto para elevar o padrao tecnico da sua operacao?
+              Quer transformar seu portfolio em <em className="italic text-[#B8783D]">vantagem competitiva real?</em>
             </h3>
-            <p className="text-[#475569] mb-6 max-w-md mx-auto lg:mx-0">
-              Agende um diagnostico tecnico gratuito e descubra como podemos otimizar seus processos de formulacao.
+            <p className="text-[#475569] mb-6 max-w-md mx-auto lg:mx-0 leading-relaxed">
+              Em uma conversa de 30 minutos identificamos os pontos criticos da sua operacao
+              e mostramos onde a ciencia aplicada gera maior impacto comercial.
             </p>
             <Link
               href="/consultoria"
               className="group inline-flex items-center gap-2 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.2)]"
             >
-              Agendar diagnostico tecnico
+              Solicitar diagnostico do projeto
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

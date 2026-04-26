@@ -38,10 +38,10 @@ export function InstagramBanner() {
             {/* Text */}
             <div>
               <p className="text-white font-bold text-base tracking-wide">
-                Siga @samir_farma no Instagram
+                Aulas tecnicas curtas, todos os dias — @samir_farma
               </p>
               <p className="text-white/80 text-sm">
-                Conteudo tecnico, bastidores e novidades em primeira mao
+                Bastidores de bancada, racional de ativos e tendencias antes do mercado
               </p>
             </div>
           </div>
