@@ -7,7 +7,6 @@ import { BigStats } from "@/components/big-stats"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { HomeLabPro } from "@/components/home-lab-pro"
 import { HomeInnovations } from "@/components/home-innovations"
-import { VetDermKnowledge } from "@/components/vet-derm-knowledge"
 import { HomeAuthority } from "@/components/home-authority"
 import { Footer } from "@/components/footer"
 
@@ -26,7 +25,6 @@ export default function Home() {
       <IALabBanner />
       <HomeLabPro />
       <HomeInnovations />
-      <VetDermKnowledge />
       {/* 5. Autoridade final + CTA */}
       <HomeAuthority />
       {/* 6. Social (menos prioritario) */}
