@@ -6,6 +6,7 @@ import { ConsultoriaSection } from "@/components/consultoria-section"
 import { BigStats } from "@/components/big-stats"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { HomeClubeBanner } from "@/components/home-clube-banner"
+import { HomeContentEngine } from "@/components/home-content-engine"
 import { Missions } from "@/components/missions"
 import { HomeLabPro } from "@/components/home-lab-pro"
 import { HomeInnovations } from "@/components/home-innovations"
@@ -16,24 +17,29 @@ export default function Home() {
   return (
     <main className="bg-white scroll-smooth">
       <Navbar />
+      {/* 1. HERO — problema + promessa: capta atencao */}
       <HeroSection />
-      {/* 1. Prova de autoridade - numeros que validam */}
+      {/* 2. PROVA RAPIDA — numeros que validam autoridade imediatamente */}
       <BigStats />
-      {/* 2. Clube de Formulas — produto-chave cedo no funil para captura imediata */}
-      <HomeClubeBanner />
-      {/* 3. Dores + Solucao comparativa */}
+      {/* 3. PROBLEMA + IMPLICACAO — abre a dor: 'ativos bons nao bastam' */}
       <HomeDifferentiation />
-      {/* 4. Missoes Internacionais — autoridade global antes da decisao de compra */}
+      {/* 4. AUTORIDADE PRE-VENDA — conteudo tecnico como mecanismo de conversao
+             (caso comentado, analise de ativo, racional de combinacao, erro frequente).
+             Cada formato abre uma nova curiosidade tecnica antes da oferta comercial. */}
+      <HomeContentEngine />
+      {/* 5. SOLUCAO DE BAIXO TICKET — Clube: porta de entrada para quem ja foi engajado pelo conteudo */}
+      <HomeClubeBanner />
+      {/* 6. AUTORIDADE GLOBAL — missoes internacionais validam a inteligencia tecnica */}
       <Missions />
-      {/* 5. Ofertas explicitas por segmento */}
+      {/* 7. OFERTAS POR SEGMENTO — consultoria explicita: magistral, industrial, prescritor */}
       <ConsultoriaSection />
-      {/* 6. Tecnologia / Inovacao */}
+      {/* 8. DIFERENCIACAO TECNOLOGICA — IA Lab + LabPro + Inovacoes em escala */}
       <IALabBanner />
       <HomeLabPro />
       <HomeInnovations />
-      {/* 7. Autoridade final + CTA */}
+      {/* 9. CONVERSAO FINAL — autoridade + CTA */}
       <HomeAuthority />
-      {/* 8. Social (menos prioritario) */}
+      {/* 10. SOCIAL — Instagram como prova viva, fora do funil principal */}
       <InstagramBanner />
       <Footer />
     </main>
