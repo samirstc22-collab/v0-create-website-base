@@ -86,14 +86,14 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Editorial column */}
           <div className="text-center lg:text-left">
-            {/* Attention-grabbing small headline */}
+            {/* Eyebrow — clinical-commercial authority */}
             <div
               className={`mb-6 transition-all duration-700 delay-150 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-base md:text-lg font-bold tracking-wide">
-                Transformo evidencia cientifica em formulacoes, protocolos e estrategias dermatologicas
+              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-base md:text-[17px] font-semibold leading-snug max-w-[640px]">
+                Estrategias formulativas e protocolos dermatologicos orientados por evidencia — para gerar diferenciacao tecnica, valor percebido e performance clinica.
               </span>
             </div>
 
@@ -125,16 +125,16 @@ export function HeroSection() {
               {" "}e disputa preco?
             </h1>
 
-            {/* Subheadline — transformation promise */}
+            {/* Subheadline — outcome-oriented, clinical authority */}
             <p
-              className={`text-lg md:text-xl text-white/75 leading-[1.8] max-w-[620px] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
+              className={`text-[17px] md:text-lg text-white/75 leading-[1.75] max-w-[58ch] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               Seis anos coordenando P&D no{" "}
-              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>.{" "}
-              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> tecnicamente.{" "}
-              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>. Agora levo essa experiencia para dentro da sua operacao — transformando formulas genericas em diferenciacoes competitivas com seguranca e evidencia clinica.
+              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>,{" "}
+              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> em consultoria tecnica e{" "}
+              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>. Essa pratica industrial vira protocolo dentro da sua operacao — convertendo bancada em diferenciacao competitiva, com seguranca regulatoria e evidencia clinica documentada.
             </p>
 
             {/* CTA row — action-oriented buttons */}
@@ -165,9 +165,9 @@ export function HeroSection() {
               }`}
             >
               {[
-                "Transformo evidencia em diferenciacao",
-                "Seguranca clinica comprovada",
-                "Operacional desde dia 1",
+                "Racional cientifico documentado",
+                "Seguranca regulatoria e clinica",
+                "Pronto para escala industrial",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#10b981]" />
@@ -206,12 +206,12 @@ export function HeroSection() {
                     <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
                       <Play className="w-4 h-4 text-white fill-white" />
                     </div>
-                    <span className="text-[11px] tracking-[2px] uppercase font-bold text-white/80">
-                      Transformacao clinica · Resultados comprovados
+                    <span className="eyebrow text-white/80">
+                      Pratica industrial · Bancada documentada
                     </span>
                   </div>
-                  <p className="text-white font-medium text-lg leading-snug max-w-[340px]">
-                    Quando a ciencia encontra a formulacao — experiencia que gera valor real
+                  <p className="font-serif text-white text-[22px] leading-[1.25] max-w-[360px] tracking-[-0.02em]">
+                    Da literatura a bancada — formulacao que sustenta posicionamento clinico.
                   </p>
                 </div>
               </div>
