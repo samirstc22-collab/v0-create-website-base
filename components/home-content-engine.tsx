@@ -17,7 +17,7 @@ import {
   MoleculeIllustration,
   HexagonPattern,
   AtomIllustration,
-  DnaHelix,
+  DNAHelix,
   FlaskIllustration,
 } from "./illustrations"
 
@@ -91,7 +91,7 @@ const contentFormats: ContentFormat[] = [
     href: "/blog/niacinamida-vitamina-c",
     accent: "#0C2340",
     Icon: Layers,
-    Decor: DnaHelix,
+    Decor: DNAHelix,
     decorPosition: "top-4 right-4",
   },
   {
@@ -215,10 +215,13 @@ export function HomeContentEngine() {
                 />
 
                 {/* Decorative vector */}
-                <Decor
-                  className={`absolute ${item.decorPosition} w-32 h-32 pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:opacity-20`}
-                  style={{ color: item.accent, opacity: 0.08 } as React.CSSProperties}
-                />
+                <div
+                  className={`absolute ${item.decorPosition} pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:opacity-20`}
+                  style={{ color: item.accent, opacity: 0.08 }}
+                  aria-hidden
+                >
+                  <Decor className="w-32 h-32" />
+                </div>
 
                 <div className="relative p-7 lg:p-8 flex-1 flex flex-col">
                   {/* Header row: format chip + ID */}
