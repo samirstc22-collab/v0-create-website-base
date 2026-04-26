@@ -146,11 +146,23 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Premium editorial baseline: 17px on desktop, 16px on small screens */
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
   }
 
   body {
     @apply bg-white text-foreground;
-    font-feature-settings: "ss01", "ss02", "cv01";
+    /* Inter OpenType features: cv11 humanist a/g, ss01 alt 1, cv02 single-storey g */
+    font-feature-settings: "cv11", "ss01", "cv02", "kern";
+    font-variant-ligatures: common-ligatures contextual;
+    line-height: 1.65;
+    letter-spacing: -0.005em;
   }
 
   ::selection {
@@ -165,13 +177,51 @@
     @apply no-underline text-inherit;
   }
 
-  /* Typography refinements */
+  /* Editorial heading scale — tight, premium, high-contrast vs body */
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+    letter-spacing: -0.022em;
   }
 
+  /* Serif headings get tighter optical tracking */
+  h1.font-serif, h2.font-serif, h3.font-serif,
+  .font-serif h1, .font-serif h2, .font-serif h3 {
+    letter-spacing: -0.028em;
+    font-feature-settings: "kern", "liga", "calt";
+  }
+
+  /* Paragraph rhythm */
   p {
     text-wrap: pretty;
+    line-height: 1.7;
+  }
+
+  /* Tight cap labels (eyebrows, kickers) */
+  .tracking-eyebrow {
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  /* Controlled prose width — keeps measure between 60-75 chars per line */
+  .prose-measure {
+    max-width: 62ch;
+  }
+
+  /* Slightly relaxed body for long-form sections */
+  .body-relaxed {
+    font-size: 1.0625rem; /* ~18px on 17px base */
+    line-height: 1.75;
+  }
+
+  /* Editorial small caps eyebrow */
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 }
 
@@ -208,6 +258,16 @@
 
 @keyframes slideInRight {
   0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-16px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(16px); }
   100% { opacity: 1; transform: translateX(0); }
 }
 

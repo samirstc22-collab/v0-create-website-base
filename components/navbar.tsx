@@ -67,16 +67,49 @@ export function Navbar() {
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre", icon: User },
-    { 
-      href: "#", 
+    {
+      href: "#",
       label: "Servicos",
       icon: Briefcase,
       highlight: true,
       children: [
-        { href: "/consultoria", label: "Consultoria", description: "Magistral e industrial", icon: Briefcase },
-        { href: "/mentoria", label: "Mentoria Premium", description: "4 sessoes + planos mensais", icon: GraduationCap },
-        { href: "/protocolos", label: "Protocolos Clinicos", description: "Dermatologia e prescritores", icon: Stethoscope },
-      ]
+        {
+          href: "/consultoria",
+          label: "Consultoria Magistral",
+          description: "Portfolio autoral, protocolos diferenciados e narrativa tecnica para sair da disputa por preco.",
+          icon: Briefcase,
+        },
+        {
+          href: "/consultoria#industrial",
+          label: "Consultoria Industrial",
+          description: "Prototipos com sensorial refinado, claims defensaveis e suporte do conceito a escala.",
+          icon: Sparkles,
+        },
+        {
+          href: "/protocolos",
+          label: "Protocolos Clinicos",
+          description: "Peelings, regeneracao, tricologia e dermatologia avancada com racional documentado.",
+          icon: Stethoscope,
+        },
+        {
+          href: "/mentoria",
+          label: "Mentoria Premium",
+          description: "Acompanhamento individual: 4 sessoes intensivas + plano mensal continuado.",
+          icon: GraduationCap,
+        },
+        {
+          href: "/missoes",
+          label: "Treinamentos In Loco",
+          description: "Capacitacao hands-on para equipes de magistrais, industria e clinicas.",
+          icon: Globe,
+        },
+        {
+          href: "/loja",
+          label: "Materiais Tecnicos",
+          description: "Formularios, e-books e compendios para acelerar seu time.",
+          icon: BookOpen,
+        },
+      ],
     },
     { href: "/portfolio-inovacoes", label: "Portfolio", icon: Sparkles },
     { href: "/missoes", label: "Missoes", icon: Globe },
@@ -139,35 +172,144 @@ export function Navbar() {
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>
                   
-                  {/* Dropdown Menu */}
+                  {/* Mega Menu Dropdown */}
                   {isDropdownOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-[0_20px_60px_rgba(12,35,64,0.15)] border border-[#0C2340]/10 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
-                      <div className="p-2">
-                        {link.children.map((child) => {
-                          const Icon = child.icon
-                          return (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              onClick={() => setOpenDropdown(null)}
-                              className={`flex items-start gap-3 p-3 rounded-xl transition-all duration-150 ${
-                                isActive(child.href)
-                                  ? "bg-[#B8783D]/10 text-[#B8783D]"
-                                  : "hover:bg-[#f8fafc] text-[#0C2340]"
-                              }`}
-                            >
-                              <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                                isActive(child.href) ? "bg-[#B8783D]/20" : "bg-[#0C2340]/5"
-                              }`}>
-                                <Icon className="w-5 h-5" />
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[820px] bg-white rounded-3xl shadow-[0_24px_80px_rgba(12,35,64,0.18)] border border-[#0C2340]/10 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="grid grid-cols-[1fr_280px]">
+                        {/* LEFT: services grid (2 cols) */}
+                        <div className="p-6">
+                          <div className="flex items-center gap-2 mb-5 px-2">
+                            <span className="h-px w-6 bg-[#B8783D]" />
+                            <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#B8783D]">
+                              Solucoes ST Farma
+                            </span>
+                          </div>
+                          <div className="grid grid-cols-2 gap-1.5">
+                            {link.children.map((child) => {
+                              const Icon = child.icon
+                              const active = isActive(child.href)
+                              return (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  onClick={() => setOpenDropdown(null)}
+                                  className={`group/item relative flex items-start gap-3 p-3.5 rounded-xl transition-all duration-150 ${
+                                    active
+                                      ? "bg-[#B8783D]/10"
+                                      : "hover:bg-[#f8fafc]"
+                                  }`}
+                                >
+                                  <div
+                                    className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
+                                      active
+                                        ? "bg-[#B8783D] text-white"
+                                        : "bg-[#0C2340]/[0.04] text-[#0C2340] group-hover/item:bg-[#0C2340] group-hover/item:text-white"
+                                    }`}
+                                  >
+                                    <Icon className="w-5 h-5" strokeWidth={1.75} />
+                                  </div>
+                                  <div className="flex-1 min-w-0 pt-0.5">
+                                    <div className="flex items-center gap-1.5">
+                                      <div
+                                        className={`font-bold text-[14px] tracking-tight ${
+                                          active ? "text-[#B8783D]" : "text-[#0C2340]"
+                                        }`}
+                                      >
+                                        {child.label}
+                                      </div>
+                                      <ArrowUpRight
+                                        className={`w-3.5 h-3.5 transition-all ${
+                                          active
+                                            ? "text-[#B8783D]"
+                                            : "text-transparent group-hover/item:text-[#B8783D] group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5"
+                                        }`}
+                                      />
+                                    </div>
+                                    <div className="text-[12px] leading-[1.45] text-[#64748b] mt-1">
+                                      {child.description}
+                                    </div>
+                                  </div>
+                                </Link>
+                              )
+                            })}
+                          </div>
+                        </div>
+
+                        {/* RIGHT: featured CTA panel */}
+                        <div className="relative bg-gradient-to-br from-[#0C2340] via-[#0a1f3a] to-[#07172d] p-6 flex flex-col justify-between overflow-hidden">
+                          {/* Decorative copper glow */}
+                          <div
+                            aria-hidden
+                            className="absolute -top-12 -right-12 w-48 h-48 rounded-full opacity-30 blur-3xl"
+                            style={{ background: "radial-gradient(circle, #B8783D 0%, transparent 70%)" }}
+                          />
+
+                          <div className="relative">
+                            <div className="inline-flex items-center gap-2 mb-4 text-[10px] font-bold uppercase tracking-[2.5px] text-[#d4a574]">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#B8783D] animate-pulse" />
+                              Diagnostico gratuito
+                            </div>
+
+                            <h4 className="font-serif text-[22px] leading-[1.15] text-white tracking-[-0.02em] mb-3">
+                              Identifique onde sua operacao{" "}
+                              <em className="italic text-[#d4a574]">trava o crescimento</em>.
+                            </h4>
+
+                            <p className="text-[12.5px] leading-[1.55] text-white/70 mb-5">
+                              Conversa de 30 min para mapear pontos criticos do seu portfolio e o caminho mais curto ate diferenciacao tecnica real.
+                            </p>
+
+                            {/* Mini-stats */}
+                            <div className="flex gap-4 mb-5 pb-5 border-b border-white/10">
+                              <div>
+                                <div className="font-serif text-[20px] text-white leading-none">500+</div>
+                                <div className="text-[10px] uppercase tracking-[1.5px] text-white/50 mt-1 font-semibold">
+                                  Operacoes
+                                </div>
                               </div>
                               <div>
-                                <div className="font-semibold text-sm">{child.label}</div>
-                                <div className="text-xs text-[#64748b] mt-0.5">{child.description}</div>
+                                <div className="font-serif text-[20px] text-white leading-none">6 anos</div>
+                                <div className="text-[10px] uppercase tracking-[1.5px] text-white/50 mt-1 font-semibold">
+                                  Em P&D
+                                </div>
                               </div>
+                            </div>
+                          </div>
+
+                          <Link
+                            href="/contato?assunto=Diagnostico%20Tecnico"
+                            onClick={() => setOpenDropdown(null)}
+                            className="relative group/cta inline-flex items-center justify-between gap-2 w-full bg-[#B8783D] hover:bg-[#a66a32] text-white px-4 py-3 rounded-xl font-bold text-[13px] tracking-wide transition-all shadow-[0_8px_24px_rgba(184,120,61,0.4)]"
+                          >
+                            Solicitar diagnostico
+                            <ArrowUpRight className="w-4 h-4 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Bottom action bar */}
+                      <div className="flex items-center justify-between px-6 py-3.5 border-t border-[#0C2340]/8 bg-[#fafbfc]">
+                        <div className="flex items-center gap-2 text-[12px] text-[#64748b]">
+                          <Sparkles className="w-3.5 h-3.5 text-[#B8783D]" />
+                          <span>
+                            Nao sabe qual servico escolher?{" "}
+                            <Link
+                              href="/contato"
+                              onClick={() => setOpenDropdown(null)}
+                              className="font-bold text-[#0C2340] hover:text-[#B8783D] transition-colors"
+                            >
+                              Fale comigo
                             </Link>
-                          )
-                        })}
+                          </span>
+                        </div>
+                        <Link
+                          href="/consultoria"
+                          onClick={() => setOpenDropdown(null)}
+                          className="flex items-center gap-1.5 text-[12px] font-bold text-[#0C2340] hover:text-[#B8783D] transition-colors"
+                        >
+                          Ver todos os servicos
+                          <ChevronRight className="w-3.5 h-3.5" />
+                        </Link>
                       </div>
                     </div>
                   )}

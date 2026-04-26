@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { ArrowRight, Play, Check, Sparkles } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -86,29 +86,32 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Editorial column */}
           <div className="text-center lg:text-left">
-            {/* Attention-grabbing small headline */}
+            {/* Eyebrow — short, calm, authoritative */}
             <div
-              className={`mb-4 transition-all duration-700 delay-150 ${
+              className={`mb-7 transition-all duration-700 delay-150 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-lg md:text-xl font-bold tracking-wide">
-                Inovacao que transforma formulas em resultados
+              <span className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#B8783D]/15 border border-[#B8783D]/30 text-[12px] md:text-[13px] font-bold uppercase tracking-[2.5px] text-[#d4a574]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8783D]" />
+                Consultoria tecnica em formulacao
               </span>
             </div>
 
-            {/* Main headline */}
+            {/* Main headline — service description, premium scale */}
             <h1
-              className={`font-serif font-normal text-[clamp(36px,5.5vw,64px)] leading-[1.08] tracking-[-1.5px] text-white mb-6 transition-all duration-700 delay-200 ${
+              className={`font-serif font-normal text-[clamp(46px,6.4vw,84px)] leading-[1.0] tracking-[-2px] text-white mb-8 transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Consultoria Tecnica em Formulacao{" "}
+              Da literatura a bancada,
+              <br />
+              da bancada ao{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">para quem busca excelencia</em>
+                <em className="italic text-[#B8783D]">mercado</em>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
-                  height="8"
+                  height="10"
                   viewBox="0 0 200 8"
                   preserveAspectRatio="none"
                   aria-hidden
@@ -125,20 +128,19 @@ export function HeroSection() {
               .
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline — outcome-oriented, clinical authority */}
             <p
-              className={`text-lg md:text-xl text-white/70 leading-[1.7] max-w-[580px] mx-auto lg:mx-0 mb-8 transition-all duration-700 delay-300 ${
+              className={`text-[19px] md:text-[21px] text-white/85 leading-[1.6] max-w-[56ch] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Seis anos coordenando P&D no{" "}
-              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>,{" "}
-              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> tecnicamente e{" "}
-              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>.
-              Hoje, essa experiencia vira consultoria sob medida para a sua operacao — industrial ou magistral.
+              Desenvolvo <strong className="text-white font-semibold">formulas autorais</strong>,{" "}
+              <strong className="text-white font-semibold">protocolos clinicos</strong> e{" "}
+              <strong className="text-white font-semibold">estrategias dermatologicas orientadas por evidencia</strong>{" "}
+              — para farmacias magistrais, marcas proprias e prescritores que precisam diferenciar tecnicamente, escalar com seguranca e gerar valor percebido real.
             </p>
 
-            {/* CTA row */}
+            {/* CTA row — action-oriented buttons */}
             <div
               className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 transition-all duration-700 delay-400 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -146,33 +148,32 @@ export function HeroSection() {
             >
               <Link
                 href="/consultoria"
-                className="group inline-flex items-center justify-center gap-3 bg-[#B8783D] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#a66a32] transition-all shadow-[0_8px_30px_rgba(184,120,61,0.4)] hover:shadow-[0_12px_40px_rgba(184,120,61,0.5)] hover:translate-y-[-2px]"
+                className="group inline-flex items-center justify-center gap-3 bg-[#B8783D] text-white px-9 py-[18px] rounded-xl font-bold text-[17px] tracking-wide hover:bg-[#a66a32] transition-all shadow-[0_8px_30px_rgba(184,120,61,0.4)] hover:shadow-[0_12px_40px_rgba(184,120,61,0.5)] hover:translate-y-[-2px]"
               >
-                Agendar diagnostico tecnico
+                Solicitar diagnostico do projeto
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/formulator-ai"
-                className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border-2 border-white/20 text-white px-6 py-4 rounded-xl font-semibold text-base tracking-wide hover:border-[#B8783D]/60 hover:bg-[#B8783D]/10 transition-all"
+                href="/consultoria#tiered-offers"
+                className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border-2 border-white/20 text-white px-7 py-[18px] rounded-xl font-semibold text-[17px] tracking-wide hover:border-[#B8783D]/60 hover:bg-[#B8783D]/10 transition-all"
               >
-                <Sparkles className="w-5 h-5 text-[#2dd4bf]" />
-                Conhecer os servicos
+                Ver modelos de consultoria
               </Link>
             </div>
 
-            {/* Trust bullets */}
+            {/* Trust bullets — specific value propositions */}
             <div
-              className={`flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-white/60 transition-all duration-700 delay-500 ${
+              className={`flex flex-wrap gap-x-7 gap-y-3 justify-center lg:justify-start text-[15px] md:text-[16px] text-white/80 font-medium transition-all duration-700 delay-500 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               {[
-                "6 anos de P&D no maior grupo magistral",
-                "500+ farmacias atendidas",
-                "1.000+ formuladores treinados",
+                "Racional cientifico documentado",
+                "Seguranca regulatoria e clinica",
+                "Pronto para escala industrial",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#10b981]" />
+                  <Check className="w-[18px] h-[18px] text-[#10b981]" strokeWidth={2.5} />
                   <span>{item}</span>
                 </div>
               ))}
@@ -190,30 +191,56 @@ export function HeroSection() {
                 mounted ? "animate-fade-in-up" : "opacity-0"
               }`}
             >
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden">
+              {/* Image — tight portrait crop */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#0a1a33]">
+                {/* Subtle navy ground layer behind the portrait — extends the studio bg */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at 50% 30%, #1a3358 0%, #0C2340 45%, #07172d 100%)",
+                  }}
+                />
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9321%20copiar-R9iJREd47uVnHpBixTYoO1EHXgF3Pd.jpg"
-                  alt="Samir Tannuri - Consultor em Formulacao Magistral"
+                  alt="Samir Tannuri — consultor tecnico em formulacao dermatologica"
                   fill
-                  className="object-cover object-[center_20%]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-[center_8%] contrast-[1.08] saturate-[1.05]"
+                  sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/90 via-[#0C2340]/20 to-transparent" />
+
+                {/* Cinematic gradient — top vignette for depth, strong navy bottom for caption legibility */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(12,35,64,0.55) 0%, rgba(12,35,64,0) 22%, rgba(12,35,64,0) 50%, rgba(12,35,64,0.85) 80%, rgba(7,23,45,0.98) 100%)",
+                  }}
+                />
+
+                {/* Side vignette — focuses attention on subject */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse 75% 90% at center 35%, transparent 50%, rgba(7,23,45,0.55) 100%)",
+                  }}
+                />
 
                 {/* Image caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
-                      <Play className="w-4 h-4 text-white fill-white" />
-                    </div>
-                    <span className="text-[11px] tracking-[2px] uppercase font-bold text-white/80">
-                      Consultoria tecnica · Pratica industrial real
+                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-7">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="h-px w-8 bg-[#B8783D]" />
+                    <span className="eyebrow text-[#d4a574]">
+                      Pratica industrial · Bancada documentada
                     </span>
                   </div>
-                  <p className="text-white font-medium text-lg leading-snug max-w-[320px]">
-                    Samir Tannuri — tecnologia magistral aplicada
+                  <p className="font-serif text-white text-[clamp(20px,2.4vw,26px)] leading-[1.18] max-w-[380px] tracking-[-0.025em]">
+                    Da literatura a bancada — formulacao que sustenta posicionamento clinico.
                   </p>
                 </div>
               </div>
@@ -239,6 +266,133 @@ export function HeroSection() {
             <div className="absolute -top-3 -right-3 bg-[#B8783D] text-white px-4 py-2 rounded-xl font-bold text-xs tracking-wide shadow-[0_8px_24px_rgba(184,120,61,0.5)] animate-glow">
               Boutique B2B
             </div>
+          </div>
+        </div>
+
+        {/* SOLUCOES IMEDIATAS — pain → solution by segment */}
+        <div
+          className={`mt-20 lg:mt-28 transition-all duration-700 delay-700 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          {/* Section header */}
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-8 pb-6 border-b border-white/10">
+            <div>
+              <span className="inline-flex items-center gap-2 mb-3 text-[12px] font-bold uppercase tracking-[3px] text-[#B8783D]">
+                <span className="h-px w-8 bg-[#B8783D]" />
+                Solucoes imediatas
+              </span>
+              <h2 className="font-serif text-[clamp(28px,3.4vw,42px)] text-white leading-[1.1] tracking-[-0.02em] max-w-[680px]">
+                Tres frentes de entrega — <em className="italic text-[#d4a574]">tudo comeca por um diagnostico tecnico</em>.
+              </h2>
+            </div>
+            <div className="text-right hidden md:block">
+              <div className="text-[11px] uppercase tracking-[2px] text-white/50 font-bold mb-1">
+                Resposta
+              </div>
+              <div className="text-white text-[15px] font-semibold">
+                Em 48h apos diagnostico
+              </div>
+            </div>
+          </div>
+
+          {/* 3 segment cards */}
+          <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+            {[
+              {
+                num: "01",
+                accent: "#B8783D",
+                segment: "Magistrais",
+                pain: "Portfolio que disputa preco e copia o vizinho.",
+                solution: "Formulas autorais validadas em bancada e narrativa tecnica que justifica margem.",
+                deliverables: ["Linha autoral exclusiva", "Protocolos diferenciados", "Argumentacao para prescritor"],
+              },
+              {
+                num: "02",
+                accent: "#0db5c8",
+                segment: "Industriais",
+                pain: "Time-to-market longo, claims fracos, escala inseguranca.",
+                solution: "Prototipos com sensorial refinado, claims defensaveis e suporte tecnico ate a escala.",
+                deliverables: ["Prototipos funcionais", "Claims com lastro cientifico", "Suporte ao up-scale"],
+              },
+              {
+                num: "03",
+                accent: "#d4a574",
+                segment: "Educacionais",
+                pain: "Equipe sem fluencia tecnica trava todo o pipeline.",
+                solution: "Treinamento hands-on derivado de pratica industrial real — nao teoria de manual.",
+                deliverables: ["Capacitacao in loco", "Cursos para magistrais", "Aulas em MBAs e congressos"],
+              },
+            ].map((card) => (
+              <div
+                key={card.num}
+                className="group relative bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[var(--accent)]/40 p-7 lg:p-8 transition-all duration-300 hover:translate-y-[-4px]"
+                style={{ ["--accent" as string]: card.accent } as React.CSSProperties}
+              >
+                {/* Number + segment label */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-serif text-[44px] leading-none text-white/15 group-hover:text-white/25 transition-colors">
+                    {card.num}
+                  </span>
+                  <span
+                    className="text-[11px] font-bold uppercase tracking-[2.5px] px-3 py-1.5 rounded-full"
+                    style={{
+                      color: card.accent,
+                      backgroundColor: `${card.accent}15`,
+                      border: `1px solid ${card.accent}40`,
+                    }}
+                  >
+                    {card.segment}
+                  </span>
+                </div>
+
+                {/* Pain */}
+                <div className="mb-5">
+                  <div className="text-[10px] font-bold uppercase tracking-[2px] text-white/40 mb-2">
+                    Dor
+                  </div>
+                  <p className="text-[16px] text-white/70 leading-[1.45] line-through decoration-white/20 decoration-1">
+                    {card.pain}
+                  </p>
+                </div>
+
+                {/* Solution */}
+                <div className="mb-6">
+                  <div
+                    className="text-[10px] font-bold uppercase tracking-[2px] mb-2"
+                    style={{ color: card.accent }}
+                  >
+                    Solucao
+                  </div>
+                  <p className="font-serif text-[19px] lg:text-[20px] text-white leading-[1.3] tracking-[-0.015em]">
+                    {card.solution}
+                  </p>
+                </div>
+
+                {/* Divider */}
+                <div
+                  className="h-px w-10 mb-5"
+                  style={{ backgroundColor: card.accent, opacity: 0.5 }}
+                />
+
+                {/* Deliverables */}
+                <ul className="space-y-2">
+                  {card.deliverables.map((d) => (
+                    <li
+                      key={d}
+                      className="flex items-center gap-2.5 text-[14px] text-white/85 font-medium"
+                    >
+                      <Check
+                        className="w-[15px] h-[15px] shrink-0"
+                        style={{ color: card.accent }}
+                        strokeWidth={2.5}
+                      />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
