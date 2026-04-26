@@ -44,9 +44,9 @@ export function HomeDifferentiation() {
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#0C2340] leading-[1.1] tracking-tight mb-6 max-w-[800px] mx-auto">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#0C2340] leading-[1.05] tracking-[-0.02em] mb-6 max-w-[820px] mx-auto">
             Sua marca tem ativos bons, mas{" "}
-            <em className="italic text-[#dc2626]">nao tem narrativa tecnica que converta?</em>
+            <em className="italic text-[#B8783D]">nao tem narrativa tecnica que converta?</em>
           </h2>
 
           <p className="text-lg text-[#475569] leading-[1.7] max-w-[650px] mx-auto">
@@ -54,45 +54,57 @@ export function HomeDifferentiation() {
           </p>
         </div>
 
-        {/* Comparison grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-14">
-          {/* BAD column */}
-          <div className="bg-white rounded-2xl border border-[#fecaca]/50 overflow-hidden">
-            <div className="bg-[#fef2f2] px-6 py-4 border-b border-[#fecaca]/30">
-              <div className="flex items-center gap-2">
-                <X className="w-5 h-5 text-[#dc2626]" />
-                <span className="font-semibold text-[#991b1b]">Abordagem comum</span>
+        {/* Comparison grid — brand-harmonized: muted slate vs brand navy */}
+        <div className="grid md:grid-cols-2 gap-5 lg:gap-6 mb-14">
+          {/* BAD column — neutral slate with subtle warning */}
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-[0_4px_20px_rgba(15,23,42,0.04)]">
+            <div className="bg-slate-50 px-7 py-5 border-b border-slate-200/70">
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center">
+                  <X className="w-4 h-4 text-slate-600" strokeWidth={2.5} />
+                </div>
+                <span className="font-bold text-slate-700 text-[15px] tracking-tight">
+                  Abordagem comum
+                </span>
               </div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-5 lg:p-6 space-y-2.5">
               {problems.map((p, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 p-4 bg-[#fef2f2]/50 rounded-xl border border-[#fecaca]/20"
+                  className="flex items-start gap-3 px-4 py-3.5 rounded-xl bg-slate-50/60"
                 >
-                  <X className="w-4 h-4 text-[#dc2626] mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-[#7f1d1d]">{p.bad}</span>
+                  <X className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" strokeWidth={2.5} />
+                  <span className="text-[14px] leading-snug text-slate-600 font-medium">
+                    {p.bad}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* GOOD column */}
-          <div className="bg-white rounded-2xl border border-[#bbf7d0]/50 overflow-hidden">
-            <div className="bg-[#f0fdf4] px-6 py-4 border-b border-[#bbf7d0]/30">
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#16a34a]" />
-                <span className="font-semibold text-[#166534]">Metodo ST Farma</span>
+          {/* GOOD column — brand navy + copper accent */}
+          <div className="bg-white rounded-2xl border-2 border-[#B8783D]/25 overflow-hidden shadow-[0_8px_30px_rgba(12,35,64,0.10)]">
+            <div className="bg-gradient-to-r from-[#0C2340] to-[#0a1a33] px-7 py-5 border-b border-[#0C2340]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-full bg-[#B8783D] flex items-center justify-center">
+                  <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                </div>
+                <span className="font-bold text-white text-[15px] tracking-tight">
+                  Metodo ST Farma
+                </span>
               </div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-5 lg:p-6 space-y-2.5">
               {problems.map((p, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 p-4 bg-[#f0fdf4]/50 rounded-xl border border-[#bbf7d0]/20"
+                  className="flex items-start gap-3 px-4 py-3.5 rounded-xl bg-[#B8783D]/[0.04] border border-[#B8783D]/15"
                 >
-                  <Check className="w-4 h-4 text-[#16a34a] mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-[#166534]">{p.good}</span>
+                  <Check className="w-4 h-4 text-[#B8783D] mt-0.5 flex-shrink-0" strokeWidth={3} />
+                  <span className="text-[14px] leading-snug text-[#0C2340] font-semibold">
+                    {p.good}
+                  </span>
                 </div>
               ))}
             </div>

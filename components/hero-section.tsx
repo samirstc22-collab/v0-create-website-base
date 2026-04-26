@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { ArrowRight, Play, Check, Sparkles } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -86,26 +86,29 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           {/* LEFT — Editorial column */}
           <div className="text-center lg:text-left">
-            {/* Eyebrow — clinical-commercial authority */}
+            {/* Eyebrow — short, calm, authoritative */}
             <div
               className={`mb-6 transition-all duration-700 delay-150 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-base md:text-[17px] font-semibold leading-snug max-w-[640px]">
-                Estrategias formulativas e protocolos dermatologicos orientados por evidencia — para gerar diferenciacao tecnica, valor percebido e performance clinica.
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B8783D]/15 border border-[#B8783D]/30 text-[11px] font-bold uppercase tracking-[2.5px] text-[#d4a574]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8783D]" />
+                Consultoria tecnica em formulacao
               </span>
             </div>
 
-            {/* Main headline — pain point focused */}
+            {/* Main headline — service description, premium scale */}
             <h1
-              className={`font-serif font-normal text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-1.5px] text-white mb-8 transition-all duration-700 delay-200 ${
+              className={`font-serif font-normal text-[clamp(40px,5.8vw,72px)] leading-[1.02] tracking-[-1.8px] text-white mb-7 transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Sua farmacia vende{" "}
+              Da literatura a bancada,
+              <br />
+              da bancada ao{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">formulas comuns</em>
+                <em className="italic text-[#B8783D]">mercado</em>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="8"
@@ -122,19 +125,19 @@ export function HeroSection() {
                   />
                 </svg>
               </span>
-              {" "}e disputa preco?
+              .
             </h1>
 
             {/* Subheadline — outcome-oriented, clinical authority */}
             <p
-              className={`text-[17px] md:text-lg text-white/75 leading-[1.75] max-w-[58ch] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
+              className={`text-[17px] md:text-lg text-white/80 leading-[1.7] max-w-[56ch] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Seis anos coordenando P&D no{" "}
-              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>,{" "}
-              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> em consultoria tecnica e{" "}
-              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>. Essa pratica industrial vira protocolo dentro da sua operacao — convertendo bancada em diferenciacao competitiva, com seguranca regulatoria e evidencia clinica documentada.
+              Desenvolvo <strong className="text-white font-semibold">formulas autorais</strong>,{" "}
+              <strong className="text-white font-semibold">protocolos clinicos</strong> e{" "}
+              <strong className="text-white font-semibold">estrategias dermatologicas orientadas por evidencia</strong>{" "}
+              — para farmacias magistrais, marcas proprias e prescritores que precisam diferenciar tecnicamente, escalar com seguranca e gerar valor percebido real.
             </p>
 
             {/* CTA row — action-oriented buttons */}
@@ -188,29 +191,55 @@ export function HeroSection() {
                 mounted ? "animate-fade-in-up" : "opacity-0"
               }`}
             >
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden">
+              {/* Image — tight portrait crop */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#0a1a33]">
+                {/* Subtle navy ground layer behind the portrait — extends the studio bg */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at 50% 30%, #1a3358 0%, #0C2340 45%, #07172d 100%)",
+                  }}
+                />
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9321%20copiar-R9iJREd47uVnHpBixTYoO1EHXgF3Pd.jpg"
-                  alt="Samir Tannuri - Consultor em Formulacao Magistral"
+                  alt="Samir Tannuri — consultor tecnico em formulacao dermatologica"
                   fill
-                  className="object-cover object-[center_20%]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-[center_8%] contrast-[1.08] saturate-[1.05]"
+                  sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/90 via-[#0C2340]/20 to-transparent" />
+
+                {/* Cinematic gradient — top vignette for depth, strong navy bottom for caption legibility */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(12,35,64,0.55) 0%, rgba(12,35,64,0) 22%, rgba(12,35,64,0) 50%, rgba(12,35,64,0.85) 80%, rgba(7,23,45,0.98) 100%)",
+                  }}
+                />
+
+                {/* Side vignette — focuses attention on subject */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse 75% 90% at center 35%, transparent 50%, rgba(7,23,45,0.55) 100%)",
+                  }}
+                />
 
                 {/* Image caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
-                      <Play className="w-4 h-4 text-white fill-white" />
-                    </div>
-                    <span className="eyebrow text-white/80">
+                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-7">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="h-px w-8 bg-[#B8783D]" />
+                    <span className="eyebrow text-[#d4a574]">
                       Pratica industrial · Bancada documentada
                     </span>
                   </div>
-                  <p className="font-serif text-white text-[22px] leading-[1.25] max-w-[360px] tracking-[-0.02em]">
+                  <p className="font-serif text-white text-[clamp(20px,2.4vw,26px)] leading-[1.18] max-w-[380px] tracking-[-0.025em]">
                     Da literatura a bancada — formulacao que sustenta posicionamento clinico.
                   </p>
                 </div>
