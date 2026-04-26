@@ -88,24 +88,24 @@ export function HeroSection() {
           <div className="text-center lg:text-left">
             {/* Attention-grabbing small headline */}
             <div
-              className={`mb-4 transition-all duration-700 delay-150 ${
+              className={`mb-6 transition-all duration-700 delay-150 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-lg md:text-xl font-bold tracking-wide">
-                Inovacao que transforma formulas em resultados
+              <span className="inline-block bg-gradient-to-r from-[#B8783D] to-[#d4a574] bg-clip-text text-transparent text-base md:text-lg font-bold tracking-wide">
+                Transformo evidencia cientifica em formulacoes, protocolos e estrategias dermatologicas
               </span>
             </div>
 
-            {/* Main headline */}
+            {/* Main headline — pain point focused */}
             <h1
-              className={`font-serif font-normal text-[clamp(36px,5.5vw,64px)] leading-[1.08] tracking-[-1.5px] text-white mb-6 transition-all duration-700 delay-200 ${
+              className={`font-serif font-normal text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-1.5px] text-white mb-8 transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Consultoria Tecnica em Formulacao{" "}
+              Sua farmacia vende{" "}
               <span className="relative inline-block">
-                <em className="italic text-[#B8783D]">para quem busca excelencia</em>
+                <em className="italic text-[#B8783D]">formulas comuns</em>
                 <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="8"
@@ -122,25 +122,24 @@ export function HeroSection() {
                   />
                 </svg>
               </span>
-              .
+              {" "}e disputa preco?
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline — transformation promise */}
             <p
-              className={`text-lg md:text-xl text-white/70 leading-[1.7] max-w-[580px] mx-auto lg:mx-0 mb-8 transition-all duration-700 delay-300 ${
+              className={`text-lg md:text-xl text-white/75 leading-[1.8] max-w-[620px] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               Seis anos coordenando P&D no{" "}
-              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>,{" "}
-              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> tecnicamente e{" "}
-              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>.
-              Hoje, essa experiencia vira consultoria sob medida para a sua operacao — industrial ou magistral.
+              <strong className="text-white font-semibold">maior grupo magistral do Brasil</strong>.{" "}
+              <strong className="text-white font-semibold">500+ farmacias atendidas</strong> tecnicamente.{" "}
+              <strong className="text-white font-semibold">1.000+ formuladores treinados</strong>. Agora levo essa experiencia para dentro da sua operacao — transformando formulas genericas em diferenciacoes competitivas com seguranca e evidencia clinica.
             </p>
 
-            {/* CTA row */}
+            {/* CTA row — action-oriented buttons */}
             <div
-              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 transition-all duration-700 delay-400 ${
+              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 transition-all duration-700 delay-400 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -148,28 +147,27 @@ export function HeroSection() {
                 href="/consultoria"
                 className="group inline-flex items-center justify-center gap-3 bg-[#B8783D] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#a66a32] transition-all shadow-[0_8px_30px_rgba(184,120,61,0.4)] hover:shadow-[0_12px_40px_rgba(184,120,61,0.5)] hover:translate-y-[-2px]"
               >
-                Agendar diagnostico tecnico
+                Solicitar diagnostico do projeto
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/formulator-ai"
+                href="/consultoria#tiered-offers"
                 className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border-2 border-white/20 text-white px-6 py-4 rounded-xl font-semibold text-base tracking-wide hover:border-[#B8783D]/60 hover:bg-[#B8783D]/10 transition-all"
               >
-                <Sparkles className="w-5 h-5 text-[#2dd4bf]" />
-                Conhecer os servicos
+                Ver modelos de consultoria
               </Link>
             </div>
 
-            {/* Trust bullets */}
+            {/* Trust bullets — specific value propositions */}
             <div
-              className={`flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm text-white/60 transition-all duration-700 delay-500 ${
+              className={`flex flex-wrap gap-x-6 gap-y-3 justify-center lg:justify-start text-sm text-white/70 transition-all duration-700 delay-500 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               {[
-                "6 anos de P&D no maior grupo magistral",
-                "500+ farmacias atendidas",
-                "1.000+ formuladores treinados",
+                "Transformo evidencia em diferenciacao",
+                "Seguranca clinica comprovada",
+                "Operacional desde dia 1",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#10b981]" />
@@ -209,11 +207,11 @@ export function HeroSection() {
                       <Play className="w-4 h-4 text-white fill-white" />
                     </div>
                     <span className="text-[11px] tracking-[2px] uppercase font-bold text-white/80">
-                      Consultoria tecnica · Pratica industrial real
+                      Transformacao clinica · Resultados comprovados
                     </span>
                   </div>
-                  <p className="text-white font-medium text-lg leading-snug max-w-[320px]">
-                    Samir Tannuri — tecnologia magistral aplicada
+                  <p className="text-white font-medium text-lg leading-snug max-w-[340px]">
+                    Quando a ciencia encontra a formulacao — experiencia que gera valor real
                   </p>
                 </div>
               </div>
