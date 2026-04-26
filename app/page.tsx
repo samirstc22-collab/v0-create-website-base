@@ -16,15 +16,21 @@ export default function Home() {
     <main className="bg-white scroll-smooth">
       <Navbar />
       <HeroSection />
-      <IALabBanner />
-      <InstagramBanner />
-      <ConsultoriaSection />
+      {/* 1. Prova de autoridade - numeros que validam */}
       <BigStats />
+      {/* 2. Dores + Solucao comparativa */}
       <HomeDifferentiation />
+      {/* 3. Ofertas explicitas por segmento */}
+      <ConsultoriaSection />
+      {/* 4. Tecnologia / Inovacao */}
+      <IALabBanner />
       <HomeLabPro />
       <HomeInnovations />
       <VetDermKnowledge />
+      {/* 5. Autoridade final + CTA */}
       <HomeAuthority />
+      {/* 6. Social (menos prioritario) */}
+      <InstagramBanner />
       <Footer />
     </main>
   )

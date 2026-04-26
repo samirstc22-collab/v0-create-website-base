@@ -46,14 +46,15 @@ export function ConsultoriaSection() {
       <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-[800px] mx-auto text-center mb-16">
+          <span className="inline-block text-[11px] font-bold tracking-[3px] uppercase text-[#B8783D] mb-4">
+            Solucoes sob medida
+          </span>
           <h2 className="font-serif text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-[-1px] text-[#0C2340] mb-6">
-            Nao desenvolvo apenas formulas.{" "}
-            <span className="text-[#B8783D]">Desenvolvo vantagem competitiva.</span>
+            Da literatura ao posicionamento:{" "}
+            <span className="text-[#B8783D]">solucoes exclusivas para quem precisa inovar</span>
           </h2>
           <p className="text-lg md:text-xl text-[#475569] leading-[1.7]">
-            Cada projeto e tratado como unico porque cada operacao tem desafios especificos.
-            A consultoria conecta ciencia, mercado e execucao — para que voce entregue resultados,
-            nao apenas produtos.
+            Minha formacao em pesquisa, desenvolvimento laboratorial, docencia e consultoria me permite unir rigor cientifico e aplicabilidade mercadologica na criacao de solucoes dermatologicas de alto valor.
           </p>
         </div>
 
@@ -119,17 +120,17 @@ export function ConsultoriaSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/portfolio-inovacoes"
+            href="/consultoria"
             className="group inline-flex items-center justify-center gap-3 bg-[#0C2340] text-white px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#0a1a33] transition-all shadow-[0_8px_30px_rgba(12,35,64,0.25)] hover:shadow-[0_12px_40px_rgba(12,35,64,0.35)] hover:translate-y-[-2px]"
           >
-            Conhecer o portfolio de inovacoes
+            Solicitar diagnostico do projeto
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="/contato?assunto=Projeto%20de%20Consultoria"
+            href="/contato?assunto=Consultoria%20Estrategica"
             className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-[#B8783D] text-[#B8783D] px-8 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#B8783D] hover:text-white transition-all"
           >
-            Falar sobre um projeto
+            Agendar consultoria estrategica
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

@@ -45,13 +45,12 @@ export function HomeDifferentiation() {
           </div>
 
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#0C2340] leading-[1.1] tracking-tight mb-6 max-w-[800px] mx-auto">
-            A maioria dos portfolios falha por{" "}
-            <em className="italic text-[#dc2626]">falta de criterio tecnico</em>
+            Sua marca tem ativos bons, mas{" "}
+            <em className="italic text-[#dc2626]">nao tem narrativa tecnica que converta?</em>
           </h2>
 
-          <p className="text-lg text-[#475569] leading-[1.7] max-w-[600px] mx-auto">
-            Enquanto o mercado replica receitas sem fundamento, a ST Farma entrega consultoria
-            tecnica documentada com resultado em bancada.
+          <p className="text-lg text-[#475569] leading-[1.7] max-w-[650px] mx-auto">
+            Combino ciencia translacional, formulacao magistral e raciocinio de mercado para criar solucoes dermatologicas que nao nascem prontas em catalogo.
           </p>
         </div>
 

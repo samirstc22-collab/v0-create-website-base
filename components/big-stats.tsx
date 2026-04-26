@@ -18,10 +18,11 @@ export function BigStats() {
         {/* Section header */}
         <div className="text-center mb-14">
           <span className="inline-block text-[11px] font-bold tracking-[3px] uppercase text-[#B8783D] mb-3">
-            A experiencia por tras do metodo
+            Por que confiar
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-[#0C2340] tracking-tight">
-            Pratica industrial real, <em className="italic text-[#B8783D]">nao teoria de sala de aula</em>
+          <h2 className="font-serif text-3xl md:text-4xl text-[#0C2340] tracking-tight max-w-[700px] mx-auto">
+            Experiencia que se traduz em{" "}
+            <em className="italic text-[#B8783D]">resultados para sua operacao</em>
           </h2>
         </div>
 
