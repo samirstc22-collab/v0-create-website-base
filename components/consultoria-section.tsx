@@ -5,31 +5,28 @@ import { ArrowRight, Beaker, Building2, Stethoscope } from "lucide-react"
 
 const cards = [
   {
-    label: "Para farmacias magistrais",
-    title: "Saia da disputa por preco",
-    description:
-      "Construa um portfolio exclusivo com formulas autorais, protocolos diferenciados e narrativa tecnica que transforma sua farmacia em referencia regional.",
+    label: "Farmacias magistrais",
+    title: "Saia da disputa por preco.",
+    description: "Portfolio autoral e narrativa tecnica que tira sua farmacia da guerra de margem.",
     icon: Beaker,
     color: "#B8783D",
-    features: ["Formulas autorais validadas", "Protocolos de manipulacao", "Argumentacao tecnica para prescritores"],
+    features: ["Formulas autorais", "Protocolos exclusivos", "Argumentacao para prescritor"],
   },
   {
-    label: "Para industria e marcas proprias",
-    title: "Acelere o time-to-market",
-    description:
-      "Prototipos funcionais com ajuste sensorial refinado, claims embasados em literatura e suporte tecnico do conceito a escala industrial.",
+    label: "Industria e marcas proprias",
+    title: "Acelere o time-to-market.",
+    description: "Do prototipo a escala industrial com sensorial refinado e claims com lastro cientifico.",
     icon: Building2,
     color: "#0db5c8",
-    features: ["Prototipos com sensorial refinado", "Claims com lastro cientifico", "Suporte tecnico para escala"],
+    features: ["Prototipos validados", "Claims defensaveis", "Suporte ate a escala"],
   },
   {
-    label: "Para prescritores e clinicas",
-    title: "Protocolos com evidencia",
-    description:
-      "Protocolos clinicos validados em peelings, regeneracao cutanea, tricologia e dermatologia avancada — com racional tecnico documentado.",
+    label: "Prescritores e clinicas",
+    title: "Protocolos com evidencia.",
+    description: "Peelings, regeneracao, tricologia e dermatologia avancada com racional documentado.",
     icon: Stethoscope,
     color: "#0C2340",
-    features: ["Peelings avancados validados", "Regeneracao cutanea documentada", "Tricologia clinica baseada em evidencia"],
+    features: ["Peelings avancados", "Regeneracao cutanea", "Tricologia clinica"],
   },
 ]
 
@@ -66,50 +63,56 @@ export function ConsultoriaSection() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="group relative bg-white rounded-2xl overflow-hidden border border-[#e5e7eb] shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-all duration-300 hover:translate-y-[-4px]"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-[#e5e7eb] shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(12,35,64,0.14)] transition-all duration-300 hover:translate-y-[-4px] hover:border-[#0C2340]/20 flex flex-col"
             >
               {/* Colored top border */}
               <div
-                className="h-1.5 w-full"
+                className="h-2 w-full"
                 style={{ backgroundColor: card.color }}
               />
 
-              <div className="p-8">
-                {/* Icon */}
-                <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: `${card.color}15` }}
-                >
-                  <card.icon
-                    className="w-7 h-7"
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
+                {/* Icon + segment label inline */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `${card.color}18` }}
+                  >
+                    <card.icon className="w-6 h-6" style={{ color: card.color }} />
+                  </div>
+                  <div
+                    className="eyebrow text-[10px]"
                     style={{ color: card.color }}
-                  />
+                  >
+                    {card.label}
+                  </div>
                 </div>
 
-                {/* Segment label */}
-                <div
-                  className="text-[10px] font-bold tracking-[2px] uppercase mb-2"
-                  style={{ color: card.color }}
-                >
-                  {card.label}
-                </div>
-
-                {/* Title */}
-                <h3 className="font-serif text-2xl text-[#0C2340] mb-3 leading-tight">
+                {/* Title — larger, higher contrast */}
+                <h3 className="font-serif text-[clamp(28px,3.2vw,38px)] text-[#0C2340] leading-[1.05] tracking-[-0.025em] mb-4">
                   {card.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-[#64748b] leading-relaxed mb-6">
+                {/* Description — concise, navy body for contrast */}
+                <p className="text-[15px] text-[#0C2340]/75 leading-[1.55] mb-7 prose-measure">
                   {card.description}
                 </p>
 
-                {/* Features */}
-                <ul className="space-y-2">
+                {/* Divider */}
+                <div
+                  className="h-px w-12 mb-5"
+                  style={{ backgroundColor: card.color, opacity: 0.4 }}
+                />
+
+                {/* Features — stronger contrast, semibold */}
+                <ul className="space-y-2.5 mt-auto">
                   {card.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-[#475569]">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2.5 text-[14px] font-semibold text-[#0C2340]"
+                    >
                       <div
-                        className="w-1.5 h-1.5 rounded-full"
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
                         style={{ backgroundColor: card.color }}
                       />
                       {feature}
