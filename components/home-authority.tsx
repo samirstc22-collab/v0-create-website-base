@@ -143,7 +143,7 @@ export function HomeAuthority() {
             <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/30 via-transparent to-[#2dd4bf]/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-Fh12Umo5MunvDT3pxP0ePdyCtwVaRC.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-fVKNBWLv6ZALcCRwbeg0uBTc9mEPEA.jpg"
                 alt="Samir Tannuri — Consultor em Formulação Magistral"
                 width={1200}
                 height={1500}
@@ -344,6 +344,69 @@ export function HomeAuthority() {
             </div>
           </div>
 
+          {/* Palestras / Speaker — banner imersivo de autoridade em palco */}
+          <div className="relative mb-12 overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+            <div className="grid lg:grid-cols-[1.15fr_1fr]">
+              {/* Imagem em palco */}
+              <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[440px] overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4728-hwaQ3hZlFj8DiEadtJBjOzAHQz2S9t.jpg"
+                  alt="Samir Tannuri palestrando em congresso internacional"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                />
+                {/* Gradiente para integrar com a paleta */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0a1628] lg:bg-gradient-to-r lg:from-transparent lg:via-[#0a1628]/30 lg:to-[#0a1628]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/85 via-transparent to-transparent lg:hidden" />
+
+                {/* Badge "ao vivo" sutil */}
+                <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-[#e8a87c]/40 bg-[#0a1628]/70 px-4 py-2 backdrop-blur-md">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#e8a87c]" />
+                  <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
+                    No palco · Congressos
+                  </span>
+                </div>
+              </div>
+
+              {/* Conteudo lateral */}
+              <div className="relative flex flex-col justify-center gap-6 bg-gradient-to-br from-[#0a1628] to-[#0d1d35] p-8 md:p-12">
+                <div>
+                  <div className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
+                    <Mic2 className="h-3.5 w-3.5" />
+                    Palestrante de referência
+                  </div>
+                  <h3 className="font-serif text-3xl leading-[1.1] text-white md:text-[40px]">
+                    Da bancada{" "}
+                    <em className="text-[#e8a87c]">para o palco.</em>
+                  </h3>
+                </div>
+
+                <p className="text-base leading-relaxed text-white/75">
+                  Mais de <strong className="text-white">7 palestras internacionais</strong> em
+                  congressos como o 1º Simpósio de Peelings Químicos do Brasil. Conteúdo técnico
+                  apresentado para milhares de farmacêuticos, médicos e formuladores.
+                </p>
+
+                {/* Mini-stats em linha */}
+                <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                  <div>
+                    <div className="font-serif text-3xl text-white md:text-4xl">7+</div>
+                    <div className="mt-1 text-[11px] font-semibold uppercase tracking-[1.5px] text-white/55">
+                      Palcos internacionais
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-serif text-3xl text-white md:text-4xl">1.000+</div>
+                    <div className="mt-1 text-[11px] font-semibold uppercase tracking-[1.5px] text-white/55">
+                      Profissionais formados
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {bigNumbers.map((item) => {
               const Icon = item.icon
@@ -462,7 +525,7 @@ export function HomeAuthority() {
               <div className="hidden shrink-0 lg:block">
                 <div className="relative h-[180px] w-[180px] overflow-hidden rounded-full border-4 border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0083%20copiar-i1zHpOYJQutLzHKphs5z9JTmuZimeK.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0083%20copiar-e5k6wyER1qKwoupKy8UkcFUhl5K2ox.jpg"
                     alt="Samir Tannuri"
                     fill
                     className="object-cover object-[center_20%]"
