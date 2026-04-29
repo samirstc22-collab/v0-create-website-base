@@ -396,23 +396,6 @@ export function Navbar() {
             <Instagram className="w-5 h-5" />
           </a>
 
-          {/* AI Button - Leva a IA na sua */}
-          <Link
-            href="/leva-ia"
-            className={`ml-2 flex items-center gap-2 px-4 py-2.5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-200 ${
-              isScrolled
-                ? "text-[#4a9eff] bg-[#4a9eff]/10 hover:bg-[#4a9eff]/15 border border-[#4a9eff]/20"
-                : "text-[#7eb8ff] bg-white/5 hover:bg-white/10 border border-white/10"
-            }`}
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#4a9eff]" />
-            </span>
-            <Sparkles className="w-4 h-4" />
-            Leva a IA
-          </Link>
-
           {/* Consultoria CTA */}
           <Link
             href="/consultoria"
@@ -501,20 +484,6 @@ export function Navbar() {
               <Store className="w-5 h-5" />
               Loja
               <ChevronRight className="w-4 h-4 ml-auto text-[#94a3b8]" />
-            </Link>
-            
-            {/* AI Button Mobile */}
-            <Link
-              href="/leva-ia"
-              className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-semibold bg-[#4a9eff]/10 text-[#4a9eff] border border-[#4a9eff]/20"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Sparkles className="w-5 h-5" />
-              Leva a IA na sua
-              <span className="ml-auto relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a9eff] opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#4a9eff]" />
-              </span>
             </Link>
             
             {/* Instagram Mobile */}

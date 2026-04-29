@@ -275,10 +275,10 @@ export function IALabBanner() {
 
             {/* Go to page CTA */}
             <Link
-              href="/formulator-ai"
+              href="/ia"
               className="group inline-flex items-center gap-2 text-[#4a9eff] hover:text-white text-sm font-semibold transition-colors border-b border-[#4a9eff]/30 hover:border-white/50 pb-0.5"
             >
-              Conhecer o STAi Formulator LAB completo
+              Conhecer o iA Labs completo
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

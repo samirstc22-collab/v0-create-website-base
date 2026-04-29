@@ -104,11 +104,11 @@ export function HomeHeroLight() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/formulator-ai"
+                href="/ia"
                 className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-[#0C2340]/15 text-[#0C2340] px-6 py-4 rounded-xl font-semibold text-base tracking-wide hover:border-[#B8783D]/40 hover:bg-[#B8783D]/5 transition-all"
               >
                 <Sparkles className="w-5 h-5 text-[#4a9eff]" />
-                Conhecer os servicos
+                Conhecer o iA Labs
               </Link>
             </div>
 

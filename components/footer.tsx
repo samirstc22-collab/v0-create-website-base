@@ -127,9 +127,9 @@ export function Footer() {
             <Link href="/consultoria" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Consultoria
             </Link>
-            <Link href="/formulator-ai" className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#4a9eff] transition-colors">
+            <Link href="/ia" className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#4a9eff] transition-colors">
               <Sparkles className="w-3.5 h-3.5" />
-              Formulator AI
+              iA Labs
             </Link>
             <Link href="/lp" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Lab Pro
