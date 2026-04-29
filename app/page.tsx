@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { HeroPremium } from "@/components/hero-premium"
 import { FeaturedProducts } from "@/components/featured-products"
 import { BigStats } from "@/components/big-stats"
+import { TeachingShowcase } from "@/components/teaching-showcase"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { LeadCaptureSection } from "@/components/lead-capture-section"
 import { LeadQuiz } from "@/components/lead-quiz"
@@ -18,6 +19,8 @@ export default function Home() {
       <FeaturedProducts />
       {/* 3. PROVA RAPIDA — numeros que validam autoridade */}
       <BigStats />
+      {/* 3.5 ENSINO & PALESTRAS — autoridade visual em cena (Samir lecionando) */}
+      <TeachingShowcase />
       {/* 4. DIFERENCIACAO — problema + implicacao */}
       <HomeDifferentiation />
       {/* 5. CAPTACAO DE LEADS — formulario Clube da Formula */}
