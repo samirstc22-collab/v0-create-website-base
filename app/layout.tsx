@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Inter, Instrument_Serif, Playfair_Display, JetBrains_Mono } from "next/font/google"
+import { Inter, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { NewsletterPopup } from "@/components/newsletter-popup"
@@ -9,7 +9,7 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 })
 
 const instrumentSerif = Instrument_Serif({
@@ -17,23 +17,6 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
   variable: "--font-instrument",
-  display: "swap",
-})
-
-// Tannuri Brand System — Display & Editorial
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-playfair",
-  display: "swap",
-})
-
-// Tannuri Brand System — Mono / Eyebrow / Technical
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-jetbrains",
   display: "swap",
 })
 
@@ -61,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${instrumentSerif.variable} ${playfair.variable} ${jetbrains.variable} bg-background`}>
+    <html lang="pt-BR" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body className="font-sans antialiased bg-white text-body overflow-x-hidden">
         {children}
         <NewsletterPopup />
