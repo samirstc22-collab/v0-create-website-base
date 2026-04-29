@@ -4,42 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Primary Navy System - Elegant & Deep */
-  --navy-900: #0C2340;
-  --navy-800: #0f2d4d;
-  --navy-700: #153a5f;
-  --navy-600: #1a4672;
-  --navy-500: #2a5a8a;
-  --navy-400: #4a7ab0;
-  --navy-300: #7aa0cc;
-  --navy-200: #b3c9e0;
-  --navy-100: #e0e9f2;
-  --navy-50: #f0f4f8;
+  /* Midnight Navy System - Profundo e Editorial */
+  --navy-900: #0A1628;
+  --navy-800: #0F1F38;
+  --navy-700: #152544;
+  --navy-600: #1B2A4E;
+  --navy-500: #2a3a64;
+  --navy-400: #4a5a82;
+  --navy-300: #7a86a8;
+  --navy-200: #b3bcd0;
+  --navy-100: #e0e3ec;
+  --navy-50: #F4EDE0;
 
-  /* Copper/Gold Accent System - Warm & Premium */
-  --copper-900: #5c3a1f;
-  --copper-800: #8a5729;
-  --copper-700: #a66a32;
-  --copper-600: #B8783D;
-  --copper-500: #c98f52;
-  --copper-400: #d4a76a;
-  --copper-300: #e0bf8a;
-  --copper-200: #ebd5b0;
-  --copper-100: #f5ecd8;
-  --copper-50: #faf6ef;
+  /* Champagne Gold - Accent principal premium (substitui copper) */
+  --copper-900: #5c4824;
+  --copper-800: #8a6d3a;
+  --copper-700: #a68449;
+  --copper-600: #c9a368;
+  --copper-500: #D4B98C;
+  --copper-400: #e0c89e;
+  --copper-300: #ead7b3;
+  --copper-200: #f0e2c8;
+  --copper-100: #f7eede;
+  --copper-50: #fbf7ef;
 
-  /* Gold Accent */
-  --gold-600: #c9a227;
-  --gold-500: #d4af37;
-  --gold-400: #e0c05c;
-  --gold-300: #ebd380;
+  /* Gold Accent (mantido como warm highlight) */
+  --gold-600: #b8923d;
+  --gold-500: #d4af6a;
+  --gold-400: #e0c089;
+  --gold-300: #ebd3a8;
 
-  /* Teal Accent - Clinical/Tech */
-  --teal-700: #0a6b75;
-  --teal-600: #0a8f9e;
-  --teal-500: #0db5c8;
-  --teal-400: #2dd4bf;
-  --teal-300: #5eead4;
+  /* Sage Mint - accent ciencia/saude/cuidado (substitui teal frio) */
+  --teal-700: #5a7a70;
+  --teal-600: #7d9a8f;
+  --teal-500: #9DBEB1;
+  --teal-400: #b3cfc4;
+  --teal-300: #c9e0d6;
 
   /* Clinical Blue - Tech/AI */
   --blue-600: #2563eb;
