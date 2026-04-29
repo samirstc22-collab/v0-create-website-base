@@ -4,15 +4,13 @@ import { useEffect, useState, Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import { ArrowRight, Check, Instagram, FileText, Award, FlaskConical, Star } from "lucide-react"
+import { ArrowRight, Check, Instagram, Award, FlaskConical, GraduationCap, Microscope } from "lucide-react"
 
-// Carregamento dinamico das moleculas 3D para melhor performance
 const FloatingMolecules = dynamic(
   () => import("./3d/floating-molecules").then((mod) => mod.FloatingMolecules),
   { ssr: false },
 )
 
-// Fundo cinematografico premium em canvas (substitui video pesado)
 const ElegantAuroraBg = dynamic(
   () => import("./elegant-aurora-bg").then((mod) => mod.ElegantAuroraBg),
   { ssr: false },
@@ -26,19 +24,19 @@ export function HeroPremium() {
   }, [])
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050a14]">
-      {/* Aurora cinematografica - cobre, teal, navy fluindo */}
+    <section className="relative min-h-screen overflow-hidden bg-[#02060f]">
+      {/* Aurora cinematografica de fundo */}
       <div className="absolute inset-0 z-0">
         <ElegantAuroraBg />
       </div>
 
-      {/* Overlay escuro forte para contraste maximo do texto */}
+      {/* Overlay vertical de contraste */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,2,8,0.55) 0%, rgba(0,2,8,0.35) 40%, rgba(0,2,8,0.7) 100%)",
+            "linear-gradient(180deg, rgba(0,2,8,0.6) 0%, rgba(0,2,8,0.35) 45%, rgba(0,2,8,0.75) 100%)",
         }}
       />
 
@@ -48,11 +46,11 @@ export function HeroPremium() {
         className="absolute inset-y-0 left-0 w-[65%] z-[2] pointer-events-none hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0,2,8,0.75) 0%, rgba(0,2,8,0.45) 50%, rgba(0,2,8,0) 100%)",
+            "linear-gradient(90deg, rgba(0,2,8,0.85) 0%, rgba(0,2,8,0.5) 50%, rgba(0,2,8,0) 100%)",
         }}
       />
 
-      {/* Moleculas 3D flutuantes */}
+      {/* Moleculas 3D flutuantes (decorativas) */}
       <Suspense fallback={null}>
         <FloatingMolecules />
       </Suspense>
@@ -67,23 +65,13 @@ export function HeroPremium() {
         }}
       />
 
-      {/* Glow radial teal */}
+      {/* Glow atras da foto */}
       <div
         aria-hidden
-        className="absolute bottom-[-5%] left-[5%] w-[700px] h-[700px] rounded-full pointer-events-none z-[6]"
+        className="absolute top-[18%] right-[3%] w-[560px] h-[680px] rounded-full pointer-events-none z-[5]"
         style={{
-          background: "radial-gradient(circle at center, rgba(13,181,200,0.15), transparent 55%)",
-          filter: "blur(80px)",
-        }}
-      />
-
-      {/* Glow atras da foto - mais forte */}
-      <div
-        aria-hidden
-        className="absolute top-[20%] right-[5%] w-[500px] h-[600px] rounded-full pointer-events-none z-[5]"
-        style={{
-          background: "radial-gradient(circle at center, rgba(184,120,61,0.32), transparent 60%)",
-          filter: "blur(60px)",
+          background: "radial-gradient(circle at center, rgba(184,120,61,0.36), transparent 60%)",
+          filter: "blur(70px)",
         }}
       />
 
@@ -98,173 +86,219 @@ export function HeroPremium() {
       />
 
       {/* Conteudo principal */}
-      <div className="relative z-[10] max-w-[1400px] mx-auto px-6 lg:px-10 pt-28 pb-20 lg:pt-36 lg:pb-24">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative z-[10] max-w-[1400px] mx-auto px-6 lg:px-10 pt-28 pb-20 lg:pt-32 lg:pb-24">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Coluna esquerda - Conteudo */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Badges de autoridade premium */}
+            {/* Eyebrow elegante */}
             <div
-              className={`flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-7 transition-all duration-700 ${
+              className={`inline-flex items-center gap-3 mb-7 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              {[
-                { icon: Award, text: "Delegado · In-Cosmetics Paris 2025" },
-                { icon: FileText, text: "Paper Peer-Reviewed" },
-                { icon: Star, text: "+500 Farmacias Atendidas" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-black/55 border border-[#d4a574]/45 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.08)]"
-                >
-                  <item.icon className="w-3.5 h-3.5 text-[#f0c896]" />
-                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[1.5px] text-white">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
+              <span className="h-px w-10 bg-gradient-to-r from-transparent via-[#d4a574] to-[#d4a574]" />
+              <span className="text-[11px] font-bold uppercase tracking-[3.5px] text-[#f0c896]">
+                Samir Tannuri · Pesquisador & Consultor
+              </span>
             </div>
 
-            {/* Frase de impacto principal - mais nitida */}
+            {/* Titulo principal - Cursos & Consultoria de Alto Nivel */}
             <h1
-              className={`font-serif font-normal text-[clamp(38px,5.8vw,76px)] leading-[1.0] tracking-[-2.5px] text-white mb-6 transition-all duration-700 delay-100 ${
+              className={`font-serif font-normal text-[clamp(40px,6vw,80px)] leading-[0.98] tracking-[-3px] text-white mb-6 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
                 textShadow:
-                  "0 2px 4px rgba(0,0,0,0.95), 0 4px 30px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.6)",
+                  "0 2px 4px rgba(0,0,0,0.95), 0 4px 30px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7)",
               }}
             >
-              A ciencia por tras das{" "}
+              Cursos & Consultoria de{" "}
               <span className="relative inline-block">
-                <em className="italic bg-gradient-to-r from-[#d4a574] via-[#B8783D] to-[#d4a574] bg-clip-text text-transparent">
-                  formulas que prescritores
+                <em className="italic bg-gradient-to-r from-[#f0c896] via-[#d4a574] to-[#B8783D] bg-clip-text text-transparent">
+                  alto nivel
                 </em>
-              </span>{" "}
+              </span>
+              <br />
+              para pesquisadores e{" "}
               <span className="relative inline-block">
-                pedem pelo nome
+                consultores
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
-                  height="12"
+                  height="14"
                   viewBox="0 0 200 8"
                   preserveAspectRatio="none"
                   aria-hidden
                 >
                   <path
                     d="M2,5 Q50,2 100,4 T198,3"
-                    stroke="#B8783D"
+                    stroke="#d4a574"
                     strokeWidth="3"
                     fill="none"
-                    opacity="0.85"
+                    opacity="0.9"
                   />
                 </svg>
-              </span>
+              </span>{" "}
+              de formulas
             </h1>
 
-            {/* Subheadline persuasiva com mais contraste */}
+            {/* Subheadline - foco em ciencia e prescritores */}
             <p
-              className={`text-[18px] md:text-[22px] text-white leading-[1.55] max-w-[620px] mx-auto lg:mx-0 mb-9 font-normal transition-all duration-700 delay-200 ${
+              className={`text-[18px] md:text-[21px] text-white leading-[1.55] max-w-[640px] mx-auto lg:mx-0 mb-9 font-normal transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
-                textShadow:
-                  "0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.7)",
+                textShadow: "0 2px 4px rgba(0,0,0,0.92), 0 4px 20px rgba(0,0,0,0.7)",
               }}
             >
-              Desenvolvo{" "}
-              <strong className="text-[#d4a574] font-bold">formulacoes autorais</strong> e{" "}
-              <strong className="text-[#d4a574] font-bold">protocolos validados</strong> que transformam
-              farmacias magistrais em referencias tecnicas — saindo da disputa por preco e construindo um portfolio que prescritores reconhecem e indicam.
+              Formacao avancada e mentoria estrategica para quem desenvolve{" "}
+              <strong className="text-[#f0c896] font-bold">formulas autorais com base cientifica</strong>{" "}
+              — as mesmas que prescritores reconhecem, indicam e pedem pelo nome.
             </p>
 
-            {/* CTAs principais - mais destacados */}
+            {/* Stat row destacada - 500 Farmacias */}
             <div
-              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 transition-all duration-700 delay-300 ${
+              className={`grid grid-cols-3 gap-4 max-w-[640px] mx-auto lg:mx-0 mb-10 transition-all duration-700 delay-250 ${
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+            >
+              {[
+                { value: "500+", label: "Farmacias atendidas", icon: FlaskConical },
+                { value: "1.000+", label: "Profissionais formados", icon: GraduationCap },
+                { value: "Peer", label: "Reviewed em ciencia", icon: Microscope },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="relative bg-black/55 border border-[#d4a574]/35 rounded-2xl px-4 py-4 backdrop-blur-md text-center lg:text-left shadow-[0_8px_28px_rgba(0,0,0,0.5)]"
+                >
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4a574]/60 to-transparent" />
+                  <div className="flex items-center gap-2 justify-center lg:justify-start mb-1.5">
+                    <stat.icon className="w-3.5 h-3.5 text-[#f0c896]" />
+                    <div className="font-serif text-[26px] md:text-[30px] leading-none text-white font-bold tracking-tight">
+                      {stat.value}
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-white/85 uppercase tracking-[1.5px] font-semibold">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAs principais - Cursos e Diagnostico */}
+            <div
+              className={`flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-8 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <Link
-                href="/contato"
+                href="/cursos"
                 className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#B8783D] via-[#d4a574] to-[#B8783D] text-white px-9 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:shadow-[0_0_50px_rgba(184,120,61,0.7)] transition-all shadow-[0_10px_40px_rgba(184,120,61,0.5)] hover:translate-y-[-3px] overflow-hidden"
                 style={{ backgroundSize: "200% 100%" }}
               >
-                <FlaskConical className="w-5 h-5" />
-                <span className="relative z-[2]">Diagnostico Tecnico Personalizado</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-[2]" />
+                <GraduationCap className="w-5 h-5" />
+                <span>Ver Cursos</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
+              <Link
+                href="/contato"
+                className="group inline-flex items-center justify-center gap-3 bg-transparent text-white px-8 py-5 rounded-2xl font-bold text-[16px] tracking-wide border-2 border-white/30 hover:border-white/70 hover:bg-white/10 hover:translate-y-[-3px] transition-all backdrop-blur-md"
+              >
+                <span>Diagnostico Tecnico</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              {/* Instagram discreto - apenas icone redondo */}
               <Link
                 href="https://instagram.com/samir_farma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#833AB4] via-[#C13584] to-[#E1306C] text-white px-8 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:opacity-95 hover:translate-y-[-3px] transition-all shadow-[0_10px_30px_rgba(193,53,132,0.45)]"
+                aria-label="Instagram @samir_farma"
+                className="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/8 border border-white/20 hover:bg-white/15 hover:border-white/40 hover:scale-110 transition-all"
               >
-                <Instagram className="w-7 h-7" />
-                <span>@samir_farma</span>
+                <Instagram className="w-4 h-4 text-white/85 group-hover:text-white" />
               </Link>
             </div>
 
             {/* Trust bullets nitidos */}
             <div
-              className={`flex flex-wrap gap-x-7 gap-y-3 justify-center lg:justify-start text-[14px] font-semibold transition-all duration-700 delay-400 ${
+              className={`flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-[13px] font-semibold transition-all duration-700 delay-400 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               {[
-                "+1.000 profissionais formados",
-                "6 anos liderando P&D",
-                "Publicacoes peer-reviewed",
+                { icon: Award, text: "Delegado · In-Cosmetics Paris 2025" },
+                { icon: Microscope, text: "Paper Peer-Reviewed" },
+                { icon: GraduationCap, text: "Mestre em P&D Cosmetico" },
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-white">
-                  <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center">
-                    <Check className="w-3 h-3 text-emerald-400" strokeWidth={3} />
-                  </div>
-                  <span style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}>{item}</span>
+                <div key={item.text} className="flex items-center gap-2 text-white">
+                  <item.icon className="w-4 h-4 text-[#f0c896]" />
+                  <span style={{ textShadow: "0 1px 10px rgba(0,0,0,0.7)" }}>{item.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Coluna direita - Foto grande e impactante */}
+          {/* Coluna direita - Foto de terno (pesquisador/consultor) */}
           <div
             className={`lg:col-span-5 relative transition-all duration-1000 delay-300 ${
               mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            <div className="relative mx-auto max-w-[420px] lg:max-w-[480px]">
+            <div className="relative mx-auto max-w-[420px] lg:max-w-[500px]">
               {/* Moldura decorativa dupla */}
               <div className="absolute -inset-5 rounded-3xl border-2 border-[#B8783D]/40 animate-border-glow" />
-              <div className="absolute -inset-2 rounded-3xl border border-[#d4a574]/20" />
-              
-              {/* Foto principal - bem grande */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+              <div className="absolute -inset-2 rounded-3xl border border-[#d4a574]/25" />
+
+              {/* Foto principal de terno */}
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2400-56iB6ioacXe4fVxwFVoNMDro6w3zSZ.jpeg"
-                  alt="Samir Tannuri — Consultor em Tecnologia Magistral e P&D Cosmetico"
+                  src="/samir-suit-portrait.jpg"
+                  alt="Samir Tannuri — Pesquisador e Consultor em Tecnologia de Formulas"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 80vw, 45vw"
                   priority
                 />
-                {/* Overlay gradiente sutil para legibilidade */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050a14]/50 via-transparent to-transparent" />
+                {/* Overlay sutil de cor para integrar na paleta */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#02060f]/60 via-transparent to-transparent" />
+                <div
+                  className="absolute inset-0 mix-blend-overlay opacity-25"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(184,120,61,0.4) 0%, transparent 50%, rgba(13,181,200,0.25) 100%)",
+                  }}
+                />
               </div>
 
               {/* Badge flutuante premium */}
-              <div className="absolute -bottom-5 -left-5 bg-gradient-to-br from-[#0C2340]/95 to-[#050a14]/95 backdrop-blur-xl border-2 border-[#B8783D]/50 rounded-2xl px-6 py-4 shadow-[0_15px_40px_rgba(0,0,0,0.5)]">
-                <div className="text-[10px] uppercase tracking-[2px] text-[#d4a574] font-bold mb-1">
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#0C2340]/95 to-[#02060f]/95 backdrop-blur-xl border-2 border-[#B8783D]/55 rounded-2xl px-6 py-4 shadow-[0_15px_40px_rgba(0,0,0,0.6)]">
+                <div className="text-[10px] uppercase tracking-[2.5px] text-[#f0c896] font-bold mb-1">
                   Samir Tannuri
                 </div>
                 <div className="text-white text-[15px] font-bold mb-0.5">
-                  Farmaceutico · Pesquisador
+                  Pesquisador · Consultor
                 </div>
-                <div className="text-white/60 text-[11px] font-medium">
-                  Consultor Tecnico Cientifico
+                <div className="text-white/65 text-[11px] font-medium">
+                  Cursos & Mentoria de Alto Nivel
                 </div>
               </div>
 
-              {/* Decoracoes de canto premium */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 border-t-[3px] border-r-[3px] border-[#0db5c8]/70 rounded-tr-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-[3px] border-l-[3px] border-[#B8783D]/70 rounded-bl-2xl" />
+              {/* Selo "500 farmacias" sobre a foto */}
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#B8783D] to-[#8b5520] rounded-2xl px-4 py-3 shadow-[0_10px_30px_rgba(184,120,61,0.5)] border border-[#f0c896]/40">
+                <div className="text-[10px] uppercase tracking-[2px] text-white/80 font-bold leading-tight">
+                  Atendi
+                </div>
+                <div className="font-serif text-white text-[24px] font-bold leading-none">
+                  500+
+                </div>
+                <div className="text-[10px] uppercase tracking-[1.5px] text-white font-bold leading-tight">
+                  farmacias
+                </div>
+              </div>
+
+              {/* Decoracoes de canto */}
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-[3px] border-r-[3px] border-[#0db5c8]/70 rounded-br-2xl" />
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-[3px] border-l-[3px] border-[#B8783D]/70 rounded-tl-2xl" />
             </div>
           </div>
         </div>
@@ -273,7 +307,7 @@ export function HeroPremium() {
       {/* Gradiente de transicao na base */}
       <div className="absolute bottom-0 left-0 right-0 h-32 z-[8] pointer-events-none bg-gradient-to-t from-white via-white/50 to-transparent" />
 
-      {/* Linha decorativa cobre → teal */}
+      {/* Linha decorativa cobre <-> teal */}
       <div className="absolute bottom-0 left-0 right-0 h-1 z-[9]">
         <div
           className="h-full w-full"

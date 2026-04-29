@@ -123,19 +123,20 @@ export function ThreePillars() {
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B8783D]/15 border border-[#B8783D]/40 text-[#d4a574] text-[11px] font-bold uppercase tracking-[2.5px] mb-6 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5" />
-            O que eu resolvo
+            O que eu entrego
           </span>
           <h2
-            className="font-serif text-[clamp(36px,5vw,60px)] leading-[1.05] tracking-[-1.5px] text-white mb-6"
-            style={{ textShadow: "0 2px 30px rgba(0,0,0,0.5)" }}
+            className="font-serif text-[clamp(38px,5.2vw,64px)] leading-[1.02] tracking-[-2px] text-white mb-6 font-bold"
+            style={{ textShadow: "0 2px 4px rgba(0,0,0,0.9), 0 4px 30px rgba(0,0,0,0.6)" }}
           >
-            Tres pilares para transformar sua{" "}
-            <em className="italic bg-gradient-to-r from-[#d4a574] via-[#B8783D] to-[#d4a574] bg-clip-text text-transparent">
-              autoridade tecnica
-            </em>
+            Tres pilares de{" "}
+            <em className="italic bg-gradient-to-r from-[#f0c896] via-[#d4a574] to-[#B8783D] bg-clip-text text-transparent not-italic font-bold">
+              valor cientifico
+            </em>{" "}
+            que voce contrata
           </h2>
-          <p className="text-[18px] md:text-[20px] text-white/85 leading-[1.6] font-light">
-            Cada projeto que conduzo nasce de um destes tres eixos. Identifique o seu desafio e veja exatamente como vamos resolve-lo juntos.
+          <p className="text-[19px] md:text-[21px] text-white leading-[1.55] font-medium" style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}>
+            Mais de <strong className="text-[#f0c896] font-bold">500 farmacias</strong> ja confiaram nesse metodo. Identifique o pilar do seu desafio.
           </p>
         </div>
 

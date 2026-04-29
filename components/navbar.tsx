@@ -67,28 +67,9 @@ export function Navbar() {
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
     { href: "/cursos", label: "Cursos", icon: GraduationCap, highlight: true },
-    {
-      href: "#",
-      label: "Consultoria",
-      icon: Briefcase,
-      children: [
-        {
-          href: "/consultoria-magistral",
-          label: "Consultoria Magistral",
-          description: "Portfolio autoral, protocolos diferenciados para farmacias de manipulacao.",
-          icon: Briefcase,
-        },
-        {
-          href: "/consultoria-industrial",
-          label: "Consultoria Industrial",
-          description: "P&D de alta performance para industrias cosmeticas e farmaceuticas.",
-          icon: Sparkles,
-        },
-      ],
-    },
-    { href: "/ia", label: "IA Formulador", icon: Sparkles },
+    { href: "/loja", label: "Loja", icon: FileText, highlight: true },
+    { href: "/ia", label: "iA Labs", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
-    { href: "/portfolio-inovacoes", label: "Portfolio", icon: FileText },
     { href: "/contato", label: "Contato", icon: Mail },
   ]
 

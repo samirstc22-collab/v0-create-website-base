@@ -21,26 +21,16 @@ const conversations: Message[][] = [
         "Para vitamina C 15% (acido ascorbico), recomendo um serum aquoso com pH entre 2.5-3.5 para maxima estabilidade e penetracao. Use propilenoglicol (5-10%) para solubilizacao e adicione acido ferulico (0.5%) para sinergismo antioxidante. Evite emulsoes cremosas que aceleram a oxidacao.",
       highlights: ["pH 2.5-3.5", "Propilenoglicol 5-10%", "Acido ferulico 0.5%"],
     },
-    {
-      role: "user",
-      message: "Posso associar com niacinamida?",
-    },
-    {
-      role: "assistant",
-      message:
-        "Sim, mas com cuidado tecnico. Para uso topico: 1) Mantenha pH abaixo de 3.5 para a vitamina C, 2) Use niacinamida a 4-5% (nao mais), 3) Adicione antioxidantes secundarios. A formacao de nicotinamida adenina e mais relevante em altas temperaturas — em formulacoes magistrais bem feitas, a associacao funciona excelentemente.",
-      highlights: ["Niacinamida 4-5%", "Estabilidade termica", "Antioxidantes"],
-    },
   ],
   [
     {
       role: "user",
-      message: "Como formular um peeling para hiperpigmentacao pos-inflamatoria?",
+      message: "Como formular para hiperpigmentacao pos-inflamatoria?",
     },
     {
       role: "assistant",
       message:
-        "Para PIH, recomendo combinar acido azelaico 15% + acido tranexamico 5% + niacinamida 4% em base creme com pH 4.5-5.0. Aplicar 3x por semana inicialmente. O acido azelaico inibe tirosinase, o tranexamico bloqueia ativacao melanocitaria e a niacinamida reduz transferencia de melanossomos.",
+        "Para PIH, combine acido azelaico 15% + acido tranexamico 5% + niacinamida 4% em base creme com pH 4.5-5.0. O azelaico inibe tirosinase, o tranexamico bloqueia ativacao melanocitaria e a niacinamida reduz transferencia de melanossomos.",
       highlights: ["Azelaico 15%", "Tranexamico 5%", "pH 4.5-5.0"],
     },
   ],
@@ -48,60 +38,91 @@ const conversations: Message[][] = [
 
 export function IADemo() {
   const [conversationIdx, setConversationIdx] = useState(0)
-  const [visibleMessages, setVisibleMessages] = useState(0)
+  const [visibleMessages, setVisibleMessages] = useState<Message[]>([])
   const [isTyping, setIsTyping] = useState(false)
   const [typedText, setTypedText] = useState("")
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const isMountedRef = useRef(true)
 
-  const currentConversation = conversations[conversationIdx]
-
+  // Garante cleanup correto ao desmontar
   useEffect(() => {
-    const totalMessages = currentConversation.length
+    isMountedRef.current = true
+    return () => {
+      isMountedRef.current = false
+    }
+  }, [])
 
-    if (visibleMessages >= totalMessages) {
-      // Reset apos terminar
-      const resetTimer = setTimeout(() => {
-        setVisibleMessages(0)
-        setTypedText("")
-        setConversationIdx((prev) => (prev + 1) % conversations.length)
-      }, 4000)
-      return () => clearTimeout(resetTimer)
+  // Maquina de animacao baseada em cancellable timers
+  useEffect(() => {
+    const timers: number[] = []
+    let cancelled = false
+
+    const safeTimeout = (fn: () => void, delay: number) => {
+      const id = window.setTimeout(() => {
+        if (!cancelled && isMountedRef.current) fn()
+      }, delay)
+      timers.push(id)
+      return id
     }
 
-    const currentMsg = currentConversation[visibleMessages]
-    const isAssistant = currentMsg.role === "assistant"
-    const delay = isAssistant ? 1500 : 1000
+    const runConversation = async (idx: number) => {
+      const conv = conversations[idx]
+      if (!conv || cancelled) return
 
-    const timer = setTimeout(() => {
-      if (isAssistant) {
-        setIsTyping(true)
-        setTimeout(() => {
+      // Reset
+      setVisibleMessages([])
+      setTypedText("")
+      setIsTyping(false)
+
+      for (let i = 0; i < conv.length; i++) {
+        if (cancelled || !isMountedRef.current) return
+        const msg = conv[i]
+
+        // Delay antes da proxima mensagem
+        await new Promise<void>((resolve) => safeTimeout(resolve, msg.role === "user" ? 900 : 700))
+
+        if (cancelled || !isMountedRef.current) return
+
+        if (msg.role === "user") {
+          setVisibleMessages((prev) => [...prev, msg])
+        } else {
+          // Mostra "digitando..."
+          setIsTyping(true)
+          await new Promise<void>((resolve) => safeTimeout(resolve, 1100))
+          if (cancelled || !isMountedRef.current) return
           setIsTyping(false)
-          // Efeito de digitacao para a resposta
-          let i = 0
-          const fullText = currentMsg.message
-          const typeInterval = setInterval(() => {
-            if (i < fullText.length) {
-              setTypedText(fullText.substring(0, i + 1))
-              i += 3
-            } else {
-              setTypedText(fullText)
-              clearInterval(typeInterval)
-              setVisibleMessages((prev) => prev + 1)
-              setTypedText("")
-            }
-          }, 20)
-        }, 1200)
-      } else {
-        setVisibleMessages((prev) => prev + 1)
+
+          // Efeito de digitacao em chunks (em vez de setInterval)
+          const fullText = msg.message
+          const chunkSize = 4
+          for (let pos = chunkSize; pos <= fullText.length; pos += chunkSize) {
+            if (cancelled || !isMountedRef.current) return
+            setTypedText(fullText.substring(0, pos))
+            await new Promise<void>((resolve) => safeTimeout(resolve, 18))
+          }
+          if (cancelled || !isMountedRef.current) return
+          setTypedText("")
+          setVisibleMessages((prev) => [...prev, msg])
+        }
       }
-    }, delay)
 
-    return () => clearTimeout(timer)
-  }, [visibleMessages, conversationIdx, currentConversation])
+      // Aguarda e troca conversa
+      await new Promise<void>((resolve) => safeTimeout(resolve, 4500))
+      if (cancelled || !isMountedRef.current) return
+      setConversationIdx((prev) => (prev + 1) % conversations.length)
+    }
 
+    runConversation(conversationIdx)
+
+    return () => {
+      cancelled = true
+      timers.forEach((id) => window.clearTimeout(id))
+    }
+  }, [conversationIdx])
+
+  // Scroll suave ao adicionar mensagens
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" })
   }, [visibleMessages, typedText, isTyping])
 
   return (
@@ -138,7 +159,7 @@ export function IADemo() {
               </div>
               <div className="flex-1">
                 <div className="text-white font-bold text-[15px] flex items-center gap-2">
-                  IA Lab Formulador
+                  iA Labs Formulador
                   <span className="px-2 py-0.5 rounded-full bg-[#5eead4]/20 text-[#5eead4] text-[9px] font-bold uppercase tracking-[1.5px]">
                     Beta
                   </span>
@@ -159,12 +180,12 @@ export function IADemo() {
                 </div>
                 <div className="bg-gradient-to-br from-[#0db5c8]/10 to-[#5eead4]/10 border border-[#0db5c8]/20 text-gray-700 rounded-2xl rounded-tl-sm px-5 py-3.5 max-w-[80%]">
                   <p className="text-[14px] leading-relaxed font-medium">
-                    Ola! Sou a IA Lab. Posso te ajudar com formulas, ativos, incompatibilidades e protocolos. Como posso te ajudar hoje?
+                    Ola! Sou a iA Labs. Posso te ajudar com formulas, ativos, incompatibilidades e protocolos. Como posso te ajudar hoje?
                   </p>
                 </div>
               </div>
 
-              {currentConversation.slice(0, visibleMessages).map((msg, i) => (
+              {visibleMessages.map((msg, i) => (
                 <div
                   key={`${conversationIdx}-${i}`}
                   className={`flex gap-3 ${msg.role === "user" ? "justify-end" : "justify-start"} animate-fade-in-up`}
