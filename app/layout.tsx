@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { NewsletterPopup } from "@/components/newsletter-popup"
 import "./globals.css"
 
@@ -48,6 +49,7 @@ export default function RootLayout({
         {children}
         <NewsletterPopup />
         {process.env.NODE_ENV === "production" && <Analytics />}
+        <SpeedInsights />
       </body>
     </html>
   )
