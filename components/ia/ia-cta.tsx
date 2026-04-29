@@ -16,7 +16,7 @@ export function IACta() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-[#0C2340] via-[#1a3a5f] to-[#0a1628]">
+    <section id="waitlist" className="py-20 md:py-28 bg-gradient-to-br from-[#0C2340] via-[#1a3a5f] to-[#0a1628]">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
         <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0db5c8] to-[#5eead4] flex items-center justify-center mx-auto mb-8 shadow-[0_0_60px_rgba(13,181,200,0.3)]">
           <Bell className="w-10 h-10 text-white" />
