@@ -127,15 +127,15 @@ export function LeadQuiz() {
         <div className="text-center mb-10">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B8783D]/15 border border-[#B8783D]/30 text-[12px] font-bold uppercase tracking-[2px] text-[#d4a574] mb-6">
             <Sparkles className="w-4 h-4" />
-            Descubra a solucao ideal
+            Diagnostico Tecnico Personalizado
           </span>
           <h2 className="font-serif text-[clamp(28px,4vw,42px)] text-white leading-[1.1] mb-4">
             {showForm ? "Finalize seu cadastro" : "Responda 3 perguntas rapidas"}
           </h2>
           <p className="text-white/70 text-[17px]">
             {showForm
-              ? "Preencha seus dados para receber uma proposta personalizada"
-              : "Vamos entender suas necessidades para oferecer a melhor solucao"}
+              ? "Preencha seus dados para receber um diagnostico tecnico individualizado"
+              : "Entenda suas necessidades para um atendimento personalizado"}
           </p>
         </div>
 
