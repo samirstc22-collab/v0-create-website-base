@@ -67,6 +67,7 @@ export function Navbar() {
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
     { href: "/cursos", label: "Cursos", icon: GraduationCap, highlight: true },
+    { href: "/portfolio", label: "Portfólio", icon: Briefcase },
     { href: "/loja", label: "Loja", icon: FileText, highlight: true },
     { href: "/ia", label: "iA Labs", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },

@@ -242,21 +242,42 @@ export function PortfolioShowcase() {
       className="relative bg-[#fbf8f3] py-24 md:py-32"
     >
       <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
-        {/* Header */}
+        {/* Header — eyebrow + título + parágrafo justificado + counter de fórmulas */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#b87333]/30 bg-[#b87333]/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[2.5px] text-[#b87333]">
             <Sparkles className="h-3.5 w-3.5" />
             Vitrine de Fórmulas · 2019 — 2026
           </div>
           <h2 className="mt-4 font-serif text-4xl leading-[1.05] tracking-tight text-[#0a1628] md:text-5xl lg:text-6xl text-balance">
-            +20 fórmulas autorais entregues a marcas líderes — em P&amp;D, criação de produto e formulação de matéria-prima.
+            +20 fórmulas autorais entregues a marcas líderes em P&amp;D, criação de produto e formulação de matéria-prima.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-[17px] leading-relaxed text-[#0a1628]/70">
+          <p className="mx-auto mt-6 max-w-2xl text-justify text-[17px] leading-relaxed text-[#0a1628]/75 md:text-center">
             Da bancada magistral à indústria{" "}
             <strong className="text-[#0a1628]">Grau I e II</strong>: cada fórmula nasce de
             pesquisa aplicada, evidência clínica e ciclo de inovação curto. Esta é uma seleção
-            curada do que entreguei nos últimos seis anos.
+            curada do que foi entregue nos últimos seis anos para clínicas, magistrais, marcas
+            próprias e grandes indústrias cosméticas.
           </p>
+        </div>
+
+        {/* Faixa de KPIs */}
+        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          {[
+            { v: "22", l: "Fórmulas exibidas" },
+            { v: "9", l: "Categorias" },
+            { v: "I & II", l: "Indústria · Grau" },
+            { v: "6 anos", l: "P&D aplicado" },
+          ].map((s) => (
+            <div
+              key={s.l}
+              className="rounded-xl border border-[#0a1628]/10 bg-white px-4 py-3 text-center"
+            >
+              <div className="font-serif text-2xl text-[#0a1628] md:text-3xl">{s.v}</div>
+              <div className="mt-1 text-[10px] font-semibold uppercase tracking-[1.5px] text-[#0a1628]/55">
+                {s.l}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Industry legend */}
@@ -313,7 +334,7 @@ export function PortfolioShowcase() {
                 <h3 className="relative mt-2 font-serif text-[22px] leading-[1.15] text-[#0a1628]">
                   {item.title}
                 </h3>
-                <p className="relative mt-3 flex-1 text-[14.5px] leading-relaxed text-[#0a1628]/70">
+                <p className="relative mt-3 flex-1 text-justify text-[14.5px] leading-relaxed text-[#0a1628]/70 hyphens-auto">
                   {item.desc}
                 </p>
 
@@ -328,11 +349,30 @@ export function PortfolioShowcase() {
           })}
         </div>
 
-        {/* Bottom note */}
-        <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-[#0a1628]/55">
-          Esta é uma vitrine pública — projetos sob NDA, marcas próprias e fórmulas confidenciais
-          ficam fora desta lista. Para conversar sobre um briefing específico, fale comigo.
-        </p>
+        {/* Bottom CTA — confidencialidade + briefing */}
+        <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-[#0a1628]/10 bg-white p-6 md:mt-16 md:p-8">
+          <div className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between md:gap-6">
+            <div>
+              <div className="mb-2 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px] text-[#b87333]">
+                <ShieldCheck className="h-3 w-3" />
+                Vitrine pública
+              </div>
+              <p className="text-justify text-[15px] leading-relaxed text-[#0a1628]/75">
+                Esta é uma seleção pública. Projetos sob NDA, marcas próprias confidenciais e
+                fórmulas em desenvolvimento ficam fora desta lista. Para conversar sobre um
+                briefing específico, traga seu desafio.
+              </p>
+            </div>
+            <Link
+              href="/contato"
+              className="group inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#8a5729] px-6 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_-10px_rgba(184,115,51,0.5)] transition-all hover:-translate-y-0.5"
+            >
+              <Microscope className="h-4 w-4" />
+              Solicitar briefing técnico
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   )
