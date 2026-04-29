@@ -17,12 +17,32 @@ export function NewsletterPopup() {
     const isDismissed = localStorage.getItem(STORAGE_KEY)
     if (isDismissed) return
 
-    // Show popup after 3 seconds
-    const timer = setTimeout(() => {
-      setIsOpen(true)
-    }, 3000)
+    let hasTriggered = false
 
-    return () => clearTimeout(timer)
+    // Trigger por tempo (30 segundos)
+    const timer = setTimeout(() => {
+      if (!hasTriggered) {
+        hasTriggered = true
+        setIsOpen(true)
+      }
+    }, 30000)
+
+    // Trigger por scroll (50% da pagina)
+    const handleScroll = () => {
+      if (hasTriggered) return
+      const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      if (scrollPercentage >= 50) {
+        hasTriggered = true
+        setIsOpen(true)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   const handleClose = () => {

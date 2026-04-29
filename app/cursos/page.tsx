@@ -1,15 +1,14 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CursosHero } from "@/components/cursos/cursos-hero"
-import { CursosFeatured } from "@/components/cursos/cursos-featured"
 import { CursosGrid } from "@/components/cursos/cursos-grid"
-import { CursosTestimonials } from "@/components/cursos/cursos-testimonials"
 import { CursosCTA } from "@/components/cursos/cursos-cta"
+import { LeadCaptureSection } from "@/components/lead-capture-section"
 
 export const metadata = {
-  title: "Cursos | Clube de Fórmulas — Samir Tannuri",
+  title: "Cursos | Clube de Formulas — Samir Tannuri",
   description:
-    "Cursos de cosmetologia aplicada, manipulação avançada e gestão magistral com o Samir Tannuri. Conhecimento internacional, aplicação imediata no seu balcão.",
+    "Cursos de cosmetologia aplicada, manipulacao avancada e gestao magistral. Conhecimento internacional com aplicacao pratica imediata.",
 }
 
 export default function CursosPage() {
@@ -17,9 +16,8 @@ export default function CursosPage() {
     <main>
       <Navbar />
       <CursosHero />
-      <CursosFeatured />
       <CursosGrid />
-      <CursosTestimonials />
+      <LeadCaptureSection />
       <CursosCTA />
       <Footer />
     </main>

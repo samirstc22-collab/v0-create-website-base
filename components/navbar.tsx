@@ -66,53 +66,9 @@ export function Navbar() {
 
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
-    { href: "/sobre", label: "Sobre", icon: User },
-    {
-      href: "#",
-      label: "Servicos",
-      icon: Briefcase,
-      highlight: true,
-      children: [
-        {
-          href: "/consultoria",
-          label: "Consultoria Magistral",
-          description: "Portfolio autoral, protocolos diferenciados e narrativa tecnica para sair da disputa por preco.",
-          icon: Briefcase,
-        },
-        {
-          href: "/consultoria#industrial",
-          label: "Consultoria Industrial",
-          description: "Prototipos com sensorial refinado, claims defensaveis e suporte do conceito a escala.",
-          icon: Sparkles,
-        },
-        {
-          href: "/protocolos",
-          label: "Protocolos Clinicos",
-          description: "Peelings, regeneracao, tricologia e dermatologia avancada com racional documentado.",
-          icon: Stethoscope,
-        },
-        {
-          href: "/mentoria",
-          label: "Mentoria Premium",
-          description: "Acompanhamento individual: 4 sessoes intensivas + plano mensal continuado.",
-          icon: GraduationCap,
-        },
-        {
-          href: "/missoes",
-          label: "Treinamentos In Loco",
-          description: "Capacitacao hands-on para equipes de magistrais, industria e clinicas.",
-          icon: Globe,
-        },
-        {
-          href: "/loja",
-          label: "Materiais Tecnicos",
-          description: "Formularios, e-books e compendios para acelerar seu time.",
-          icon: BookOpen,
-        },
-      ],
-    },
-    { href: "/portfolio-inovacoes", label: "Portfolio", icon: Sparkles },
-    { href: "/missoes", label: "Missoes", icon: Globe },
+    { href: "/cursos", label: "Cursos", icon: GraduationCap, highlight: true },
+    { href: "/loja", label: "Loja", icon: FileText, highlight: true },
+    { href: "/ia", label: "iA Labs", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/contato", label: "Contato", icon: Mail },
   ]

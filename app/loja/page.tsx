@@ -1,14 +1,15 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { LojaHero } from "@/components/loja/loja-hero"
+import { LojaCursosVitrine } from "@/components/loja/loja-cursos-vitrine"
 import { LojaFeatured } from "@/components/loja/loja-featured"
 import { LojaCatalog } from "@/components/loja/loja-catalog"
 import { LojaCta } from "@/components/loja/loja-cta"
 
 export const metadata = {
-  title: "Loja · Ebooks, Formulários & Lâminas Técnicas — Clube de Fórmulas",
+  title: "Loja Oficial · Cursos, Formularios & E-books — Samir Tannuri",
   description:
-    "Vitrine editorial completa do Clube de Fórmulas: 60+ artefatos técnico-científicos em 7 tiers — formulários integrados, protocolos clínicos, compêndios, lâminas dupla-face e sínteses de pesquisa peer-reviewed. Entrega imediata via Hotmart.",
+    "Vitrine completa: cursos premium, formularios magistrais e e-books tecnicos. Materiais exclusivos para profissionais que buscam diferenciacao tecnica em farmacia magistral.",
 }
 
 export default function LojaPage() {
@@ -16,6 +17,7 @@ export default function LojaPage() {
     <main>
       <Navbar />
       <LojaHero />
+      <LojaCursosVitrine />
       <LojaFeatured />
       <LojaCatalog />
       <LojaCta />
