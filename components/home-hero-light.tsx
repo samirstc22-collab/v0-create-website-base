@@ -52,9 +52,9 @@ export function HomeHeroLight() {
           <span className="hidden md:inline text-[#d1d5db]">|</span>
           <span>Missoes Amsterdam · Japao</span>
           <span className="hidden md:inline text-[#d1d5db]">|</span>
-          <span>Paper Peer-Reviewed</span>
+          <span>20+ Fórmulas Autorais</span>
           <span className="hidden md:inline text-[#d1d5db]">|</span>
-          <span>ICosmetologia</span>
+          <span>Indústria Grau I e II</span>
         </div>
 
         {/* Hero content grid */}

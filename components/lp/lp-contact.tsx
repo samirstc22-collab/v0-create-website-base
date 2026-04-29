@@ -115,7 +115,7 @@ export function LPContact() {
                 Metapharma · CNPJ 00.246.124/0001-51
               </div>
               <div className="mt-1 text-[12px] text-white/40">
-                Goiânia — GO · Brasil · Atendimento nacional
+                Campinas — SP · Brasil · Atendimento nacional
               </div>
             </div>
           </div>

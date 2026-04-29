@@ -108,7 +108,7 @@ export function CursosGrid() {
       levelColor: "#0a1628",
       title: "Imersão Executiva Presencial",
       description:
-        "3 dias presenciais em Goiânia com Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
+        "3 dias presenciais em Campinas — SP com Samir e equipe. Diagnóstico do seu negócio, mentoria coletiva e networking de alto nível.",
       duration: "3 dias",
       lessons: "Presencial",
       price: "R$ 4.997",
@@ -160,10 +160,10 @@ export function CursosGrid() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 font-serif text-xl leading-tight text-[#0a1628] md:text-2xl">
+                <h3 className="mt-6 font-serif text-2xl leading-[1.15] tracking-[-0.01em] text-[#0a1628] md:text-[28px] lg:text-3xl">
                   {course.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-[#0a1628]/65">
+                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-[#0a1628]/70">
                   {course.description}
                 </p>
 

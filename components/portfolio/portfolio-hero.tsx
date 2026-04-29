@@ -28,28 +28,28 @@ export function PortfolioHero() {
           </div>
 
           <h1 className="mt-6 font-serif text-5xl leading-[1.02] tracking-tight text-white md:text-6xl lg:text-7xl text-balance">
-            Inovacoes em formulacao{" "}
-            <em className="text-[#e8a87c]">cosmetologica</em> &amp;{" "}
-            <em className="text-[#5eead4]">dermatologica</em>.
+            +20 fórmulas autorais para <em className="text-[#e8a87c]">indústria cosmética</em> &amp;{" "}
+            <em className="text-[#5eead4]">marcas líderes</em>.
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl text-pretty">
-            Seis anos moldando a farmacia magistral brasileira — bases galenicas exclusivas, ativos
-            vetorizados, peelings inovadores e protocolos com evidencia clinica rastreavel.
+            Seis anos de pesquisa aplicada em <strong className="text-white">indústria Grau I e II</strong>,
+            magistral e marcas próprias — em P&amp;D, criação de produto, inovação e formulação de
+            matéria-prima.
           </p>
 
           {/* Stats */}
           <div className="mt-10 grid gap-4 sm:grid-cols-4">
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
-              <div className="font-serif text-3xl text-white">+200</div>
+              <div className="font-serif text-3xl text-white">20+</div>
               <div className="mt-1 text-[11px] font-medium uppercase tracking-[1.5px] text-white/55">
-                Formulas originais
+                Fórmulas autorais
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
-              <div className="font-serif text-3xl text-white">20+</div>
+              <div className="font-serif text-3xl text-white">I &amp; II</div>
               <div className="mt-1 text-[11px] font-medium uppercase tracking-[1.5px] text-white/55">
-                Bases galenicas
+                Indústria · Grau
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
@@ -61,7 +61,7 @@ export function PortfolioHero() {
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
               <div className="font-serif text-3xl text-white">9</div>
               <div className="mt-1 text-[11px] font-medium uppercase tracking-[1.5px] text-white/55">
-                Areas terapeuticas
+                Áreas terapêuticas
               </div>
             </div>
           </div>
@@ -69,11 +69,11 @@ export function PortfolioHero() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="#destaques"
+              href="#vitrine"
               className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#B8783D] to-[#8a5729] px-8 py-4 text-base font-bold text-white shadow-[0_10px_30px_-10px_rgba(184,120,61,0.6)] transition-all hover:-translate-y-0.5"
             >
               <FlaskConical className="h-4 w-4" />
-              Ver destaques tecnicos
+              Ver vitrine completa
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
@@ -81,7 +81,7 @@ export function PortfolioHero() {
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur transition-all hover:border-white/40 hover:bg-white/10"
             >
               <Microscope className="h-4 w-4" />
-              Solicitar consultoria
+              Solicitar briefing técnico
             </Link>
           </div>
         </div>

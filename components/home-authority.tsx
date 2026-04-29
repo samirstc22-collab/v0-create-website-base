@@ -64,8 +64,8 @@ export function HomeAuthority() {
     "In-Cosmetics Global Paris 2025",
     "Missão Técnica Amsterdam",
     "Missão Técnica Japão",
-    "Paper Peer-Reviewed",
-    "ICosmetologia",
+    "Indústria Cosmética · Grau I e II",
+    "20+ Fórmulas Autorais",
   ]
 
   const productImages = [
