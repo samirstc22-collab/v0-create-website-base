@@ -4,17 +4,22 @@ import { useEffect, useState, Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import { ArrowRight, Check, Instagram, Sparkles, FileText, Award, FlaskConical, Star } from "lucide-react"
+import { ArrowRight, Check, Instagram, FileText, Award, FlaskConical, Star } from "lucide-react"
 
 // Carregamento dinamico das moleculas 3D para melhor performance
 const FloatingMolecules = dynamic(
   () => import("./3d/floating-molecules").then((mod) => mod.FloatingMolecules),
-  { ssr: false }
+  { ssr: false },
+)
+
+// Fundo cinematografico premium em canvas (substitui video pesado)
+const ElegantAuroraBg = dynamic(
+  () => import("./elegant-aurora-bg").then((mod) => mod.ElegantAuroraBg),
+  { ssr: false },
 )
 
 export function HeroPremium() {
   const [mounted, setMounted] = useState(false)
-  const [videoLoaded, setVideoLoaded] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -22,41 +27,18 @@ export function HeroPremium() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#050a14]">
-      {/* Video de fundo - Laboratorio de pesquisa com moleculas */}
+      {/* Aurora cinematografica - cobre, teal, navy fluindo */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          onLoadedData={() => setVideoLoaded(true)}
-          className={`w-full h-full object-cover transition-opacity duration-1000 ${
-            videoLoaded ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          {/* Video laboratorio de pesquisa - microscopia, pipetas, moleculas */}
-          <source
-            src="https://videos.pexels.com/video-files/8330115/8330115-uhd_2560_1440_30fps.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://videos.pexels.com/video-files/3196583/3196583-uhd_2560_1440_25fps.mp4"
-            type="video/mp4"
-          />
-        </video>
-        {/* Fallback enquanto video carrega */}
-        {!videoLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#050a14] via-[#0C2340] to-[#0a1a33]" />
-        )}
+        <ElegantAuroraBg />
       </div>
 
-      {/* Overlay escuro forte para alto contraste */}
+      {/* Overlay escurecedor sutil - mantem cores vibrantes mas garante contraste */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(5,10,20,0.88) 0%, rgba(12,35,64,0.82) 40%, rgba(5,10,20,0.95) 100%)",
+            "linear-gradient(180deg, rgba(5,10,20,0.35) 0%, rgba(5,10,20,0.15) 40%, rgba(5,10,20,0.55) 100%)",
         }}
       />
 
