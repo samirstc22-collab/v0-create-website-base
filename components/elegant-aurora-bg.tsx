@@ -50,15 +50,16 @@ export function ElegantAuroraBg() {
     }
 
     const blobs: Blob[] = [
-      // Copper warm tones
-      { x: width * 0.2, y: height * 0.3, vx: 0.15, vy: 0.08, r: 480, color: "184,120,61", pulse: 0 },
-      { x: width * 0.75, y: height * 0.25, vx: -0.12, vy: 0.1, r: 560, color: "212,165,116", pulse: 1.2 },
-      // Teal accent
-      { x: width * 0.6, y: height * 0.7, vx: 0.1, vy: -0.07, r: 520, color: "13,181,200", pulse: 2.4 },
-      // Deep blue
-      { x: width * 0.1, y: height * 0.8, vx: 0.08, vy: -0.12, r: 600, color: "30,80,140", pulse: 3.6 },
-      // Subtle warm highlight
-      { x: width * 0.85, y: height * 0.85, vx: -0.09, vy: -0.06, r: 420, color: "244,194,148", pulse: 4.8 },
+      // Cobre quente intenso
+      { x: width * 0.2, y: height * 0.3, vx: 0.15, vy: 0.08, r: 520, color: "230,140,55", pulse: 0 },
+      // Dourado luminoso
+      { x: width * 0.75, y: height * 0.25, vx: -0.12, vy: 0.1, r: 580, color: "255,190,120", pulse: 1.2 },
+      // Teal vibrante (alto contraste com cobre)
+      { x: width * 0.6, y: height * 0.7, vx: 0.1, vy: -0.07, r: 540, color: "20,210,230", pulse: 2.4 },
+      // Azul royal profundo
+      { x: width * 0.1, y: height * 0.8, vx: 0.08, vy: -0.12, r: 620, color: "55,110,200", pulse: 3.6 },
+      // Highlight quente extra
+      { x: width * 0.85, y: height * 0.85, vx: -0.09, vy: -0.06, r: 460, color: "255,210,170", pulse: 4.8 },
     ]
 
     let time = 0
@@ -66,11 +67,11 @@ export function ElegantAuroraBg() {
     const draw = () => {
       time += 0.005
 
-      // Limpa e desenha base escura cinematografica
+      // Base ULTRA escura para contraste maximo com a aurora
       const baseGrad = ctx.createLinearGradient(0, 0, 0, height)
-      baseGrad.addColorStop(0, "#050a14")
-      baseGrad.addColorStop(0.5, "#0a1a30")
-      baseGrad.addColorStop(1, "#050a14")
+      baseGrad.addColorStop(0, "#000308")
+      baseGrad.addColorStop(0.5, "#02060f")
+      baseGrad.addColorStop(1, "#000308")
       ctx.fillStyle = baseGrad
       ctx.fillRect(0, 0, width, height)
 
@@ -87,12 +88,13 @@ export function ElegantAuroraBg() {
         if (b.y < -200 || b.y > height + 200) b.vy *= -1
 
         // Pulsacao suave do raio
-        const pulseR = b.r + Math.sin(time + b.pulse) * 80
+        const pulseR = b.r + Math.sin(time + b.pulse) * 100
 
-        // Gradiente radial elegante
+        // Gradiente radial - cores MUITO mais saturadas e intensas
         const grad = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, pulseR)
-        grad.addColorStop(0, `rgba(${b.color}, 0.55)`)
-        grad.addColorStop(0.4, `rgba(${b.color}, 0.22)`)
+        grad.addColorStop(0, `rgba(${b.color}, 0.95)`)
+        grad.addColorStop(0.25, `rgba(${b.color}, 0.55)`)
+        grad.addColorStop(0.55, `rgba(${b.color}, 0.22)`)
         grad.addColorStop(1, `rgba(${b.color}, 0)`)
 
         ctx.fillStyle = grad
@@ -103,17 +105,18 @@ export function ElegantAuroraBg() {
 
       ctx.globalCompositeOperation = "source-over"
 
-      // Vinheta cinematografica para concentrar foco no centro
+      // Vinheta cinematografica MAIS forte - escurece bordas dramaticamente
       const vignette = ctx.createRadialGradient(
         width / 2,
         height / 2,
-        Math.min(width, height) * 0.3,
+        Math.min(width, height) * 0.2,
         width / 2,
         height / 2,
-        Math.max(width, height) * 0.85,
+        Math.max(width, height) * 0.8,
       )
       vignette.addColorStop(0, "rgba(0,0,0,0)")
-      vignette.addColorStop(1, "rgba(5,10,20,0.7)")
+      vignette.addColorStop(0.6, "rgba(0,1,5,0.4)")
+      vignette.addColorStop(1, "rgba(0,1,5,0.92)")
       ctx.fillStyle = vignette
       ctx.fillRect(0, 0, width, height)
 

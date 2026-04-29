@@ -32,13 +32,23 @@ export function HeroPremium() {
         <ElegantAuroraBg />
       </div>
 
-      {/* Overlay escurecedor sutil - mantem cores vibrantes mas garante contraste */}
+      {/* Overlay escuro forte para contraste maximo do texto */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(5,10,20,0.35) 0%, rgba(5,10,20,0.15) 40%, rgba(5,10,20,0.55) 100%)",
+            "linear-gradient(180deg, rgba(0,2,8,0.55) 0%, rgba(0,2,8,0.35) 40%, rgba(0,2,8,0.7) 100%)",
+        }}
+      />
+
+      {/* Spotlight escuro lateral esquerda - garante leitura nitida do texto */}
+      <div
+        aria-hidden
+        className="absolute inset-y-0 left-0 w-[65%] z-[2] pointer-events-none hidden lg:block"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,2,8,0.75) 0%, rgba(0,2,8,0.45) 50%, rgba(0,2,8,0) 100%)",
         }}
       />
 
@@ -105,10 +115,10 @@ export function HeroPremium() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.07] border border-white/[0.15] backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-black/55 border border-[#d4a574]/45 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.08)]"
                 >
-                  <item.icon className="w-3.5 h-3.5 text-[#d4a574]" />
-                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[1.5px] text-white/95">
+                  <item.icon className="w-3.5 h-3.5 text-[#f0c896]" />
+                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[1.5px] text-white">
                     {item.text}
                   </span>
                 </div>
@@ -121,7 +131,8 @@ export function HeroPremium() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
-                textShadow: "0 2px 30px rgba(0,0,0,0.5)",
+                textShadow:
+                  "0 2px 4px rgba(0,0,0,0.95), 0 4px 30px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.6)",
               }}
             >
               A ciencia por tras das{" "}
@@ -152,11 +163,12 @@ export function HeroPremium() {
 
             {/* Subheadline persuasiva com mais contraste */}
             <p
-              className={`text-[18px] md:text-[22px] text-white leading-[1.55] max-w-[620px] mx-auto lg:mx-0 mb-9 font-light transition-all duration-700 delay-200 ${
+              className={`text-[18px] md:text-[22px] text-white leading-[1.55] max-w-[620px] mx-auto lg:mx-0 mb-9 font-normal transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
-                textShadow: "0 2px 20px rgba(0,0,0,0.6)",
+                textShadow:
+                  "0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.7)",
               }}
             >
               Desenvolvo{" "}
