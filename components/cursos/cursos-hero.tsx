@@ -28,18 +28,16 @@ export function CursosHero() {
               </span>
             </div>
 
-            <h1 className="mt-7 font-serif text-4xl leading-[1.02] tracking-[-0.02em] text-white md:text-6xl lg:text-[82px]">
-              Cursos que transformam farmacêuticos em{" "}
-              <span className="italic text-[#e8a87c]">referências técnicas</span> da sua região.
+            <h1 className="mt-7 font-serif text-4xl leading-[1.02] tracking-[-0.02em] text-white md:text-6xl lg:text-[72px]">
+              Do conceito à bancada:{" "}
+              <span className="italic text-[#e8a87c]">aprenda a desenvolver produtos</span> com raciocínio técnico e aplicação clínica.
             </h1>
 
-            <p className="mt-7 max-w-[620px] text-lg leading-[1.7] text-white/70 md:text-xl">
-              Formação intensiva em cosmetologia avançada, manipulação de alta performance e gestão
-              lucrativa — construída com o mesmo rigor das melhores escolas de Paris, Tóquio e
-              Amsterdam, e adaptada ao balcão brasileiro.{" "}
-              <span className="font-semibold text-white">
-                Do iniciante ao farmacêutico que quer virar autoridade.
-              </span>
+            <p className="mt-7 max-w-[680px] text-lg leading-[1.7] text-white/70 md:text-xl">
+              Formação intensiva em{" "}
+              <span className="font-semibold text-white">cosmetologia avançada</span>,{" "}
+              <span className="font-semibold text-white">manipulação de alta performance</span> e{" "}
+              <span className="font-semibold text-white">gestão lucrativa</span> — com rigor técnico internacional e aplicação prática no mercado.
             </p>
 
             {/* Micro stats */}
