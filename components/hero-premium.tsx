@@ -115,12 +115,11 @@ export function HeroPremium() {
                   "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
               }}
             >
-              Consultoria, cursos e
+              Consultoria, cursos e desenvolvimento técnico para farmácias e indústrias que querem sair da
               <br />
-              desenvolvimento técnico{" "}
               <span className="relative inline-block">
                 <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                  para farmácias e indústrias
+                  fórmula comum e construir diferenciação real
                 </em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -137,12 +136,7 @@ export function HeroPremium() {
                     opacity="0.95"
                   />
                 </svg>
-              </span>{" "}
-              que querem sair da
-              <br />
-              <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                fórmula comum e construir diferenciação real
-              </em>
+              </span>
             </h1>
 
             {/* Subheadline - foco em publico */}
