@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRight, FlaskConical, MapPin } from "lucide-react"
+import { ArrowUpRight, FlaskConical, MapPin, Globe2 } from "lucide-react"
 
 // Bandeiras em SVG inline — leves, escaláveis e acessíveis
 function FlagFR({ className = "" }: { className?: string }) {
