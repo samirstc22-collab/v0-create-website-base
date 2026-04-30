@@ -105,7 +105,7 @@ export function HeroPremium() {
               </span>
             </div>
 
-            {/* Titulo principal - ciencia que vira autoridade tecnica */}
+            {/* Titulo principal - consultoria, cursos e desenvolvimento */}
             <h1
               className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[0.98] tracking-[-3px] text-[#F4EDE0] mb-6 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -115,12 +115,12 @@ export function HeroPremium() {
                   "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
               }}
             >
-              Ciencia cosmetica
+              Consultoria, cursos e
               <br />
-              que vira{" "}
+              desenvolvimento técnico{" "}
               <span className="relative inline-block">
                 <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                  autoridade
+                  para farmácias e indústrias
                 </em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -138,8 +138,10 @@ export function HeroPremium() {
                   />
                 </svg>
               </span>{" "}
+              que querem sair da
+              <br />
               <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                tecnica
+                fórmula comum e construir diferenciação real
               </em>
             </h1>
 
