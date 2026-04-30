@@ -107,33 +107,42 @@ export function HeroPremium() {
 
             {/* Titulo principal - consultoria, cursos e desenvolvimento */}
             <h1
-              className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[0.98] tracking-[-3px] text-[#F4EDE0] mb-6 transition-all duration-700 delay-100 ${
+              className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[1.05] tracking-[-3px] text-[#FCF5ED] mb-8 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
                 textShadow:
-                  "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
+                  "0 1px 2px rgba(0,0,0,0.4), 0 6px 18px rgba(0,0,0,0.6), 0 12px 40px rgba(0,0,0,0.5)",
+                letterSpacing: "-0.02em",
               }}
             >
               Consultoria, cursos e desenvolvimento técnico para farmácias e indústrias que querem sair da
               <br />
-              <span className="relative inline-block">
-                <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
+              <span className="relative inline-block mt-2">
+                <em className="italic bg-gradient-to-r from-[#F5E6D3] via-[#E0C89E] to-[#D4B98C] bg-clip-text text-transparent drop-shadow-lg">
                   fórmula comum e construir diferenciação real
                 </em>
                 <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="14"
+                  className="absolute -bottom-1 left-0 w-full"
+                  height="12"
                   viewBox="0 0 200 8"
                   preserveAspectRatio="none"
                   aria-hidden
                 >
+                  <defs>
+                    <linearGradient id="underlineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#E0C89E" stopOpacity="0.3" />
+                      <stop offset="40%" stopColor="#D4B98C" stopOpacity="0.8" />
+                      <stop offset="60%" stopColor="#D4B98C" stopOpacity="0.8" />
+                      <stop offset="100%" stopColor="#E0C89E" stopOpacity="0.3" />
+                    </linearGradient>
+                  </defs>
                   <path
-                    d="M2,5 Q50,2 100,4 T198,3"
-                    stroke="#D4B98C"
-                    strokeWidth="3"
+                    d="M2,4 Q50,1.5 100,3 T198,2"
+                    stroke="url(#underlineGradient)"
+                    strokeWidth="2.5"
                     fill="none"
-                    opacity="0.95"
+                    vectorEffect="non-scaling-stroke"
                   />
                 </svg>
               </span>
