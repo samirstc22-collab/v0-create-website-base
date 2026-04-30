@@ -95,14 +95,14 @@ export function HeroPremium() {
           <div className="lg:col-span-7 text-center lg:text-left">
             {/* Eyebrow elegante — apresentação pessoal como focal point */}
             <div
-              className={`mb-8 transition-all duration-700 ${
+              className={`mb-12 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
               {/* Linha decorativa superior */}
-              <div className="flex items-center gap-3 mb-4 justify-center lg:justify-start">
-                <span className="h-px w-8 bg-[#D4B98C]/50" />
-                <span className="text-[10px] font-bold uppercase tracking-[4px] text-[#D4B98C]/70">
+              <div className="flex items-center gap-3 mb-5 justify-center lg:justify-start">
+                <span className="h-px w-10 bg-[#D4B98C]/60" />
+                <span className="text-[9px] font-bold uppercase tracking-[4.5px] text-[#D4B98C]/80">
                   Apresentação
                 </span>
               </div>
@@ -110,50 +110,27 @@ export function HeroPremium() {
               {/* Frase focal principal */}
               <div className="inline-block relative">
                 <p
-                  className="font-serif text-[clamp(22px,3vw,38px)] leading-[1.15] tracking-[-0.5px] text-[#FCF5ED]"
+                  className="font-serif text-[clamp(24px,3.2vw,40px)] leading-[1.2] tracking-[-0.8px] text-[#FCF5ED]"
                   style={{
-                    textShadow: "0 2px 8px rgba(0,0,0,0.6), 0 6px 24px rgba(0,0,0,0.45)",
+                    textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 8px 28px rgba(0,0,0,0.65)",
                   }}
                 >
-                  <span className="text-[#D4B98C]/80 font-normal italic text-[clamp(18px,2.2vw,28px)]">
+                  <span className="text-[#D4B98C]/85 font-normal italic text-[clamp(20px,2.4vw,32px)]">
                     Prazer,{" "}
                   </span>
                   <strong
-                    className="font-serif font-semibold bg-gradient-to-r from-[#FCF5ED] via-[#F5E6D3] to-[#E0C89E] bg-clip-text text-transparent"
-                    style={{ WebkitTextStroke: "0px" }}
+                    className="font-serif font-semibold text-[#FCF5ED] underline underline-offset-4 decoration-[#D4B98C] decoration-2"
                   >
                     Prof. Samir Tannuri
                   </strong>
                 </p>
-                {/* Sublinha accent dourada */}
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="10"
-                  viewBox="0 0 300 6"
-                  preserveAspectRatio="none"
-                  aria-hidden
-                >
-                  <defs>
-                    <linearGradient id="pitchLine" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#D4B98C" stopOpacity="0" />
-                      <stop offset="20%" stopColor="#D4B98C" stopOpacity="0.7" />
-                      <stop offset="80%" stopColor="#D4B98C" stopOpacity="0.7" />
-                      <stop offset="100%" stopColor="#D4B98C" stopOpacity="0" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M0,3 Q75,1 150,2.5 T300,2"
-                    stroke="url(#pitchLine)"
-                    strokeWidth="1.5"
-                    fill="none"
-                  />
-                </svg>
+                {/* Sublinha accent dourada removida para usar underline nativo */}
               </div>
 
-              {/* Role tag */}
-              <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#D4B98C]" />
-                <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#D4B98C]">
+              {/* Role tag com melhor contraste */}
+              <div className="flex items-center gap-2.5 mt-6 justify-center lg:justify-start">
+                <span className="h-2 w-2 rounded-full bg-[#D4B98C]/90" />
+                <span className="text-[10px] font-bold uppercase tracking-[3.5px] text-[#D4B98C]/90">
                   Pesquisador & Consultor em Tecnologia Magistral
                 </span>
               </div>
@@ -161,12 +138,12 @@ export function HeroPremium() {
 
             {/* Titulo principal - consultoria, cursos e desenvolvimento */}
             <h1
-              className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[1.05] tracking-[-3px] text-[#FCF5ED] mb-8 transition-all duration-700 delay-100 ${
+              className={`font-serif font-normal text-[clamp(38px,5.2vw,70px)] leading-[1.08] tracking-[-2.5px] text-[#FCF5ED] mb-10 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
                 textShadow:
-                  "0 1px 2px rgba(0,0,0,0.4), 0 6px 18px rgba(0,0,0,0.6), 0 12px 40px rgba(0,0,0,0.5)",
+                  "0 2px 4px rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.65), 0 14px 48px rgba(0,0,0,0.55)",
                 letterSpacing: "-0.02em",
               }}
             >
@@ -204,11 +181,11 @@ export function HeroPremium() {
 
             {/* Subheadline - foco em publico */}
             <p
-              className={`text-[18px] md:text-[21px] text-[#F4EDE0]/95 leading-[1.55] max-w-[640px] mx-auto lg:mx-0 mb-9 font-normal transition-all duration-700 delay-200 ${
+              className={`text-[17px] md:text-[20px] text-[#FCF5ED]/98 leading-[1.62] max-w-[620px] mx-auto lg:mx-0 mb-12 font-normal transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
-                textShadow: "0 2px 4px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4)",
+                textShadow: "0 2px 5px rgba(0,0,0,0.65), 0 5px 18px rgba(0,0,0,0.5)",
               }}
             >
               Cursos, mentoria e consultoria de{" "}
