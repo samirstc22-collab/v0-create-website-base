@@ -9,9 +9,9 @@ import { Science } from "@/components/science"
 import { Speaker } from "@/components/speaker"
 
 export const metadata = {
-  title: "Sobre — Samir Tannuri · ST Farma",
+  title: "Sobre — Samir Tannuri · Professor, Pesquisador e Consultor",
   description:
-    "Conheça a trajetória de Samir Tannuri — consultor em tecnologia magistral com seis anos coordenando P&D no maior grupo magistral do Brasil, delegado técnico In-Cosmetics Global Paris 2025 e coautor de paper peer-reviewed.",
+    "Samir Tannuri atua na interface entre dermatologia clínica aplicada, desenvolvimento de formulações e educação científica — com base sólida em pesquisa pela UNICAMP, USF e FOP, rigor metodológico e aplicabilidade real no balcão e na bancada.",
 }
 
 export default function SobrePage() {
