@@ -166,9 +166,9 @@ export function HeroPremium() {
               }`}
             >
               {[
-                { value: "500+", label: "Farmacias atendidas", icon: FlaskConical, highlight: true },
+                { value: "500+", label: "Mais de 500 farmácias atendidas", icon: FlaskConical, highlight: true },
                 { value: "1.000+", label: "Profissionais formados", icon: GraduationCap },
-                { value: "24+", label: "Anos na bancada", icon: Award },
+                { value: "4.000", label: "Fórmulas testadas nos últimos anos", icon: Award },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -287,19 +287,6 @@ export function HeroPremium() {
                 </div>
                 <div className="text-[#F4EDE0]/70 text-[11px] font-medium">
                   Consultoria · Cursos · P&amp;D
-                </div>
-              </div>
-
-              {/* Selo "500 farmacias" sobreposto */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#D4B98C] to-[#a68449] rounded-2xl px-4 py-3 shadow-[0_10px_30px_rgba(212,185,140,0.45)] border border-[#F4EDE0]/40">
-                <div className="text-[10px] uppercase tracking-[2px] text-[#0A1628]/80 font-bold leading-tight">
-                  Atendi
-                </div>
-                <div className="font-serif text-[#0A1628] text-[24px] font-bold leading-none">
-                  500+
-                </div>
-                <div className="text-[10px] uppercase tracking-[1.5px] text-[#0A1628] font-bold leading-tight">
-                  farmacias
                 </div>
               </div>
 

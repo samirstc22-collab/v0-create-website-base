@@ -199,6 +199,25 @@ export function HomeTrajectory() {
             </h3>
           </div>
 
+          {/* Foto de produto autoral — batons de formulação */}
+          <div className="mb-10 overflow-hidden rounded-2xl border border-[#B8783D]/20 shadow-[0_20px_50px_rgba(12,35,64,0.10)]">
+            <div className="relative h-56 md:h-72 lg:h-80">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-30%20at%2000.38.31%20%281%29-9p9wEpDCYMqu7utHzx52sE1tWNzcXg.jpeg"
+                alt="Batons magistrais de formulação autoral do Prof. Samir Tannuri — amostras de P&D cosmético"
+                fill
+                sizes="(max-width: 768px) 100vw, 80vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2340]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-6 right-6">
+                <span className="inline-block rounded-full border border-white/30 bg-black/50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[2.5px] text-white backdrop-blur">
+                  P&amp;D Autoral · Formulação Magistral
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-6">
             {innovations.map((item) => (
               <div
