@@ -16,88 +16,97 @@ export function IAHero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#0A1628] pt-24 pb-24 md:pt-32 md:pb-32">
-      {/* Background ESTATICO - sem canvas/animacoes pesadas que travam */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-0"
-        style={{
-          background: `
-            radial-gradient(ellipse 70% 50% at 30% 20%, rgba(157, 190, 177, 0.18) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 50% at 70% 80%, rgba(212, 185, 140, 0.14) 0%, transparent 60%),
-            linear-gradient(135deg, #0A1628 0%, #0F1F38 50%, #152544 100%)
-          `,
-        }}
-      />
-
-      {/* Grid pattern fino - sem animacao */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-[1] opacity-[0.06] pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(157, 190, 177, 0.6) 1px, transparent 0)`,
-          backgroundSize: "48px 48px",
-        }}
-      />
-
-      {/* Botao Voltar - elegante e claro */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#050a14] via-[#0a1d36] to-[#0C2340] pt-24 pb-24 md:pt-32 md:pb-32">
+      {/* Botao Voltar */}
       <div className="absolute top-24 left-6 lg:left-10 z-30">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0A1628]/70 backdrop-blur-md border border-[#D4B98C]/30 text-[#F4EDE0] text-[13px] font-semibold hover:bg-[#0A1628]/90 hover:border-[#D4B98C]/55 transition-all"
+          className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-white text-[13px] font-semibold hover:bg-white/[0.12] hover:border-white/25 transition-all"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Voltar para Home
         </Link>
       </div>
 
-      <div className="relative z-[10] mx-auto max-w-5xl px-6 lg:px-8 text-center mt-12">
+      {/* Animated background */}
+      <div className="pointer-events-none absolute inset-0">
+        {/* Neural network effect */}
+        <div className="absolute inset-0 opacity-[0.12]">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <defs>
+              <pattern id="neural" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="50" cy="50" r="1.5" fill="#0db5c8">
+                  <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="25" cy="25" r="1" fill="#d4a574" />
+                <circle cx="75" cy="75" r="1" fill="#d4a574" />
+                <circle cx="25" cy="75" r="0.8" fill="#0db5c8" opacity="0.6" />
+                <circle cx="75" cy="25" r="0.8" fill="#0db5c8" opacity="0.6" />
+                <line x1="50" y1="50" x2="25" y2="25" stroke="#0db5c8" strokeWidth="0.4" opacity="0.5" />
+                <line x1="50" y1="50" x2="75" y2="75" stroke="#0db5c8" strokeWidth="0.4" opacity="0.5" />
+                <line x1="50" y1="50" x2="25" y2="75" stroke="#d4a574" strokeWidth="0.3" opacity="0.4" />
+                <line x1="50" y1="50" x2="75" y2="25" stroke="#d4a574" strokeWidth="0.3" opacity="0.4" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural)" />
+          </svg>
+        </div>
+
+        {/* Glows */}
+        <div className="absolute left-1/4 top-20 h-[500px] w-[500px] rounded-full bg-[#0db5c8]/25 blur-[100px] animate-pulse" />
+        <div
+          className="absolute right-1/4 bottom-20 h-[400px] w-[400px] rounded-full bg-[#B8783D]/20 blur-[100px] animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-5xl px-6 lg:px-8 text-center mt-12">
         {/* Badge */}
         <div
-          className={`inline-flex items-center gap-2 rounded-full border border-[#9DBEB1]/40 bg-[#9DBEB1]/12 px-5 py-2.5 text-[10px] font-bold uppercase tracking-[2.5px] text-[#9DBEB1] mb-8 backdrop-blur-sm transition-all duration-700 ${
+          className={`inline-flex items-center gap-2 rounded-full border border-[#0db5c8]/40 bg-[#0db5c8]/10 px-5 py-2.5 text-[10px] font-bold uppercase tracking-[2.5px] text-[#5eead4] mb-8 backdrop-blur-sm transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-[#9DBEB1] opacity-60 animate-ping" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#9DBEB1]" />
+          <span className="flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#5eead4] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5eead4]" />
           </span>
-          iA Labs · Lancamento Em Breve
+          Lancamento Em Breve
         </div>
 
         {/* Headline com mais impacto */}
         <h1
-          className={`font-serif text-[clamp(48px,7vw,84px)] leading-[0.96] tracking-[-2.5px] text-[#F4EDE0] mb-7 transition-all duration-700 delay-100 ${
+          className={`font-serif text-[clamp(48px,7vw,84px)] leading-[0.96] tracking-[-2.5px] text-white mb-7 transition-all duration-700 delay-100 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
-          style={{ textShadow: "0 2px 30px rgba(0,0,0,0.6)" }}
+          style={{ textShadow: "0 2px 30px rgba(0,0,0,0.5)" }}
         >
-          iA Labs{" "}
-          <em className="italic bg-gradient-to-r from-[#9DBEB1] via-[#c9e0d6] to-[#9DBEB1] bg-clip-text text-transparent">
-            Formulador
-          </em>
+          IA Lab{" "}
+          <span className="relative inline-block">
+            <em className="italic bg-gradient-to-r from-[#0db5c8] via-[#5eead4] to-[#0db5c8] bg-clip-text text-transparent">
+              Formulador
+            </em>
+          </span>
         </h1>
 
         <p
-          className={`text-[20px] md:text-[24px] text-[#F4EDE0]/90 max-w-3xl mx-auto mb-4 leading-[1.4] font-light transition-all duration-700 delay-200 ${
+          className={`text-[20px] md:text-[24px] text-white/85 max-w-3xl mx-auto mb-4 leading-[1.4] font-light transition-all duration-700 delay-200 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
-          style={{ textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}
+          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
         >
-          A primeira <strong className="text-[#F4EDE0] font-bold">inteligencia cientifica brasileira</strong> treinada
-          em base autoral de pesquisa em formulas.
+          A primeira <strong className="text-white font-bold">inteligencia artificial brasileira</strong> treinada exclusivamente em farmacia magistral.
         </p>
 
         <p
-          className={`text-[16px] md:text-[18px] text-[#F4EDE0]/65 max-w-2xl mx-auto mb-10 leading-[1.6] transition-all duration-700 delay-250 ${
+          className={`text-[16px] md:text-[18px] text-white/65 max-w-2xl mx-auto mb-10 leading-[1.6] transition-all duration-700 delay-250 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          Pergunte sobre <strong className="text-[#9DBEB1]">ativos</strong>,{" "}
-          <strong className="text-[#9DBEB1]">veiculos</strong>,{" "}
-          <strong className="text-[#9DBEB1]">incompatibilidades</strong>,{" "}
-          <strong className="text-[#9DBEB1]">protocolos clinicos</strong> e receba respostas tecnicas validadas em
-          segundos.
+          Pergunte sobre <strong className="text-[#5eead4]">ativos</strong>,{" "}
+          <strong className="text-[#5eead4]">veiculos</strong>,{" "}
+          <strong className="text-[#5eead4]">incompatibilidades</strong>,{" "}
+          <strong className="text-[#5eead4]">protocolos clinicos</strong> e receba respostas tecnicas validadas em segundos.
         </p>
 
         {/* Feature pills */}
@@ -114,10 +123,10 @@ export function IAHero() {
           ].map((item, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F4EDE0]/[0.06] border border-[#F4EDE0]/[0.14] backdrop-blur-md"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.06] border border-white/[0.12] backdrop-blur-md"
             >
-              <item.icon className="w-4 h-4 text-[#9DBEB1]" />
-              <span className="text-[13px] font-semibold text-[#F4EDE0]/95">{item.text}</span>
+              <item.icon className="w-4 h-4 text-[#5eead4]" />
+              <span className="text-[13px] font-semibold text-white/95">{item.text}</span>
             </div>
           ))}
         </div>
@@ -130,7 +139,7 @@ export function IAHero() {
         >
           <button
             onClick={scrollToWaitlist}
-            className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#a68449] via-[#D4B98C] to-[#a68449] text-[#0A1628] px-10 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:shadow-[0_0_60px_rgba(212,185,140,0.7)] transition-all shadow-[0_15px_50px_rgba(212,185,140,0.45)] hover:translate-y-[-3px]"
+            className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#0db5c8] via-[#5eead4] to-[#0db5c8] text-[#0C2340] px-10 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:shadow-[0_0_60px_rgba(13,181,200,0.7)] transition-all shadow-[0_15px_50px_rgba(13,181,200,0.5)] hover:translate-y-[-3px]"
           >
             <Bell className="w-5 h-5" />
             Entrar na Lista de Espera
@@ -138,15 +147,15 @@ export function IAHero() {
           </button>
           <Link
             href="#demo"
-            className="inline-flex items-center justify-center gap-2 bg-[#F4EDE0]/[0.05] border border-[#F4EDE0]/15 text-[#F4EDE0] px-8 py-5 rounded-2xl font-bold text-[15px] tracking-wide hover:bg-[#F4EDE0]/[0.1] hover:border-[#F4EDE0]/25 transition-all backdrop-blur-md"
+            className="inline-flex items-center justify-center gap-2 bg-white/[0.05] border border-white/15 text-white px-8 py-5 rounded-2xl font-bold text-[15px] tracking-wide hover:bg-white/[0.1] hover:border-white/25 transition-all backdrop-blur-md"
           >
-            Ver Demonstracao
+            Ver Demonstracao Interativa
           </Link>
         </div>
 
         {/* Social proof */}
         <p
-          className={`text-[12px] text-[#F4EDE0]/50 mt-6 uppercase tracking-[2px] font-semibold transition-all duration-700 delay-500 ${
+          className={`text-[12px] text-white/50 mt-6 uppercase tracking-[2px] font-semibold transition-all duration-700 delay-500 ${
             mounted ? "opacity-100" : "opacity-0"
           }`}
         >
