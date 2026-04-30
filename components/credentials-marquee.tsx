@@ -1,9 +1,7 @@
 import {
   Award,
   Globe2,
-  GraduationCap,
   FlaskConical,
-  Mic2,
   Sparkles,
   ShieldCheck,
   Building2,
@@ -12,8 +10,6 @@ import {
 } from "lucide-react"
 
 const items = [
-  { icon: GraduationCap, text: "3.000+ alunos formados" },
-  { icon: Mic2, text: "100+ palestras e congressos" },
   { icon: FlaskConical, text: "20+ fórmulas autorais" },
   { icon: Globe2, text: "Missões em Paris · Amsterdam · Japão" },
   { icon: Building2, text: "Indústria cosmética · Grau I e II" },

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRight, FlaskConical, MapPin } from "lucide-react"
+import { ArrowUpRight, FlaskConical, MapPin, Globe2 } from "lucide-react"
 
 // Bandeiras em SVG inline — leves, escaláveis e acessíveis
 function FlagFR({ className = "" }: { className?: string }) {
@@ -334,9 +334,9 @@ export function TeachingShowcase() {
 
                   {/* Atividades */}
                   <ul className="mt-4 flex flex-1 flex-col gap-3">
-                    {m.activities.map((activity) => (
+                    {m.activities.map((activity, idx) => (
                       <li
-                        key={activity}
+                        key={`${m.city}-activity-${idx}`}
                         className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-white/80"
                       >
                         <span
