@@ -148,7 +148,7 @@ export function Footer() {
               <ExternalLink className="w-3.5 h-3.5" />
               Portfólio · 20+ fórmulas
             </Link>
-            <span className="block text-white/50 text-sm mb-3">In-Cosmetics Paris 2025</span>
+            <span className="block text-white/50 text-sm mb-3">+500 farmácias atendidas</span>
             <span className="block text-white/50 text-sm mb-3">Missão Amsterdam · Japão</span>
             <span className="block text-white/50 text-sm">Grau I e II · Indústria cosmética</span>
           </div>

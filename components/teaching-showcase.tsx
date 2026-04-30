@@ -1,30 +1,89 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRight, Mic2, GraduationCap, Globe2, FlaskConical } from "lucide-react"
+import { ArrowUpRight, FlaskConical, MapPin } from "lucide-react"
 
-const metrics = [
+// Bandeiras em SVG inline — leves, escaláveis e acessíveis
+function FlagFR({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 60 40" className={className} aria-hidden role="img">
+      <rect width="20" height="40" fill="#0055A4" />
+      <rect x="20" width="20" height="40" fill="#FFFFFF" />
+      <rect x="40" width="20" height="40" fill="#EF4135" />
+    </svg>
+  )
+}
+
+function FlagJP({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 60 40" className={className} aria-hidden role="img">
+      <rect width="60" height="40" fill="#FFFFFF" />
+      <circle cx="30" cy="20" r="12" fill="#BC002D" />
+    </svg>
+  )
+}
+
+function FlagNL({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 60 40" className={className} aria-hidden role="img">
+      <rect width="60" height="13.33" fill="#AE1C28" />
+      <rect y="13.33" width="60" height="13.34" fill="#FFFFFF" />
+      <rect y="26.67" width="60" height="13.33" fill="#21468B" />
+    </svg>
+  )
+}
+
+const internationalMissions = [
   {
-    icon: Mic2,
-    value: "100+",
-    label: "Palestras, cursos e congressos",
-    detail:
-      "Eventos presenciais como palestrante — em indústria, magistrais, faculdades e congressos científicos.",
+    city: "Paris",
+    country: "França",
+    Flag: FlagFR,
+    accent: "#D4B98C",
+    headline: "Sourcing internacional & In-Cosmetics Global",
+    activities: [
+      "Visitas técnicas à Gattefossé, Lucas Meyer e Sensient",
+      "Participação no In-Cosmetics Global 2024 e 2025",
+      "Acesso antecipado a ativos exclusivos para o Brasil",
+    ],
   },
   {
-    icon: GraduationCap,
-    value: "3.000+",
-    label: "Alunos formados",
-    detail:
-      "Profissionais formados em cursos livres, práticos e técnicos em farmacotécnica e cosmetologia aplicada.",
+    city: "Lyon",
+    country: "França",
+    Flag: FlagFR,
+    accent: "#9DBEB1",
+    headline: "Imersão em fornecedores de referência",
+    activities: [
+      "Visita técnica à Kobo Products — pigmentos e tecnologias para color care",
+      "Visita à sede da Gattefossé — emolientes e ativos premium",
+      "Estudo de mercado em color cosmetics e skincare avançado",
+    ],
   },
   {
-    icon: Globe2,
-    value: "4 países",
-    label: "Missões internacionais",
-    detail:
-      "Brasil, França (In-Cosmetics Paris), Holanda (Amsterdam) e Japão — pesquisa, sourcing e ensino in loco.",
+    city: "Tóquio",
+    country: "Japão",
+    Flag: FlagJP,
+    accent: "#e8a87c",
+    headline: "Convidado pela Nikko Chemicals",
+    activities: [
+      "Convite oficial para pesquisa de mercado pela Nikko Chemicals",
+      "Estudo dos ativos inovadores da linha Nikkol",
+      "Atualização tecnológica para o formulador brasileiro",
+    ],
+  },
+  {
+    city: "Amsterdam",
+    country: "Holanda",
+    Flag: FlagNL,
+    accent: "#2dd4bf",
+    headline: "Estudo do mercado asiático",
+    activities: [
+      "Visita técnica à Galena — referência em K-beauty e J-beauty",
+      "Análise de tendências importadas da Ásia para a Europa",
+      "Curadoria de ativos asiáticos para o mercado nacional",
+    ],
   },
 ]
+
+
 
 export function TeachingShowcase() {
   return (
@@ -209,35 +268,93 @@ export function TeachingShowcase() {
           </div>
         </div>
 
-        {/* Faixa de métricas — 3 cartões alinhados */}
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3 md:gap-6">
-          {metrics.map((item) => {
-            const Icon = item.icon
-            return (
-              <div
-                key={item.label}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:border-[#D4B98C]/30 hover:bg-white/[0.04] md:p-7"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#D4B98C]/25 bg-[#D4B98C]/10 text-[#D4B98C]">
-                    <Icon className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
-                  <div className="font-serif text-4xl leading-none text-white md:text-5xl">
-                    {item.value}
-                  </div>
-                </div>
-                <div className="mt-5">
-                  <div className="text-sm font-semibold tracking-tight text-white">
-                    {item.label}
-                  </div>
-                  <div className="mt-1.5 text-justify text-xs leading-relaxed text-white/60 md:text-[13px]">
-                    {item.detail}
-                  </div>
-                </div>
+        {/* Missões internacionais — 4 países visitados, com bandeiras */}
+        <div className="mt-16 md:mt-24">
+          <div className="mb-10 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <div className="mb-4 inline-flex items-center gap-3">
+                <span className="h-px w-10 bg-gradient-to-r from-transparent via-[#D4B98C] to-[#D4B98C]" />
+                <span className="text-[11px] font-bold uppercase tracking-[3.5px] text-[#D4B98C]">
+                  Missões internacionais
+                </span>
               </div>
-            )
-          })}
+              <h3 className="font-serif text-[clamp(28px,3.6vw,44px)] leading-[1.05] tracking-[-0.02em] text-white">
+                Pesquisa, sourcing e ensino in loco em{" "}
+                <em className="bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text italic text-transparent">
+                  4 países
+                </em>
+                .
+              </h3>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
+                Cada missão técnica é traduzida em formação, atualização e diferenciação para
+                farmácias e indústrias brasileiras — direto da bancada europeia e asiática para o
+                seu balcão.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+            {internationalMissions.map((m) => {
+              const Flag = m.Flag
+              return (
+                <article
+                  key={`${m.city}-${m.headline}`}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.05] md:p-7"
+                >
+                  {/* Linha colorida superior */}
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-0 top-0 h-[3px]"
+                    style={{ backgroundColor: m.accent }}
+                  />
+
+                  {/* Bandeira + cidade */}
+                  <div className="flex items-center gap-4">
+                    <div className="relative h-10 w-[60px] flex-shrink-0 overflow-hidden rounded-md border border-white/15 shadow-[0_4px_14px_rgba(0,0,0,0.35)]">
+                      <Flag className="h-full w-full" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[2px] text-white/55">
+                        <MapPin className="h-3 w-3" strokeWidth={2} />
+                        <span>{m.country}</span>
+                      </div>
+                      <div className="font-serif text-2xl leading-none text-white md:text-[26px]">
+                        {m.city}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Headline */}
+                  <p
+                    className="mt-5 text-[13px] font-bold uppercase leading-snug tracking-[1.5px]"
+                    style={{ color: m.accent }}
+                  >
+                    {m.headline}
+                  </p>
+
+                  {/* Atividades */}
+                  <ul className="mt-4 flex flex-1 flex-col gap-3">
+                    {m.activities.map((activity) => (
+                      <li
+                        key={activity}
+                        className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-white/80"
+                      >
+                        <span
+                          aria-hidden
+                          className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                          style={{ backgroundColor: m.accent }}
+                        />
+                        <span>{activity}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              )
+            })}
+          </div>
         </div>
+
+
       </div>
     </section>
   )

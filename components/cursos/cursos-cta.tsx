@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Shield, Clock, RefreshCw } from "lucide-react"
+import { ArrowRight, Shield, Clock, RefreshCw, PlayCircle, BookOpen, MessageCircle } from "lucide-react"
 
 export function CursosCTA() {
   const guarantees = [
@@ -10,13 +10,28 @@ export function CursosCTA() {
     },
     {
       icon: Clock,
-      title: "Acesso por 12 meses",
-      detail: "Estude no seu ritmo, reveja quantas vezes quiser.",
+      title: "Gravado por 12 meses",
+      detail: "Curso fica disponível por 12 meses — assista quantas vezes quiser, no seu ritmo.",
     },
     {
       icon: RefreshCw,
       title: "Atualizações contínuas",
       detail: "Novas aulas sempre que a ciência avançar — sem custo extra.",
+    },
+  ]
+
+  const courseBenefits = [
+    {
+      icon: PlayCircle,
+      label: "Curso gravado disponível por 12 meses",
+    },
+    {
+      icon: BookOpen,
+      label: "Apostila de apoio inclusa em cada módulo",
+    },
+    {
+      icon: MessageCircle,
+      label: "Dúvidas com o professor via tutoria",
     },
   ]
 
@@ -49,8 +64,24 @@ export function CursosCTA() {
           </p>
         </div>
 
+        {/* Bullets de benefícios do curso */}
+        <div className="mx-auto mt-10 flex flex-wrap justify-center gap-4">
+          {courseBenefits.map((b) => {
+            const Icon = b.icon
+            return (
+              <div
+                key={b.label}
+                className="flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 backdrop-blur"
+              >
+                <Icon className="h-4 w-4 flex-shrink-0 text-white" />
+                <span className="text-sm font-semibold text-white">{b.label}</span>
+              </div>
+            )
+          })}
+        </div>
+
         {/* Guarantees */}
-        <div className="mx-auto mt-14 grid max-w-5xl gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-3">
           {guarantees.map((g) => {
             const Icon = g.icon
             return (

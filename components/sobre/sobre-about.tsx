@@ -1,119 +1,155 @@
 import Image from "next/image"
-import { Check, ArrowRight } from "lucide-react"
-import { FlaskIllustration, BeakerIllustration } from "../illustrations"
+import { Quote } from "lucide-react"
 
 export function SobreAbout() {
-  const checkItems = [
-    "6 anos coordenando P&D no maior grupo magistral do Brasil",
-    "Lideranca em atividades laboratoriais e projetos de P&D desde 2021",
-    "500+ farmacias magistrais atendidas tecnicamente",
-    "1.000+ formuladores treinados em programas proprios",
-    "Delegado tecnico In-Cosmetics Global Paris 2025",
-    "Missoes tecnicas em Paris, Amsterdam e Toquio",
-    "Publicacao peer-reviewed com DOI indexado",
-    "Professor em cursos, congressos e MBAs",
-    "Co-organizador do 1o Simposio de Peelings Quimicos do Brasil",
-    "Estudante de Nutricao e Ciencias Biomedicas",
-  ]
-
   return (
-    <section className="py-28 px-6 lg:px-10 bg-white relative overflow-hidden">
-      {/* Decorative Elements */}
-      <FlaskIllustration className="absolute top-20 right-[3%] w-24 h-32 text-teal opacity-10" />
-      <BeakerIllustration className="absolute bottom-20 left-[3%] w-20 h-28 text-copper opacity-10" />
+    <section id="sobre" className="relative bg-[#F8F6F2] py-24 lg:py-32 px-6 lg:px-10">
+      {/* Padrão sutil */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(12,35,64,0.6) 1px, transparent 0)`,
+          backgroundSize: "44px 44px",
+        }}
+      />
 
-      <div className="max-w-[1200px] mx-auto">
-        <div className="flex gap-20 items-start flex-wrap">
-          {/* Photo Side */}
-          <div className="flex-[0_0_400px] min-w-[300px] hidden lg:block">
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] sticky top-32">
-              <div className="w-full aspect-[3/4] relative">
+      <div className="relative max-w-[1180px] mx-auto">
+        {/* Eyebrow */}
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#B8783D]/25 bg-[#B8783D]/8 px-4 py-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#B8783D]" />
+            <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#B8783D]">
+              Sobre · Manifesto
+            </span>
+          </div>
+        </div>
+
+        {/* Frase de abertura — destaque editorial */}
+        <h2 className="font-serif font-normal text-[clamp(30px,4.2vw,50px)] text-[#0C2340] leading-[1.12] tracking-[-1px] text-center max-w-[940px] mx-auto text-balance mb-20">
+          Ensinar o que amo é minha missão. Compartilhar conhecimento, provocar reflexões,{" "}
+          <em className="italic text-[#B8783D]">traduzir ciência em prática</em> — isso me move.
+        </h2>
+
+        {/* Bloco principal: foto + texto narrativo */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Foto */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <div className="relative mx-auto max-w-[420px]">
+              <div className="absolute -inset-3 rounded-3xl border-2 border-[#B8783D]/25" aria-hidden />
+              <div
+                aria-hidden
+                className="absolute -inset-10 rounded-full opacity-35 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(184,120,61,0.30) 0%, transparent 70%)",
+                  filter: "blur(50px)",
+                }}
+              />
+
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-[0_30px_70px_rgba(12,35,64,0.22)] bg-[#0C2340]">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2400-56iB6ioacXe4fVxwFVoNMDro6w3zSZ.jpeg"
-                  alt="Samir Tannuri trabalhando no laboratorio — consultor em tecnologia magistral"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-30%20at%2000.11.30-UkIMWFmpL5lZ3gn4blX8ZmP2oSU9L6.jpeg"
+                  alt="Prof. Samir Tannuri — professor, pesquisador e consultor"
                   fill
+                  sizes="(max-width: 1024px) 80vw, 40vw"
                   className="object-cover object-top"
-                  sizes="400px"
+                  priority
                 />
               </div>
-              <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-xl rounded-2xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                <div className="font-serif text-xl text-navy">Samir Tannuri</div>
-                <div className="text-sm text-muted mt-1">Consultor em Tecnologia Magistral</div>
-              </div>
+
+              <div
+                className="absolute -bottom-3 -right-3 w-20 h-20 border-b-[3px] border-r-[3px] border-[#B8783D]/55 rounded-br-2xl"
+                aria-hidden
+              />
+              <div
+                className="absolute -top-3 -left-3 w-20 h-20 border-t-[3px] border-l-[3px] border-[#B8783D]/55 rounded-tl-2xl"
+                aria-hidden
+              />
             </div>
           </div>
 
-          {/* Text Side */}
-          <div className="flex-1 min-w-[320px]">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#B8783D]/25 bg-[#B8783D]/8 px-4 py-1.5 mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B8783D]" />
-              <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#B8783D]">
-                Curriculo & Trajetoria
+          {/* Texto narrativo — fiel ao manifesto */}
+          <div className="lg:col-span-7">
+            <p className="text-[18px] leading-[1.8] text-[#374151] mb-6">
+              Sou{" "}
+              <strong className="text-[#0C2340] font-semibold">
+                professor, pesquisador e consultor da indústria
+              </strong>
+              . Minha trajetória começou nos laboratórios de pesquisa da{" "}
+              <strong className="text-[#0C2340] font-semibold">FCF-UNICAMP</strong>, onde aprendi
+              que rigor científico e curiosidade caminham juntos. Depois vieram os{" "}
+              <strong className="text-[#0C2340] font-semibold">
+                fibroblastos humanos na Universidade São Francisco
+              </strong>
+              , os{" "}
+              <strong className="text-[#0C2340] font-semibold">
+                polímeros odontológicos na FOP-UNICAMP
+              </strong>
+              , e dezenas de cursos, palestras e aulas que ministrei desde então.
+            </p>
+
+            <p className="text-[18px] leading-[1.8] text-[#374151] mb-6">
+              Cada sala de aula, cada bancada, cada protocolo desenvolvido reforça uma certeza:{" "}
+              <strong className="text-[#0C2340] font-semibold">
+                conhecimento existe para circular
+              </strong>
+              . Eu aprendo ensinando. Ensino aprendendo. E nisso encontro propósito.
+            </p>
+
+            <p className="text-[18px] leading-[1.8] text-[#374151] mb-10">
+              Essa lógica aplico na docência e na consultoria:{" "}
+              <strong className="text-[#0C2340] font-semibold">
+                não entrego fórmulas mágicas. Entrego fundamentos. Evidências
+              </strong>
+              . Caminhos para que médicos, farmacêuticos e profissionais da saúde tomem decisões
+              clínicas{" "}
+              <span className="font-semibold text-[#B8783D]">
+                conscientes, seguras e personalizadas
               </span>
-            </div>
-
-            <h2 className="font-serif text-3xl md:text-4xl text-[#0C2340] mb-8 leading-tight">
-              Experiencia que se traduz em <em className="text-[#B8783D]">resultados mensuráveis</em>.
-            </h2>
-
-            <p className="text-lg leading-relaxed mb-6 text-[#374151]">
-              <strong className="text-[#0C2340] font-semibold">Samir Tannuri</strong> passou os ultimos seis anos coordenando o P&D de cosmeticos no <strong className="text-[#0C2340] font-semibold">maior grupo magistral do Brasil</strong>. Nesse periodo, formulou, escalonou, resolveu desvio de lote, atendeu tecnicamente mais de 500 farmacias magistrais e treinou mais de mil formuladores no pais inteiro.
-            </p>
-            
-            <p className="text-lg leading-relaxed mb-6 text-[#374151]">
-              Desde 2021, lidera <strong className="text-[#0C2340] font-semibold">atividades laboratoriais e projetos de Pesquisa e Desenvolvimento</strong>, conduzindo iniciativas cientificas inovadoras com foco na identificacao de novas solucoes, otimizacao de processos e desenvolvimento de formulacoes de alta performance. Colabora com <strong className="text-[#0C2340] font-semibold">equipes multidisciplinares</strong> para atender as demandas do mercado farmaceutico e cosmetico.
+              .
             </p>
 
-            <p className="text-lg leading-relaxed mb-6 text-[#374151]">
-              A <strong className="text-[#0C2340] font-semibold">ST Farma — Consultoria em Tecnologia Farmaceutica</strong> nasce para levar essa vivencia operacional para dentro da sua empresa. Nao e aula. Nao e palestra motivacional. E consultoria tecnica, documentada, com entregaveis claros: diagnostico de formulacao, reformulacao de portfolio, estudo de estabilidade, transferencia de tecnologia, selecao de ativos e due diligence de ingredientes.
+            {/* Citação destacada — Cora Coralina */}
+            <figure className="relative my-12 rounded-2xl border-l-[4px] border-[#B8783D] bg-white px-8 py-8 shadow-[0_15px_40px_rgba(12,35,64,0.08)]">
+              <Quote
+                className="absolute -top-4 left-6 w-9 h-9 text-[#B8783D] bg-[#F8F6F2] rounded-full p-1.5"
+                aria-hidden
+              />
+              <blockquote className="font-serif italic text-[22px] md:text-[26px] leading-[1.4] text-[#0C2340] tracking-[-0.3px] mb-3">
+                &ldquo;Feliz aquele que transfere o que sabe e aprende o que ensina.&rdquo;
+              </blockquote>
+              <figcaption className="text-[12px] font-bold uppercase tracking-[2.5px] text-[#B8783D]">
+                — Cora Coralina
+              </figcaption>
+            </figure>
+
+            <p className="text-[19px] leading-[1.7] text-[#0C2340] font-serif italic mb-12">
+              É exatamente isso que faço.{" "}
+              <strong className="not-italic font-bold text-[#B8783D]">
+                E é exatamente por isso que sigo.
+              </strong>
             </p>
 
-            <p className="text-lg leading-relaxed mb-6 text-[#374151]">
-              Ministra <strong className="text-[#0C2340] font-semibold">aulas em programas tecnico-cientificos</strong> abordando tecnologia farmaceutica, cosmetica e protocolos avancados de tratamentos esteticos. Como estudante de <strong className="text-[#0C2340] font-semibold">Nutricao e Ciencias Biomedicas</strong>, integra conhecimento academico e aplicacao pratica para promover avancos nos setores de saude e cuidados pessoais.
-            </p>
-
-            <p className="text-lg leading-relaxed mb-8 text-[#374151]">
-              Criador do primeiro peeling de acido azelaico em pasta anidra do mundo e autor da <strong className="text-[#0C2340] font-semibold">Tecnica Fenol FREE</strong>. Co-assina paper peer-reviewed sobre fotoprotecao em peles negras. Delegado tecnico In-Cosmetics Global Paris 2025, com missoes em Amsterdam e Toquio.
-            </p>
-
-            {/* Check Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-10">
-              {checkItems.map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-base text-[#0C2340] font-medium">
-                  <div className="w-6 h-6 rounded-full bg-[#0a8f9e]/15 flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 text-[#0a8f9e]" />
-                  </div>
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            {/* Quote Box */}
-            <div className="border-l-4 border-[#B8783D] py-6 px-7 bg-[#B8783D]/10 rounded-r-2xl mt-10">
-              <p className="font-serif italic text-xl text-[#0C2340] leading-relaxed mb-3">
-                {'"'}Formula boa nao nasce de opiniao — nasce de evidencia, metodo e iteracao.{'"'}
-              </p>
-              <span className="text-sm text-[#64748b] font-medium">— Samir Tannuri</span>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="https://wa.me/5511981403000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#B8783D] text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-[#9a6530] transition-colors"
-              >
-                Falar sobre um projeto
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="/portfolio"
-                className="inline-flex items-center gap-2 border-2 border-[#0C2340] text-[#0C2340] font-semibold px-6 py-3.5 rounded-xl hover:bg-[#0C2340] hover:text-white transition-colors"
-              >
-                Ver portfolio de inovacoes
-              </a>
+            {/* Assinatura */}
+            <div className="border-t border-[#0C2340]/15 pt-8">
+              <div className="font-serif text-[28px] text-[#0C2340] tracking-[-0.5px] mb-2">
+                Samir Tannuri
+              </div>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-bold uppercase tracking-[2px] text-[#B8783D] mb-3">
+                <span>Professor</span>
+                <span className="text-[#B8783D]/40">|</span>
+                <span>Pesquisador</span>
+                <span className="text-[#B8783D]/40">|</span>
+                <span>Consultor</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-[#374151]">
+                <span>Dermatologia Clínica Aplicada</span>
+                <span className="text-[#0C2340]/30">|</span>
+                <span>Desenvolvimento de Formulações</span>
+                <span className="text-[#0C2340]/30">|</span>
+                <span>Educação Científica</span>
+              </div>
             </div>
           </div>
         </div>

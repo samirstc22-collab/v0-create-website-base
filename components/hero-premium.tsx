@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Award, FlaskConical, GraduationCap, Microscope, BookOpen } from "lucide-react"
+import { ArrowRight, Award, FlaskConical, GraduationCap, Users, BookOpen } from "lucide-react"
 
 export function HeroPremium() {
   const [mounted, setMounted] = useState(false)
@@ -105,9 +105,9 @@ export function HeroPremium() {
               </span>
             </div>
 
-            {/* Titulo principal - ciencia que vira autoridade tecnica */}
+            {/* Titulo principal - inovacao magistral para faturamento da farmacia */}
             <h1
-              className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[0.98] tracking-[-3px] text-[#F4EDE0] mb-6 transition-all duration-700 delay-100 ${
+              className={`font-serif font-normal text-[clamp(36px,5.4vw,72px)] leading-[1.02] tracking-[-2px] text-[#F4EDE0] mb-6 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
@@ -115,12 +115,10 @@ export function HeroPremium() {
                   "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
               }}
             >
-              Ciencia cosmetica
-              <br />
-              que vira{" "}
+              Inovação em{" "}
               <span className="relative inline-block">
                 <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                  autoridade
+                  formulação magistral
                 </em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -137,10 +135,13 @@ export function HeroPremium() {
                     opacity="0.95"
                   />
                 </svg>
-              </span>{" "}
+              </span>
+              <br />
+              para aumentar o{" "}
               <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                tecnica
-              </em>
+                faturamento
+              </em>{" "}
+              da sua farmácia.
             </h1>
 
             {/* Subheadline - foco em publico */}
@@ -152,9 +153,10 @@ export function HeroPremium() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4)",
               }}
             >
-              Cursos, mentoria e consultoria de{" "}
-              <strong className="text-[#D4B98C] font-bold">alto nivel</strong>{" "}
-              para pesquisadores e consultores que desenvolvem formulas autorais com base cientifica — as mesmas que prescritores reconhecem, indicam e pedem pelo nome.
+              <strong className="text-[#D4B98C] font-bold">Consultoria, cursos e P&amp;D</strong>{" "}
+              para farmácias e indústrias que querem inovar com{" "}
+              <strong className="text-[#D4B98C] font-bold">segurança, performance e diferenciação</strong>{" "}
+              no mercado.
             </p>
 
             {/* Stat row destacada - 500 Farmacias em destaque */}
@@ -164,9 +166,9 @@ export function HeroPremium() {
               }`}
             >
               {[
-                { value: "500+", label: "Farmacias atendidas", icon: FlaskConical, highlight: true },
+                { value: "500+", label: "Mais de 500 farmácias atendidas", icon: FlaskConical, highlight: true },
                 { value: "1.000+", label: "Profissionais formados", icon: GraduationCap },
-                { value: "Peer", label: "Reviewed em ciencia", icon: Microscope },
+                { value: "4.000", label: "Fórmulas testadas nos últimos anos", icon: Award },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -197,20 +199,20 @@ export function HeroPremium() {
               }`}
             >
               <Link
-                href="/cursos"
+                href="/contato"
                 className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#a68449] via-[#D4B98C] to-[#a68449] text-[#0A1628] px-9 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:shadow-[0_0_50px_rgba(212,185,140,0.7)] transition-all shadow-[0_10px_40px_rgba(212,185,140,0.45)] hover:translate-y-[-3px] overflow-hidden"
                 style={{ backgroundSize: "200% 100%" }}
               >
-                <GraduationCap className="w-5 h-5" />
-                <span>Ver Cursos</span>
+                <FlaskConical className="w-5 h-5" />
+                <span>Quero desenvolver com estratégia</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/loja"
+                href="/consultoria"
                 className="group inline-flex items-center justify-center gap-3 bg-[#9DBEB1]/15 text-[#F4EDE0] px-8 py-5 rounded-2xl font-bold text-[16px] tracking-wide border-2 border-[#9DBEB1]/45 hover:bg-[#9DBEB1]/25 hover:border-[#9DBEB1]/70 hover:translate-y-[-3px] transition-all backdrop-blur-md"
               >
                 <BookOpen className="w-5 h-5 text-[#9DBEB1]" />
-                <span>Ir para a Loja</span>
+                <span>Falar com consultoria</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -222,9 +224,7 @@ export function HeroPremium() {
               }`}
             >
               {[
-                { icon: Award, text: "Delegado · In-Cosmetics Paris 2025" },
-                { icon: Microscope, text: "Paper Peer-Reviewed" },
-                { icon: GraduationCap, text: "Mestre em P&D Cosmetico" },
+                { icon: Users, text: "+500 farmácias atendidas" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-[#F4EDE0]">
                   <item.icon className="w-4 h-4 text-[#D4B98C]" />
@@ -260,7 +260,7 @@ export function HeroPremium() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9888%20copiar-K73UeCChbW1Z8EQ1xXtTRg3yFGHX8E.jpg"
-                  alt="Samir Tannuri — Pesquisador e Consultor de Formulas"
+                  alt="Samir Tannuri ��� Pesquisador e Consultor de Formulas"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 80vw, 45vw"
@@ -283,23 +283,10 @@ export function HeroPremium() {
                   Samir Tannuri
                 </div>
                 <div className="text-[#F4EDE0] text-[15px] font-bold mb-0.5">
-                  Pesquisador · Consultor
+                  Inovação Magistral
                 </div>
                 <div className="text-[#F4EDE0]/70 text-[11px] font-medium">
-                  Cursos & Mentoria de Alto Nivel
-                </div>
-              </div>
-
-              {/* Selo "500 farmacias" sobreposto */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#D4B98C] to-[#a68449] rounded-2xl px-4 py-3 shadow-[0_10px_30px_rgba(212,185,140,0.45)] border border-[#F4EDE0]/40">
-                <div className="text-[10px] uppercase tracking-[2px] text-[#0A1628]/80 font-bold leading-tight">
-                  Atendi
-                </div>
-                <div className="font-serif text-[#0A1628] text-[24px] font-bold leading-none">
-                  500+
-                </div>
-                <div className="text-[10px] uppercase tracking-[1.5px] text-[#0A1628] font-bold leading-tight">
-                  farmacias
+                  Consultoria · Cursos · P&amp;D
                 </div>
               </div>
 

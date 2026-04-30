@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { GraduationCap, Award, Users } from "lucide-react"
+import { GraduationCap, Award, Users, PlayCircle, BookOpen, MessageCircle } from "lucide-react"
 
 export function CursosHero() {
   return (
@@ -28,35 +28,33 @@ export function CursosHero() {
               </span>
             </div>
 
-            <h1 className="mt-7 font-serif text-4xl leading-[1.02] tracking-[-0.02em] text-white md:text-6xl lg:text-[82px]">
-              Cursos que transformam farmacêuticos em{" "}
-              <span className="italic text-[#e8a87c]">referências técnicas</span> da sua região.
+            <h1 className="mt-7 font-serif text-4xl leading-[1.02] tracking-[-0.02em] text-white md:text-6xl lg:text-[72px]">
+              Do conceito à bancada:{" "}
+              <span className="italic text-[#e8a87c]">aprenda a desenvolver produtos</span> com raciocínio técnico e aplicação clínica.
             </h1>
 
-            <p className="mt-7 max-w-[620px] text-lg leading-[1.7] text-white/70 md:text-xl">
-              Formação intensiva em cosmetologia avançada, manipulação de alta performance e gestão
-              lucrativa — construída com o mesmo rigor das melhores escolas de Paris, Tóquio e
-              Amsterdam, e adaptada ao balcão brasileiro.{" "}
-              <span className="font-semibold text-white">
-                Do iniciante ao farmacêutico que quer virar autoridade.
-              </span>
+            <p className="mt-7 max-w-[680px] text-lg leading-[1.7] text-white/70 md:text-xl">
+              Formação intensiva em{" "}
+              <span className="font-semibold text-white">cosmetologia avançada</span>,{" "}
+              <span className="font-semibold text-white">manipulação de alta performance</span> e{" "}
+              <span className="font-semibold text-white">gestão lucrativa</span> — com rigor técnico internacional e aplicação prática no mercado.
             </p>
 
             {/* Micro stats */}
             <div className="mt-10 grid gap-5 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
-                  <Users className="h-3 w-3" /> Alunos
+                  <Users className="h-3 w-3" /> Presença
                 </div>
-                <div className="mt-2 font-serif text-4xl text-white">12.000+</div>
-                <div className="text-xs text-white/50">em 26 capitais</div>
+                <div className="mt-2 font-serif text-2xl leading-tight text-white">+23 capitais e 6 países</div>
+                <div className="text-xs text-white/50">Europa, Ásia e América Latina</div>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
-                  <Award className="h-3 w-3" /> Satisfação
+                  <Award className="h-3 w-3" /> Experiência
                 </div>
-                <div className="mt-2 font-serif text-4xl text-white">98%</div>
-                <div className="text-xs text-white/50">recomendam</div>
+                <div className="mt-2 font-serif text-2xl leading-tight text-white">20+</div>
+                <div className="text-xs text-white/50">indústrias cosméticas atendidas</div>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
@@ -68,27 +66,48 @@ export function CursosHero() {
             </div>
           </div>
 
-          {/* Photo */}
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/25 to-[#2dd4bf]/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
-              <Image
-                src="/placeholder.svg?height=600&width=800"
-                alt="Samir Tannuri em laboratório internacional"
-                width={1000}
-                height={1250}
-                className="h-auto w-full object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-xl">
-                <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
-                  Treinamento EUROTEX · França
+          {/* Photo + bullets */}
+          <div className="flex flex-col gap-6">
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/25 to-[#2dd4bf]/20 blur-3xl" />
+              <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-30%20at%2000.38.31-zUzPglrJQeh57Kj3gVgPBiDAOjsIst.jpeg"
+                  alt="Samir Tannuri em laboratório internacional — pesquisa na bancada"
+                  width={1000}
+                  height={1250}
+                  className="h-auto w-full object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-xl">
+                  <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
+                    Bancada real · P&amp;D cosmético
+                  </div>
+                  <p className="mt-1 font-serif text-lg leading-tight text-white">
+                    O que você aprende aqui, eu testei na bancada!
+                  </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-tight text-white">
-                  O que você aprende aqui, ele aprendeu na origem.
-                </p>
               </div>
+            </div>
+
+            {/* Bullets de benefício do curso */}
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+              <p className="mb-4 text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
+                O que está incluso
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                  { icon: PlayCircle, text: "Curso fica gravado por 12 meses — assista quando e quantas vezes quiser" },
+                  { icon: BookOpen, text: "Apostila de apoio completa com cada módulo do curso" },
+                  { icon: MessageCircle, text: "Dúvidas respondidas com o professor via tutoria" },
+                ].map((item) => (
+                  <li key={item.text} className="flex items-start gap-3">
+                    <item.icon className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#2dd4bf]" />
+                    <span className="text-sm leading-relaxed text-white/80">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
