@@ -51,10 +51,10 @@ export function CursosHero() {
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
-                  <Award className="h-3 w-3" /> Satisfação
+                  <Award className="h-3 w-3" /> Experiência
                 </div>
-                <div className="mt-2 font-serif text-4xl text-white">98%</div>
-                <div className="text-xs text-white/50">recomendam</div>
+                <div className="mt-2 font-serif text-2xl leading-tight text-white">20+</div>
+                <div className="text-xs text-white/50">indústrias cosméticas atendidas</div>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
