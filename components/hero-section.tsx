@@ -77,9 +77,9 @@ export function HeroSection() {
           <span className="hidden md:inline text-white/30">|</span>
           <span>Missoes Amsterdam · Japao</span>
           <span className="hidden md:inline text-white/30">|</span>
-          <span>Paper Peer-Reviewed</span>
+          <span>20+ Fórmulas Autorais</span>
           <span className="hidden md:inline text-white/30">|</span>
-          <span>ICosmetologia</span>
+          <span>Indústria Grau I e II</span>
         </div>
 
         {/* Hero content grid */}

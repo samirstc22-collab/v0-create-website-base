@@ -47,7 +47,7 @@ export function Footer() {
               <br />
               ST Farma — Consultoria em Formulação Magistral
               <br />
-              Goiania — GO · Brasil
+              Campinas — SP · Brasil
             </p>
             {/* Social icons */}
             <div className="flex gap-2">
@@ -108,6 +108,9 @@ export function Footer() {
             <Link href="/cursos" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Cursos
             </Link>
+            <Link href="/portfolio" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
+              Portfólio
+            </Link>
             <Link href="/formularios" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Formularios
             </Link>
@@ -127,9 +130,9 @@ export function Footer() {
             <Link href="/consultoria" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Consultoria
             </Link>
-            <Link href="/formulator-ai" className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#4a9eff] transition-colors">
+            <Link href="/ia" className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#4a9eff] transition-colors">
               <Sparkles className="w-3.5 h-3.5" />
-              Formulator AI
+              iA Labs
             </Link>
             <Link href="/lp" className="block text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               Lab Pro
@@ -141,18 +144,13 @@ export function Footer() {
             <div className="text-[10px] font-bold text-white/25 tracking-[2px] uppercase mb-5">
               Credenciais
             </div>
-            <a
-              href="https://doi.org/10.24933/rep.v6i2.281"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors"
-            >
+            <Link href="/portfolio" className="flex items-center gap-1.5 text-white/50 text-sm mb-3 hover:text-[#e8a87c] transition-colors">
               <ExternalLink className="w-3.5 h-3.5" />
-              Paper Peer-Reviewed
-            </a>
+              Portfólio · 20+ fórmulas
+            </Link>
             <span className="block text-white/50 text-sm mb-3">In-Cosmetics Paris 2025</span>
-            <span className="block text-white/50 text-sm mb-3">Missao Amsterdam · Japao</span>
-            <span className="block text-white/40 text-sm">ICosmetologia</span>
+            <span className="block text-white/50 text-sm mb-3">Missão Amsterdam · Japão</span>
+            <span className="block text-white/50 text-sm">Grau I e II · Indústria cosmética</span>
           </div>
         </div>
 

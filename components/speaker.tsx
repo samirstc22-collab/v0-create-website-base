@@ -22,7 +22,7 @@ export function Speaker() {
     {
       year: "2023",
       title: "Seminarios Cientificos Regionais",
-      desc: "Cuiaba, Maringa, Goiania, Espirito Santo | Peelings quimicos e tratamento de melasma",
+      desc: "Cuiabá, Maringá, Campinas, Espírito Santo | Peelings químicos e tratamento de melasma",
     },
     {
       year: "2022",

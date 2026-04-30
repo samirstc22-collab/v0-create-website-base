@@ -1,7 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Award, Clock } from "lucide-react"
 import { getFeaturedPost } from "@/lib/blog-data"
 import { MoleculeIllustration, FlaskIllustration } from "@/components/illustrations"
+
+const AUTHOR_PHOTO =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9390%20copiar-EsdoKTWVMwZx90EynnDjPAAJmGFgXd.jpg"
 
 export function BlogFeatured() {
   const post = getFeaturedPost()
@@ -107,8 +111,14 @@ export function BlogFeatured() {
 
               <div className="flex items-center justify-between border-t border-black/5 pt-6">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-navy text-sm font-serif text-[#e8a87c]">
-                    ST
+                  <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-[#b87333]/40">
+                    <Image
+                      src={AUTHOR_PHOTO}
+                      alt={post.author}
+                      fill
+                      className="object-cover object-[center_15%]"
+                      sizes="40px"
+                    />
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-navy">{post.author}</div>

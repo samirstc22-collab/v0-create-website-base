@@ -25,7 +25,7 @@ export function ContatoForm() {
     {
       icon: MapPin,
       label: "Localizacao",
-      value: "Goiania - GO, Brasil",
+      value: "Campinas - SP, Brasil",
     },
     {
       icon: Clock,

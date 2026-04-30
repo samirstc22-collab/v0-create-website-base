@@ -1,7 +1,9 @@
 import { Navbar } from "@/components/navbar"
 import { HeroPremium } from "@/components/hero-premium"
+import { CredentialsMarquee } from "@/components/credentials-marquee"
 import { FeaturedProducts } from "@/components/featured-products"
 import { BigStats } from "@/components/big-stats"
+import { TeachingShowcase } from "@/components/teaching-showcase"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { LeadCaptureSection } from "@/components/lead-capture-section"
 import { LeadQuiz } from "@/components/lead-quiz"
@@ -14,10 +16,14 @@ export default function Home() {
       <Navbar />
       {/* 1. HERO PREMIUM — foto grande do Samir + video animado + frase de impacto */}
       <HeroPremium />
+      {/* 1.5 BARRA DE CREDENCIAIS — carrossel infinito de provas (chama atencao) */}
+      <CredentialsMarquee />
       {/* 2. PRODUTOS EM DESTAQUE — cursos especiais, formularios e ebooks */}
       <FeaturedProducts />
       {/* 3. PROVA RAPIDA — numeros que validam autoridade */}
       <BigStats />
+      {/* 3.5 ENSINO & PALESTRAS — autoridade visual em cena (Samir lecionando) */}
+      <TeachingShowcase />
       {/* 4. DIFERENCIACAO — problema + implicacao */}
       <HomeDifferentiation />
       {/* 5. CAPTACAO DE LEADS — formulario Clube da Formula */}

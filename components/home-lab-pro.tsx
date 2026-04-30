@@ -150,11 +150,11 @@ export function HomeLabPro() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/formulator-ai"
+                href="/ia"
                 className="group inline-flex items-center gap-2 bg-[#4a9eff] text-white px-7 py-4 rounded-xl font-bold text-base tracking-wide hover:bg-[#3b8fe8] transition-all shadow-[0_8px_30px_rgba(74,158,255,0.3)] hover:shadow-[0_12px_40px_rgba(74,158,255,0.4)] hover:translate-y-[-2px]"
               >
                 <Sparkles className="w-5 h-5" />
-                Acessar o Lab Pro
+                Acessar o iA Labs
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

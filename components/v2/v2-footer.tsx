@@ -18,7 +18,7 @@ export function V2Footer() {
               <br />
               Pesquisador · Consultor Industrial · Palestrante
               <br />
-              Metapharma · Goiânia — GO · Brasil
+              ST Farma · Campinas — SP · Brasil
             </p>
           </div>
 

@@ -64,8 +64,8 @@ export function HomeAuthority() {
     "In-Cosmetics Global Paris 2025",
     "Missão Técnica Amsterdam",
     "Missão Técnica Japão",
-    "Paper Peer-Reviewed",
-    "ICosmetologia",
+    "Indústria Cosmética · Grau I e II",
+    "20+ Fórmulas Autorais",
   ]
 
   const productImages = [
@@ -143,7 +143,7 @@ export function HomeAuthority() {
             <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#e8a87c]/30 via-transparent to-[#2dd4bf]/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-Fh12Umo5MunvDT3pxP0ePdyCtwVaRC.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0101%20copiar-fVKNBWLv6ZALcCRwbeg0uBTc9mEPEA.jpg"
                 alt="Samir Tannuri — Consultor em Formulação Magistral"
                 width={1200}
                 height={1500}
@@ -462,7 +462,7 @@ export function HomeAuthority() {
               <div className="hidden shrink-0 lg:block">
                 <div className="relative h-[180px] w-[180px] overflow-hidden rounded-full border-4 border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0083%20copiar-i1zHpOYJQutLzHKphs5z9JTmuZimeK.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_0083%20copiar-e5k6wyER1qKwoupKy8UkcFUhl5K2ox.jpg"
                     alt="Samir Tannuri"
                     fill
                     className="object-cover object-[center_20%]"

@@ -14,16 +14,27 @@ export function HeroPremium() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0A1628]">
-      {/* Fundo estatico premium - gradiente com profundidade editorial */}
+      {/* Imagem de fundo - palestra em palco internacional (cenario que comprova autoridade) */}
+      <div aria-hidden className="absolute inset-0 z-0">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4727-NTuBtxqrkNVd7sX59ZDNZ4ga2AjT6S.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center scale-105"
+        />
+      </div>
+
+      {/* Camadas de escurecimento e cor para legibilidade premium */}
       <div
         aria-hidden
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-[1]"
         style={{
           background: `
+            linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,31,56,0.78) 35%, rgba(21,37,68,0.72) 65%, rgba(10,22,40,0.88) 100%),
             radial-gradient(ellipse 80% 60% at 80% 20%, rgba(212, 185, 140, 0.18) 0%, transparent 55%),
-            radial-gradient(ellipse 70% 50% at 20% 80%, rgba(157, 190, 177, 0.10) 0%, transparent 55%),
-            radial-gradient(ellipse 100% 70% at 50% 50%, rgba(27, 42, 78, 0.7) 0%, transparent 70%),
-            linear-gradient(135deg, #0A1628 0%, #0F1F38 35%, #152544 65%, #0A1628 100%)
+            radial-gradient(ellipse 70% 50% at 20% 80%, rgba(157, 190, 177, 0.10) 0%, transparent 55%)
           `,
         }}
       />
@@ -31,7 +42,7 @@ export function HeroPremium() {
       {/* Textura grain sutil para sensacao premium editorial */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1] opacity-[0.06] pointer-events-none mix-blend-overlay"
+        className="absolute inset-0 z-[2] opacity-[0.08] pointer-events-none mix-blend-overlay"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
         }}
@@ -40,7 +51,7 @@ export function HeroPremium() {
       {/* Grid pattern fino - laboratorio/ciencia */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1] opacity-[0.05] pointer-events-none"
+        className="absolute inset-0 z-[2] opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(212, 185, 140, 0.6) 1px, transparent 0)`,
           backgroundSize: "56px 56px",
@@ -50,20 +61,30 @@ export function HeroPremium() {
       {/* Glow champagne suave - apenas decorativo, sem animacao pesada */}
       <div
         aria-hidden
-        className="absolute top-[10%] right-[8%] w-[700px] h-[700px] rounded-full pointer-events-none z-[2] opacity-50"
+        className="absolute top-[10%] right-[8%] w-[700px] h-[700px] rounded-full pointer-events-none z-[3] opacity-40"
         style={{
           background: "radial-gradient(circle, rgba(212, 185, 140, 0.20) 0%, transparent 60%)",
           filter: "blur(80px)",
         }}
       />
 
-      {/* Spotlight escuro lateral esquerda - garante leitura */}
+      {/* Spotlight escuro lateral esquerda - garante leitura sobre o palco */}
       <div
         aria-hidden
-        className="absolute inset-y-0 left-0 w-[60%] z-[3] pointer-events-none hidden lg:block"
+        className="absolute inset-y-0 left-0 w-[65%] z-[4] pointer-events-none hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, rgba(10,22,40,0.85) 0%, rgba(10,22,40,0.55) 50%, rgba(10,22,40,0) 100%)",
+            "linear-gradient(90deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.65) 50%, rgba(10,22,40,0) 100%)",
+        }}
+      />
+
+      {/* Vignette inferior — base e mistura com a proxima secao */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-[50%] z-[4] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(180deg, transparent 0%, rgba(10,22,40,0.55) 60%, rgba(10,22,40,0.95) 100%)",
         }}
       />
 
@@ -84,7 +105,7 @@ export function HeroPremium() {
               </span>
             </div>
 
-            {/* Titulo principal - foco em pesquisador/consultor */}
+            {/* Titulo principal - ciencia que vira autoridade tecnica */}
             <h1
               className={`font-serif font-normal text-[clamp(40px,6vw,82px)] leading-[0.98] tracking-[-3px] text-[#F4EDE0] mb-6 transition-all duration-700 delay-100 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -94,14 +115,13 @@ export function HeroPremium() {
                   "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
               }}
             >
-              Cursos & Consultoria de{" "}
-              <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                alto nivel
-              </em>
+              Ciencia cosmetica
               <br />
-              para{" "}
+              que vira{" "}
               <span className="relative inline-block">
-                pesquisadores
+                <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
+                  autoridade
+                </em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="14"
@@ -118,10 +138,12 @@ export function HeroPremium() {
                   />
                 </svg>
               </span>{" "}
-              e consultores
+              <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
+                tecnica
+              </em>
             </h1>
 
-            {/* Subheadline - foco em ciencia */}
+            {/* Subheadline - foco em publico */}
             <p
               className={`text-[18px] md:text-[21px] text-[#F4EDE0]/95 leading-[1.55] max-w-[640px] mx-auto lg:mx-0 mb-9 font-normal transition-all duration-700 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -130,9 +152,9 @@ export function HeroPremium() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4)",
               }}
             >
-              Formacao avancada e mentoria estrategica para quem desenvolve{" "}
-              <strong className="text-[#D4B98C] font-bold">formulas autorais com base cientifica</strong>{" "}
-              — as mesmas que prescritores reconhecem, indicam e pedem pelo nome.
+              Cursos, mentoria e consultoria de{" "}
+              <strong className="text-[#D4B98C] font-bold">alto nivel</strong>{" "}
+              para pesquisadores e consultores que desenvolvem formulas autorais com base cientifica — as mesmas que prescritores reconhecem, indicam e pedem pelo nome.
             </p>
 
             {/* Stat row destacada - 500 Farmacias em destaque */}
@@ -237,7 +259,7 @@ export function HeroPremium() {
               {/* Foto principal de terno */}
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <Image
-                  src="/samir-portrait-suit.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9888%20copiar-K73UeCChbW1Z8EQ1xXtTRg3yFGHX8E.jpg"
                   alt="Samir Tannuri — Pesquisador e Consultor de Formulas"
                   fill
                   className="object-cover object-top"

@@ -86,7 +86,7 @@ export function BigStats() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[#B8783D]/20 via-transparent to-[#0C2340]/15 blur-2xl pointer-events-none" />
             <div className="relative overflow-hidden rounded-2xl border border-[#0C2340]/10 shadow-[0_30px_70px_-20px_rgba(12,35,64,0.25)]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9950%20copiar-5oI7SGUIxX6Vi6p4D42Jo06tatWSVM.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9390%20copiar-EsdoKTWVMwZx90EynnDjPAAJmGFgXd.jpg"
                 alt="Samir Tannuri - Consultor em Formulacao Magistral"
                 width={320}
                 height={460}
