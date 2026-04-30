@@ -58,6 +58,9 @@ export function SobreAbout() {
             </h2>
 
             <p className="text-lg leading-relaxed mb-6 text-[#374151]">
+              <strong className="text-[#0C2340] font-semibold">Quem ensinou Samir foi o proprio pai.</strong> Cresceu dentro de farmacia magistral, ouvindo conversa de balcao e vendo manipulacao acontecer desde crianca. Esse legado familiar virou paixao por compartilhar conhecimento — e a paixao virou metodo de ensinar e formar profissionais Brasil afora.
+            </p>
+            <p className="text-lg leading-relaxed mb-6 text-[#374151]">
               <strong className="text-[#0C2340] font-semibold">Samir Tannuri</strong> passou os ultimos seis anos coordenando o P&D de cosmeticos no <strong className="text-[#0C2340] font-semibold">maior grupo magistral do Brasil</strong>. Nesse periodo, formulou, escalonou, resolveu desvio de lote, atendeu tecnicamente mais de 500 farmacias magistrais e treinou mais de mil formuladores no pais inteiro.
             </p>
             

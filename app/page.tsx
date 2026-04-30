@@ -4,6 +4,7 @@ import { CredentialsMarquee } from "@/components/credentials-marquee"
 import { FeaturedProducts } from "@/components/featured-products"
 import { BigStats } from "@/components/big-stats"
 import { TeachingShowcase } from "@/components/teaching-showcase"
+import { HomeTrajectory } from "@/components/home-trajectory"
 import { HomeDifferentiation } from "@/components/home-differentiation"
 import { LeadCaptureSection } from "@/components/lead-capture-section"
 import { LeadQuiz } from "@/components/lead-quiz"
@@ -24,6 +25,8 @@ export default function Home() {
       <BigStats />
       {/* 3.5 ENSINO & PALESTRAS — autoridade visual em cena (Samir lecionando) */}
       <TeachingShowcase />
+      {/* 3.7 TRAJETORIA — historia do pai, expertise, inovacoes e CTAs estrategicos */}
+      <HomeTrajectory />
       {/* 4. DIFERENCIACAO — problema + implicacao */}
       <HomeDifferentiation />
       {/* 5. CAPTACAO DE LEADS — formulario Clube da Formula */}
