@@ -85,7 +85,7 @@ export function CursosHero() {
                     Bancada real · P&amp;D cosmético
                   </div>
                   <p className="mt-1 font-serif text-lg leading-tight text-white">
-                    O que você aprende aqui, ele testou na bancada.
+                    O que você aprende aqui, eu testei na bancada!
                   </p>
                 </div>
               </div>
