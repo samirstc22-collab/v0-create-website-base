@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRight, Mic2, GraduationCap, Globe2, FlaskConical, MapPin } from "lucide-react"
+import { ArrowUpRight, FlaskConical, MapPin } from "lucide-react"
 
 // Bandeiras em SVG inline — leves, escaláveis e acessíveis
 function FlagFR({ className = "" }: { className?: string }) {
@@ -83,29 +83,7 @@ const internationalMissions = [
   },
 ]
 
-const metrics = [
-  {
-    icon: Mic2,
-    value: "100+",
-    label: "Palestras, cursos e congressos",
-    detail:
-      "Eventos presenciais como palestrante — em indústria, magistrais, faculdades e congressos científicos.",
-  },
-  {
-    icon: GraduationCap,
-    value: "3.000+",
-    label: "Alunos formados",
-    detail:
-      "Profissionais formados em cursos livres, práticos e técnicos em farmacotécnica e cosmetologia aplicada.",
-  },
-  {
-    icon: Globe2,
-    value: "4 países",
-    label: "Missões internacionais",
-    detail:
-      "Brasil, França (Paris), Holanda (Amsterdam) e Japão — pesquisa, sourcing e ensino in loco.",
-  },
-]
+
 
 export function TeachingShowcase() {
   return (
@@ -376,35 +354,7 @@ export function TeachingShowcase() {
           </div>
         </div>
 
-        {/* Faixa de métricas — 3 cartões alinhados */}
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3 md:gap-6">
-          {metrics.map((item) => {
-            const Icon = item.icon
-            return (
-              <div
-                key={item.label}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:border-[#D4B98C]/30 hover:bg-white/[0.04] md:p-7"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#D4B98C]/25 bg-[#D4B98C]/10 text-[#D4B98C]">
-                    <Icon className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
-                  <div className="font-serif text-4xl leading-none text-white md:text-5xl">
-                    {item.value}
-                  </div>
-                </div>
-                <div className="mt-5">
-                  <div className="text-sm font-semibold tracking-tight text-white">
-                    {item.label}
-                  </div>
-                  <div className="mt-1.5 text-justify text-xs leading-relaxed text-white/60 md:text-[13px]">
-                    {item.detail}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
+
       </div>
     </section>
   )
