@@ -115,12 +115,12 @@ export function HeroPremium() {
                   "0 2px 4px rgba(0,0,0,0.7), 0 4px 30px rgba(0,0,0,0.5)",
               }}
             >
-              Ciencia cosmetica
+              Soluções personalizadas em
               <br />
-              que vira{" "}
+              formulação e{" "}
               <span className="relative inline-block">
                 <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                  autoridade
+                  P&D
                 </em>
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -138,9 +138,12 @@ export function HeroPremium() {
                   />
                 </svg>
               </span>{" "}
-              <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
-                tecnica
-              </em>
+              <span className="block mt-2 text-[clamp(28px,4.2vw,56px)] font-normal text-[#F4EDE0]/95 tracking-[-1.5px]">
+                para{" "}
+                <em className="italic bg-gradient-to-r from-[#e0c89e] via-[#D4B98C] to-[#a68449] bg-clip-text text-transparent">
+                  farmácias e indústria
+                </em>
+              </span>
             </h1>
 
             {/* Subheadline - foco em publico */}
@@ -152,9 +155,9 @@ export function HeroPremium() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4)",
               }}
             >
-              Cursos, mentoria e consultoria de{" "}
-              <strong className="text-[#D4B98C] font-bold">alto nivel</strong>{" "}
-              para pesquisadores e consultores que desenvolvem formulas autorais com base cientifica — as mesmas que prescritores reconhecem, indicam e pedem pelo nome.
+              Formulação clínica.{" "}
+              <strong className="text-[#D4B98C] font-bold">P&D aplicado.</strong>{" "}
+              Protocolos que prescritores reconhecem, indicam e pedem pelo nome — para farmácias magistrais e indústria que querem parar de copiar fórmula e começar a desenvolver as suas.
             </p>
 
             {/* Stat row destacada - 500 Farmacias em destaque */}
@@ -198,20 +201,20 @@ export function HeroPremium() {
             >
               <Link
                 href="/cursos"
-                className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#a68449] via-[#D4B98C] to-[#a68449] text-[#0A1628] px-9 py-5 rounded-2xl font-bold text-[16px] tracking-wide hover:shadow-[0_0_50px_rgba(212,185,140,0.7)] transition-all shadow-[0_10px_40px_rgba(212,185,140,0.45)] hover:translate-y-[-3px] overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#a68449] via-[#D4B98C] to-[#a68449] text-[#0A1628] px-9 py-5 rounded-2xl font-bold text-[15px] tracking-wide hover:shadow-[0_0_50px_rgba(212,185,140,0.7)] transition-all shadow-[0_10px_40px_rgba(212,185,140,0.45)] hover:translate-y-[-3px] overflow-hidden text-balance"
                 style={{ backgroundSize: "200% 100%" }}
               >
-                <GraduationCap className="w-5 h-5" />
-                <span>Ver Cursos</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <GraduationCap className="w-5 h-5 shrink-0" />
+                <span>Quero formular com lógica clínica</span>
+                <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/loja"
-                className="group inline-flex items-center justify-center gap-3 bg-[#9DBEB1]/15 text-[#F4EDE0] px-8 py-5 rounded-2xl font-bold text-[16px] tracking-wide border-2 border-[#9DBEB1]/45 hover:bg-[#9DBEB1]/25 hover:border-[#9DBEB1]/70 hover:translate-y-[-3px] transition-all backdrop-blur-md"
+                className="group inline-flex items-center justify-center gap-3 bg-[#9DBEB1]/15 text-[#F4EDE0] px-8 py-5 rounded-2xl font-bold text-[15px] tracking-wide border-2 border-[#9DBEB1]/45 hover:bg-[#9DBEB1]/25 hover:border-[#9DBEB1]/70 hover:translate-y-[-3px] transition-all backdrop-blur-md"
               >
-                <BookOpen className="w-5 h-5 text-[#9DBEB1]" />
-                <span>Ir para a Loja</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <BookOpen className="w-5 h-5 shrink-0 text-[#9DBEB1]" />
+                <span>Ver materiais e protocolos</span>
+                <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 

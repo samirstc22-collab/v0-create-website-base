@@ -403,7 +403,7 @@ export function Navbar() {
             className="ml-3 bg-gradient-to-br from-[#B8783D] to-[#8a5729] border-none rounded-xl py-2.5 px-5 text-white font-bold text-sm shadow-[0_4px_16px_rgba(184,120,61,0.35)] hover:translate-y-[-1px] hover:shadow-[0_6px_24px_rgba(184,120,61,0.45)] transition-all duration-300 tracking-wide flex items-center gap-2"
           >
             <Briefcase className="w-4 h-4" />
-            Consultoria
+            Aplicar no meu negócio
           </Link>
         </div>
 
@@ -507,7 +507,7 @@ export function Navbar() {
               className="mt-3 bg-gradient-to-br from-[#B8783D] to-[#8a5729] rounded-xl py-4 px-6 text-white font-bold text-base text-center shadow-[0_4px_20px_rgba(184,120,61,0.3)] flex items-center justify-center gap-2"
             >
               <Briefcase className="w-5 h-5" />
-              Agendar Consultoria
+              Aplicar no meu negócio
             </Link>
           </div>
         </div>
