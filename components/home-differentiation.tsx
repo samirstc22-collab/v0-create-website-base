@@ -14,7 +14,7 @@ export function HomeDifferentiation() {
     },
     {
       bad: "Claims sem lastro — promessas vazias ao prescritor",
-      good: "Resultados com DOI e referencia peer-reviewed",
+      good: "Resultados validados pelo balcao em +500 farmacias atendidas",
     },
     {
       bad: "Bases instaveis que comprometem eficacia",

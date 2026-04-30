@@ -22,7 +22,7 @@ const metrics = [
     value: "4 países",
     label: "Missões internacionais",
     detail:
-      "Brasil, França (In-Cosmetics Paris), Holanda (Amsterdam) e Japão — pesquisa, sourcing e ensino in loco.",
+      "Brasil, França (Paris), Holanda (Amsterdam) e Japão — pesquisa, sourcing e ensino in loco.",
   },
 ]
 

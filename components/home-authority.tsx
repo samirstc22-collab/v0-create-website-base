@@ -47,9 +47,9 @@ export function HomeAuthority() {
     },
     {
       icon: Award,
-      value: "1",
-      label: "Paper peer-reviewed",
-      detail: "DOI 10.24933/rep.v6i2.281",
+      value: "+500",
+      label: "Farmácias atendidas",
+      detail: "Suporte técnico e P&D em todo o Brasil",
     },
   ]
 
@@ -61,7 +61,7 @@ export function HomeAuthority() {
   ]
 
   const authoritySeals = [
-    "In-Cosmetics Global Paris 2025",
+    "+500 farmácias atendidas",
     "Missão Técnica Amsterdam",
     "Missão Técnica Japão",
     "Indústria Cosmética · Grau I e II",
@@ -155,22 +155,22 @@ export function HomeAuthority() {
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-xl">
                 <div className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#e8a87c]">
                   <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#e8a87c]" />
-                  In-Cosmetics Paris 2025 · Delegado Técnico
+                  +500 farmácias atendidas
                 </div>
                 <p className="font-serif text-lg leading-tight text-white">
-                  Interlocução direta com fornecedores de referência mundial. Acesso antecipado a
-                  ativos não disponíveis no mercado local.
+                  Suporte técnico real, formulação validada e diferenciação de carteira para
+                  farmácias e indústrias que querem inovar com segurança.
                 </p>
               </div>
             </div>
             {/* Corner badges */}
             <div className="absolute -right-4 top-8 hidden rounded-2xl border border-white/15 bg-white/[0.08] px-5 py-4 backdrop-blur-xl lg:block">
-              <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">In-Cosmetics</div>
-              <div className="font-mono text-sm text-white">Paris 2025</div>
+              <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">Farmácias</div>
+              <div className="font-mono text-sm text-white">+500 atendidas</div>
             </div>
             <div className="absolute -left-4 bottom-24 hidden rounded-2xl border border-white/15 bg-white/[0.08] px-5 py-4 backdrop-blur-xl lg:block">
-              <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">Peer-Reviewed</div>
-              <div className="font-mono text-sm text-white">DOI · 281</div>
+              <div className="text-[10px] font-bold uppercase tracking-[2.5px] text-white/60">Bancada</div>
+              <div className="font-mono text-sm text-white">24+ anos</div>
             </div>
           </div>
 
@@ -208,8 +208,9 @@ export function HomeAuthority() {
                     Rede internacional para sourcing e benchmarking
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-white/65">
-                    Delegado técnico In-Cosmetics Global Paris 2025. Missões em Amsterdam e no
-                    Japão. Interlocução direta com fornecedores como Sederma e Lucas Meyer.
+                    Missões técnicas internacionais e interlocução direta com fornecedores
+                    de referência mundial como Sederma e Lucas Meyer — acesso antecipado a
+                    ativos ainda fora do mercado local.
                   </p>
                 </div>
               </div>
@@ -222,8 +223,8 @@ export function HomeAuthority() {
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-white/65">
                     Co-organizador do 1º Simpósio de Peelings Químicos do Brasil. Criador do
-                    primeiro peeling de ácido azelaico em pasta anidra do mundo. Autor da técnica
-                    Fenol FREE e coautor de paper peer-reviewed.
+                    primeiro peeling de ácido azelaico em pasta anidra do mundo e autor da
+                    técnica Fenol FREE — inovações replicadas por +500 farmácias no Brasil.
                   </p>
                 </div>
               </div>
@@ -387,7 +388,7 @@ export function HomeAuthority() {
             <div className="group relative overflow-hidden rounded-3xl border border-white/10">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744355862838-J3zTIx6C9CoFx3MVLHAV1WrNvI0p3I.jpeg"
-                alt="Delegação brasileira na In-Cosmetics Global Paris 2025"
+                alt="Missão técnica internacional — sourcing de ativos para farmácias e indústrias"
                 width={800}
                 height={600}
                 className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -395,10 +396,10 @@ export function HomeAuthority() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="mb-2 text-[11px] font-bold uppercase tracking-[2.5px] text-[#2dd4bf]">
-                  In-Cosmetics Global · Paris 2025
+                  Missão técnica · Paris
                 </div>
                 <p className="text-lg font-medium leading-snug text-white">
-                  Delegado técnico com acesso a lançamentos exclusivos de ativos
+                  Sourcing internacional de ativos exclusivos para farmácias e indústrias
                 </p>
               </div>
             </div>
