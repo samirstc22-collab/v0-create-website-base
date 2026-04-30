@@ -93,16 +93,70 @@ export function HeroPremium() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Coluna esquerda - Conteudo */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Eyebrow elegante */}
+            {/* Eyebrow elegante — apresentação pessoal como focal point */}
             <div
-              className={`inline-flex items-center gap-3 mb-7 transition-all duration-700 ${
+              className={`mb-8 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="h-px w-10 bg-gradient-to-r from-transparent via-[#D4B98C] to-[#D4B98C]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3.5px] text-[#D4B98C]">
-                Samir Tannuri · Pesquisador & Consultor
-              </span>
+              {/* Linha decorativa superior */}
+              <div className="flex items-center gap-3 mb-4 justify-center lg:justify-start">
+                <span className="h-px w-8 bg-[#D4B98C]/50" />
+                <span className="text-[10px] font-bold uppercase tracking-[4px] text-[#D4B98C]/70">
+                  Apresentação
+                </span>
+              </div>
+
+              {/* Frase focal principal */}
+              <div className="inline-block relative">
+                <p
+                  className="font-serif text-[clamp(22px,3vw,38px)] leading-[1.15] tracking-[-0.5px] text-[#FCF5ED]"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.6), 0 6px 24px rgba(0,0,0,0.45)",
+                  }}
+                >
+                  <span className="text-[#D4B98C]/80 font-normal italic text-[clamp(18px,2.2vw,28px)]">
+                    Prazer,{" "}
+                  </span>
+                  <strong
+                    className="font-serif font-semibold bg-gradient-to-r from-[#FCF5ED] via-[#F5E6D3] to-[#E0C89E] bg-clip-text text-transparent"
+                    style={{ WebkitTextStroke: "0px" }}
+                  >
+                    Prof. Samir Tannuri
+                  </strong>
+                </p>
+                {/* Sublinha accent dourada */}
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  height="10"
+                  viewBox="0 0 300 6"
+                  preserveAspectRatio="none"
+                  aria-hidden
+                >
+                  <defs>
+                    <linearGradient id="pitchLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#D4B98C" stopOpacity="0" />
+                      <stop offset="20%" stopColor="#D4B98C" stopOpacity="0.7" />
+                      <stop offset="80%" stopColor="#D4B98C" stopOpacity="0.7" />
+                      <stop offset="100%" stopColor="#D4B98C" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0,3 Q75,1 150,2.5 T300,2"
+                    stroke="url(#pitchLine)"
+                    strokeWidth="1.5"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+
+              {/* Role tag */}
+              <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#D4B98C]" />
+                <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#D4B98C]">
+                  Pesquisador & Consultor em Tecnologia Magistral
+                </span>
+              </div>
             </div>
 
             {/* Titulo principal - consultoria, cursos e desenvolvimento */}
@@ -283,15 +337,15 @@ export function HeroPremium() {
               </div>
 
               {/* Badge flutuante premium */}
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#0F1F38]/95 to-[#0A1628]/95 backdrop-blur-xl border-2 border-[#D4B98C]/55 rounded-2xl px-6 py-4 shadow-[0_15px_40px_rgba(0,0,0,0.7)]">
-                <div className="text-[10px] uppercase tracking-[2.5px] text-[#D4B98C] font-bold mb-1">
-                  Samir Tannuri
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#0F1F38]/98 to-[#0A1628]/98 backdrop-blur-xl border-2 border-[#D4B98C]/70 rounded-2xl px-6 py-4 shadow-[0_15px_50px_rgba(0,0,0,0.8),0_0_0_1px_rgba(212,185,140,0.15)]">
+                <div className="text-[10px] uppercase tracking-[3px] text-[#D4B98C] font-bold mb-1 opacity-90">
+                  Prazer,
                 </div>
-                <div className="text-[#F4EDE0] text-[15px] font-bold mb-0.5">
-                  Pesquisador · Consultor
+                <div className="font-serif text-[#FCF5ED] text-[17px] font-semibold mb-0.5 tracking-[-0.3px]">
+                  Prof. Samir Tannuri
                 </div>
-                <div className="text-[#F4EDE0]/70 text-[11px] font-medium">
-                  Cursos & Mentoria de Alto Nivel
+                <div className="text-[#D4B98C]/80 text-[11px] font-medium tracking-[1px]">
+                  Pesquisador · Consultor Magistral
                 </div>
               </div>
 
