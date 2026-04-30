@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { SobreHero } from "@/components/sobre/sobre-hero"
 import { SobreAbout } from "@/components/sobre/sobre-about"
 import { SobreSocials } from "@/components/sobre/sobre-socials"
+import { HomeTrajectory } from "@/components/home-trajectory"
 import { DualExpertise } from "@/components/dual-expertise"
 import { Missions } from "@/components/missions"
 import { Science } from "@/components/science"
@@ -19,6 +20,8 @@ export default function SobrePage() {
     <main>
       <Navbar />
       <SobreHero />
+      {/* Bloco Portfólio · Trajetória — agora no início do Sobre */}
+      <HomeTrajectory />
       <SobreAbout />
       <DualExpertise />
       <Missions />

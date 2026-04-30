@@ -70,7 +70,7 @@ export function HomeTrajectory() {
           <div className="inline-flex items-center gap-2 rounded-full border border-[#B8783D]/25 bg-[#B8783D]/8 px-4 py-1.5 mb-5">
             <span className="h-1.5 w-1.5 rounded-full bg-[#B8783D]" />
             <span className="text-[10px] font-bold uppercase tracking-[2.5px] text-[#B8783D]">
-              Minha Trajetória
+              Portfólio · Trajetória
             </span>
           </div>
           <h2 className="font-serif font-normal text-[clamp(34px,4.6vw,56px)] text-[#0C2340] leading-[1.08] tracking-[-1px] max-w-[920px] mx-auto text-balance">
