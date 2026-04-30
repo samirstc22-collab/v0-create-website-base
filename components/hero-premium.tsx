@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Award, FlaskConical, GraduationCap, Microscope, BookOpen } from "lucide-react"
+import { ArrowRight, Award, FlaskConical, GraduationCap, Users, BookOpen } from "lucide-react"
 
 export function HeroPremium() {
   const [mounted, setMounted] = useState(false)
@@ -168,7 +168,7 @@ export function HeroPremium() {
               {[
                 { value: "500+", label: "Farmacias atendidas", icon: FlaskConical, highlight: true },
                 { value: "1.000+", label: "Profissionais formados", icon: GraduationCap },
-                { value: "Peer", label: "Reviewed em ciencia", icon: Microscope },
+                { value: "24+", label: "Anos na bancada", icon: Award },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -224,9 +224,7 @@ export function HeroPremium() {
               }`}
             >
               {[
-                { icon: Award, text: "Delegado · In-Cosmetics Paris 2025" },
-                { icon: Microscope, text: "Paper Peer-Reviewed" },
-                { icon: GraduationCap, text: "Mestre em P&D Cosmetico" },
+                { icon: Users, text: "+500 farmácias atendidas" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 text-[#F4EDE0]">
                   <item.icon className="w-4 h-4 text-[#D4B98C]" />
@@ -262,7 +260,7 @@ export function HeroPremium() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_9888%20copiar-K73UeCChbW1Z8EQ1xXtTRg3yFGHX8E.jpg"
-                  alt="Samir Tannuri — Pesquisador e Consultor de Formulas"
+                  alt="Samir Tannuri ��� Pesquisador e Consultor de Formulas"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 80vw, 45vw"

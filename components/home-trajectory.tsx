@@ -36,8 +36,8 @@ export function HomeTrajectory() {
     "24+ anos imerso em formulação magistral",
     "500+ farmácias atendidas tecnicamente",
     "1.000+ formuladores treinados em programas próprios",
-    "Delegado técnico In-Cosmetics Global Paris 2025",
-    "Publicação peer-reviewed com DOI indexado",
+    "Coordenação de P&D no maior grupo magistral do Brasil",
+    "Criador da Técnica Fenol FREE e do peeling de azelaico em pasta anidra",
     "Consultor de 20+ indústrias cosméticas",
   ]
 
@@ -120,19 +120,6 @@ export function HomeTrajectory() {
                 </div>
                 <div className="text-[#0C2340] text-[14px] font-bold leading-tight">
                   Consultor em Tecnologia Magistral
-                </div>
-              </div>
-
-              {/* Selo flutuante */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#B8783D] to-[#8a5a2b] rounded-2xl px-4 py-3 shadow-[0_10px_30px_rgba(184,120,61,0.45)]">
-                <div className="text-[10px] uppercase tracking-[2px] text-white/85 font-bold leading-tight">
-                  Desde
-                </div>
-                <div className="font-serif text-white text-[26px] font-bold leading-none">
-                  2001
-                </div>
-                <div className="text-[10px] uppercase tracking-[1.5px] text-white font-bold leading-tight">
-                  na bancada
                 </div>
               </div>
 
