@@ -14,6 +14,7 @@ import {
   Clock,
   ArrowRight,
 } from "lucide-react"
+import { submitLead } from "@/app/actions/leads"
 
 const formulas = [
   "Serum despigmentante com Tranexamico 5%",
@@ -34,13 +35,27 @@ export function LeadMagnetProtocolo() {
   const [name, setName] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    // Simulacao de envio - integrar com API real
-    await new Promise((r) => setTimeout(r, 1000))
-    setSubmitted(true)
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "lead-magnet-protocolo",
+      name,
+      email,
+      whatsapp,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+      metadata: { lead_magnet: "protocolo-hiperpigmentacao-pos-inflamatoria" },
+    })
+
+    if (res.ok) {
+      setSubmitted(true)
+    } else {
+      setErrorMsg(res.error)
+    }
     setLoading(false)
   }
 
@@ -239,6 +254,12 @@ export function LeadMagnetProtocolo() {
                     className="w-full bg-white/[0.06] backdrop-blur-md border border-white/15 rounded-xl pl-12 pr-5 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#d4a574] focus:bg-white/[0.1] transition-all text-[15px]"
                   />
                 </div>
+
+                {errorMsg && (
+                  <p className="text-sm text-red-300 bg-red-900/30 border border-red-500/30 rounded-lg px-4 py-2">
+                    {errorMsg}
+                  </p>
+                )}
 
                 <button
                   type="submit"

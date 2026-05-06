@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Send, MessageCircle, Mail, MapPin, Clock } from "lucide-react"
+import { Send, MessageCircle, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react"
 import { FlaskIllustration, HexagonPattern } from "../illustrations"
+import { submitLead } from "@/app/actions/leads"
 
 export function ContatoForm() {
   const [formData, setFormData] = useState({
@@ -11,9 +12,34 @@ export function ContatoForm() {
     interest: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [errorMsg, setErrorMsg] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("loading")
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "contato",
+      name: formData.name,
+      email: formData.email,
+      interest: formData.interest,
+      message: formData.message,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
+
+    if (res.ok) {
+      setStatus("success")
+      setFormData({ name: "", email: "", interest: "", message: "" })
+    } else {
+      setStatus("error")
+      setErrorMsg(res.error)
+    }
   }
 
   const contactInfo = [
@@ -82,66 +108,99 @@ export function ContatoForm() {
           <div className="lg:col-span-3">
             <div className="bg-white rounded-3xl p-10 border border-border shadow-[0_8px_40px_rgba(0,0,0,0.04)]">
               <h3 className="font-serif text-2xl text-navy mb-8">Envie sua mensagem</h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                <div>
-                  <label className="text-sm font-medium text-navy mb-2 block">Nome</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white"
-                    placeholder="Seu nome"
-                  />
+
+              {status === "success" ? (
+                <div className="flex flex-col items-center text-center py-10">
+                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mb-5">
+                    <CheckCircle2 className="w-8 h-8 text-emerald-500" />
+                  </div>
+                  <h4 className="font-serif text-xl text-navy mb-2">Mensagem recebida.</h4>
+                  <p className="text-base text-muted leading-relaxed max-w-sm">
+                    Retorno em ate 24 horas uteis no e-mail informado.
+                  </p>
                 </div>
-                <div>
-                  <label className="text-sm font-medium text-navy mb-2 block">E-mail</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-              </div>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <div>
+                      <label className="text-sm font-medium text-navy mb-2 block">Nome</label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white"
+                        placeholder="Seu nome"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-navy mb-2 block">E-mail</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white"
+                        placeholder="seu@email.com"
+                      />
+                    </div>
+                  </div>
 
-              <div className="mb-5">
-                <label className="text-sm font-medium text-navy mb-2 block">Interesse principal</label>
-                <select
-                  name="interest"
-                  value={formData.interest}
-                  onChange={handleChange}
-                  className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white appearance-none"
-                >
-                  <option value="">Selecione uma opcao</option>
-                  <option value="consult-magistral">Consultoria Magistral Completa</option>
-                  <option value="pd-industrial">P&D Industrial — Industrias e Marcas</option>
-                  <option value="diagnostico">Diagnostico Tecnico</option>
-                  <option value="missao">Missoes Internacionais</option>
-                  <option value="ebook">eBooks, Formularios e Cursos</option>
-                  <option value="palestra">Convite para Palestra</option>
-                </select>
-              </div>
+                  <div className="mb-5">
+                    <label className="text-sm font-medium text-navy mb-2 block">Interesse principal</label>
+                    <select
+                      name="interest"
+                      value={formData.interest}
+                      onChange={handleChange}
+                      className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white appearance-none"
+                    >
+                      <option value="">Selecione uma opcao</option>
+                      <option value="consult-magistral">Consultoria Magistral Completa</option>
+                      <option value="pd-industrial">P&D Industrial - Industrias e Marcas</option>
+                      <option value="diagnostico">Diagnostico Tecnico</option>
+                      <option value="missao">Missoes Internacionais</option>
+                      <option value="ebook">eBooks, Formularios e Cursos</option>
+                      <option value="palestra">Convite para Palestra</option>
+                    </select>
+                  </div>
 
-              <div className="mb-8">
-                <label className="text-sm font-medium text-navy mb-2 block">Mensagem</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all resize-y focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white min-h-[140px]"
-                  placeholder="Descreva seu projeto ou duvida"
-                  rows={5}
-                />
-              </div>
+                  <div className="mb-8">
+                    <label className="text-sm font-medium text-navy mb-2 block">Mensagem</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full py-4 px-5 rounded-xl border border-border bg-off-white text-dark text-base font-sans outline-none transition-all resize-y focus:border-copper focus:shadow-[0_0_0_4px_rgba(192,133,74,0.1)] focus:bg-white min-h-[140px]"
+                      placeholder="Descreva seu projeto ou duvida"
+                      rows={5}
+                    />
+                  </div>
 
-              <button className="w-full bg-gradient-to-br from-copper to-copper-deep border-none rounded-xl py-4 px-8 text-white font-bold text-base shadow-[0_6px_24px_rgba(192,133,74,0.3)] hover:translate-y-[-2px] hover:shadow-[0_10px_32px_rgba(192,133,74,0.4)] transition-all flex items-center justify-center gap-3">
-                <Send className="w-5 h-5" />
-                Enviar Mensagem
-              </button>
+                  {status === "error" && errorMsg && (
+                    <p className="mb-4 text-sm text-red-600">{errorMsg}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full bg-gradient-to-br from-copper to-copper-deep border-none rounded-xl py-4 px-8 text-white font-bold text-base shadow-[0_6px_24px_rgba(192,133,74,0.3)] hover:translate-y-[-2px] hover:shadow-[0_10px_32px_rgba(192,133,74,0.4)] transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? (
+                      <>
+                        <span className="w-5 h-5 rounded-full border-2 border-white/30 border-t-white animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Enviar Mensagem
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

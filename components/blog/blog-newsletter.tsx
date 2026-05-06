@@ -3,10 +3,33 @@
 import { useState } from "react"
 import { Mail, Send, ShieldCheck } from "lucide-react"
 import { DNAHelix, MoleculeIllustration } from "@/components/illustrations"
+import { submitLead } from "@/app/actions/leads"
 
 export function BlogNewsletter() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    setLoading(true)
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "blog-newsletter",
+      email,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
+
+    if (res.ok) {
+      setSubmitted(true)
+    } else {
+      setErrorMsg(res.error)
+    }
+    setLoading(false)
+  }
 
   return (
     <section className="relative overflow-hidden bg-[#0a1628] py-24 lg:py-28">
@@ -39,29 +62,41 @@ export function BlogNewsletter() {
           </p>
 
           {!submitted ? (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                if (email) setSubmitted(true)
-              }}
-              className="mx-auto mt-10 flex max-w-[540px] flex-col gap-3 sm:flex-row"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="seu-email@farmacia.com.br"
-                className="flex-1 rounded-xl border border-white/15 bg-white/[0.06] px-5 py-4 text-base text-white placeholder:text-white/40 outline-none transition focus:border-[#e8a87c] focus:bg-white/10"
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#a0632c] px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(184,115,51,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(184,115,51,0.5)]"
+            <>
+              <form
+                onSubmit={handleSubmit}
+                className="mx-auto mt-10 flex max-w-[540px] flex-col gap-3 sm:flex-row"
               >
-                Assinar boletim
-                <Send className="h-4 w-4" />
-              </button>
-            </form>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="seu-email@farmacia.com.br"
+                  className="flex-1 rounded-xl border border-white/15 bg-white/[0.06] px-5 py-4 text-base text-white placeholder:text-white/40 outline-none transition focus:border-[#e8a87c] focus:bg-white/10"
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#a0632c] px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(184,115,51,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(184,115,51,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {loading ? (
+                    <>
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                      Enviando
+                    </>
+                  ) : (
+                    <>
+                      Assinar boletim
+                      <Send className="h-4 w-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+              {errorMsg && (
+                <p className="mt-3 text-sm text-red-300">{errorMsg}</p>
+              )}
+            </>
           ) : (
             <div className="mx-auto mt-10 inline-flex items-center gap-3 rounded-xl border border-[#2dd4bf]/30 bg-[#2dd4bf]/10 px-6 py-4">
               <ShieldCheck className="h-5 w-5 text-[#86efd4]" />

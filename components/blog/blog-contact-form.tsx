@@ -3,10 +3,35 @@
 import { useState } from "react"
 import { User, Mail, Phone, Send, ShieldCheck, FileText } from "lucide-react"
 import { DNAHelix, MoleculeIllustration } from "@/components/illustrations"
+import { submitLead } from "@/app/actions/leads"
 
 export function BlogContactForm() {
   const [form, setForm] = useState({ nome: "", email: "", whatsapp: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!form.nome || !form.email || !form.whatsapp) return
+    setLoading(true)
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "blog-contact",
+      name: form.nome,
+      email: form.email,
+      whatsapp: form.whatsapp,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
+
+    if (res.ok) {
+      setSubmitted(true)
+    } else {
+      setErrorMsg(res.error)
+    }
+    setLoading(false)
+  }
 
   function formatWhatsApp(value: string) {
     const digits = value.replace(/\D/g, "").slice(0, 11)
@@ -64,13 +89,7 @@ export function BlogContactForm() {
           {/* Right: form */}
           <div className="p-10 md:p-14 lg:col-span-3">
             {!submitted ? (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  if (form.nome && form.email && form.whatsapp) setSubmitted(true)
-                }}
-                className="space-y-5"
-              >
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-[1.5px] text-white/60">
                     Nome completo
@@ -123,12 +142,26 @@ export function BlogContactForm() {
                   </div>
                 </div>
 
+                {errorMsg && (
+                  <p className="text-sm text-red-300">{errorMsg}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#a0632c] px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(184,115,51,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(184,115,51,0.5)]"
+                  disabled={loading}
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#b87333] to-[#a0632c] px-7 py-4 text-base font-bold text-white shadow-[0_12px_30px_rgba(184,115,51,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(184,115,51,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Enviar mensagem ao Samir
-                  <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  {loading ? (
+                    <>
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                      Enviando
+                    </>
+                  ) : (
+                    <>
+                      Enviar mensagem ao Samir
+                      <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </>
+                  )}
                 </button>
 
                 <p className="pt-2 text-center text-xs tracking-wide text-white/40">

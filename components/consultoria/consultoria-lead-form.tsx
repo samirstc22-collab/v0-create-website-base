@@ -14,6 +14,7 @@ import {
   Calendar,
   ShieldCheck,
 } from "lucide-react"
+import { submitLead } from "@/app/actions/leads"
 
 const operationTypes = [
   "Farmacia magistral · 1 unidade",
@@ -54,14 +55,30 @@ export function ConsultoriaLeadForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate submission - in production, replace with real endpoint
-    await new Promise((r) => setTimeout(r, 1200))
-    console.log("[v0] consultoria lead:", formData)
-    setIsSuccess(true)
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "consultoria",
+      name: formData.name,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      operation: formData.operation,
+      pain: formData.pain,
+      goal: formData.goal,
+      investment: formData.investment,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
+
+    if (res.ok) {
+      setIsSuccess(true)
+    } else {
+      setErrorMsg(res.error)
+    }
     setIsSubmitting(false)
   }
 
@@ -268,6 +285,10 @@ export function ConsultoriaLeadForm() {
                     onChange={(v) => setFormData({ ...formData, investment: v })}
                     options={investmentRanges}
                   />
+
+                  {errorMsg && (
+                    <p className="text-sm text-red-600">{errorMsg}</p>
+                  )}
 
                   {/* Submit */}
                   <button

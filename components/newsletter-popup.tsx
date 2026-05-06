@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, Mail, Phone, User, Sparkles, FlaskConical, ShieldCheck, FileDown, Download } from "lucide-react"
+import { submitLead } from "@/app/actions/leads"
 
 const STORAGE_KEY = "stfarma_protocol_dismissed"
 
@@ -12,6 +13,7 @@ export function NewsletterPopup() {
   const [whatsapp, setWhatsapp] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   useEffect(() => {
     const isDismissed = localStorage.getItem(STORAGE_KEY)
@@ -45,11 +47,26 @@ export function NewsletterPopup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSuccess(true)
-    setTimeout(() => {
-      handleClose()
-    }, 3500)
+    setErrorMsg("")
+
+    const res = await submitLead({
+      source: "newsletter-popup",
+      name,
+      email,
+      whatsapp,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+      metadata: { lead_magnet: "protocolo-pos-procedimentos" },
+    })
+
+    if (res.ok) {
+      setIsSuccess(true)
+      setTimeout(() => {
+        handleClose()
+      }, 3500)
+    } else {
+      setErrorMsg(res.error)
+      setIsSubmitting(false)
+    }
   }
 
   if (!isOpen) return null
@@ -276,6 +293,10 @@ export function NewsletterPopup() {
                       className="w-full rounded-xl border border-[#0a1628]/15 bg-[#0a1628]/[0.02] py-3.5 pl-11 pr-4 text-[15px] text-[#0a1628] placeholder:text-[#94a3b8] transition-all focus:border-[#b87333] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#b87333]/20"
                     />
                   </div>
+
+                  {errorMsg && (
+                    <p className="text-sm text-red-600">{errorMsg}</p>
+                  )}
 
                   <button
                     type="submit"

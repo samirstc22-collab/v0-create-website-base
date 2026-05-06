@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, ArrowLeft, CheckCircle2, Sparkles, Building2, FlaskConical, GraduationCap } from "lucide-react"
+import { submitLead } from "@/app/actions/leads"
 
 type QuizStep = {
   question: string
@@ -46,6 +47,7 @@ export function LeadQuiz() {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   const handleOptionSelect = (value: string) => {
     setAnswers({ ...answers, [currentStep]: value })
@@ -66,12 +68,25 @@ export function LeadQuiz() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMsg("")
 
-    // Simular envio da API
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const res = await submitLead({
+      source: "lead-quiz",
+      name: formData.name,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      quiz_profile: answers[0],
+      quiz_need: answers[1],
+      quiz_timeline: answers[2],
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
 
-    console.log("Lead qualificado:", { ...formData, ...answers })
-    setIsSuccess(true)
+    if (res.ok) {
+      setIsSuccess(true)
+    } else {
+      setErrorMsg(res.error)
+    }
+    setIsSubmitting(false)
   }
 
   const progress = ((currentStep + 1) / (quizSteps.length + 1)) * 100
@@ -188,6 +203,10 @@ export function LeadQuiz() {
                 className="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-[#B8783D] focus:bg-white/15 transition-all"
               />
             </div>
+
+            {errorMsg && (
+              <p className="text-sm text-red-300">{errorMsg}</p>
+            )}
 
             <div className="flex gap-4 pt-4">
               <button

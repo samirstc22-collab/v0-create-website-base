@@ -2,21 +2,33 @@
 
 import { useState } from "react"
 import { ArrowRight, Mail, Phone, User, CheckCircle2, Gift, BookOpen, FlaskConical, Sparkles } from "lucide-react"
+import { submitLead } from "@/app/actions/leads"
 
 export function LeadCaptureSection() {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMsg("")
 
-    // Simular envio
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const res = await submitLead({
+      source: "lead-capture-clube",
+      name: formData.name,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    })
 
-    console.log("Lead capturado:", formData)
-    setIsSuccess(true)
+    if (res.ok) {
+      setIsSuccess(true)
+    } else {
+      setErrorMsg(res.error)
+    }
+    setIsSubmitting(false)
   }
 
   const benefits = [
@@ -153,6 +165,10 @@ export function LeadCaptureSection() {
                         className="w-full pl-12 pr-4 py-4 rounded-xl border border-[#e5e7eb] bg-[#f9fafb] text-[#0C2340] placeholder:text-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#B8783D]/30 focus:border-[#B8783D] focus:bg-white transition-all"
                       />
                     </div>
+
+                    {errorMsg && (
+                      <p className="text-sm text-red-600 -mt-2">{errorMsg}</p>
+                    )}
 
                     <button
                       type="submit"
